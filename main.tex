@@ -1,0 +1,27 @@
+\documentclass{report} % article, book
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{appendix}
+\usepackage{bookmark}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{linebreaker}
+\usepackage{multicol} % For making 2 columns 
+\usepackage[parfill]{parskip}
+\usepackage[% APA Citation 7th Edition
+backend=biber,
+natbib=true,
+style=apa,
+]{biblatex}
+
+\addbibresource{references.bib}
+
+\begin{document}
+\include{Sections/Font-Page}
+\include{Sections/Introduction}
+
+\include{Sections/Appendix}
+\end{document}

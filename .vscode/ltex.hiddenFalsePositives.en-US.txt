@@ -1,0 +1,1 @@
+{"rule":"PHRASE_REPETITION","sentence":"^\\QTotal Costs Total costs currently endured by the consumers, based on the current price and the current load.\\E$"}

@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QThesis NHL Stenden University of Applied Sciences\\E$"}

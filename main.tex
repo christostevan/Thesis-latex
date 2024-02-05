@@ -2,26 +2,44 @@
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage[table,xcdraw]{xcolor}
-
 \usepackage{appendix}
 \usepackage{bookmark}
 \usepackage{hyperref}
+\hypersetup{ % Setting the reference colors
+    colorlinks,
+    linkcolor={red!10!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage{linebreaker}
 \usepackage{multicol} % For making 2 columns 
+\setlength{\columnsep}{1cm} % Column separation
 \usepackage[parfill]{parskip}
+\usepackage[toc]{glossaries}
 \usepackage[% APA Citation 7th Edition
 backend=biber,
 natbib=true,
 style=apa,
 ]{biblatex}
-
 \addbibresource{references.bib}
+
+\makeglossaries
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{it}{IT}{Information Technology}
 
 \begin{document}
 \include{Sections/Font-Page}
+\include{Sections/Summary}
+\tableofcontents
+\clearpage
+\printglossary[title=Special Terms, toctitle=List of terms]
 \include{Sections/Introduction}
+\clearpage
+\include{Sections/Acronyms}
+\include{Sections/Glossary}
 
 \include{Sections/Appendix}
 \end{document}

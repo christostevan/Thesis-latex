@@ -1,5 +1,11 @@
 Pandoc command (convert tex to wordx file)
-
 pandoc -s main.tex --citeproc --bibliography=references.bib --csl=apa.csl  -o output.docx
-
 -t template.docx
+
+
+Pdflatex compile glossaries to show
+makeglossaries filename
+
+Texcount to count the word
+texcount -inc main.tex 
+-exclude=bibliography.tex

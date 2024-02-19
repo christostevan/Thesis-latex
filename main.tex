@@ -14,10 +14,24 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage{linebreaker}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=0.2em}
+\setlist[enumerate]{leftmargin=*}
 \usepackage{multicol} % For making 2 columns 
-\setlength{\columnsep}{1cm} % Column separation
+\setlength{\columnsep}{20pt} % Column separation
+\setlength{\columnseprule}{0.5pt} % Column separation rule thickness
 \usepackage[parfill]{parskip}
-\usepackage[toc]{glossaries}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{geometry}
+ \geometry{ % APA all lines need to be equal 24mm
+ a4paper,
+ left=24mm,
+ top=24mm,
+ right=24mm,
+ bottom=24mm,
+}
+\usepackage[toc]{glossaries} % Glossary package, with acronym and ToC support
 \usepackage[% APA Citation 7th Edition
 backend=biber,
 natbib=true,
@@ -29,17 +43,22 @@ style=apa,
 \newacronym{api}{API}{Application Programming Interface}
 \newacronym{ai}{AI}{Artificial Intelligence}
 \newacronym{it}{IT}{Information Technology}
+\newacronym{ict}{ICT}{Information and Communication Technology}
+\newacronym{qict}{Q-ICT}{Quality ICT}
+\newacronym{qaas}{QaaS}{Quality as a Service}
+\newacronym{rest}{REST}{Representational State Transfer}
 
 \begin{document}
 \include{Sections/Font-Page}
 \include{Sections/Summary}
 \tableofcontents
+\listoffigures
 \clearpage
 \printglossary[title=Special Terms, toctitle=List of terms]
 \include{Sections/Introduction}
-\clearpage
-\include{Sections/Acronyms}
-\include{Sections/Glossary}
-
+\include{Sections/Research}
+\include{Sections/Realization}
+\include{Sections/Conclusions}
 \include{Sections/Appendix}
+\printbibliography
 \end{document}

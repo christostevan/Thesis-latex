@@ -31,7 +31,7 @@
  right=24mm,
  bottom=24mm,
 }
-\usepackage[toc]{glossaries} % Glossary package, with acronym and ToC support
+\usepackage[toc,acronym]{glossaries} % Glossary package, with acronym and ToC support
 \usepackage[% APA Citation 7th Edition
 backend=biber,
 natbib=true,
@@ -40,6 +40,28 @@ style=apa,
 \addbibresource{references.bib}
 
 \makeglossaries
+
+\newglossaryentry{pentest}
+{
+    name=Pentest,
+    description={\acrshort{aka} ethical hacking, is a simulated cyber attack where professional ethical hackers break into corporate 
+    networks to find weaknesses (\cite{pentest})
+    }  
+}
+\newglossaryentry{CRM}
+{
+    name=\acrshort{crm},
+    description={is a technology for managing all your company's relationships and interactions with 
+    customers and potential customers. It provides a centralized \acrshort{db} or system for storing and organizing customer 
+    data, as well as tools for managing sales, marketing, customer service, and other aspects of customer realationships. 
+    A \acrshort{crm} system helps companies stay connected to customers, streamline processes, and improve profitability (\cite{crm})
+    }
+}
+\newglossaryentry{RRM} {
+    name=\acrshort{rrm},
+    description={}
+}
+
 \newacronym{api}{API}{Application Programming Interface}
 \newacronym{ai}{AI}{Artificial Intelligence}
 \newacronym{it}{IT}{Information Technology}
@@ -47,6 +69,41 @@ style=apa,
 \newacronym{qict}{Q-ICT}{Quality ICT}
 \newacronym{qaas}{QaaS}{Quality as a Service}
 \newacronym{rest}{REST}{Representational State Transfer}
+\newacronym{apa}{APA}{American Psychological Association}
+\newacronym{bv}{B.V.}{Besloten Vennootschap}
+\newacronym{itil}{ITIL}{Information Technology Infrastructure Library}
+\newacronym{json}{JSON}{JavaScript Object Notation}
+\newacronym{xml}{XML}{Extensible Markup Language}
+\newacronym{mfa}{MFA}{Multi Factor Authentication}
+\newacronym{2fa}{2FA}{Two Factor Authentication}
+\newacronym{otp}{OTP}{One Time Password}
+\newacronym{totp}{TOTP}{Time-based One Time Password}
+\newacronym{gcp}{GCP}{Google Cloud Platform}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{ux}{UX}{User Experience}
+\newacronym{sdk}{SDK}{Software Development Kit}
+\newacronym{os}{OS}{Operating System}
+\newacronym{ide}{IDE}{Integrated Development Environment}
+\newacronym{baas}{BaaS}{Back-end as a Service}
+\newacronym{paas}{PaaS}{Platform as a Service}
+\newacronym{iaas}{IaaS}{Infrastructure as a Service}
+\newacronym{saas}{SaaS}{Software as a Service}
+\newacronym{crm}{CRM}{Customer Relationship Management}
+\newacronym{rrm}{RRM}{Remote Monitoring and Management}
+\newacronym{msp}{MSP}{Managed Service Provider}
+\newacronym{sme}{SME}{Small and Medium-sized Enterprises}
+\newacronym{mkb}{MKB}{Midden- en Kleinbedrijf}
+\newacronym{html}{HTML}{Hypertext Markup Language}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
+\newacronym{nist}{NIST}{National Institute of Standards and Technology}
+\newacronym{csf}{CSF}{Cybersecurity Framework}
+\newacronym{db}{DB}{Database}
+\newacronym{iso}{ISO}{International Organization for Standardization}
+\newacronym{aka}{A.K.A.}{Also Known As}
+\newacronym{fips}{FIPS}{Federal Information Processing Standards}
+\newacronym{siem}{SIEM}{Security Information and Event Management}
+\newacronym{ct}{CT}{Creative Technology}
 
 \begin{document}
 \include{Sections/Front-Page}
@@ -54,11 +111,12 @@ style=apa,
 \tableofcontents
 \listoffigures
 \clearpage
-\printglossary[title=Special Terms, toctitle=List of terms]
+\printglossaries
 \include{Sections/Introduction}
 \include{Sections/Research}
 \include{Sections/Realization}
 \include{Sections/Conclusions}
-\include{Sections/Appendix}
+\addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
+\include{Sections/Appendix}
 \end{document}

@@ -1,3 +1,0 @@
-mail manuel
-
-calculate cost, if possible to lower it, if it's gonna cost a lot more if we scale up

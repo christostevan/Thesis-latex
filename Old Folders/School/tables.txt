@@ -1,3 +1,0 @@
-Company name, street number, address, postal code, street, invoice, contactPerson, invoice address, kvk, btw, 
-
-Company, customer

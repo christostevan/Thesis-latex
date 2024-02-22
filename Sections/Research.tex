@@ -20,13 +20,14 @@
             \item What functionalities should be prioritized in the development of monitoring and managing
                   third-party \acrshort{api}s within an internal application while ensuring real-time monitoring,
                   error detection, and insight generation regarding \acrshort{api} connections?
-            \item How can SentinelOne can be integrated into the QaaS app environment, especially aligning with the
-                  \acrshort{api} monitoring functionality, while still utilizing their key features and capabilities in
-                  context of cyber threat detection and remote IT infrastructure management?
-            \item What are the most suitable visualization techniques for displaying the data processed and received by
-                  the \acrshort{qaas} app in \acrshort{xml} and \acrshort{json} formats to ensure clear and
-                  insightful representation of threats detected by SentinelOne and other relevant \acrshort{api}
-                  connections?
+            \item How can SentinelOne can be integrated into the \acrshort{qaas} app environment, especially
+                  aligning with the \acrshort{api} monitoring functionality, while still utilizing their key
+                  features and capabilities in context of cyber threat detection and remote IT infrastructure
+                  management?
+            \item What are the most suitable visualization techniques for displaying the data processed and
+                  received by the \acrshort{qaas} app in \acrshort{xml} and \acrshort{json} formats to ensure
+                  clear and insightful representation of threats detected by SentinelOne and other relevant
+                  \acrshort{api} connections?
       \end{itemize}
       \section{Research Methodology}
       In this research, different research methods have been used to answer the research questions. This research
@@ -69,7 +70,7 @@
       \subsection{QaaS App Infrastructure}
       \textbf{Flutter}
 
-      Flutter is an open-source framework made by Google in 2017. It used as a \acrshort{ui} toolkit for building
+      Flutter is an open-source framework made by Google in 2017. It used as an \acrshort{ui} toolkit for building
       natively compiled applications for mobile, web, and desktop (Windows, mac\acrshort{os}, Linux) from a single
       codebase (\cite{flutter}).
 
@@ -91,21 +92,30 @@
             \item Authentication
             \item Functions
             \item Hosting
-            \item Realtime database:
+            \item Real-time database:
       \end{itemize}
 
       \textbf{Algolia}
 
+      Algolia is used for search functionality. It is a search-as-a-service platform that enables developers to
+      integrate and build fast, relevant search functionality into their applications and websites (\cite{algolia}).
+      It provides a range of features and capabilities for building and managing search functionality, including
+      full-text search, typo tolerance, and relevance tuning, as well as analytics and monitoring tools to help
+      developers understand how users are interacting with their search functionality in real-time.
+
+      The reason as to why \acrshort{qict} uses Algolia is that the nature of Firebase search engine is quite often
+      proven to be inaccurate and slow.
 
       \textbf{NoSQL Database}
 
       \subsection{Q-ICT Internal APIs}
       Those \acrshort{api}s are the following:
       \begin{itemize}
-            \item Pax8: is used for \acrshort{qict} Microsoft subscriptions. It is a cloud marketplace that
-                  simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions through automation. It
-                  provides a single platform to manage the entire cloud customer lifecycle, from quote to cash to
-                  support, thus simplifying the process of buying, selling and managing cloud solutions.
+            \item Resello: is used for \acrshort{qict} Microsoft subscriptions owned by Pax8. It is a cloud
+                  marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions through
+                  automation. It provides a single platform to manage the entire cloud customer lifecycle, from
+                  quote to cash to support, thus simplifying the process of buying, selling and managing cloud
+                  solutions.
             \item SnelStart: is used for \acrshort{qict} automation of financial and accounting system software,
                   such as managing invoices, etc., for \acrshort{sme}s. It offers a range of products and services
                   to help businesses manage their finances, including accounting software, invoicing software, and
@@ -130,7 +140,6 @@
             \item PerfectView: is a \gls{CRM} application from a Dutch company designed to help manage, track, and
                   store information related to \acrshort{qict}'s current and potential customers.
             \item Computicate:
-            \item Ticketing:
       \end{itemize}
       \section{Research Question \#2}
       \section{Research Question \#3}

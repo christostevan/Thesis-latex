@@ -2,3 +2,7 @@ analyze
 Firestore
 SentinelOne
 analyzing
+Algolia
+PerfectView
+SnelStart
+Resello

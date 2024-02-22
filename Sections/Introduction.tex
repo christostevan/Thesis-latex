@@ -145,9 +145,31 @@
       In the end of this project which consist of 90-99 working days, the following objectives should be achieved:
       \begin{enumerate}
             \item Develop a standardized \acrshort{api} monitoring system within the \acrshort{qaas} app, with
-                  features such as error handling, connection status warranty, debugging, .
+                  features such as error handling, connection status warranty, debugging, secure storage of
+                  \acrshort{api} keys, handling of expired \acrshort{api} keys, and external validation of
+                  \acrshort{api} connections. Additionally, this research will focus in identifying and
+                  implementing optional practices for integrating \acrshort{api} monitoring into an existing
+                  application, as well as expand the possibility into reading more standard text-based format
+                  such as \acrshort{yaml}, \acrshort{toml}, and \acrshort{csv} files.
             \item Effectively integrates and leverages the SentinelOne security threat platform for continuous
                   cybersecurity monitoring within the \acrshort{qaas} app.
+            \item The \acrshort{qaas} should have a way to visualize the data retrieved from the \acrshort{api}s
+                  in a user-friendly manner in order for the client users helpdesk support, financial department,
+                  cybersecurity department, software development department, and other employees within
+                  \acrshort{qict}  departments to see the data easier.
+            \item Incorporate an error logging functionality that is capable of listing unsuccessful \acrshort{api}
+                  calls and displaying their respective status codes and error messages. Furthermore, the
+                  \acrshort{qaas} app should be able to conduct testing and debugging to these unsuccessful
+                  \acrshort{api} calls to diagnose issues such as expired credentials, while also being able to
+                  inspect the payload for further analysis.
+            \item Ensure proper unit testing, code refactoring, commenting, and adherence to the overall code
+                  conventional guidelines and best practices in both the test and live environments of the
+                  \acrshort{qaas} app.
+            \item Inspect the potential breach of data integrity issue arising from a specific \acrshort{api},
+                  N-Central, which often results in errors of the return data, mainly in the form of \acrshort{xml}
+                  and \acrshort{json} format.
+            \item The \acrshort{qaas} app should be able to serve as a versatile template application for integration
+                  with further upcoming third-party \acrshort{api}s in the future for importing new data.
       \end{enumerate}
       \section{Reading Guide}
       This report is structured as follows:

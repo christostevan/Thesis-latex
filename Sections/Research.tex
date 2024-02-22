@@ -6,24 +6,24 @@
       encapsulating the primary objective or purpose of the study.
       The following main research question will be used throughout the research:
       \begin{center}
-            \textit{"How can Q-ICT effectively enhance API monitoring within its internal application while
-                  integrating and leveraging SentinelOne security threat platform for continuous cybersecurity
-                  monitoring while still ensuring adherence to the highest security standards?"}
+            \textit{"How can Quality ICT B.V. effectively enhance API monitoring within its internal application
+                  while integrating and leveraging SentinelOne security threat platform for continuous
+                  cybersecurity monitoring while still ensuring adherence to the highest security standards?"}
       \end{center}
       The research sub-questions are then used to function as a pathway that dissect the main
       question into smaller, more manageable components, which can then be addressed individually. This approach
       allows for a more comprehensive and in-depth analysis of the research topic, ensuring that all relevant
       aspects are covered and that the research is conducted in a systematic and organized manner.
-      This research main question is therefore expanded in the following research sub-questions:
+      This research main question is therefore expanded in the following research sub-questions: % data is not up to date, stop/pause the connection
       \begin{itemize}
-            \item What is the current situation of the \acrshort{qaas} app of \acrshort{qict}?
+            \item What is the current situation of the \acrshort{qaas} app of \acrlong{qict} \acrshort{bv}?
             \item What functionalities should be prioritized in the development of monitoring and managing
-                  third-party \acrshort{api}s within an internal application while ensuring real-time monitoring,
+                  third-party \acrshort{api}s within the \acrshort{qaas} app while ensuring real-time monitoring,
                   error detection, and insight generation regarding \acrshort{api} connections?
-            \item How can SentinelOne can be integrated into the \acrshort{qaas} app environment, especially
+            \item How can SentinelOne be integrated into the \acrshort{qaas} app environment, especially
                   aligning with the \acrshort{api} monitoring functionality, while still utilizing their key
-                  features and capabilities in context of cyber threat detection and remote IT infrastructure
-                  management?
+                  features and capabilities in context of cyber-threat detection and remote \acrshort{it}
+                  infrastructure management?
             \item What are the most suitable visualization techniques for displaying the data processed and
                   received by the \acrshort{qaas} app in \acrshort{xml} and \acrshort{json} formats to ensure
                   clear and insightful representation of threats detected by SentinelOne and other relevant
@@ -36,34 +36,95 @@
       reliable:
       \subsection{Method of Data Collection}
       \begin{itemize}[label=-]
-            \item Sub-question \#1:
-            \item Sub-question \#2:
-            \item Sub-question \#3:
-            \item Sub-question \#4:
+            \item Sub-question \#1: desk research of Literature Study will be conducted, with the goal of creating
+                  infrastructure information that displays the structure of the \acrshort{qaas} app and all of its
+                  dependencies. Furthermore, Interview with key stakeholders involved in the  development, maintenance,
+                  and usage of the \acrshort{qaas} app will be conducted to gain insights into the current situation
+                  of the app.
+            \item Sub-question \#2: Literature Study on various articles on the Internet, interviews, expert reviews,
+                  and requirement elicitation techniques such as use case analysis and user stories. Analysis on the
+                  current \acrshort{qaas} app and its \acrshort{api} monitoring capabilities.
+            \item Sub-question \#3: technical evaluations of SentinelOne's capabilities and \acrshort{api}s will
+                  be conducted, the \acrshort{api} documentation and integration guideline will be read and review
+                  with Literature Study method and case studies of similar integrations. Requirements from the
+                  cybersecurity experts from the \acrshort{qict} department responsible for SentinelOne's technical
+                  support will be gathered and analyzed. Furthermore, Prototyping with proof-of-concept prototypes
+                  on a test environment will be conducted to test different integration scenarios, assess feasibility,
+                  identify potential challenges, refine the approach, and evaluate the performance of the integration.
+            \item Sub-question \#4: research into existing visualization techniques for \acrshort{xml} and
+                  \acrshort{json} data, especially the data coming from SentinelOne \acrshort{api} through Literature
+                  Study. Analyze existing data visualization tools and platforms that are available in Flutter and
+                  Firebase. Gather requirements from project stakeholders regarding data visualization preferences and
+                  usability, and do data analysis and usability testing.
       \end{itemize}
       \subsection{Selected Measuring Instruments}
       \begin{itemize}[label=-]
-            \item Sub-question \#1:
-            \item Sub-question \#2:
-            \item Sub-question \#3:
+            \item Sub-question \#1: structured interview guide, document report checklist analysis and review,
+                  observation, analysis tools for codebase and logs, and quite possibly supplemented by surveys
+                  or questionnaires.
+            \item Sub-question \#2: document analysis tools for literature review. Structured questionnaires for
+                  requirement interviews regarding functionality rating scale and compare the response against
+                  industry standards and best practices. Observation of existing \acrshort{api} monitoring tools.
+                  Prioritize functionalities based on importance, feasibility, and impact on the \acrshort{qaas} app.
+            \item Sub-question \#3: technical assessments and requirement workshops will be conducted. Furthermore,
+                  \acrshort{api} documentation  review, document analysis tools, security impact risk assessment,
+                  and feasibility checklist assessment with the Company Supervisor will also be overseen.
             \item Sub-question \#4: the selected measuring instruments for this sub-question will be through
-                  observation and reading the studies of.
+                  observation of existing data visualization tools, literature review through reading the studies of
+                  the best visualization suitability matrix techniques, structured questionnaires to end-user
+                  interviews, and usability testing heuristics.
       \end{itemize}
       \subsection{Method of Data Analysis}
       \begin{itemize}[label=-]
-            \item Sub-question \#1:
-            \item Sub-question \#2:
-            \item Sub-question \#3:
-            \item Sub-question \#4:
+            \item Sub-question \#1: a qualitative thematic \acrshort{swot} analysis of interview transcripts
+                  and documentation for operational insights to identify strengths, weaknesses, and areas for
+                  improvement in the current situation of the \acrshort{qaas} app.
+            \item Sub-question \#2: comparative analyze survey/interview responses using \acrshort{mcda} and
+                  compare against industry standards and best practices. Prioritize functionalities based on
+                  importance, feasibility, and impact on the \acrshort{qaas} app.
+            \item Sub-question \#3: evaluate the technical feasibility, compactibility, and alignment of
+                  SentinelOne's features with the \acrshort{qaas} app environment. Analyze potential integration
+                  challenges and mitigation strategies, and assess the performance of the integration through
+                  prototyping and testing. Technical analysis for the \acrshort{api} documentation and
+                  thematic analysis for interview data.
+            \item Sub-question \#4: technical tool analysis by reviewing and evaluating the suitability of different
+                  visualization techniques for representing the data processed and received by the \acrshort{qaas}
+                  app in \acrshort{xml} and \acrshort{json} formats from the \acrshort{api} considering factors such
+                  as clarity, interpretability, and user engagement. Do a user-centered design and cognitive load
+                  analysis by analyzing feedback from company stakeholders, supervisor, and end-users.
       \end{itemize}
       \subsection{Reliability, Validity, and General Applicability}
       \begin{itemize}[label=-]
-            \item Sub-question \#1:
-            \item Sub-question \#2:
-            \item Sub-question \#3:
-            \item Sub-question \#4:
+            \item Sub-question \#1: the reliability of the data can be ensured by triangulation of data from
+                  multiple sources and conducting interviews with stakeholders from different departments with
+                  structure questionnaires to ensure that the data is consistent and accurate. The validity of
+                  the data will be ensured by  cross-referencing with the existing literature or industry best
+                  practices or other sources and  through information obtained from  interviews with the
+                  \acrshort{qaas} app developers to ensure  that the data is accurate and reliable. The general
+                  applicability of the data will be ensured by  ensuring that the information obtained is relevant
+                  and applicable to the research question and  that it can be used to draw meaningful conclusions
+                  and make informed decisions, furthermore by comparing findings with industry standards and best
+                  practices or similar case studies or projects.
+            \item Sub-question \#2: ensure reliability through sampling techniques and representative stakeholder
+                  involvement, with comprehensive literature review and multiple sources of information. Validate
+                  priorities against real-world scenarios or case studies involving diverse expert panel, like 
+                  the Company Supervisor. General applicability can be assessed by comparing prioritization with 
+                  similar projects or frameworks, and considering scalability and adaptability of the integration
+                  with representative user samples.
+            \item Sub-question \#3: the validity of this sub-question will be through pilot integration unit testing
+                  or proof of concept documents, and ensuring alignment with cybersecurity standards and best
+                  practices. The reliability will be to consider future needs such as adaptability and scalability of
+                  the integration, and focus on \acrshort{qict} user context and needs. General applicability can be
+                  assessed by comparing integration strategies with industry standards or expert opinions such as from
+                  the Company Supervisor.
+            \item Sub-question \#4: reliability can be defined by ensuring future adaptability with comprehensive
+                  literature review and multiple sources of information. Validity can be achieved through validating
+                  visualization choices through data-driven approach in usability testing or  prototyping, ensuring
+                  alignment with best practices in data visualization and involving the expert, like the Company
+                  Supervisor on the field. General applicability can be assessed by accessibility considerations by
+                  comparing proposed visualization techniques with similar applications or domains.
       \end{itemize}
-      \section{Research Question \#1}
+      \section{Research Sub-Question \#1}
       The \acrshort{qaas} app is a web application that is used by \acrshort{qict}. It is in Dart with Flutter as
       the front-end framework.
 
@@ -141,7 +202,7 @@
                   store information related to \acrshort{qict}'s current and potential customers.
             \item Computicate:
       \end{itemize}
-      \section{Research Question \#2}
-      \section{Research Question \#3}
-      \section{Research Question \#4}
+      \section{Research Sub-Question \#2}
+      \section{Research Sub-Question \#3}
+      \section{Research Sub-Question \#4}
 \end{multicols}

@@ -1,2 +1,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QThesis NHL Stenden University of Applied Sciences\\E$"}
 {"rule":"PRP_VB","sentence":"^\\QWith the proliferation of sophisticated cyber threats and the increasing complexity of it infrastructures, business are constantly seeking new and innovative ways to protect their digital assets and fortify their defences and safeguard sensitive data.\\E$"}
+{"rule":"PRP_VB","sentence":"^\\QInadequate security measures, as the company risks inconsistent data retrieval and analysis across its apis, potentially leading to incomplete insights into client it systems and infrastructure.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QSoftware Development Department: it addresses qict clients needs by creating custom software solutions tailored to their specific requirements.\\E$"}

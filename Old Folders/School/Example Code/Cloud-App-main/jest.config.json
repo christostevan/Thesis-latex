@@ -1,0 +1,23 @@
+{
+    "roots": ["."],
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+        "^.+\\.tsx?$": "babel-jest",
+        "^.+\\.ts?$": "ts-jest"
+    },
+    "testRegex": "tests/.*\\.test\\.ts?$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "moduleNameMapper": {
+        "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "modulePathIgnorePatterns": [
+        "<rootDir>/dist/",
+        "<rootDir>/node_modules/"
+    ],
+    "transformIgnorePatterns": [
+        "C:\\\\Users\\\\WackyMachine\\\\Documents\\\\GitHub\\\\Cloud-App\\\\tests\\\\weatherAlarm\\.test\\.ts"
+    ],
+    "extensionsToTreatAsEsm": [".ts"]
+}
+

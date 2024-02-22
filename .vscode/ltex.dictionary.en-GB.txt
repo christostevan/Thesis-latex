@@ -6,3 +6,6 @@ Algolia
 PerfectView
 SnelStart
 Resello
+analyzed
+centered
+user-centered

@@ -1,0 +1,2817 @@
+{
+	"cen_m61_v1": {
+		"batch": {
+			"rows": {
+				"batchId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetN": {
+					"type": "integer",
+					"length": 19,
+					"default": null,
+					"allowNull": true
+				},
+				"creatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"isExported": {
+					"type": "integer",
+					"length": 3
+				},
+				"isFinished": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"nRequestedBags": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"operatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"orderN": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"customFields": {
+					"type": "string",
+					"length": 16383,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"databaseinfo": {
+			"rows": {
+				"dbVersion": {
+					"type": "string",
+					"length": 6,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"revision": {
+					"type": "string",
+					"length": 5,
+					"collation": "latin1_swedish_ci"
+				},
+				"releaseDate": {
+					"type": "string",
+					"format": "date"
+				}
+			}
+		},
+		"error": {
+			"rows": {
+				"errorId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"errorDescriptionId": {
+					"type": "string",
+					"length": 4,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"allowNull": true,
+					"default": null,
+					"foreignKey": true
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"allowNull": true,
+					"default": null,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"errordescription": {
+			"rows": {
+				"errorDescriptionId": {
+					"type": "string",
+					"length": 4,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"description": {
+					"type": "string",
+					"length": 500,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"enum": true,
+					"object": [
+						"E",
+						"M"
+					],
+					"default": "E",
+					"collation": "latin1_swedish_ci"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"allowNull": true,
+					"default": null
+				}
+			}
+		},
+		"machine": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"default": "NO_DEF",
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"lastSync": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"softwareRev": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"machineType": {
+					"type": "string",
+					"length": 30,
+					"default": "Weigher",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"machineactivity": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"startDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"activityType": {
+					"enum": true,
+					"object": [
+						"Testing",
+						"Production"
+					],
+					"default": "Production",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time"
+				}
+			}
+		},
+		"pd_bagger": {
+			"rows": {
+				"baggerN": {
+					"type": "integer",
+					"primaryKey": true,
+					"length": 10
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true,
+					"foreignKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"bagCounter": {
+					"type": "integer",
+					"length": 10
+				},
+				"delay": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"preset": {
+			"rows": {
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true
+				},
+				"name": {
+					"type": "string",
+					"length": 64
+				},
+				"presetN": {
+					"type": "integer",
+					"length": 10
+				},
+				"targetWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"rawData": {
+					"type": "string",
+					"length": 16383
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp"
+				}
+			}
+		},
+		"productiondata": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"foreignKey": true
+				},
+				"batchId": {
+					"type": "string",
+					"length": 19,
+					"foreignKey": true,
+					"allowNull": true,
+					"default": null
+				},
+				"allowedDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDumps": {
+					"type": "integer",
+					"length": 10
+				},
+				"tDumpedWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"feedDelay": {
+					"type": "integer",
+					"length": 10
+				},
+				"minDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nMaxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nWaitForMoreScales": {
+					"type": "integer",
+					"length": 10
+				},
+				"totalCounter": {
+					"type": "integer",
+					"length": 19
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"synctable": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"test": {
+			"rows": {
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"primaryKey": true
+				},
+				"shortDescription": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"longDescription": {
+					"type": "string",
+					"length": 16383,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"testresult": {
+			"rows": {
+				"resultId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"foreignKey": true
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"avgDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"weighingunit": {
+			"rows": {
+				"unitId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "integer",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"nScaleBadComb": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleNotEmpty": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleUsed": {
+					"type": "string",
+					"length": 45,
+					"collation": "latin1_swedish_ci"
+				},
+				"scaleMin": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleMax": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleN": {
+					"type": "integer",
+					"length": 3
+				},
+				"state": {
+					"enum": true,
+					"object": [
+						"active",
+						"innactive"
+					],
+					"default": "inactive",
+					"collation": "latin1_swedish_ci"
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		}
+	},
+	"cen_m61_v1t": {
+		"batch": {
+			"rows": {
+				"batchId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetN": {
+					"type": "integer",
+					"length": 19,
+					"default": null,
+					"allowNull": true
+				},
+				"creatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"isExported": {
+					"type": "integer",
+					"length": 3
+				},
+				"isFinished": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"nRequestedBags": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"operatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"orderN": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"customFields": {
+					"type": "string",
+					"length": 16383,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"databaseinfo": {
+			"rows": {
+				"dbVersion": {
+					"type": "string",
+					"length": 6,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"revision": {
+					"type": "string",
+					"length": 5,
+					"collation": "latin1_swedish_ci"
+				},
+				"releaseDate": {
+					"type": "string",
+					"format": "date"
+				}
+			}
+		},
+		"error": {
+			"rows": {
+				"errorId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"errorDescriptionId": {
+					"type": "string",
+					"length": 4,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"allowNull": true,
+					"default": null,
+					"foreignKey": true
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"allowNull": true,
+					"default": null,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"errordescription": {
+			"rows": {
+				"errorDescriptionId": {
+					"type": "string",
+					"length": 4,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"description": {
+					"type": "string",
+					"length": 500,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"enum": true,
+					"object": [
+						"E",
+						"M"
+					],
+					"default": "E",
+					"collation": "latin1_swedish_ci"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"allowNull": true,
+					"default": null
+				}
+			}
+		},
+		"machine": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"default": "NO_DEF",
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"lastSync": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"softwareRev": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"machineType": {
+					"type": "string",
+					"length": 30,
+					"default": "Weigher",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"machineactivity": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"startDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"activityType": {
+					"enum": true,
+					"object": [
+						"Testing",
+						"Production"
+					],
+					"default": "Production",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time"
+				}
+			}
+		},
+		"pd_bagger": {
+			"rows": {
+				"baggerN": {
+					"type": "integer",
+					"primaryKey": true,
+					"length": 10
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true,
+					"foreignKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"bagCounter": {
+					"type": "integer",
+					"length": 10
+				},
+				"delay": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"preset": {
+			"rows": {
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true
+				},
+				"name": {
+					"type": "string",
+					"length": 64
+				},
+				"presetN": {
+					"type": "integer",
+					"length": 10
+				},
+				"targetWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"rawData": {
+					"type": "string",
+					"length": 16383
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp"
+				}
+			}
+		},
+		"productiondata": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"foreignKey": true
+				},
+				"batchId": {
+					"type": "string",
+					"length": 19,
+					"foreignKey": true,
+					"allowNull": true,
+					"default": null
+				},
+				"allowedDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDumps": {
+					"type": "integer",
+					"length": 10
+				},
+				"tDumpedWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"feedDelay": {
+					"type": "integer",
+					"length": 10
+				},
+				"minDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nMaxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nWaitForMoreScales": {
+					"type": "integer",
+					"length": 10
+				},
+				"totalCounter": {
+					"type": "integer",
+					"length": 19
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"synctable": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"test": {
+			"rows": {
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"primaryKey": true
+				},
+				"shortDescription": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"longDescription": {
+					"type": "string",
+					"length": 16383,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"testresult": {
+			"rows": {
+				"resultId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"foreignKey": true
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"avgDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"weighingunit": {
+			"rows": {
+				"unitId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "integer",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"nScaleBadComb": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleNotEmpty": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleUsed": {
+					"type": "string",
+					"length": 45,
+					"collation": "latin1_swedish_ci"
+				},
+				"scaleMin": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleMax": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleN": {
+					"type": "integer",
+					"length": 3
+				},
+				"state": {
+					"enum": true,
+					"object": [
+						"active",
+						"innactive"
+					],
+					"default": "inactive",
+					"collation": "latin1_swedish_ci"
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		}
+	},
+	"cen_m70_v1": {
+		"batch": {
+			"rows": {
+				"batchId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"creatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"isExported": {
+					"type": "integer",
+					"length": 3
+				},
+				"isFinished": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"nRequestedBags": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"operatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"orderN": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"customFields": {
+					"type": "string",
+					"length": 16383,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"component": {
+			"rows": {
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"primaryKey": true,
+					"comment": "Unique part identifier for the certain machine. Nr of the component"
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"primaryKey": true,
+					"comment": "The type of part it represents, weigher, bucket, vibration lane, etc. We chose a VARCHAR type because of the dynamic change in components, thus we cannot use ENUM(). Since the impact is rather small of dubble data for now there will no be normalization performed for this field.",
+					"collation": "latin1_swedish_ci"
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"nCycles": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"databaseinfo": {
+			"rows": {
+				"dbVersion": {
+					"type": "string",
+					"length": 10,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"revision": {
+					"type": "string",
+					"length": 5,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"releaseDate": {
+					"type": "string",
+					"format": "date"
+				}
+			}
+		},
+		"error": {
+			"rows": {
+				"errorId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"eCode": {
+					"type": "string",
+					"length": 10,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"function": {
+					"type": "string",
+					"length": 40,
+					"collation": "latin1_swedish_ci"
+				},
+				"line": {
+					"type": "integer",
+					"length": 10
+				},
+				"hasReset": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"description": {
+					"type": "string",
+					"length": 200,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"type": "integer",
+					"length": 10
+				},
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"allowNull": true,
+					"default": null
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"errordescription": {
+			"rows": {
+				"eCode": {
+					"type": "integer",
+					"length": 10,
+					"primaryKey": true
+				},
+				"description": {
+					"type": "string",
+					"length": 500,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"type": "integer",
+					"length": 10
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp",
+					"allowNull": true
+				}
+			}
+		},
+		"machine": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"default": "NO_DEF",
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"lastSync": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"machineType": {
+					"type": "string",
+					"length": 30,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"modelVersion": {
+					"type": "string",
+					"length": 30,
+					"default": "-",
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"ctrlVersion": {
+					"type": "string",
+					"length": 30,
+					"default": "-",
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": true,
+					"allowNull": true
+				}
+			}
+		},
+		"machineactivity": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityType": {
+					"enum": true,
+					"object": [
+						"Testing",
+						"Production"
+					],
+					"default": "Production",
+					"comment": "IMPLEMENT ENUM HERE WITH THE AVAILABLE ACTIVITY TYPES.",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"pd_bagger": {
+			"rows": {
+				"baggerN": {
+					"type": "integer",
+					"primaryKey": true,
+					"length": 10
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true,
+					"foreignKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"bagCounter": {
+					"type": "integer",
+					"length": 10
+				},
+				"delay": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"pd_dumpedweight": {
+			"dumpedWeightId": {
+				"type": "integer",
+				"length": 19,
+				"auto-increment": true,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"dumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"pd_mix": {
+			"mixN": {
+				"type": "integer",
+				"length": 3,
+				"primaryKey": true
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"totalDumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"pd_mixeddumpedweight": {
+			"mixDumpeWeightId": {
+				"type": "integer",
+				"length": 19,
+				"auto-increment": true,
+				"primaryKey": true
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"mixN": {
+				"type": "integer",
+				"length": 3,
+				"foreignKey": true
+			},
+			"dumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"preset": {
+			"rows": {
+				"presetHash": {
+					"type": "string",
+					"length": 64,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"name": {
+					"type": "string",
+					"length": 64,
+					"collation": "latin1_swedish_ci"
+				},
+				"targetWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"rawData": {
+					"type": "string",
+					"length": 32768,
+					"collation": "latin1_swedish_ci"
+				},
+				"isDeleted": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"productiondata": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 64,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"batchId": {
+					"type": "string",
+					"length": 19,
+					"foreignKey": true,
+					"allowNull": true,
+					"default": null
+				},
+				"allowedDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDumps": {
+					"type": "integer",
+					"length": 10
+				},
+				"tDumpedWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"feedDelay": {
+					"type": "integer",
+					"length": 10
+				},
+				"minDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nMaxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nWaitForMoreScales": {
+					"type": "integer",
+					"length": 10
+				},
+				"totalCounter": {
+					"type": "integer",
+					"length": 19
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"service": {
+			"serviceId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"serviceAgent": {
+				"type": "integer",
+				"length": 10,
+				"foreignKey": true,
+				"default": null,
+				"allowNull": true,
+				"comment": "The ID of the service agent which performed operations upon the machine's parts."
+			},
+			"serviceDescription": {
+				"type": "string",
+				"length": 500,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"serviceagents": {
+			"agentId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true,
+				"comment": "Available Agent ID's."
+			},
+			"firstname": {
+				"type": "string",
+				"length": 30,
+				"collation": "latin1_swedish_ci"
+			},
+			"surname": {
+				"type": "string",
+				"length": 30,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			},
+			"updatedAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": null,
+				"allowNull": true
+			}
+		},
+		"servicecomponent": {
+			"serviceId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"compN": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"compType": {
+				"type": "string",
+				"length": 30,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"synctable": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				},
+				"ErrorDescription": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"ServiceAgents": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"Test": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"test": {
+			"rows": {
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"primaryKey": true
+				},
+				"shortDescription": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"longDescription": {
+					"type": "string",
+					"length": 16383,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"testresult": {
+			"rows": {
+				"resultId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"foreignKey": true
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"avgDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"weighingunit": {
+			"rows": {
+				"unitId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "integer",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"nScaleBadComb": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleNotEmpty": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleUsed": {
+					"type": "string",
+					"length": 45,
+					"collation": "latin1_swedish_ci"
+				},
+				"scaleMin": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleMax": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleN": {
+					"type": "integer",
+					"length": 3
+				},
+				"state": {
+					"enum": true,
+					"object": [
+						"active",
+						"innactive"
+					],
+					"default": "inactive",
+					"collation": "latin1_swedish_ci"
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		}
+	},
+	"cen_m70_v1t": {
+		"batch": {
+			"rows": {
+				"batchId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 32,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"creatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"isExported": {
+					"type": "integer",
+					"length": 3
+				},
+				"isFinished": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"nRequestedBags": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"operatorId": {
+					"type": "integer",
+					"length": 10,
+					"default": null,
+					"allowNull": true
+				},
+				"orderN": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"customFields": {
+					"type": "string",
+					"length": 16383,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"component": {
+			"rows": {
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"primaryKey": true,
+					"comment": "Unique part identifier for the certain machine. Nr of the component"
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"primaryKey": true,
+					"comment": "The type of part it represents, weigher, bucket, vibration lane, etc. We chose a VARCHAR type because of the dynamic change in components, thus we cannot use ENUM(). Since the impact is rather small of dubble data for now there will no be normalization performed for this field.",
+					"collation": "latin1_swedish_ci"
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"nCycles": {
+					"type": "integer",
+					"length": 10,
+					"default": 0
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"databaseinfo": {
+			"rows": {
+				"dbVersion": {
+					"type": "string",
+					"length": 10,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"revision": {
+					"type": "string",
+					"length": 5,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"releaseDate": {
+					"type": "string",
+					"format": "date"
+				}
+			}
+		},
+		"error": {
+			"rows": {
+				"errorId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"eCode": {
+					"type": "string",
+					"length": 10,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"function": {
+					"type": "string",
+					"length": 40,
+					"collation": "latin1_swedish_ci"
+				},
+				"line": {
+					"type": "integer",
+					"length": 10
+				},
+				"hasReset": {
+					"type": "integer",
+					"length": 3,
+					"default": 0
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"description": {
+					"type": "string",
+					"length": 200,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"type": "integer",
+					"length": 10
+				},
+				"compN": {
+					"type": "integer",
+					"length": 10,
+					"allowNull": true,
+					"default": null
+				},
+				"compType": {
+					"type": "string",
+					"length": 30,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				}
+			}
+		},
+		"errordescription": {
+			"rows": {
+				"eCode": {
+					"type": "integer",
+					"length": 10,
+					"primaryKey": true
+				},
+				"description": {
+					"type": "string",
+					"length": 500,
+					"collation": "latin1_swedish_ci"
+				},
+				"severity": {
+					"type": "integer",
+					"length": 10
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp",
+					"allowNull": true
+				}
+			}
+		},
+		"machine": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"default": "NO_DEF",
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"lastSync": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"machineType": {
+					"type": "string",
+					"length": 30,
+					"default": null,
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"modelVersion": {
+					"type": "string",
+					"length": 30,
+					"default": "-",
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"ctrlVersion": {
+					"type": "string",
+					"length": 30,
+					"default": "-",
+					"allowNull": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": true,
+					"allowNull": true
+				}
+			}
+		},
+		"machineactivity": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityType": {
+					"enum": true,
+					"object": [
+						"Testing",
+						"Production"
+					],
+					"default": "Production",
+					"comment": "IMPLEMENT ENUM HERE WITH THE AVAILABLE ACTIVITY TYPES.",
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"pd_bagger": {
+			"rows": {
+				"baggerN": {
+					"type": "integer",
+					"primaryKey": true,
+					"length": 10
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true,
+					"foreignKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"bagCounter": {
+					"type": "integer",
+					"length": 10
+				},
+				"delay": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"pd_dumpedweight": {
+			"dumpedWeightId": {
+				"type": "integer",
+				"length": 19,
+				"auto-increment": true,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"dumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"pd_mix": {
+			"mixN": {
+				"type": "integer",
+				"length": 3,
+				"primaryKey": true
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"totalDumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"pd_mixeddumpedweight": {
+			"mixDumpeWeightId": {
+				"type": "integer",
+				"length": 19,
+				"auto-increment": true,
+				"primaryKey": true
+			},
+			"activityId": {
+				"type": "integer",
+				"length": 19,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"mixN": {
+				"type": "integer",
+				"length": 3,
+				"foreignKey": true
+			},
+			"dumpedWeight": {
+				"type": "integer",
+				"length": 10
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"preset": {
+			"rows": {
+				"presetHash": {
+					"type": "string",
+					"length": 64,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"name": {
+					"type": "string",
+					"length": 64,
+					"collation": "latin1_swedish_ci"
+				},
+				"targetWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"rawData": {
+					"type": "string",
+					"length": 32768,
+					"collation": "latin1_swedish_ci"
+				},
+				"isDeleted": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"productiondata": {
+			"rows": {
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"presetHash": {
+					"type": "string",
+					"length": 64,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"batchId": {
+					"type": "string",
+					"length": 19,
+					"foreignKey": true,
+					"allowNull": true,
+					"default": null
+				},
+				"allowedDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDumps": {
+					"type": "integer",
+					"length": 10
+				},
+				"tDumpedWeight": {
+					"type": "integer",
+					"length": 10
+				},
+				"feedDelay": {
+					"type": "integer",
+					"length": 10
+				},
+				"minDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nMaxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"nWaitForMoreScales": {
+					"type": "integer",
+					"length": 10
+				},
+				"totalCounter": {
+					"type": "integer",
+					"length": 19
+				},
+				"userId": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"service": {
+			"serviceId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"serviceAgent": {
+				"type": "integer",
+				"length": 10,
+				"foreignKey": true,
+				"default": null,
+				"allowNull": true,
+				"comment": "The ID of the service agent which performed operations upon the machine's parts."
+			},
+			"serviceDescription": {
+				"type": "string",
+				"length": 500,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"serviceagents": {
+			"agentId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true,
+				"comment": "Available Agent ID's."
+			},
+			"firstname": {
+				"type": "string",
+				"length": 30,
+				"collation": "latin1_swedish_ci"
+			},
+			"surname": {
+				"type": "string",
+				"length": 30,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			},
+			"updatedAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": null,
+				"allowNull": true
+			}
+		},
+		"servicecomponent": {
+			"serviceId": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true
+			},
+			"machineId": {
+				"type": "string",
+				"length": 8,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"compN": {
+				"type": "integer",
+				"length": 10,
+				"primaryKey": true,
+				"foreignKey": true
+			},
+			"compType": {
+				"type": "string",
+				"length": 30,
+				"primaryKey": true,
+				"foreignKey": true,
+				"collation": "latin1_swedish_ci"
+			},
+			"createdAt": {
+				"type": "string",
+				"format": "time-stamp",
+				"default": "current_timestamp"
+			}
+		},
+		"synctable": {
+			"rows": {
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"allowNull": true,
+					"default": null,
+					"collation": "latin1_swedish_ci"
+				},
+				"ErrorDescription": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"ServiceAgents": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				},
+				"Test": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"test": {
+			"rows": {
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"primaryKey": true
+				},
+				"shortDescription": {
+					"type": "string",
+					"length": 20,
+					"collation": "latin1_swedish_ci"
+				},
+				"longDescription": {
+					"type": "string",
+					"length": 16383,
+					"collation": "latin1_swedish_ci"
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": null,
+					"allowNull": true
+				}
+			}
+		},
+		"testresult": {
+			"rows": {
+				"resultId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"machineId": {
+					"type": "string",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"testId": {
+					"type": "integer",
+					"length": 3,
+					"foreignKey": true
+				},
+				"maxDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"avgDiff": {
+					"type": "integer",
+					"length": 10
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		},
+		"weighingunit": {
+			"rows": {
+				"unitId": {
+					"type": "integer",
+					"length": 19,
+					"auto-increment": true,
+					"primaryKey": true
+				},
+				"machineId": {
+					"type": "integer",
+					"length": 8,
+					"primaryKey": true,
+					"foreignKey": true,
+					"collation": "latin1_swedish_ci"
+				},
+				"activityId": {
+					"type": "integer",
+					"length": 19,
+					"foreignKey": true
+				},
+				"nScaleBadComb": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleDiffs": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleNotEmpty": {
+					"type": "integer",
+					"length": 10
+				},
+				"nScaleUsed": {
+					"type": "string",
+					"length": 45,
+					"collation": "latin1_swedish_ci"
+				},
+				"scaleMin": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleMax": {
+					"type": "integer",
+					"length": 10
+				},
+				"scaleN": {
+					"type": "integer",
+					"length": 3
+				},
+				"state": {
+					"enum": true,
+					"object": [
+						"active",
+						"innactive"
+					],
+					"default": "inactive",
+					"collation": "latin1_swedish_ci"
+				},
+				"testN": {
+					"type": "integer",
+					"length": 19
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "time-stamp",
+					"default": "current_timestamp"
+				}
+			}
+		}
+	},
+	"cen_users": {
+		"user": {
+			"id": {
+				"type": "integer",
+				"length": 10
+			},
+			"firstname": {
+				"type": "string",
+				"length": 25,
+				"collation": "utf8mb4_general_ci"
+			},
+			"lastname": {
+				"type": "string",
+				"length": 99,
+				"collation": "utf8mb4_general_ci"
+			},
+			"email": {
+				"type": "string",
+				"length": 255,
+				"collation": "utf8mb4_general_ci"
+			}, 
+			"password": {	
+				"type": "string",
+				"length": 255,
+				"collation": "utf8mb4_general_ci"
+			},
+			"rank": {
+				"enum": true,
+				"object": ["MANTER","DEALER","CUSTOMER"]
+			},
+			"company": {
+				"type": "string",
+				"length": 99,
+				"collation": "utf8mb4_general_ci"
+			},
+			"delaer_id": {
+				"type": "integer",
+				"length": 10,
+				"default": null,
+				"allowNull": true
+			}
+		}
+	}
+}

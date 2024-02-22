@@ -1,0 +1,11 @@
+What Microsoft subscription does the company already have? (Enterprise Agreement, Office 365 enterprise
+Pay-as-you-go, 3 months
+
+What components of the Firebase does the company use?
+Firestore data, cloud functions back-end code, authentication, cloud storage,
+SecretManager: API keys, Alternative = keyVault
+Extensions: Algolia (search engine), search queries in Firebase is not that good. Indexes our database and make copy, 10,000 reads per month 1 euro per each thousand
+Pay-as-you-go, 15.39 euros per month test and live environment, making backup for the database. 50GB with backup includes, Device table is very big, roughly 400 devices every customers
+
+Firebase?
+Other ppl who I havent seen. 

@@ -1,0 +1,16 @@
+We are currently utilizing Firebase and Flutter for most of our application development. 
+However, we are intrigued to explore the potential of using the Azure cloud platform into our future projects.
+We also have the problem that we do not have a default project which we can build up on when approaching a potential new customer. 
+This default project could be a proof of concept in case Azure cloud platform is something for us. 
+If not, this still could be made with Flutter and Firebase. By a default project we want something like 
+
+•	A standardized login system with two-step authentication.
+•	Predefined tables that can support potential customers in their work, including features like sorting columns, search functionality
+, and data presentation.
+•	Default user management, including user role management.
+•	Page route management.
+•	Standard responsive design.
+•	A standardized method for importing third-party data using APIs.
+•	A secure approach to storing API keys.
+Additionally, it would be valuable to implement unit testing in this standard project and integrate it with Azure DevOps, 
+which we have recently started using.

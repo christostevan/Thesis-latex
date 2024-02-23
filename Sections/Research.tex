@@ -125,7 +125,7 @@
                   comparing proposed visualization techniques with similar applications or domains.
       \end{itemize}
       \section{Research Sub-Question \#1}
-      The \acrshort{qaas} app is a web application that is used by \acrshort{qict}. It is in Dart with Flutter as
+      The \acrshort{qaas} app is a web application that is used by \acrshort{qict}. It is made in Dart with Flutter as
       the front-end framework.
 
       \subsection{QaaS App Infrastructure}
@@ -140,20 +140,56 @@
       Firebase is a comprehensive platform for developing and managing web and mobile applications, created by
       Google and is party of \acrshort{gcp}. It was originally an independent company founded by Firebase, Inc.
       in 2011. It was then acquired by Google in 2014. Since then, it has become an integral part of Google's
-      broader ecosystem of cloud services.
+      broader ecosystem of cloud services (\cite{firebase}).
 
       Firebase is a \acrshort{baas} that provides developers with a variety of tools and services to help with both
       back-end infrastructure and front-end capabilities without worrying about managing servers or infrastructures.
+      The services offered by Firebase including (\cite{firebaseproducts})
       \begin{itemize}
-            \item Firestore Database: Firestore is a NoSQL database that is part of the Firebase platform. It is a
-                  flexible, scalable database for mobile, web, and server development. It keeps data in sync across
-                  client apps through real-time listeners and offers offline support for mobile and web, so the
-                  developers can build responsive apps that work regardless of network latency or Internet
-                  connectivity.
-            \item Authentication
-            \item Functions
-            \item Hosting
-            \item Real-time database:
+            \item Database: 
+            \begin{itemize}
+                  \item Firestore Database: Firestore is a No\acrshort{sql} database that is part of the Firebase 
+                  platform. It is a flexible, scalable database for mobile, web, and server development. It keeps 
+                  data in sync across client apps through real-time listeners and offers offline support for mobile 
+                  and web, so the developers can build responsive apps that work regardless of network latency or 
+                  Internet connectivity.
+                  \item Real-time database:
+            \end{itemize}
+            \item Authentication: is an easy-to-understand authentication services that support various authentication
+                  methods like email/password, phone number, with identity providers such as Google, Facebook, Twitter,
+                  Apple, GitHub, \acrshort{etc}
+                  along with utilizing \acrshort{2fa} authentication factors to enhance security by requiring additional
+                  factor, such as an \acrshort{otp} code that is sent to the user's phone or security key.
+            \item Cloud Functions: often just called Functions in the Firebase console, it allows developers to run 
+                  back-end code in response to events triggered by Firebase features and \acrshort{https} requests. 
+                  The code is stored in Google's cloud and runs in a managed environment. It is a serverless framework
+                  that allows developers to build and deploy serverless functions that automatically scale up and down
+                  based on demand. The available programming languages are Node.js (JavaScript and TypeScript), Python, Go, 
+                  Java, and .NET (C\#).
+            \item Hosting: a service that allows developers to host static websites, dynamic web apps, mobile apps, and 
+                  microservices on Firebase's infrastructure. The \acrshort{qaas} app is currently hosted on Firebase 
+                  Hosting. 
+            \item Cloud Messaging/\acrshort{fcm}: allows developers to send push notification and targeted messages to a 
+                  client app that new email or other data is available to sync, or send notification messages to drive app 
+                  interaction, adding more user re-engagement and retention. It is a cross-platform messaging solution that lets 
+                  developers reliably deliver messages at no cost.
+            \item Cloud Storage: offers a secure, scalable, and reliable file storage and sharing for Firebase apps. 
+                  It is designed to help developers quickly and easily store and serve user-generated content, such as 
+                  photos or videos.
+            \item Remote Config: allows developers to dynamically control and the change behaviour and appearance of their apps 
+                  without publishing app updates and requiring users to download them. 
+            \item Performance Monitoring
+            \item Analytics: provides free and unlimited analytics solutions for understanding app usage, user engagement and 
+                  user behaviour by tracking event logging, user demographics, and funnel analysis to gain valuable insights to 
+                  improve the app.
+            \item Crashlytics: is a lightweight, real-time crash and error reporter that helps developers track, prioritize, 
+                  and fix stability issues that erode to the quality of the developer's app. 
+            \item Test Lab: enables automated testing of the developer's app on real devices in the Google data center. 
+            \item Dynamic Links: consist of deep links that dynamically route users to the content they are interested in, 
+                  across platforms and devices. It helps developers create and share links that work the way they want, on the 
+                  platform they want, and whether users have their apps installed. 
+            \item \acrshort{ml} Kit: provides a set of \acrshort{ml} \acrshort{api}s that can be easily integrated developer's app.
+                  This feature is still in beta testing.
       \end{itemize}
 
       \textbf{Algolia}
@@ -200,7 +236,6 @@
                   recovery, and network topology mapping.
             \item PerfectView: is a \gls{CRM} application from a Dutch company designed to help manage, track, and
                   store information related to \acrshort{qict}'s current and potential customers.
-            \item Computicate:
       \end{itemize}
       \section{Research Sub-Question \#2}
       \section{Research Sub-Question \#3}

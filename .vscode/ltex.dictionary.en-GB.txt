@@ -9,3 +9,6 @@ Resello
 analyzed
 centered
 user-centered
+Crashlytics
+Computicate
+center

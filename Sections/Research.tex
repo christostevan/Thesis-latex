@@ -129,14 +129,13 @@
       the front-end framework.
 
       \subsection{QaaS App Infrastructure}
-      \textbf{Flutter}
-
+      \subsubsection{Flutter}
       Flutter is an open-source framework made by Google in 2017. It used as an \acrshort{ui} toolkit for building
       natively compiled applications for mobile, web, and desktop (Windows, mac\acrshort{os}, Linux) from a single
       codebase (\cite{flutter}).
 
-      \textbf{Firebase}
-
+      \subsubsection{Cloud}
+      \subsubsection{Firebase}
       Firebase is a comprehensive platform for developing and managing web and mobile applications, created by
       Google and is party of \acrshort{gcp}. It was originally an independent company founded by Firebase, Inc.
       in 2011. It was then acquired by Google in 2014. Since then, it has become an integral part of Google's
@@ -146,7 +145,7 @@
       back-end infrastructure and front-end capabilities without worrying about managing servers or infrastructures.
       The services offered by Firebase including (\cite{firebaseproducts})
       \begin{itemize}
-            \item Database: 
+            \item Databases: 
             \begin{itemize}
                   \item Firestore Database: Firestore is a No\acrshort{sql} database that is part of the Firebase 
                   platform. It is a flexible, scalable database for mobile, web, and server development. It keeps 
@@ -206,9 +205,18 @@
       \textbf{NoSQL Database}
 
       \subsection{Q-ICT Internal APIs}
+      \subsubsection{What is an API?}
+
+      \subsubsection{Types of APIs}\label{chap:typesofapis}
+      \subsubsection{SOAP API}
+      \subsubsection{REST API}
+      \subsubsection{HTTP API}
+      This type of \acrshort{api} can be very simiar to \acrshort{rest} \acrshort{api}
+      \subsubsection{GraphQL API}
+
       Those \acrshort{api}s are the following:
       \begin{itemize}
-            \item Resello: is used for \acrshort{qict} Microsoft subscriptions owned by Pax8. It is a cloud
+            \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8. It is a cloud
                   marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions through
                   automation. It provides a single platform to manage the entire cloud customer lifecycle, from
                   quote to cash to support, thus simplifying the process of buying, selling and managing cloud
@@ -217,19 +225,12 @@
                   such as managing invoices, etc., for \acrshort{sme}s. It offers a range of products and services
                   to help businesses manage their finances, including accounting software, invoicing software, and
                   financial management tools.
-            \item SentinelOne: is a cybersecurity platform that provides endpoint protection, detection, and
-                  response capabilities to help organizations defend against advanced cyber threats. It leverages
-                  \acrlong{ai} and machine learning to analyze and respond to security threats in real-time,
-                  providing organizations with comprehensive protection against malware, ransomware, and other
-                  cyber threats. It also provides visibility into clients' \acrshort{it} systems and infrastructure,
-                  enabling organizations to gain insights into potential security risks and vulnerabilities and take
-                  proactive measures to address them.
             \item Bodyguard.io: is used for security tab. It is a product from a Dutch company that filters and
                   scrutinizes downloads from web browsers to detect and prevent malicious files with real-time
                   download scanning capabilities.
             \item N-Central: is a product from N-Able and is used for monitoring clients' devices and ensuring the
                   overall security of their systems, \acrshort{it} infrastructure, and digital assets. It is a
-                  \acrshort{rrm} platform designed to help \acrshort{msp} and \acrshort{it} professionals to
+                  \gls{RMM} platform designed to help \acrshort{msp} and \acrshort{it} professionals to
                   remotely monitor and manage their clients' devices and networks. It provides a comprehensive
                   set of tools and features for monitoring, managing, and securing clients' devices and networks,
                   including remote monitoring and management, patch management, antivirus, backup and disaster
@@ -238,6 +239,35 @@
                   store information related to \acrshort{qict}'s current and potential customers.
       \end{itemize}
       \section{Research Sub-Question \#2}
+      \subsection{What is API Monitoring?}
+      \acrshort{api} monitoring is the process of gathering, visualizing, tracking, analyzing, and alerting on the 
+      performance, availability, and the \acrshort{api} telemetry data to ensure that \acrshort{api} requests are 
+      handled as expected. 
+      \subsection{How Does API Monitoring Work?}
+      \acrshort{api} monitoring automatically checks \acrshort{api} performance and availability at regular intervals,
+      to ensure that the \acrshort{api} runs appropriately. This can be done in a few different ways, depending on the
+      type of the \acrshort{api} being monitored~\ref{chap:typesofapis}.
+
+      For example, let's take Postman, a popular free \acrshort{api} monitoring tools that allows developers to easily 
+      monitor, analyze, and debug their \acrshort{api}s. In this example, the system might look for common errors, such 
+      as 500-level responses or timeouts, when making requests to the \acrshort{api}. It also checks for latency issues 
+      or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can 
+      be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time. 
+      This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as 
+      automated alerts, detailed analytics, and comprehensive reporting capabilities.
       \section{Research Sub-Question \#3}
+      \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology
+      SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to 
+      help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze 
+      and respond to security threats in real-time, providing organizations with comprehensive protection against malware,
+      ransomware, and other cyber threats. It also provides visibility into clients' \acrshort{it} systems and infrastructure,
+      enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures 
+      to address them.
+      \subsection{SentinelOne Console}
+      \subsection{SentinelOne Ranger}
+      \subsection{SentinelOne Sentinels}
+      \subsection{SentinelOne Agent}
+      \subsection{SentinelOne Incidents}
+
       \section{Research Sub-Question \#4}
 \end{multicols}

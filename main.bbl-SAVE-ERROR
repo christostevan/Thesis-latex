@@ -16,5 +16,606 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{firebaseproducts}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GCP, Google Cloud Platform}
+      \field{title}{Firebase Products - Google}
+      \verb{urlraw}
+      \verb https://firebase.google.com/products-build
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/products-build
+      \endverb
+    \endentry
+    \entry{nist}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={NIST},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{journaltitle}{NIST Government}
+      \field{month}{3}
+      \field{title}{The Five Functions}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \endverb
+      \verb{url}
+      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \endverb
+    \endentry
+    \entry{ictresearchmethods}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=adb6a9f146f52b4db4d2edc3b53a1364}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Jochem},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{fullhash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{bibnamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authorbibnamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authornamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authorfullhash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{journaltitle}{HBO-i, Amsterdam}
+      \field{month}{10}
+      \field{title}{ICT Research Methods — Methods Pack for research in ICT}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://ictresearchmethods.nl/
+      \endverb
+      \verb{url}
+      \verb https://ictresearchmethods.nl/
+      \endverb
+    \endentry
+    \entry{algolia}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{title}{Algolia}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Algolia
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Algolia
+      \endverb
+    \endentry
+    \entry{api}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{API}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/API
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/API
+      \endverb
+    \endentry
+    \entry{crm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Customer relationship management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+    \endentry
+    \entry{firebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{title}{Firebase}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+    \endentry
+    \entry{flutter}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{5}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{5}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Flutter (software)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \endverb
+    \endentry
+    \entry{pentest}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{6}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Penetration Test}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+    \endentry
+    \entry{rmm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{7}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Remote monitoring and management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{firebaseproducts}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GCP, Google Cloud Platform}
+      \field{title}{Firebase Products - Google}
+      \verb{urlraw}
+      \verb https://firebase.google.com/products-build
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/products-build
+      \endverb
+    \endentry
+    \entry{nist}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={NIST},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{journaltitle}{NIST Government}
+      \field{month}{3}
+      \field{title}{The Five Functions}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \endverb
+      \verb{url}
+      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \endverb
+    \endentry
+    \entry{ictresearchmethods}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=adb6a9f146f52b4db4d2edc3b53a1364}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Jochem},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{fullhash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{bibnamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authorbibnamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authornamehash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \strng{authorfullhash}{adb6a9f146f52b4db4d2edc3b53a1364}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{journaltitle}{HBO-i, Amsterdam}
+      \field{month}{10}
+      \field{title}{ICT Research Methods — Methods Pack for research in ICT}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://ictresearchmethods.nl/
+      \endverb
+      \verb{url}
+      \verb https://ictresearchmethods.nl/
+      \endverb
+    \endentry
+    \entry{algolia}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{title}{Algolia}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Algolia
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Algolia
+      \endverb
+    \endentry
+    \entry{api}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{API}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/API
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/API
+      \endverb
+    \endentry
+    \entry{crm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Customer relationship management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+    \endentry
+    \entry{firebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{title}{Firebase}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+    \endentry
+    \entry{flutter}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{5}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{5}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Flutter (software)}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \endverb
+    \endentry
+    \entry{pentest}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{6}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Penetration Test}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+    \endentry
+    \entry{rmm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{7}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Remote monitoring and management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

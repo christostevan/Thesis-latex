@@ -107,8 +107,8 @@
                   practices or similar case studies or projects.
             \item Sub-question \#2: ensure reliability through sampling techniques and representative stakeholder
                   involvement, with comprehensive literature review and multiple sources of information. Validate
-                  priorities against real-world scenarios or case studies involving diverse expert panel, like 
-                  the Company Supervisor. General applicability can be assessed by comparing prioritization with 
+                  priorities against real-world scenarios or case studies involving diverse expert panel, like
+                  the Company Supervisor. General applicability can be assessed by comparing prioritization with
                   similar projects or frameworks, and considering scalability and adaptability of the integration
                   with representative user samples.
             \item Sub-question \#3: the validity of this sub-question will be through pilot integration unit testing
@@ -125,17 +125,17 @@
                   comparing proposed visualization techniques with similar applications or domains.
       \end{itemize}
       \subsection{Research Limitations}
-      The project and research in general will be limited on the \acrshort{api} request methods, in which the author 
+      The project and research in general will be limited on the \acrshort{api} request methods, in which the author
       is allowed to do only GET requests. This is due to the fact that the author is not allowed to do any
-      POST, PUT, DELETE, or any other \acrshort{http} request methods that could potentially change the state of the 
-      \acrshort{qaas} app or the \acrshort{api} that is being requested. This limitation is because the author is not a 
-      full-time employee of \acrshort{qict} and is not allowed to make any changes to the \acrshort{qaas} app or the 
-      \acrshort{api} that is being requested. Therefore, the author is limited to do research in the best practices 
+      POST, PUT, DELETE, or any other \acrshort{http} request methods that could potentially change the state of the
+      \acrshort{qaas} app or the \acrshort{api} that is being requested. This limitation is because the author is not a
+      full-time employee of \acrshort{qict} and is not allowed to make any changes to the \acrshort{qaas} app or the
+      \acrshort{api} that is being requested. Therefore, the author is limited to do research in the best practices
       and possible answer for \acrshort{api} monitoring and integration for the GET request method only.
 
-      Moreover, the author is also limited to the non-disclosure agreement signed within the initialization period of 
+      Moreover, the author is also limited to the non-disclosure agreement signed within the initialization period of
       the graduation work placement. This means that any confidential information that the company deems as confidential
-      will not be disclosed in this research. This includes any information that is not publicly available, such as any 
+      will not be disclosed in this research. This includes any information that is not publicly available, such as any
       financial data or security data pertaining to the internal system or the \acrshort{qaas} app internal code.
       \section{Research Sub-Question \#1}
       The \acrshort{qaas} app is a web application that is used by \acrshort{qict}. It is made in Dart with Flutter as
@@ -158,48 +158,48 @@
       back-end infrastructure and front-end capabilities without worrying about managing servers or infrastructures.
       The services offered by Firebase including (\cite{firebaseproducts})
       \begin{itemize}
-            \item Databases: 
-            \begin{itemize}
-                  \item Firestore Database: Firestore is a No\acrshort{sql} database that is part of the Firebase 
-                  platform. It is a flexible, scalable database for mobile, web, and server development. It keeps 
-                  data in sync across client apps through real-time listeners and offers offline support for mobile 
-                  and web, so the developers can build responsive apps that work regardless of network latency or 
-                  Internet connectivity.
-                  \item Real-time database:
-            \end{itemize}
+            \item Databases:
+                  \begin{itemize}
+                        \item Firestore Database: Firestore is a No\acrshort{sql} database that is part of the Firebase
+                              platform. It is a flexible, scalable database for mobile, web, and server development. It keeps
+                              data in sync across client apps through real-time listeners and offers offline support for mobile
+                              and web, so the developers can build responsive apps that work regardless of network latency or
+                              Internet connectivity.
+                        \item Real-time database:
+                  \end{itemize}
             \item Authentication: is an easy-to-understand authentication services that support various authentication
                   methods like email/password, phone number, with identity providers such as Google, Facebook, Twitter,
                   Apple, GitHub, \acrshort{etc}
                   along with utilizing \acrshort{2fa} authentication factors to enhance security by requiring additional
                   factor, such as an \acrshort{otp} code that is sent to the user's phone or security key.
-            \item Cloud Functions: often just called Functions in the Firebase console, it allows developers to run 
-                  back-end code in response to events triggered by Firebase features and \acrshort{https} requests. 
+            \item Cloud Functions: often just called Functions in the Firebase console, it allows developers to run
+                  back-end code in response to events triggered by Firebase features and \acrshort{https} requests.
                   The code is stored in Google's cloud and runs in a managed environment. It is a serverless framework
                   that allows developers to build and deploy serverless functions that automatically scale up and down
-                  based on demand. The available programming languages are Node.js (\acrshort{js} and \acrshort{ts}), 
+                  based on demand. The available programming languages are Node.js (\acrshort{js} and \acrshort{ts}),
                   Python, Go, Java, and .NET (C\#).
-            \item Hosting: a service that allows developers to host static websites, dynamic web apps, mobile apps, and 
-                  microservices on Firebase's infrastructure. The \acrshort{qaas} app is currently hosted on Firebase 
-                  Hosting. 
-            \item Cloud Messaging/\acrshort{fcm}: allows developers to send push notification and targeted messages to a 
-                  client app that new email or other data is available to sync, or send notification messages to drive app 
-                  interaction, adding more user re-engagement and retention. It is a cross-platform messaging solution that lets 
+            \item Hosting: a service that allows developers to host static websites, dynamic web apps, mobile apps, and
+                  microservices on Firebase's infrastructure. The \acrshort{qaas} app is currently hosted on Firebase
+                  Hosting.
+            \item Cloud Messaging/\acrshort{fcm}: allows developers to send push notification and targeted messages to a
+                  client app that new email or other data is available to sync, or send notification messages to drive app
+                  interaction, adding more user re-engagement and retention. It is a cross-platform messaging solution that lets
                   developers reliably deliver messages at no cost.
-            \item Cloud Storage: offers a secure, scalable, and reliable file storage and sharing for Firebase apps. 
-                  It is designed to help developers quickly and easily store and serve user-generated content, such as 
+            \item Cloud Storage: offers a secure, scalable, and reliable file storage and sharing for Firebase apps.
+                  It is designed to help developers quickly and easily store and serve user-generated content, such as
                   photos or videos.
-            \item Remote Config: allows developers to dynamically control and the change behaviour and appearance of their apps 
-                  without publishing app updates and requiring users to download them. 
+            \item Remote Config: allows developers to dynamically control and the change behaviour and appearance of their apps
+                  without publishing app updates and requiring users to download them.
             \item Performance Monitoring
-            \item Analytics: provides free and unlimited analytics solutions for understanding app usage, user engagement and 
-                  user behaviour by tracking event logging, user demographics, and funnel analysis to gain valuable insights to 
+            \item Analytics: provides free and unlimited analytics solutions for understanding app usage, user engagement and
+                  user behaviour by tracking event logging, user demographics, and funnel analysis to gain valuable insights to
                   improve the app.
-            \item Crashlytics: is a lightweight, real-time crash and error reporter that helps developers track, prioritize, 
-                  and fix stability issues that erode to the quality of the developer's app. 
-            \item Test Lab: enables automated testing of the developer's app on real devices in the Google data center. 
-            \item Dynamic Links: consist of deep links that dynamically route users to the content they are interested in, 
-                  across platforms and devices. It helps developers create and share links that work the way they want, on the 
-                  platform they want, and whether users have their apps installed. 
+            \item Crashlytics: is a lightweight, real-time crash and error reporter that helps developers track, prioritize,
+                  and fix stability issues that erode to the quality of the developer's app.
+            \item Test Lab: enables automated testing of the developer's app on real devices in the Google data center.
+            \item Dynamic Links: consist of deep links that dynamically route users to the content they are interested in,
+                  across platforms and devices. It helps developers create and share links that work the way they want, on the
+                  platform they want, and whether users have their apps installed.
             \item \acrshort{ml} Kit: provides a set of \acrshort{ml} \acrshort{api}s that can be easily integrated developer's app.
                   This feature is still in beta testing.
       \end{itemize}
@@ -221,38 +221,38 @@
 
       \subsection{Q-ICT Internal APIs}
       \subsubsection{What is an API?}
-      \acrshort{api} is a software intermediary that allows two applications to talk to each other. They are an 
-      accessible way to extract and share data within and across organizations. 
+      \acrshort{api} is a software intermediary that allows two applications to talk to each other. They are an
+      accessible way to extract and share data within and across organizations.
 
       \subsubsection{Different Types of API By Audience}
       \subsubsection{Different Types of API by Architecture}
       \subsubsection{Different Types of API Protocols}\label{chap:typesofapis}
       SOAP API
 
-      \acrshort{soap} \acrshort{api}s are strictly based on \acrshort{xml} for the message structure and 
-      \acrshort{http} for the protocols. \acrshort{soap} itself is a protocol and sending a \acrshort{soap} 
-      request is similar to using an envelope to send a message. \acrshort{soap} \acrshort{api}s consume extra 
-      overhead and more bandwidth, and require more work on both the client and server ends. That being said, 
+      \acrshort{soap} \acrshort{api}s are strictly based on \acrshort{xml} for the message structure and
+      \acrshort{http} for the protocols. \acrshort{soap} itself is a protocol and sending a \acrshort{soap}
+      request is similar to using an envelope to send a message. \acrshort{soap} \acrshort{api}s consume extra
+      overhead and more bandwidth, and require more work on both the client and server ends. That being said,
       like envelopes, \acrshort{soap} encloses more stringent security compared to \acrshort{rest}.
-      \end{multicols}
-      
-      \begin{lstlisting}[language=XML, caption=Example of a SOAP request, label=lst:soaprequest]
-            <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:example="http://example.com">
-                  <SOAP-ENV:Header/>
-                  <SOAP-ENV:Body>
-                        <example:GetUser>
-                              <example:UserID>123</example:UserID>
-                        </example:GetUser>
-                  </SOAP-ENV:Body>
-            </SOAP-ENV:Envelope>
-      \end{lstlisting}
- 
-      \begin{multicols}{2}
+\end{multicols}
+
+\begin{lstlisting}[language=XML, caption=Example of a SOAP request, label=lst:soaprequest]
+      <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:example="http://example.com">
+            <SOAP-ENV:Header/>
+            <SOAP-ENV:Body>
+                  <example:GetUser>
+                        <example:UserID>123</example:UserID>
+                  </example:GetUser>
+            </SOAP-ENV:Body>
+      </SOAP-ENV:Envelope>
+\end{lstlisting}
+
+\begin{multicols}{2}
       \textbf{REST API}
 
-      If \acrshort{soap} is like an envelope, \acrshort{rest} is like a  more lightweight postcard. \acrshort{rest} 
-      \acrshort{api}s are considered the gold standard for scalability and are highly compatible with microservice 
-      architecture. It is the often used protocol in the context of building \acrshort{api}s for web-based 
+      If \acrshort{soap} is like an envelope, \acrshort{rest} is like a  more lightweight postcard. \acrshort{rest}
+      \acrshort{api}s are considered the gold standard for scalability and are highly compatible with microservice
+      architecture. It is the often used protocol in the context of building \acrshort{api}s for web-based
       applications. \acrshort{rest} itself is not a protocol, but an architectural style for designing networked
       applications, defining a set of constraints and principles that define how web services should be structured
       and interact with each other (\textit{see \gls{REST}}).
@@ -261,111 +261,114 @@
       are \acrshort{rest}ful as long as they comply with the 6 guiding constraints of a \acrshort{rest}ful system
       (\cite{restguidingprinciples}):
       \begin{itemize}
-            \item \textbf{Client-server architecture}: the architecture is composed of clients, servers, and 
+            \item \textbf{Client-server architecture}: the architecture is composed of clients, servers, and
                   resources, and it handles requests through \acrshort{http}.
-            \item \textbf{Statelessness}: no client is stored on the server between requests. The server should process
-                  and complete each request independently. Information about the session state is, instead, held with the 
-                  client. The clients can do this via query parameters, headers, \acrshort{uri}s, request body, \acrshort{etc}
+            \item \textbf{Statelessness}: no client is stored on the server between requests. The server should
+                  process and complete each request independently. Information about the session state is, instead,
+                  held with the client. The clients can do this via query parameters, headers, \acrshort{uri}s,
+                  request body, \acrshort{etc}
             \item \textbf{Cacheable}: simply, the clients should be able to determine whether this response is cacheable
-                  from their side, and if so, for how long. If a response is cacheable, the client has the right to return the 
-                  data from its cache for an equivalent request and specified period, without sending another request to the 
+                  from their side, and if so, for how long. If a response is cacheable, the client has the right to return the
+                  data from its cache for an equivalent request and specified period, without sending another request to the
                   server. A well managed caching mechanism can eliminate the need for some client-server interactions
-            \item \textbf{Layered system}: client-server interactions can be mediated by additional layers. These 
+            \item \textbf{Layered system}: client-server interactions can be mediated by additional layers. These
                   layers could offer additional features like load balancing, shared caches, or security.
-            \item \textbf{Uniform interface}: this is the core to design \acrshort{rest}ful \acrshort{api}s. 
+            \item \textbf{Uniform interface}: this is the core to design \acrshort{rest}ful \acrshort{api}s.
                   There should be a uniform and standard way of interacting with a given server for all client
                   types. The uniform interface helps to simplify the overall architecture of the system. This includes
                   4 facets:
                   \begin{itemize}
-                        \item Resource identification in request: resources are uniquely identified in requests and are separate 
+                        \item Resource identification in request: resources are uniquely identified in requests and are separate
                               from the representations that are returned to the client using \acrshort{uri}.
-                        \item Resource manipulation through representations: clients receive files that represent resources. These
-                              representations must have enough information to allow modification or deletion.
-                        \item Self-descriptive messages: each message returned to a client contains enough information to describe 
-                              how the client should process the information.
+                        \item Resource manipulation through representations: clients receive files of a uniform that represent resources.
+                              These representations must have enough information to allow modification or deletion of the resource's
+                              state in the server, as long as they have the required permissions.
+                        \item Self-descriptive messages: each message returned to a client contains enough information to describe
+                              how the client should process the information further, such as additional actions that can be
+                              performed on the resource.
                         \item Hypermedia as the engine of application state: after accessing a resource, the \acrshort{rest} client
                               should be able to discover through hyperlinks all other actions that are currently available.
                   \end{itemize}
             \item \textbf{Code on demand (optional)}: servers can extend the functionality of a client by transferring
                   executable code.
       \end{itemize}
-      \acrshort{rest} \acrshort{api}s are high-performing (especially over \acrshort{http}2), time-tested, and support 
+      \acrshort{rest} \acrshort{api}s are high-performing (especially over \acrshort{http}2), time-tested, and support
       many data formats. They also decouple the client and server, making sure of independent evolution. However,
-      building a true \acrshort{rest} \acrshort{api} is difficult because it requires a disciplined adherence to the 
+      building a true \acrshort{rest} \acrshort{api} is difficult because it requires a disciplined adherence to the
       Uniform Interface constraint (\cite{restapiuniforminterface}). Some organizations trade off the long-term benefits
-      of a truly \acrshort{rest} \acrshort{api} for other \acrshort{http} \acrshort{api} protocols that have similar 
+      of a truly \acrshort{rest} \acrshort{api} for other \acrshort{http} \acrshort{api} protocols that have similar
       benefits but adhere to \acrshort{rest} constraints more liberally.
-      \end{multicols}
-      \begin{lstlisting}[language=JavaScript, caption=Different HTTP methods in REST]
+\end{multicols}
+\begin{lstlisting}[language=JavaScript, caption=Different HTTP methods in REST]
             GET /users <@\textnormal{Retrieve list of all users}@>
             GET /users/{id} <@\textnormal{Retrieve details a specific user by their ID}@>
             POST /users <@\textnormal{Create a new user}@>
             PUT /users/{id} <@\textnormal{Update a specific user by their ID}@>
             DELETE /users/{id} <@\textnormal{Delete a specific user by their ID}@>
       \end{lstlisting}
-      \begin{lstlisting}[language=JavaScript, caption=REST's Example]
+\begin{lstlisting}[language=JavaScript, caption=REST's Example]
             GET https://api.example.com/users/123
       \end{lstlisting}
-      \begin{multicols}{2}
-      All three of the \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for 
-      communication therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web 
-      services  and allow applications to interact with each other over the internet. \acrshort{http} is superbly 
+\begin{multicols}{2}
+      All three of the \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for
+      communication therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web
+      services  and allow applications to interact with each other over the internet. \acrshort{http} is superbly
       suited for applications following a request-response paradigm.
 
       \textbf{GraphQL API}
 
       Graph\acrshort{ql} \acrshort{api}s are contract-driven and come with introspection out-of-the-box. Building and
-      \acrshort{api} with Graph\acrshort{ql} is very easy in comparison to true \acrshort{rest} \acrshort{api}s, 
+      \acrshort{api} with Graph\acrshort{ql} is very easy in comparison to true \acrshort{rest} \acrshort{api}s,
       which require extensive knowledge of \acrshort{http} to build intelligently.
 
-      The downside is, however, that they do not scale well and require tight coupling between the client and the 
+      The downside is, however, that they do not scale well and require tight coupling between the client and the
       server. Graph\acrshort{ql} queries get more expensive to parse and execute plans for as they get bigger and
-      lack certain concepts native to \acrshort{http}, such as content and language negotiation. 
-      \end{multicols}
-      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Schema Example]
-            type Query {
-                  user(id: ID!): User
-                  posts: [Post!]!
-            }
-            type User {
-                  id: ID!
-                  name: String
-            }
-            type Post {
-                  id: ID!
-                  title: String!
-                  body: String!
-            }
-      \end{lstlisting}
-      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Request Example to Specific Data]
-            {
-                  posts {
-                        title
-                        user(id: "123") {
-                              name
-                        }
+      lack certain concepts native to \acrshort{http}, such as content and language negotiation.
+\end{multicols}
+\begin{lstlisting}[language=JavaScript, caption=GraphQL's Schema Example]
+      type Query {
+            user(id: ID!): User
+            posts: [Post!]!
+      }
+      type User {
+            id: ID!
+            name: String
+      }
+      type Post {
+            id: ID!
+            title: String!
+            body: String!
+      }
+\end{lstlisting}
+\begin{lstlisting}[language=JavaScript, caption=GraphQL's Request Example to Specific Data]
+      {
+            posts {
+                  title
+                  user(id: "123") {
+                        name
                   }
             }
-      \end{lstlisting}
-      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Return Data Example]
-            {
-                  "data": {
-                        "posts": [
-                              {
-                                    "title": "My first post",
+      }
+\end{lstlisting}
+\begin{lstlisting}[language=JavaScript, caption=GraphQL's Return Data Example]
+{
+      "data": {
+            "posts": [
+                        {
+                              "title": "My first post",
                                     "user": {
                                           "name": "John Doe"
                                     }
-                              }
-                        ]
-                  }
-            }            
-      \end{lstlisting}
-      \begin{multicols}{2}
+                        }
+                  ]
+      }
+}            
+\end{lstlisting}
+\begin{multicols}{2}
       \textbf{RPC API} % (json-rpc, xml-rpc) Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
 
       \textbf{WebSocket}
-      
+
       In return \acrshort{qict} manages different kind of apis those \acrshort{api}s are the following:
       \begin{itemize}
             \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8. It is a cloud
@@ -392,58 +395,58 @@
       \end{itemize}
       \section{Research Sub-Question \#2}
       \subsection{What is API Monitoring?}
-      \acrshort{api} monitoring is the process of gathering, visualizing, tracking, analyzing, and alerting on the 
-      performance, availability, and the \acrshort{api} telemetry data to ensure that \acrshort{api} requests are 
-      handled as expected. 
+      \acrshort{api} monitoring is the process of gathering, visualizing, tracking, analyzing, and alerting on the
+      performance, availability, and the \acrshort{api} telemetry data to ensure that \acrshort{api} requests are
+      handled as expected.
       \subsection{How Does API Monitoring Work?}
       \acrshort{api} monitoring automatically checks \acrshort{api} performance and availability at regular intervals,
       to ensure that the \acrshort{api} runs appropriately. This can be done in a few different ways, depending on the
       type of the \acrshort{api} being monitored~\ref{chap:typesofapis}.
 
-      For example, let's take Postman, a popular free \acrshort{api} monitoring tools that allows developers to easily 
-      monitor, analyze, and debug their \acrshort{api}s. In this example, the system might look for common errors, such 
-      as 500-level responses or timeouts, when making requests to the \acrshort{api}. It also checks for latency issues 
-      or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can 
-      be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time. 
-      This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as 
-      automated alerts, detailed analytics, and comprehensive reporting capabilities. Features that an \acrshort{api} 
+      For example, let's take Postman, a popular free \acrshort{api} monitoring tools that allows developers to easily
+      monitor, analyze, and debug their \acrshort{api}s. In this example, the system might look for common errors, such
+      as 500-level responses or timeouts, when making requests to the \acrshort{api}. It also checks for latency issues
+      or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can
+      be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time.
+      This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as
+      automated alerts, detailed analytics, and comprehensive reporting capabilities. Features that an \acrshort{api}
       monitoring might have are listed in the following (\cite{postmanapimonitoring}):
       \begin{itemize}
             \item \textbf{Endpoint Surveillance}: it begins by closely tracking the various endpoints of an \acrshort{api}
                   system. These endpoints represent specific functionalities or resources that the \acrshort{api} provides.
-            \item \textbf{Request-Response Analysis}: monitoring tools can simulate \acrshort{api} requests by sending 
+            \item \textbf{Request-Response Analysis}: monitoring tools can simulate \acrshort{api} requests by sending
                   predefined inputs and parameters to specific endpoints, then analyzing the responses for relevant factors
                   such as response time or data accuracy.
             \item \textbf{Performance Metrics Measurement}: \acrshort{kpi}s, such as response time, latency, and error rates,
                   are measured and tracked over time. This metrics offers insights into the overall health and efficiency of
                   an \acrshort{api}.
             \item \textbf{Error Detection and Logging}: actively identifying and log any errors or anomalies in \acrshort{api}
-                  resources with an \acrshort{api} monitoring program. This includes capturing \acrshort{http} error codes, 
+                  resources with an \acrshort{api} monitoring program. This includes capturing \acrshort{http} error codes,
                   unexpected data/file formats, and alerting of any deviations from expected behaviour.
-            \item \textbf{Security Checks}: \acrshort{api} monitoring assess \acrshort{api} transactions for unauthorized 
-                  access attempts, potential vulnerabilities, and adherence to security protocols. 
-            \item \textbf{Alerting and Notification System}: automated alerting systems can be configured with high levels of 
-                  customization to notify relevant stakeholders when specific \acrshort{api} performance thresholds are breached 
+            \item \textbf{Security Checks}: \acrshort{api} monitoring assess \acrshort{api} transactions for unauthorized
+                  access attempts, potential vulnerabilities, and adherence to security protocols.
+            \item \textbf{Alerting and Notification System}: automated alerting systems can be configured with high levels of
+                  customization to notify relevant stakeholders when specific \acrshort{api} performance thresholds are breached
                   or exceeded or when abnormal behaviour is detected.
-            \item \textbf{Usage Analysis Gathering}: collect usage analytics for insights into how a given \acrshort{api} is 
+            \item \textbf{Usage Analysis Gathering}: collect usage analytics for insights into how a given \acrshort{api} is
                   being used. This data helps software organizations plan for scalability, optimize resource allocation, and
                   understand user behaviour.
-            \item \textbf{Logging for Auditing}: detailed logs of \acrshort{api} interactions are maintained for auditing 
+            \item \textbf{Logging for Auditing}: detailed logs of \acrshort{api} interactions are maintained for auditing
                   purposes. These \acrshort{api} logs are valuable resources for post-incident analysis and tracking historical
                   performance and behavioural trends.
-            \item \textbf{Continuous Monitoring}: the tool is a constantly ongoing, real-time process that ensures that 
-                  issues of any scope are identified and addressed promptly.                  
+            \item \textbf{Continuous Monitoring}: the tool is a constantly ongoing, real-time process that ensures that
+                  issues of any scope are identified and addressed promptly.
       \end{itemize}
       With those functionalities in mind, \acrshort{api} monitoring tools can then automatically check \acrshort{api}
       performance and availability at specified intervals of time to ensure that the monitored \acrshort{api}s run
       appropriately. The specific timing of those intervals is unique to each \acrshort{api} product.
       \section{Research Sub-Question \#3}
       \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology
-      SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to 
-      help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze 
+      SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to
+      help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze
       and respond to security threats in real-time, providing organizations with comprehensive protection against malware,
       ransomware, and other cyber threats. It also provides visibility into clients' \acrshort{it} systems and infrastructure,
-      enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures 
+      enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures
       to address them.
       \subsection{SentinelOne Console}
       \subsection{SentinelOne Ranger}

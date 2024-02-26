@@ -215,20 +215,25 @@
       The reason as to why \acrshort{qict} uses Algolia is that the nature of Firebase search engine is quite often
       proven to be inaccurate and slow.
 
+      \textbf{Secret Manager}
+
       \textbf{NoSQL Database}
 
       \subsection{Q-ICT Internal APIs}
       \subsubsection{What is an API?}
+      \acrshort{api} is a software intermediary that allows two applications to talk to each other. They are an 
+      accessible way to extract and share data within and across organizations. 
 
       \subsubsection{Different Types of API By Audience}
+      \subsubsection{Different Types of API by Architecture}
       \subsubsection{Different Types of API Protocols}\label{chap:typesofapis}
       SOAP API
 
       \acrshort{soap} \acrshort{api}s are strictly based on \acrshort{xml} for the message structure and 
-      \acrshort{http} for the protocols. Sending a \acrshort{soap} request is similar to using an envelope 
-      to send a message. \acrshort{soap} \acrshort{api}s consume extra overhead and more bandwidth, and 
-      require more work on both the client and server ends. That being said, like envelopes, \acrshort{soap} 
-      encloses more stringent security compared to \acrshort{rest}.
+      \acrshort{http} for the protocols. \acrshort{soap} itself is a protocol and sending a \acrshort{soap} 
+      request is similar to using an envelope to send a message. \acrshort{soap} \acrshort{api}s consume extra 
+      overhead and more bandwidth, and require more work on both the client and server ends. That being said, 
+      like envelopes, \acrshort{soap} encloses more stringent security compared to \acrshort{rest}.
       \end{multicols}
       
       \begin{lstlisting}[language=XML, caption=Example of a SOAP request, label=lst:soaprequest]
@@ -247,15 +252,66 @@
 
       If \acrshort{soap} is like an envelope, \acrshort{rest} is like a  more lightweight postcard. \acrshort{rest} 
       \acrshort{api}s are considered the gold standard for scalability and are highly compatible with microservice 
-      architecture. 
+      architecture. It is the often used protocol in the context of building \acrshort{api}s for web-based 
+      applications. \acrshort{rest} itself is not a protocol, but an architectural style for designing networked
+      applications, defining a set of constraints and principles that define how web services should be structured
+      and interact with each other (\textit{see \gls{REST}}).
 
+      \acrshort{api}s that follow \acrshort{rest} principles are called \acrshort{rest}ful \acrshort{api}s. The
+      are \acrshort{rest}ful as long as they comply with the 6 guiding constraints of a \acrshort{rest}ful system
+      (\cite{restguidingprinciples}):
+      \begin{itemize}
+            \item \textbf{Client-server architecture}: the architecture is composed of clients, servers, and 
+                  resources, and it handles requests through \acrshort{http}.
+            \item \textbf{Statelessness}: no client is stored on the server between requests. The server should process
+                  and complete each request independently. Information about the session state is, instead, held with the 
+                  client. The clients can do this via query parameters, headers, \acrshort{uri}s, request body, \acrshort{etc}
+            \item \textbf{Cacheable}: simply, the clients should be able to determine whether this response is cacheable
+                  from their side, and if so, for how long. If a response is cacheable, the client has the right to return the 
+                  data from its cache for an equivalent request and specified period, without sending another request to the 
+                  server. A well managed caching mechanism can eliminate the need for some client-server interactions
+            \item \textbf{Layered system}: client-server interactions can be mediated by additional layers. These 
+                  layers could offer additional features like load balancing, shared caches, or security.
+            \item \textbf{Uniform interface}: this is the core to design \acrshort{rest}ful \acrshort{api}s. 
+                  There should be a uniform and standard way of interacting with a given server for all client
+                  types. The uniform interface helps to simplify the overall architecture of the system. This includes
+                  4 facets:
+                  \begin{itemize}
+                        \item Resource identification in request: resources are uniquely identified in requests and are separate 
+                              from the representations that are returned to the client using \acrshort{uri}.
+                        \item Resource manipulation through representations: clients receive files that represent resources. These
+                              representations must have enough information to allow modification or deletion.
+                        \item Self-descriptive messages: each message returned to a client contains enough information to describe 
+                              how the client should process the information.
+                        \item Hypermedia as the engine of application state: after accessing a resource, the \acrshort{rest} client
+                              should be able to discover through hyperlinks all other actions that are currently available.
+                  \end{itemize}
+            \item \textbf{Code on demand (optional)}: servers can extend the functionality of a client by transferring
+                  executable code.
+      \end{itemize}
       \acrshort{rest} \acrshort{api}s are high-performing (especially over \acrshort{http}2), time-tested, and support 
       many data formats. They also decouple the client and server, making sure of independent evolution. However,
       building a true \acrshort{rest} \acrshort{api} is difficult because it requires a disciplined adherence to the 
-      Uniform Interface constraint (\cite{restapiuniforminterface}). Many organizations trade off the long-term benefits
+      Uniform Interface constraint (\cite{restapiuniforminterface}). Some organizations trade off the long-term benefits
       of a truly \acrshort{rest} \acrshort{api} for other \acrshort{http} \acrshort{api} protocols that have similar 
       benefits but adhere to \acrshort{rest} constraints more liberally.
-      
+      \end{multicols}
+      \begin{lstlisting}[language=JavaScript, caption=Different HTTP methods in REST]
+            GET /users <@\textnormal{Retrieve list of all users}@>
+            GET /users/{id} <@\textnormal{Retrieve details a specific user by their ID}@>
+            POST /users <@\textnormal{Create a new user}@>
+            PUT /users/{id} <@\textnormal{Update a specific user by their ID}@>
+            DELETE /users/{id} <@\textnormal{Delete a specific user by their ID}@>
+      \end{lstlisting}
+      \begin{lstlisting}[language=JavaScript, caption=REST's Example]
+            GET https://api.example.com/users/123
+      \end{lstlisting}
+      \begin{multicols}{2}
+      All three of the \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for 
+      communication therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web 
+      services  and allow applications to interact with each other over the internet. \acrshort{http} is superbly 
+      suited for applications following a request-response paradigm.
+
       \textbf{GraphQL API}
 
       Graph\acrshort{ql} \acrshort{api}s are contract-driven and come with introspection out-of-the-box. Building and
@@ -264,16 +320,53 @@
 
       The downside is, however, that they do not scale well and require tight coupling between the client and the 
       server. Graph\acrshort{ql} queries get more expensive to parse and execute plans for as they get bigger and
-      lack certain concepts native to \acrshort{http}, such as content and language negotiation. All three of the
-      \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for communication
-      therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web services 
-      and allow applications to interact with each other over the internet.
-
-      \textbf{RPC API} % Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
+      lack certain concepts native to \acrshort{http}, such as content and language negotiation. 
+      \end{multicols}
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Schema Example]
+            type Query {
+                  user(id: ID!): User
+                  posts: [Post!]!
+            }
+            type User {
+                  id: ID!
+                  name: String
+            }
+            type Post {
+                  id: ID!
+                  title: String!
+                  body: String!
+            }
+      \end{lstlisting}
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Request Example to Specific Data]
+            {
+                  posts {
+                        title
+                        user(id: "123") {
+                              name
+                        }
+                  }
+            }
+      \end{lstlisting}
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Return Data Example]
+            {
+                  "data": {
+                        "posts": [
+                              {
+                                    "title": "My first post",
+                                    "user": {
+                                          "name": "John Doe"
+                                    }
+                              }
+                        ]
+                  }
+            }            
+      \end{lstlisting}
+      \begin{multicols}{2}
+      \textbf{RPC API} % (json-rpc, xml-rpc) Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
 
       \textbf{WebSocket}
       
-      Those \acrshort{api}s are the following:
+      In return \acrshort{qict} manages different kind of apis those \acrshort{api}s are the following:
       \begin{itemize}
             \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8. It is a cloud
                   marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions through

@@ -47,7 +47,7 @@ style=apa,
 
 \lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, 
-    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const,},
+    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const },
   keywordstyle=\color{blue}\bfseries,
   ndkeywordstyle=\color{darkgray}\bfseries,
   identifierstyle=\color{black},
@@ -111,7 +111,7 @@ style=apa,
 }
 
 \lstset{% Listing settings
-    backgroundcolor=\color{lightgray},
+    backgroundcolor=\color{white},
     extendedchars=true,
     basicstyle=\footnotesize\ttfamily,
     showstringspaces=false,
@@ -128,6 +128,7 @@ style=apa,
     morekeywords={encoding,
         xs:schema,xs:element,xs:complexType,xs:sequence,xs:attribute}
     captionpos=b,
+    escapeinside={<@}{@>}
 }
 
 \newglossaryentry{Pentest}
@@ -155,7 +156,7 @@ style=apa,
     name=\acrshort{api},
     description={is a software intermediary that allows two applications to talk to each other (\cite{api}). In other words, an 
     \acrshort{api} is the messenger that delivers request to the provider that was requested from and then delivers the response 
-    back. (\cite{api})
+    back (\cite{api}). 
     }
 }
 \newglossaryentry{AD} {
@@ -164,6 +165,14 @@ style=apa,
     services that connect users with the network resources they need to get their work done(\cite{api})
     }
 }
+\newglossaryentry{REST} {
+    name=\acrshort{rest},
+    description={is a software architectural style for providing standards between computer systems on the web, making it easier
+    to communicate with each other. It is often characterized by how they are stateless and separate the concerns of client and
+    server. (\cite{api})
+    }
+}
+
 
 \newacronym{2fa}{2FA}{Two-Factor Authentication}
 \newacronym{ad}{AD}{Active Directory}
@@ -225,6 +234,7 @@ style=apa,
 \newacronym{ict}{ICT}{Information and Communication Technology}
 \newacronym{icp}{ICP}{Internet Control Message Protocol}
 \newacronym{icmp}{ICMP}{Internet Control Message Protocol}
+\newacronym{id}{ID}{Identifier}
 \newacronym{ide}{IDE}{Integrated Development Environment}
 \newacronym{ie}{i.e.,}{id est}
 \newacronym{iot}{IoT}{Internet of Things}
@@ -276,6 +286,7 @@ style=apa,
 \newacronym{soap}{SOAP}{Simple Object Access Protocol}
 \newacronym{star}{STAR}{Situation, Task, Action, Result}
 \newacronym{ssh}{SSH}{Secure Shell}
+\newacronym{sse}{SSE}{Server-Sent Events}
 \newacronym{sql}{SQL}{Structured Query Language}
 \newacronym{ssl}{SSL}{Secure Sockets Layer}
 \newacronym{swot}{SWOT}{Strengths, Weaknesses, Opportunities, and Threats}
@@ -285,6 +296,8 @@ style=apa,
 \newacronym{ts}{TS}{TypeScript}
 \newacronym{ui}{UI}{User Interface}
 \newacronym{udp}{UDP}{User Datagram Protocol}
+\newacronym{uri}{URI}{Uniform Resource Identifier}
+\newacronym{url}{URL}{Uniform Resource Locator}
 \newacronym{ux}{UX}{User Experience}
 \newacronym{vnc}{VNC}{Virtual Network Computing}
 \newacronym{vpn}{VPN}{Virtual Private Network}

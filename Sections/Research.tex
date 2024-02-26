@@ -124,6 +124,19 @@
                   Supervisor on the field. General applicability can be assessed by accessibility considerations by
                   comparing proposed visualization techniques with similar applications or domains.
       \end{itemize}
+      \subsection{Research Limitations}
+      The project and research in general will be limited on the \acrshort{api} request methods, in which the author 
+      is allowed to do only GET requests. This is due to the fact that the author is not allowed to do any
+      POST, PUT, DELETE, or any other \acrshort{http} request methods that could potentially change the state of the 
+      \acrshort{qaas} app or the \acrshort{api} that is being requested. This limitation is because the author is not a 
+      full-time employee of \acrshort{qict} and is not allowed to make any changes to the \acrshort{qaas} app or the 
+      \acrshort{api} that is being requested. Therefore, the author is limited to do research in the best practices 
+      and possible answer for \acrshort{api} monitoring and integration for the GET request method only.
+
+      Moreover, the author is also limited to the non-disclosure agreement signed within the initialization period of 
+      the graduation work placement. This means that any confidential information that the company deems as confidential
+      will not be disclosed in this research. This includes any information that is not publicly available, such as any 
+      financial data or security data pertaining to the internal system or the \acrshort{qaas} app internal code.
       \section{Research Sub-Question \#1}
       The \acrshort{qaas} app is a web application that is used by \acrshort{qict}. It is made in Dart with Flutter as
       the front-end framework.
@@ -134,7 +147,7 @@
       natively compiled applications for mobile, web, and desktop (Windows, mac\acrshort{os}, Linux) from a single
       codebase (\cite{flutter}).
 
-      \subsubsection{Cloud}
+      \subsubsection{Cloud Solutions}
       \subsubsection{Firebase}
       Firebase is a comprehensive platform for developing and managing web and mobile applications, created by
       Google and is party of \acrshort{gcp}. It was originally an independent company founded by Firebase, Inc.
@@ -207,13 +220,59 @@
       \subsection{Q-ICT Internal APIs}
       \subsubsection{What is an API?}
 
-      \subsubsection{Types of APIs}\label{chap:typesofapis}
-      \subsubsection{SOAP API}
-      \subsubsection{REST API}
-      \subsubsection{HTTP API}
-      This type of \acrshort{api} can be very simiar to \acrshort{rest} \acrshort{api}
-      \subsubsection{GraphQL API}
+      \subsubsection{Different Types of API By Audience}
+      \subsubsection{Different Types of API Protocols}\label{chap:typesofapis}
+      SOAP API
 
+      \acrshort{soap} \acrshort{api}s are strictly based on \acrshort{xml} for the message structure and 
+      \acrshort{http} for the protocols. Sending a \acrshort{soap} request is similar to using an envelope 
+      to send a message. \acrshort{soap} \acrshort{api}s consume extra overhead and more bandwidth, and 
+      require more work on both the client and server ends. That being said, like envelopes, \acrshort{soap} 
+      encloses more stringent security compared to \acrshort{rest}.
+      \end{multicols}
+      
+      \begin{lstlisting}[language=XML, caption=Example of a SOAP request, label=lst:soaprequest]
+            <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:example="http://example.com">
+                  <SOAP-ENV:Header/>
+                  <SOAP-ENV:Body>
+                        <example:GetUser>
+                              <example:UserID>123</example:UserID>
+                        </example:GetUser>
+                  </SOAP-ENV:Body>
+            </SOAP-ENV:Envelope>
+      \end{lstlisting}
+ 
+      \begin{multicols}{2}
+      \textbf{REST API}
+
+      If \acrshort{soap} is like an envelope, \acrshort{rest} is like a  more lightweight postcard. \acrshort{rest} 
+      \acrshort{api}s are considered the gold standard for scalability and are highly compatible with microservice 
+      architecture. 
+
+      \acrshort{rest} \acrshort{api}s are high-performing (especially over \acrshort{http}2), time-tested, and support 
+      many data formats. They also decouple the client and server, making sure of independent evolution. However,
+      building a true \acrshort{rest} \acrshort{api} is difficult because it requires a disciplined adherence to the 
+      Uniform Interface constraint (\cite{restapiuniforminterface}). Many organizations trade off the long-term benefits
+      of a truly \acrshort{rest} \acrshort{api} for other \acrshort{http} \acrshort{api} protocols that have similar 
+      benefits but adhere to \acrshort{rest} constraints more liberally.
+      
+      \textbf{GraphQL API}
+
+      Graph\acrshort{ql} \acrshort{api}s are contract-driven and come with introspection out-of-the-box. Building and
+      \acrshort{api} with Graph\acrshort{ql} is very easy in comparison to true \acrshort{rest} \acrshort{api}s, 
+      which require extensive knowledge of \acrshort{http} to build intelligently.
+
+      The downside is, however, that they do not scale well and require tight coupling between the client and the 
+      server. Graph\acrshort{ql} queries get more expensive to parse and execute plans for as they get bigger and
+      lack certain concepts native to \acrshort{http}, such as content and language negotiation. All three of the
+      \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for communication
+      therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web services 
+      and allow applications to interact with each other over the internet.
+
+      \textbf{RPC API} % Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
+
+      \textbf{WebSocket}
+      
       Those \acrshort{api}s are the following:
       \begin{itemize}
             \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8. It is a cloud
@@ -254,7 +313,37 @@
       or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can 
       be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time. 
       This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as 
-      automated alerts, detailed analytics, and comprehensive reporting capabilities.
+      automated alerts, detailed analytics, and comprehensive reporting capabilities. Features that an \acrshort{api} 
+      monitoring might have are listed in the following (\cite{postmanapimonitoring}):
+      \begin{itemize}
+            \item \textbf{Endpoint Surveillance}: it begins by closely tracking the various endpoints of an \acrshort{api}
+                  system. These endpoints represent specific functionalities or resources that the \acrshort{api} provides.
+            \item \textbf{Request-Response Analysis}: monitoring tools can simulate \acrshort{api} requests by sending 
+                  predefined inputs and parameters to specific endpoints, then analyzing the responses for relevant factors
+                  such as response time or data accuracy.
+            \item \textbf{Performance Metrics Measurement}: \acrshort{kpi}s, such as response time, latency, and error rates,
+                  are measured and tracked over time. This metrics offers insights into the overall health and efficiency of
+                  an \acrshort{api}.
+            \item \textbf{Error Detection and Logging}: actively identifying and log any errors or anomalies in \acrshort{api}
+                  resources with an \acrshort{api} monitoring program. This includes capturing \acrshort{http} error codes, 
+                  unexpected data/file formats, and alerting of any deviations from expected behaviour.
+            \item \textbf{Security Checks}: \acrshort{api} monitoring assess \acrshort{api} transactions for unauthorized 
+                  access attempts, potential vulnerabilities, and adherence to security protocols. 
+            \item \textbf{Alerting and Notification System}: automated alerting systems can be configured with high levels of 
+                  customization to notify relevant stakeholders when specific \acrshort{api} performance thresholds are breached 
+                  or exceeded or when abnormal behaviour is detected.
+            \item \textbf{Usage Analysis Gathering}: collect usage analytics for insights into how a given \acrshort{api} is 
+                  being used. This data helps software organizations plan for scalability, optimize resource allocation, and
+                  understand user behaviour.
+            \item \textbf{Logging for Auditing}: detailed logs of \acrshort{api} interactions are maintained for auditing 
+                  purposes. These \acrshort{api} logs are valuable resources for post-incident analysis and tracking historical
+                  performance and behavioural trends.
+            \item \textbf{Continuous Monitoring}: the tool is a constantly ongoing, real-time process that ensures that 
+                  issues of any scope are identified and addressed promptly.                  
+      \end{itemize}
+      With those functionalities in mind, \acrshort{api} monitoring tools can then automatically check \acrshort{api}
+      performance and availability at specified intervals of time to ensure that the monitored \acrshort{api}s run
+      appropriately. The specific timing of those intervals is unique to each \acrshort{api} product.
       \section{Research Sub-Question \#3}
       \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology
       SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to 

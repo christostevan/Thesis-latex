@@ -4,3 +4,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_GB","sentence":"^\\QSoftware Development Department: it addresses qict clients needs by creating custom software solutions tailored to their specific requirements.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QSentinelOne Incidents.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QSentinelOne Sentinels.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QSentinelOne Agent.\\E$"}

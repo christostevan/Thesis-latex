@@ -1,6 +1,6 @@
 \documentclass{report} % article, book
 \usepackage{array}
-\usepackage{graphicx}
+\usepackage{graphicx} % For inserting figures
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{appendix}
 \usepackage{bookmark}
@@ -183,9 +183,11 @@ style=apa,
 \newacronym{apt}{APT}{Advanced Persistent Threat}
 \newacronym{att&ck}{ATT\&CK}{Adversarial Tactics, Techniques, and Common Knowledge}
 \newacronym{av}{AV}{Anti-Virus}
+\newacronym{b2b}{B2B}{Business-to-Business}
 \newacronym{baas}{BaaS}{Back-end as a Service}
 \newacronym{bv}{B.V.}{Besloten Vennootschap}
 \newacronym{c&c}{C&C}{Command-and-Control}
+\newacronym{cdr}{CDR}{Content Disarm and Reconstruction}
 \newacronym{cmd}{CMD}{Command Prompt}
 \newacronym{cfo}{CFO}{Chief Financial Officer}
 \newacronym{cso}{CSO}{Chief Security Officer}
@@ -203,10 +205,12 @@ style=apa,
 \newacronym{cae}{CAE}{Chief Audit Executive}
 \newacronym{cd}{CD}{Continuous Delivery/Deployment}
 \newacronym{chro}{CHRO}{Chief Human Resources Officer}
+\newacronym{cmek}{CMEK}{Customer-Managed Encryption Keys}
 \newacronym{ci}{CI}{Continuous Integration}
-\newacronym{csv}{CSV}{Comma-Separated Values}
+\newacronym{crud}{CRUD}{Create, Read, Update, Delete}
 \newacronym{crm}{CRM}{Customer Relationship Management}
 \newacronym{csp}{CSP}{Cloud Service Provider}
+\newacronym{csv}{CSV}{Comma-Separated Values}
 \newacronym{ct}{CT}{Creative Technology}
 \newacronym{css}{CSS}{Cascading Style Sheets}
 \newacronym{csf}{CSF}{Cybersecurity Framework}
@@ -217,9 +221,11 @@ style=apa,
 \newacronym{dhcp}{DHCP}{Dynamic Host Configuration Protocol}
 \newacronym{dll}{DLL}{Dynamic Link Library}
 \newacronym{dns}{DNS}{Domain Name System}
+\newacronym{dom}{DOM}{Document Object Model}
 \newacronym{edr}{EDR}{Endpoint Detection and Response}
 \newacronym{eg}{e.g.,}{exempli gratia}
 \newacronym{epp}{EPP}{Endpoint Protection Platform}
+\newacronym{erp}{ERP}{Enterprise Resource Planning}
 \newacronym{etc}{etc.,}{et cetera}
 \newacronym{fcm}{FCM}{Firebase Cloud Messaging}
 \newacronym{fips}{FIPS}{Federal Information Processing Standards}
@@ -230,6 +236,7 @@ style=apa,
 \newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
 \newacronym{hr}{HR}{Human Resources}
 \newacronym{hrm}{HRM}{Human Resource Management}
+\newacronym{iam}{IAM}{Identity and Access Management}
 \newacronym{iaas}{IaaS}{Infrastructure as a Service}
 \newacronym{ict}{ICT}{Information and Communication Technology}
 \newacronym{icp}{ICP}{Internet Control Message Protocol}
@@ -261,6 +268,7 @@ style=apa,
 \newacronym{mssp}{MSSP}{Managed Security Service Provider}
 \newacronym{nat}{NAT}{Network Address Translation}
 \newacronym{nist}{NIST}{National Institute of Standards and Technology}
+\newacronym{oauth}{OAuth}{Open Authorization}
 \newacronym{otp}{OTP}{One Time Password}
 \newacronym{os}{OS}{Operating System}
 \newacronym{osi}{OSI}{Open Systems Interconnection}
@@ -287,6 +295,7 @@ style=apa,
 \newacronym{star}{STAR}{Situation, Task, Action, Result}
 \newacronym{ssh}{SSH}{Secure Shell}
 \newacronym{sse}{SSE}{Server-Sent Events}
+\newacronym{sso}{SSO}{Single Sign-On}
 \newacronym{sql}{SQL}{Structured Query Language}
 \newacronym{ssl}{SSL}{Secure Sockets Layer}
 \newacronym{swot}{SWOT}{Strengths, Weaknesses, Opportunities, and Threats}
@@ -299,9 +308,12 @@ style=apa,
 \newacronym{uri}{URI}{Uniform Resource Identifier}
 \newacronym{url}{URL}{Uniform Resource Locator}
 \newacronym{ux}{UX}{User Experience}
+\newacronym{vm}{VM}{Virtual Machine}
 \newacronym{vnc}{VNC}{Virtual Network Computing}
 \newacronym{vpn}{VPN}{Virtual Private Network}
-\newacronym{vm}{VM}{Virtual Machine}
+\newacronym{vps}{VPS}{Virtual Private Server}
+\newacronym{vcs}{VCS}{Version Control System}
+\newacronym{vs}{vs.}{versus}
 \newacronym{yaml}{YAML}{Yet Another Markup Language}
 \newacronym{xdr}{XDR}{Extended Detection and Response}
 \newacronym{xml}{XML}{Extensible Markup Language}
@@ -310,7 +322,12 @@ style=apa,
 \include{Sections/Front-Page}
 \include{Sections/Summary}
 \tableofcontents
+\clearpage
+\addcontentsline{toc}{section}{List of Figures}
 \listoffigures
+\clearpage
+\addcontentsline{toc}{section}{List of Example Code Listings}
+\lstlistoflistings
 \clearpage
 \printglossaries
 \include{Sections/Introduction}

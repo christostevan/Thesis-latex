@@ -159,7 +159,7 @@
       \begin{itemize}
             \item Databases:
                   \begin{itemize}
-                        \item Firestore Database: Firestore is a No\acrshort{sql} database that is part of the Firebase
+                        \item Firestore Database: Firestore is a \acrshort{nosql} database that is part of the Firebase
                               platform. It is a flexible, scalable database for mobile, web, and server development. It keeps
                               data in sync across client apps through real-time listeners and offers offline support for mobile
                               and web, so the developers can build responsive apps that work regardless of network latency or
@@ -218,7 +218,7 @@
 
       It is a fully managed service provided by \acrshort{gcp} that allows developers and organization to securely store, 
       access, and manage sensitive information such as API keys, passwords, certificates, \acrshort{oauth} credentials, 
-      database credentials and other credentials used in throughout the lifecycle of their applications 
+      \acrshort{db} credentials and other credentials used in throughout the lifecycle of their applications 
       (\cite{googlesecretmanager}). It is not part of Firebase, and it helps the \acrshort{qaas} app to centralize and 
       secure its secrets in scalable and easily manageable way. Key features of Secret Manager include:
       \begin{itemize}
@@ -237,18 +237,66 @@
       \end{itemize}
 
       \textbf{NoSQL Database}
-
+      
+      is a category of \acrshort{db} that provides a mechanism for storage and retrieval of data that is modelled in ways other
+      than the tabular relations used in \acrshort{rdbms}. \acrshort{nosql} \acrshort{db}s are typically designed to handle large
+      volumes of unstructured or semi-structured data, such as \acrshort{json}, \acrshort{xml}, or binary objects, and they offer
+      a flexible data model that can evolve over time. Both databases in Firebase, Firestore, and Real-time Database are \acrshort{nosql}
+      databases. Some characteristics of \acrshort{nosql} \acrshort{db}s include (\cite{nosql}):
+      \begin{itemize}
+            \item Data Model: \acrshort{nosql} uses dynamic schema, which allows data to be inserted without having to define the schema
+                  first, while \acrshort{sql} uses a fixed schema to store data.
+            \item Data Structure: \acrshort{nosql} \acrshort{db}s use a variety of data structures such as key-value pairs, document-oriented, 
+                  graphs databases, and columns-oriented; unlike \acrshort{sql} which only uses tables to store data.
+            \item Querying: \acrshort{nosql} uses variety of query languages, such as Mongo\acrshort{db} query language or Cassandra's 
+                  \acrshort{cql}, while \acrshort{sql} databases only use \acrshort{sql} as the unified language to query data.
+            \item Data Consistency and \acrshort{acid} Compliance: databases that are \acrshort{acid} compliant means that they follow a 
+                  set of rules to ensure that database transactions are processed reliably and securely. \acrshort{sql} databases are a 
+                  good example of this, while \acrshort{nosql} databases sacrifice some \acrshort{acid} properties in order to achieve 
+                  higher performance and scalability.
+            \item Use Case: \acrshort{nosql} \acrshort{db}s are ideal for applications that need to handle large volumes of data and 
+                  require high scalability and flexibility, such as social media platforms, real-time analytics, and content management
+                  systems.
+            \item Scalability: \acrshort{nosql} databases are traditionally designed for horizontal scalability, meaning they can easily 
+                  scale out multiple servers or clusters to handle volumes of data and high throughput, which is more cost-effective and
+                  allows for better scalability. They are well-suited for distributed and cloud-based environments. \acrshort{sql} databases
+                  are traditionally designed for vertical scalability, meaning a single server is scaled up with more powerful hardware and 
+                  power (\acrshort{cpu}, \acrshort{ram}) to a single server. This can become expensive and limit scalability.
+      \end{itemize}
+\end{multicols}
+\begin{figure}[htbp] 
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/nosql-scalling.png}
+      \caption{Vertical (\acrshort{sql}) \acrshort{vs} Horizontal (\acrshort{nosql}) Scaling}
+      \label{fig:graphqlvsrestarchitecture}
+\end{figure}
+\begin{multicols}{2}
+      Some examples of \acrshort{nosql} databases include Mongo\acrshort{db} (document-oriented), Cassandra (wide-column store), Redis
+      (key-value store), and Neo4j (graph database). Some examples of \acrshort{sql} databases include My\acrshort{sql}, 
+      Postgres\acrshort{ql}, and \acrshort{ms} \acrshort{sql} Server.
       \subsection{Q-ICT Internal APIs}
       \subsubsection{What is an API?}
       \acrshort{api} is a software intermediary that allows two applications to talk to each other. They are an
       accessible way to extract and share data within and across organizations.
       \subsubsection{Web APIs}
-      
+      A web \acrshort{api} is an \acrshort{api} that can be accessed using the \acrshort{http} protocol. Not all 
+      \acrshort{api}s are web \acrshort{api}s; some \acrshort{api}s are used only to communicate between two 
+      applications on the same computer, never making use of a web connection. But in practice, when developers talk 
+      about \acrshort{api}s, they are almost always talking about web-based \acrshort{api}s used to 
+
       \textbf{JSON format}
 
       \textbf{XML format}
 
       \textbf{OpenAPI Standard}
+
+      Previously known as Swagger, \acrshort{oas} is a specification for writing a public \acrshort{api}, with 
+      guidelines for details like endpoint naming conventions, data formats, and error messaging 
+      (\cite{openapistandard}). The standards required by Open\acrshort{api} and its automation of some tasks
+      make it easier for a developer to start working with an \acrshort{api} without needing to read through
+      a complex code base. For \acrshort{api} producers, Open\acrshort{api} standard offers access to a wide
+      variety of tools based on the standards. \acrshort{api} teams can use these tools to quickly up mock
+      servers and create high-quality documentation, among other tasks.
 
       \acrshort{api}s are generally categorized into different types based on their audience, architecture, and
       protocols (\cite{typesofapi}):
@@ -303,11 +351,29 @@
       a single \acrshort{api} can be used for syncing and integration. Similar in ordering via a food app, the customers can
       use multiple GET calls, retrieving the food, and finally placing the request as a POST call. 
       \subsubsection{Different Types of API by Architecture}
-      \textbf{Monolithic API}:
+      \textbf{Monolithic API}: this is a single, coherent codebase type of architecture, providing access to a complex data 
+      source. Most public \acrshort{api}s are monolithic \acrshort{api}s, because it is familiar to most web developers, and 
+      they often closely follow the \acrshort{mvc} architecture of a relational \acrshort{db}. They provide predictable 
+      functionality across a range of resources, and they generally remain fairly stable over time because they serve so
+      many use cases for many users.
 
-      \textbf{Microservices API} \label{microservicesapi}:
+      However, as the name suggests, they are monolithic, and therefore can be difficult to scale or refactor, because so much
+      data is interconnected with them. When developers worry about releasing "breaking changes", they are often working with
+      monolithic architectures, where changing even minor details can have unpredictable consequences. 
 
-      \textbf{Unified API}:
+      \textbf{Microservices API} \label{microservicesapi}: this is the main alternative to monolithic \acrshort{api} 
+      architecture. This architecture is more common for internal and partner \acrshort{api}, though public \acrshort{api}
+      may also be part of an organization's overall microservice architecture. Most development teams using a 
+      \acrshort{ci}/\acrshort{cd} process make use of many microservices as part of their code lifecycle, each serving a 
+      discrete, independent purpose. For example, an e-commerce company might have an internal microservice that
+      provides inventory data, and another to validate employee geolocation on changes to inventory data, while 
+      software developers pushing code automatically call microservices for testing and governance. As workflows 
+      change, individual microservices can be swapped out, updated, or replaced without affecting the overall parts 
+      of the system.
+
+      \textbf{Unified API}: this type is common among Partner \acrshort{api}s. It serves similar purpose to Composite 
+      \acrshort{api}s, but instead it bundles related calls to multiple different \acrshort{api}s, instead of to multiple
+      endpoints on a single \acrshort{api}.
 
       \subsubsection{Different Types of API Protocols}\label{chap:typesofapis}
       \textbf{\acrshort{soap} \acrshort{api}s}: are strictly based on \acrshort{xml} for the message structure and

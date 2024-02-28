@@ -9,3 +9,8 @@ makeglossaries filename
 Texcount to count the word
 texcount -inc main.tex
 -exclude=bibliography.tex
+
+Update reference.bib
+pdflatex main.tex
+bibtex main.aux
+biber main

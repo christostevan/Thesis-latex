@@ -14,3 +14,4 @@ Computicate
 center
 behavior
 OpenWeatherMap
+Redis

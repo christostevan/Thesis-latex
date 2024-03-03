@@ -42,8 +42,27 @@ style=apa,
 \makeglossaries
 \definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
 \definecolor{codeGreen}{rgb}{0,0.6,0}
+\definecolor{codeRed}{rgb}{0.6,0,0}
 \definecolor{codeGray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeGreen}{rgb}{0,0.6,0}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{eclipseKeywords}{rgb}{0.64,0.08,0.08}
+\definecolor{eclipseKeywords}{rgb}{127,0,85}
+\definecolor{backgroundJSON}{HTML}{EEEEEE}
+\definecolor{delim}{rgb}{20,105,176}
+\colorlet{punct}{red!60!black}
+\colorlet{numb}{magenta!60!black}
+\definecolor{black}{cmyk}{0,0,0,1}             
+\definecolor{white}{cmyk}{0,0,0,0}
+\definecolor{darkgrey}{cmyk}{0,0,0,0.97}      %background in Visual Studio
+\definecolor{green}{cmyk}{0.6,0,0.84,0}       %comments in Visual Studio
+\definecolor{blue}{cmyk}{0.65,0.33,0,0.05}       %keywords in Visual Studio
+\definecolor{rose}{cmyk}{0,0.26,0.38,0}       %strings in Visual Studio
+\definecolor{lavender}{cmyk}{0,0.42,0,0.1}   %if/else,switch/case etc. in Visual Studio
+\definecolor{lightblue}{cmyk}{0.35,0,0,0}     %local variables in Visual Studio
+\definecolor{aqua}{cmyk}{0.65,0,0.23,0}       %class types in Visual Studio
+\definecolor{lightgreen}{cmyk}{0.12,0,0.33,0.05} %enumerations and methods in Visual Studio
+
 
 \lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, 
@@ -55,14 +74,14 @@ style=apa,
   comment=[l]{//},
   morecomment=[l]{//},
   morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{codeGreen}\ttfamily,
+  stringstyle=\color{codeRed}\ttfamily,
   morestring=[b]',
   morestring=[b]",
   ndkeywords={class, export, boolean, throw, implements, import, this, constructor, boolean, string, number},
-  keywordstyle=\color{blue}\bfseries,
-  stringstyle=\color{red}\ttfamily,
-  sensitive=true
+  sensitive=true,
+  backgroundcolor=\color{codeGray},
+  basicstyle=\footnotesize\ttfamily\color{white},
 }
 
 \lstdefinelanguage{XML} { % Define XML language in listing
@@ -72,17 +91,19 @@ style=apa,
     stringstyle=\color{black},
     identifierstyle=\color{darkblue},
     keywordstyle=\color{cyan},
-    morekeywords={xmlns,version,type}
+    morekeywords={xmlns,version,type},
+    backgroundcolor=\color{gray},
 }
 
-\lstdefinelanguage{JSON} { % Define JSON language in listing
+\lstdefinelanguage{JSON
+} { % Define JSON language in listing
     morestring=[b]",
     morestring=[d]',
     basicstyle=\normalfont\ttfamily,
-    commentstyle=\color{eclipseStrings},
-    stringstyle=\color{eclipseKeywords},
+    commentstyle=\color{eclipseStrings}, % style of comments
+    stringstyle=\color{codeRed}, 
     numbers=left,
-    numberstyle=\scriptsize,
+    numberstyle=\scriptsize, % \tiny
     stepnumber=1,
     numbersep=8pt,
     showstringspaces=false,
@@ -90,7 +111,8 @@ style=apa,
     frame=lines,
     backgroundcolor=\color{gray},
     string=[s]{"}{"},
-    comment=[l]{:"},
+    comment=[l]{:\ "},
+    morecomment=[l]{:"},
     literate=
      *{0}{{{\color{numb}0}}}{1}
       {1}{{{\color{numb}1}}}{1}
@@ -104,31 +126,55 @@ style=apa,
       {9}{{{\color{numb}9}}}{1}
       {:}{{{\color{punct}{:}}}}{1}
       {,}{{{\color{punct}{,}}}}{1}
-      {\{}{{{\color{delim}{\{}}}}{1}
-      {\}}{{{\color{delim}{\}}}}}{1}
-      {[}{{{\color{delim}{[}}}}{1}
-      {]}{{{\color{delim}{]}}}}{1},
+      {true}{{{\color{blue}true}}}{4}
+      {false}{{{\color{blue}false}}}{5}
+      {(}{{{\color{black}{(}}}}{1}
+      {)}{{{\color{black}{)}}}}{1}
+      {\{}{{{\color{black}{\{}}}}{1}
+      {\}}{{{\color{black}{\}}}}}{1}
+      {[}{{{\color{black}{[}}}}{1}
+      {]}{{{\color{black}{]}}}}{1},
 }
 
 \lstset{% Listing settings
-    backgroundcolor=\color{white},
-    extendedchars=true,
-    basicstyle=\footnotesize\ttfamily,
-    showstringspaces=false,
-    showspaces=false,
     numbers=left,
-    numberstyle=\footnotesize,
-    numbersep=9pt,
-    tabsize=2,
-    breaklines=true,
+    numberstyle=\tiny\color{black}, %\footnotesize
+    rulesep=10pt,
+    xleftmargin=12pt,
+    framexleftmargin=-2pt,
+    framexrightmargin=-5pt,
     showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    backgroundcolor=\color{darkgrey},
+    rulecolor=\color{darkgrey},
+    commentstyle=\color{codeGreen},
+    basicstyle=\footnotesize\ttfamily\color{white},
+    stringstyle=\color{rose},
+    frame=trbl,
+    framesep=5pt,
+    numbersep=7pt,
+    belowcaptionskip=1\baselineskip,
+    extendedchars=true,
+    tabsize=2,
     columns=fullflexible,
     commentstyle=\color{gray}\upshape,
-    breakatwhitespace=true,
     morekeywords={encoding,
         xs:schema,xs:element,xs:complexType,xs:sequence,xs:attribute}
     captionpos=b,
-    escapeinside={<@}{@>}
+    escapeinside={<@}{@>}, 
+    keywordstyle=\color{blue},
+    morekeywords={partial, var, value, get, set},
+    emphstyle=\color{lavender},
+    emph={if, else, return, throw, switch, case},
+    emphstyle={[2]\color{lightblue}},
+    emph={[2]someLocalVariable, someGlobalVariable},
+    emphstyle={[3]\color{aqua}},
+    emph={[3]SomeOwnClassType},
+    emphstyle={[4]\color{lightgreen}},
+    emph={[4]ToLower},
 }
 
 \newglossaryentry{Pentest}
@@ -154,9 +200,8 @@ style=apa,
 }
 \newglossaryentry{API} {
     name=\acrshort{api},
-    description={is a software intermediary that allows two applications to talk to each other (\cite{api}). In other words, an 
-    \acrshort{api} is the messenger that delivers request to the provider that was requested from and then delivers the response 
-    back (\cite{api}). 
+    description={is a software intermediary that allows two applications to talk to each other. In other words, an \acrshort{api} 
+    is the messenger that delivers request to the provider that was requested from and then delivers the response back (\cite{api}). 
     }
 }
 \newglossaryentry{AD} {
@@ -226,15 +271,19 @@ style=apa,
 \newacronym{dll}{DLL}{Dynamic Link Library}
 \newacronym{dns}{DNS}{Domain Name System}
 \newacronym{dom}{DOM}{Document Object Model}
+\newacronym{ecma}{ECMA}{European Computer Manufacturers Association}
 \newacronym{edr}{EDR}{Endpoint Detection and Response}
 \newacronym{eg}{e.g.,}{exempli gratia}
 \newacronym{epp}{EPP}{Endpoint Protection Platform}
 \newacronym{erp}{ERP}{Enterprise Resource Planning}
+\newacronym{es}{ES}{ECMAScript}
 \newacronym{etc}{etc.,}{et cetera}
 \newacronym{fcm}{FCM}{Firebase Cloud Messaging}
 \newacronym{fips}{FIPS}{Federal Information Processing Standards}
 \newacronym{ftp}{FTP}{File Transfer Protocol}
+\newacronym{gb}{GB}{Gigabyte}
 \newacronym{gcp}{GCP}{Google Cloud Platform}
+\newacronym{grpc}{gRPC}{Google Remote Procedure Call}
 \newacronym{html}{HTML}{HyperText Markup Language}
 \newacronym{http}{HTTP}{Hypertext Transfer Protocol}
 \newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
@@ -268,6 +317,7 @@ style=apa,
 \newacronym{ml}{ML}{Machine Learning}
 \newacronym{mttr}{MTTR}{Mean Time To Repair}
 \newacronym{ms}{MS}{Microsoft}
+\newacronym{msgpack}{MsgPack}{MessagePack}
 \newacronym{msp}{MSP}{Managed Service Provider}
 \newacronym{mssp}{MSSP}{Managed Security Service Provider}
 \newacronym{mvc}{MVC}{Model-View-Controller}
@@ -277,6 +327,8 @@ style=apa,
 \newacronym{nosql}{NoSQL}{Not Only SQL}
 \newacronym{oas}{OAS}{OpenAPI Specification}
 \newacronym{oauth}{OAuth}{Open Authorization}
+\newacronym{odbc}{ODBC}{Open Database Connectivity}
+\newacronym{oop}{OOP}{Object-Oriented Programming}
 \newacronym{otp}{OTP}{One Time Password}
 \newacronym{os}{OS}{Operating System}
 \newacronym{osi}{OSI}{Open Systems Interconnection}
@@ -318,6 +370,7 @@ style=apa,
 \newacronym{uri}{URI}{Uniform Resource Identifier}
 \newacronym{url}{URL}{Uniform Resource Locator}
 \newacronym{ux}{UX}{User Experience}
+\newacronym{vcpu}{vCPU}{Virtual Central Processing Unit}
 \newacronym{vm}{VM}{Virtual Machine}
 \newacronym{vnc}{VNC}{Virtual Network Computing}
 \newacronym{vpn}{VPN}{Virtual Private Network}

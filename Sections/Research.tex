@@ -376,6 +376,7 @@
                   are traditionally designed for vertical scalability, meaning a single server is scaled up with more powerful hardware and
                   power (\acrshort{cpu}, \acrshort{ram}) to a single server. This can become expensive and limit scalability.
       \end{itemize}
+      "Serverless Architecture"
 \end{multicols}
 
 \begin{figure}[htbp]
@@ -1008,7 +1009,7 @@
       performance and availability at specified intervals of time to ensure that the monitored \acrshort{api}s run
       appropriately. The specific timing of those intervals is unique to each \acrshort{api} product.
       \section{Research Sub-Question \#3}
-      \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology
+      \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
       SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to
       help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze
       and respond to security threats in real-time, providing organizations with comprehensive protection against malware,
@@ -1016,10 +1017,25 @@
       enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures
       to address them.
       \subsection{SentinelOne Console}
-      \subsection{SentinelOne Ranger}
-      \subsection{SentinelOne Sentinels}
+      \subsection{Ranger}
+      Ranger is one of the SentinelOne product that provides a way of detecting other devices (computers and
+      \acrshort{iot} devices) that are on the client's computer network. If a malicious attacker comes in and plugs his device
+      into the network, all the other SentinelOne agents are going to read the network traffic, determine and classify whether
+      this is a new device, or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
+      detect technical information regarding the device. On a network, before a machine is connected and talks to other devices
+      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} request.
+      Ranger is going to read that \acrshort{arp} request and determine
+
+      \subsection{Sentinels}
+      Sentinels are the end-points,
       \subsection{SentinelOne Agent}
-      \subsection{SentinelOne Incidents}
+      An Agent is a software program, deployed to each endpoint, including desktop, laptop, server or virtual environment,
+      and runs autonomously on each device, without reliance on internet connection.
+      \subsection{Vigilance}
+      It is a \acrshort{mdr} service - providing threat monitoring, hunting, and response, to its existing customers. It
+      provides a 24/7 \acrshort{soc} with expert analysts and researchers to give customers near real-time threat monitoring,
+      in-console threat annotations, and response to threats and suspicious events.
+      \subsection{Incidents}
 
       \section{Research Sub-Question \#4}
 \end{multicols}

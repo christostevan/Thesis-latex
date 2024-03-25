@@ -129,6 +129,8 @@
       \acrshort{api} that is being requested. Therefore, the author is limited to do research in the best practices
       and possible answer for \acrshort{api} monitoring and integration for the GET request method only.
 
+      The author is also limited in showing the SentinelOne dashboard
+
       Moreover, the author is also limited to the non-disclosure agreement signed within the initialization period of
       the graduation work placement. This means that any confidential information that the company deems as confidential
       will not be disclosed in this research. This includes any information that is not publicly available, such as any
@@ -345,6 +347,7 @@
                   who can access and manage the stored secrets and what they can do with them.
             \item Centralized Management: it stores and manages all secrets in one place, simplifying access and control.
       \end{itemize}
+      Cloud Functions can typically access \acrshort{gcp} Secret Manager by....
 
       \textbf{NoSQL Database}
 
@@ -674,53 +677,85 @@
       enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures
       to address them.
 
+      Some terminology that the readers need to be familiar with before diving deeper into SentinelOne:
+
       \textbf{Endpoint}
 
       Endpoint can be defined as any remote computing devices that receives incoming communications and sends outgoing messages
       to the network it is connected to. Examples of endpoints include desktops, laptops, smartphones, tablets, servers, workstations,
       and other \acrshort{iot} devices that is connected to a network. They are the first-line of defence for the Blue team today.
 
+      \textbf{EPP}
+
       \textbf{EDR}
 
       \acrshort{edr} \acrshort{aka} \acrshort{etdr}, is a group of integrated endpoint security solutions that combine data collection,
       data analysis, forensics, and threat hunting with the end-goal of identifying and stopping any potential security breaches in due time.
       \acrshort{edr} solutions are able to recognize any suspicious patterns that can be investigated later on, as they have been purposefully
-      created to detect and respond in an active manner to advance malware, ransomware, and other cyber threats. \acrshort{edr}, as the name
-      suggest, were developed specifically for endpoints, and not networks (\ref{sec:ndr}).
+      created to detect and respond in an active manner to advance malware, ransomware, and other cyber threats (the Response \acrshort{edr}).
+      \acrshort{edr}, as the name suggest, were developed specifically for endpoints, and not networks (\ref{sec:ndr}).
 
       The number one thing that sets apart \acrshort{edr} from traditional \acrshort{av} is that traditional \acrshort{av} relies on
       signature-based detection, usually having a defined set of list in their \acrshort{db}, where known malware signatures are compared
       against files or processes to identify threats. \acrshort{edr} on the other hand, uses a combination of signature-based detection, such
       as behavioural analysis, machine learning, and anomaly detection to identify and respond both known and unknown threats. \acrshort{edr}
       solutions focus on detecting malicious activities at the endpoint level, including file modifications, process execution, and network
-      connections.
-
-      \textbf{SIEM}
-
-      \textbf{NDR} \label{sec:ndr}
+      connections, focusing on malicious behaviour compare to only concerning with malicious software like what traditional \acrshort{av} does.
 
       \textbf{MDR}
 
-      \textbf{SOAR}
+      \textbf{NDR} \label{sec:ndr}
+
+      \textbf{SIEM}
+
+      is a software system that collects, aggregates, normalizes security data from a variety of sources within an IT infrastructure, and
+      analyzes it according to pre-set rules, present it in human-readable format and therefore giving a comprehensive picture of the company's
+      information security. \acrshort{siem} tools evolved from the log management discipline and combine \acrshort{sim} and \acrshort{sem} technologies.
+      A \acrshort{siem} tool uses \acrshort{ai} to automate a number of manual procedures related to threat detection and incident response. Furthermore,
+      it assists enterprise security teams in spotting anomalies in user behavior.
+
+      \begin{itemize}
+            \item Input: logs, threat intel, vulnerability feeds, \acrshort{ndr}, and \acrshort{edr} data
+            \item Output: high-fidelity alerts prioritized by severity
+            \item Infused with: \acrshort{ai}, \acrshort{ml}, and analytics
+      \end{itemize}
 
       \textbf{XDR}
 
-      This terminology is used to define what SentinelOne is.
+      is a security solution that gathers and analyzes data from multiple sources like endpoints, networks, cloud, emails, app, \acrshort{etc} It offers
+      great visibility into a company's \acrshort{it} infrastructure, helping the security employees to detect more threats, respond efficiently, and
+      deal with fewer false positive alerts \cite{xdrIDC}.
+
+      This solution integrates several tools combining all the gathered data into a single platform to visualize the information. It might incorporate
+      automated processes (even complex ones), \acrshort{ml}, and advanced analytics to enable quicker and more effective incident response. It can
+      deal even with hidden and advanced malware.
+
+      \textbf{MXDR}
+
+      Some people still call it \acrshort{mdr}, managed \acrshort{soc}, or managed security.
+
+      \textbf{SOAR}
+
+      \acrshort{soar} solutions focus on automating incident response processes and triage capabilities. The main goal is to oversee security without
+      human help as much as possible, boosting productivity and shorten the response time. It might use \acrshort{ai} and \acrshort{ml} to assess
+      security events and automate incident response procedures. These solutions can be standalone product, or it can be added to \acrshort{siem}
+      solutions since \acrshort{soar} does not excel in event analysis.
+
+      \textbf{SOC}
+
+      \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{Figures/XDR.jpg}
+            \caption{How all terms related to various technologies in cybersecurity connected to each other}
+            \label{fig:xdr}
+      \end{figure}
+
+      \textit{Please note that as mentioned before, \acrshort{siem} can also take data from an \acrshort{edr} and \acrshort{ndr} but for
+            the sake of simplicity, the diagram puts them as a separate pier systems.}
 
       \subsection{SentinelOne Console}
-      \subsection{Ranger}
-      Ranger is one of the SentinelOne product that provides a way of detecting other devices (computers and
-      \acrshort{iot} devices) that are on the client's computer network. If a malicious attacker comes in and plugs his device
-      into the network, all the other SentinelOne agents are going to read the network traffic, determine and classify whether
-      this is a new device, or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
-      detect technical information regarding the device. On a network, before a machine is connected and talks to other devices
-      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} request.
-      Ranger is going to read that \acrshort{arp} request and determine
 
-      \subsection{Sentinels}
-      Sentinels are the end-points,
       \subsection{SentinelOne Agent}
-
       An Agent is a software program, deployed to each endpoint, including desktop, laptop, server or virtual environment,
       and runs autonomously on each device, without reliance on Internet connection, enabling data gathering, detection, and
       response to actions. Agents can be interpreted as an \acrshort{av}, collecting relevant security telemetry such as:
@@ -731,13 +766,169 @@
       \end{itemize}
       This information can be useful to detect the presence of a threat or to use in forensic analysis and investigation after
       an attack has occurred (Recovery).
+      \subsection{Ranger}
+      Ranger is one of the SentinelOne product that provides a way of detecting other devices (computers and
+      \acrshort{iot} devices) that are on the client's computer network. If a malicious attacker comes in and plugs his device
+      into the network, all the other SentinelOne agents are going to read the network traffic, determine and classify whether
+      this is a new device, or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
+      detect technical information regarding the device. On a network, before a machine is connected and talks to other devices
+      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} request.
+      Ranger is going to read that \acrshort{arp} request and determine
+      \subsection{Sentinels}
+      Sentinels are the end-points,
 
+      \subsection{Incidents}
+
+      \begin{itemize}
+            \item Kill: stops all processes related to that threat
+            \item Quarantine: encrypts and moves the threat and its executables
+            \item Remediate: deletes all files and system changes created by the threat
+            \item Rollback: restores files and configuration that the threat changed. This step is usually taken when a malware has
+                  executed its script and has made changes to the system, \acrshort{eg} a ransomware has encrypted all the files and
+                  asked for a ransom. By executing this step, all the three previous steps will also be undertaken as well. This will
+                  then reboot the system and restore it to the safe state before the malware has executed.
+      \end{itemize}
+
+      Additionally, the user can also perform an analysis verdict
+      \begin{itemize}
+            \item False positive
+            \item Suspicious
+            \item True positive
+            \item Undefined
+      \end{itemize}
+
+      Threat mitigation status
+      \begin{itemize}
+            \item Mitigated
+            \item Not mitigated
+            \item Marked as benign
+      \end{itemize}
+
+      Incident status
+      \begin{itemize}
+            \item Resolved
+            \item Unresolved
+            \item In progress
+      \end{itemize}
+
+      \acrshort{ai} confidence Level
+      \begin{itemize}
+            \item Malicious
+            \item Suspicious
+            \item \acrshort{na}
+      \end{itemize}
+
+      Classification
+      \begin{itemize}
+            \item Malware
+            \item \acrshort{pua}
+            \item Virus
+            \item Infostealer
+            \item Hacktool
+      \end{itemize}
+
+      \acrshort{os}
+      \begin{itemize}
+            \item Windows
+            \item Linux
+            \item Mac
+            \item Windows Legacy
+      \end{itemize}
+
+      Cloud Provider
+      \begin{itemize}
+            \item Azure
+            \item \acrshort{aws}
+            \item \acrshort{gcp}
+            \item \acrshort{oci}
+            \item ESXI
+      \end{itemize}
+
+      Engine
+      \begin{itemize}
+            \item SentinelOne Cloud
+            \item On-Write Static \acrshort{ai} - Suspicious
+            \item Behavioral \acrshort{ai}
+            \item On-Write Static \acrshort{ai}
+            \item Reputation
+            \item Cloud Detection
+            \item User-Defined Blocklist
+            \item Documents, Scripts
+            \item Anti Exploitation / Fileless
+            \item Intrusion Detection
+            \item Potentially unwanted application
+            \item Lateral Movement
+            \item Remote Shell
+            \item Manual
+            \item Application Control
+            \item Threat Intelligence
+            \item WatchTower
+            \item Driver Blocking
+      \end{itemize}
+
+      Initiated by:
+      \begin{itemize}
+            \item Agent Policy
+            \item Full Disk Scan
+            \item Local agent command
+            \item Deep Visibility Command
+            \item Management console \acrshort{api}
+            \item On-Demand Scan
+            \item Custom Rule
+            \item Custom Alert
+            \item Cloud Detection
+            \item Threat Intelligence
+            \item WatchTower
+      \end{itemize}
+
+      Additionally, users can also search the mitigated threats by:
+      \begin{itemize}
+            \item Content Hash
+            \item Cloud Account
+            \item Cloud Image
+            \item Cloud Instance \acrshort{id}
+            \item Cloud Instance Size
+            \item Cloud Location
+            \item Cloud Network
+            \item \acrshort{aws} Role
+            \item \acrshort{aws} Security Groups
+            \item \acrshort{aws} Subnet \acrshort{id}s
+            \item Azure Resource Group
+            \item \acrshort{gcp} Service Account
+            \item Threat Details: \acrshort{eg}: "This is a non-Microsoft binary that masquerades as a Microsoft executable"
+            \item File Path: \acrshort{eg}: "\textbackslash Device\textbackslash HarddiskVolumeA\textbackslash Users\textbackslash Chris\textbackslash Downloads\textbackslash malicious.exe"
+            \item Endpoint Name" \acrshort{eg}: "LT-Christopher", "LT 10-08"
+            \item \acrshort{uuid}: \acrshort{eg}: "0ff2a3409f284776a23432e9f6894afa"
+            \item Agent Version (at detection): \acrshort{eg}: "23.1.4.650"
+            \item Agent Version (current)
+            \item Domain (at detection time)
+            \item Command Line Arguments
+            \item Initiated By (username): \acrshort{eg}: "LuukAdmiraalMKBIT"
+            \item Storyline
+            \item Originated Process
+            \item Cluster Name
+            \item Node Name
+            \item Namespace Name
+            \item Namespace Labels
+            \item Controller Name
+            \item Controller Labels
+            \item Pod Name
+            \item Pod Labels
+            \item Container Name
+            \item Image Name
+            \item Container Labels
+            \item External Ticket \acrshort{id}
+            \item Node Labels
+      \end{itemize}
+
+      Furthermore, it will also analyze for infected endpoint connectivity (offline/online), mitigated preemptively (yes/no),
+      reboot required (yes/no), action failed (yes/no), pending actions (yes/no), and if note and external ticket exists (yes/no).
+      \subsection{Reports}
       \subsection{Vigilance}
       It is a \acrshort{mdr} service - providing threat monitoring, hunting, and response, to its existing customers. It
       provides a 24/7 \acrshort{soc} with expert analysts and researchers to give customers near real-time threat monitoring,
-      in-console threat annotations, and response to threats and suspicious events.
-      \subsection{Incidents}
-
+      in-console threat annotations, and response to threats and suspicious events. Vigilance itself is a separate package from
+      SentinelOne.
       \section{Research Sub-Question \#3}
       Please keep in mind that in this sub-question, only the visualization techniques will be assessed, compared, contrasted,
       evaluated, and discussed. The other factors such as pricing, technologies, and features will not be discussed in this sub-question.
@@ -745,6 +936,7 @@
       \subsection{Huntress}
       \subsection{CrowdStrike}
       CrowdStrike Falcon
+      \subsection{Datto RMM}
       \subsection{Sophos}
       \subsection{Carbon Black}
       \subsection{Trend Micro}

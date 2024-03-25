@@ -17,6 +17,8 @@
       clients, streamline their operations, provide clients with robust, proactive security measurers, and improve
       their overall service delivery.
 
+      SentinelOne....
+
       \section{The Company and the QaaS App}
       \acrshort{qict} \acrshort{bv}, is a small cybersecurity consultancy based in Emmen, northeast of the
       Netherlands. It recognizes the critical importance of proactive \acrshort{api} monitoring in safeguarding
@@ -121,48 +123,22 @@
       \end{enumerate}
       \section{Problem Statement}
       The company currently manages numerous third-party \acrshort{api}s for the above-mentioned purposes.
-      Currently, those \acrshort{api}s are managed manually and without a standardized implementation in their
-      internal application, the \acrshort{qaas} app, which is a time-consuming and error-prone process. This has
-      led to several problems, namely:
-      \begin{itemize}
-            \item Inefficient and fragmented approach to \acrshort{api} management.
-            \item Lack of user-friendliness, and slow and unclear navigation.
-            \item Inconsistent integration of \acrshort{api}s into the application.
-            \item Poses a significant challenge in error handling and debugging, as disparate error reporting
-                  mechanism across the APIs hinder efficient troubleshooting and resolution processes.
-            \item Difficulty to maintain and update \acrshort{api}s.
-            \item Lack of clear and concise documentation.
-            \item Lack of a centralized \acrshort{api} management system.
-            \item Inadequate security measures, as the company risks inconsistent data retrieval and analysis
-                  across its \acrshort{api}s, potentially leading to incomplete insights into client \acrshort{it}
-                  systems and infrastructure.
-      \end{itemize}
-      Thus, the company has tasked the author with the development of a standardized \acrshort{api} monitoring
-      system within the \acrshort{qaas} app, with features such as error handling, connection status warranty,
-      debugging, and the effective integration of the SentinelOne security threat platform for continuous
-      cybersecurity monitoring within the \acrshort{qaas} app as the main topic of his graduation work placement
+      Currently,
+      Thus, the company has tasked the author with the development of the SentinelOne security threat platform integration
+      for continuous cybersecurity monitoring within the \acrshort{qaas} app as the main topic of his graduation work placement
       project.
 
       \section{Project Objectives}
       In the end of this project which consist of 90-99 working days, the following objectives should be achieved:
       \begin{enumerate}
-            \item Develop a standardized \acrshort{api} monitoring system within the \acrshort{qaas} app, with
-                  features such as error handling and logging, connection status warranty, debugging, 
-                  secure storage of \acrshort{api} keys, handling of expired \acrshort{api} keys, and external 
-                  validation of \acrshort{api} connections. Additionally, this functionality should also support
-                  displaying the respective status code of error connection from the \acrshort{api}s along with
-                  error messages, and conducting testing to these unsuccessful \acrshort{api} calls to diagnose
-                  issues such as expired credentials, while also being able to inspect the payload for further
-                  analysis.
-            \item Furthermore, the \acrshort{qaas} app should be able to serve as a versatile template application 
-                  for integration with further upcoming third-party \acrshort{api}s in the future for importing 
-                  new data.
             \item Effectively integrates and leverages the SentinelOne \acrshort{edr} platform for continuous
                   cybersecurity monitoring within the \acrshort{qaas} app.
-            \item The \acrshort{qaas} app should have a way to visualize the data retrieved from the SentinelOne 
-                  \acrshort{api} in a user-friendly manner in order for the client users helpdesk support, financial 
+            \item The \acrshort{qaas} app should have a way to visualize the data retrieved from the SentinelOne
+                  \acrshort{api} in a user-friendly manner in order for the client users helpdesk support, financial
                   department, cybersecurity department, software development department, and other employees within
                   \acrshort{qict}  departments to see the data easier.
+            \item Combine the SentinelOne data with N-Central \acrshort{api}
+            \item Utilize Vigilance package of SentinelOne
             \item Ensure proper unit testing, code refactoring, commenting, and adherence to the overall code
                   conventional guidelines and best practices in both the test and live environments of the
                   \acrshort{qaas} app.

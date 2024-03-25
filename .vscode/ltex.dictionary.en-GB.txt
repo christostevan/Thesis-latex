@@ -16,3 +16,8 @@ behavior
 OpenWeatherMap
 Redis
 Heimdal
+analyzes
+Behavioral
+Fileless
+Infostealer
+Hacktool

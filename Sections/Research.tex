@@ -22,8 +22,8 @@
             \item What are the most suitable visualization techniques for displaying the data processed and
                   received by other Security Threat Platforms to ensure clear and insightful representation
                   of threats detected by SentinelOne \acrshort{api}?
-            \item How should the QaaS app respond in the event of a cybersecurity incident detected through
-                  the utilization of SentinelOne technologies and packages?
+            \item How should the \acrshort{qaas} app respond in the event of a cybersecurity incident detected
+                  through the utilization of SentinelOne technologies and packages?
       \end{itemize}
       \section{Research Methodology}
       In this research, different research methods have been used to answer the research questions. This research
@@ -39,21 +39,20 @@
                   of the app.
             \item Sub-question \#2: Literature Study on various articles on the Internet, interviews, expert reviews,
                   and requirement elicitation techniques such as use case analysis and user stories. Analysis on the
-                  current \acrshort{qaas} app and its \acrshort{api} monitoring capabilities.
-            \item Sub-question \#3: technical evaluations of SentinelOne's capabilities and \acrshort{api}s will
+                  current \acrshort{qaas} app and its capabilities.
+            \item Sub-question \#3: research into existing visualization techniques for \acrshort{json} data coming from
+                  SentinelOne \acrshort{api} through Literature Study. Analyze existing data visualization tools and
+                  platforms that are available in Flutter and Firebase. Gather requirements from project stakeholders
+                  regarding data visualization preferences and usability, and do data analysis and usability testing.
+            \item Sub-question \#4: technical evaluations of SentinelOne's capabilities and \acrshort{api}s will
                   be conducted, the \acrshort{api} documentation and integration guideline will be read and review
                   with Literature Study method and case studies of similar integrations. Requirements from the
                   cybersecurity experts from the \acrshort{qict} department responsible for SentinelOne's technical
                   support will be gathered and analyzed. Furthermore, Prototyping with proof-of-concept prototypes
                   on a test environment will be conducted to test different integration scenarios, assess feasibility,
                   identify potential challenges, refine the approach, and evaluate the performance of the integration.
-            \item Sub-question \#4: research into existing visualization techniques for \acrshort{xml} and
-                  \acrshort{json} data, especially the data coming from SentinelOne \acrshort{api} through Literature
-                  Study. Analyze existing data visualization tools and platforms that are available in Flutter and
-                  Firebase. Gather requirements from project stakeholders regarding data visualization preferences and
-                  usability, and do data analysis and usability testing.
+                  \subsection{Selected Measuring Instruments}
       \end{itemize}
-      \subsection{Selected Measuring Instruments}
       \begin{itemize}[label=-]
             \item Sub-question \#1: structured interview guide, document report checklist analysis and review,
                   observation, analysis tools for codebase and logs, and quite possibly supplemented by surveys
@@ -127,30 +126,97 @@
       \acrshort{qaas} app or the \acrshort{api} that is being requested. This limitation is because the author is not a
       full-time employee of \acrshort{qict} and is not allowed to make any changes to the \acrshort{qaas} app or the
       \acrshort{api} that is being requested. Therefore, the author is limited to do research in the best practices
-      and possible answer for \acrshort{api} monitoring and integration for the GET request method only.
+      of SentinelOne integration for the GET request method only.
 
-      The author is also limited in showing the SentinelOne dashboard
+      The author is also limited in showing the SentinelOne dashboard data, as it contains clients' sensitive
+      information, and \acrshort{qict} has over 400 clients. Therefore, if any part of the SentinelOne dashboard is
+      shown, it will be with blurred sensitive information.
 
       Moreover, the author is also limited to the non-disclosure agreement signed within the initialization period of
       the graduation work placement. This means that any confidential information that the company deems as confidential
       will not be disclosed in this research. This includes any information that is not publicly available, such as any
       financial data or security data pertaining to the internal system or the \acrshort{qaas} app internal code.
       \section{Research Sub-Question \#1}
-      The \acrshort{qaas} app is an \acrshort{erp} web application that is used by \acrshort{qict} and its clients.
-      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used.... For \acrshort{qict} itself, it is an
+      The \acrshort{qaas} app is an \gls{ERP} web application that is used by \acrshort{qict} and its clients.
+      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to
+      For \acrshort{qict} employees themselves, it is an
       \acrshort{erp} system that is used to manage the clients and their \acrshort{ict} infrastructure.
       It is made in Dart with Flutter as the front-end framework. There are 2 main parts of the \acrshort{qaas} app, the
       front-end and the back-end. The front-end is made in Flutter, and the back-end is made in Node.js with TypeScript
       as the template. The back-end is hosted on Firebase Cloud Functions which are used to connect and make
       \acrshort{http} calls to the internal \acrshort{api}s, and the front-end is hosted on Firebase Hosting.
+\end{multicols}
 
-      \subsection{QaaS App Infrastructure}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/QaaS App Infraastructure.jpg}
+      \caption{The infrastructure of the QaaS app}
+\end{figure}
+
+\begin{multicols}{2}
       \subsubsection{Flutter}
       Flutter is an open-source framework made by Google in 2017. It used as an \acrshort{ui} toolkit for building
       natively compiled applications for mobile, web, and desktop (Windows, mac\acrshort{os}, Linux) from a single
-      codebase (\cite{flutter}).
+      codebase (\textit{\cite{flutter}}).
 
-      \subsubsection{Cloud Solutions}
+      \textbf{Widgets}
+
+      Widgets in Flutter refer to the basic building blocks used to build \acrshort{ui}s. Everything in Flutter, from
+      buttons to layout containers to text inputs, is a widget. They are lightweight, reusable components that
+      define the structure, appearance, and behavior of \acrshort{ui} elements in a Flutter application. When a widget's
+      state changes, the widget rebuilds its description, which the framework diffs against the previous description
+      in order to determine the minimal changes for rendering in the \acrshort{ui}. There are only 2 types of Widgets
+      in Flutter:
+      \begin{itemize}
+            \item \textbf{Stateless Widget}: is immutable, meaning that their properties cannot change once they are
+                  initialized. They are used for static content that do not require user interaction. Examples of a
+                  stateless widget would be text labels, buttons, icons, and static images.
+            \item \textbf{Stateful Widget}: it maintains state, allowing their properties to change over time in response
+                  to user interactions or other events. They are used for dynamic content that require updates, such as
+                  animations, form inputs, and interactive elements. Stateful widgets consist of two classes: the widget
+                  class itself and a corresponding state class that manages the widget's state. Example of stateful widgets
+                  are: text input fields, scrollable lists, tabs, and progress indicators.
+      \end{itemize}
+      Flutter apps are built using a hierarchy of nested widgets, forming a "widget tree". The root widget defines the
+      overall app structure, and other widgets branch out to create more complex \acrshort{ui}s.
+\end{multicols}
+
+\begin{lstlisting}[language=Dart, caption=Example of a stateful and stateless widget, label=lst:dartWidgets]
+      // Stateless Widget
+      class MyTextWidget extends StatelessWidget {
+            final String text;
+
+            MyTextWidget({Key key, this.text}) : super(key: key);
+
+            @override
+            Widget build(BuildContext context) {
+            return Text(text);
+            }
+      }
+
+      // Stateful Widget
+      class MyCheckbox extends StatefulWidget {
+            @override
+            _MyCheckboxState createState() => _MyCheckboxState();
+      }
+
+      class _MyCheckboxState extends State<MyCheckbox> {
+            bool isChecked = false;
+
+            @override
+            Widget build(BuildContext context) {
+                  return Checkbox(
+                        value: isChecked,
+                        onChanged: (bool value) {
+                              setState(() {
+                              isChecked = value;
+                        });
+                  });
+      }
+}
+\end{lstlisting}
+
+\begin{multicols}{2}
       \subsubsection{Firebase}
       Firebase is a comprehensive platform for developing and managing web and mobile applications, created by
       Google and is party of \acrshort{gcp}. It was originally an independent company founded by Firebase, Inc.
@@ -159,7 +225,7 @@
 
       Firebase is a \acrshort{baas} that provides developers with a variety of tools and services to help with both
       back-end infrastructure and front-end capabilities without worrying about managing servers or infrastructures.
-      The services offered by Firebase including (\cite{firebaseproducts})
+      The services offered by Firebase including (\textit{\cite{firebaseproducts}}):
       \begin{itemize}
             \item Databases:
                   \begin{itemize}
@@ -198,6 +264,15 @@
                   \end{itemize}
       \end{itemize}
 \end{multicols}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.6\textwidth]{Figures/Firebase.png}
+      \caption{Firebase products (\textit{\cite{firebasePic}})}
+      \label{fig:tsjsvenn}
+\end{figure}
+
 
 \begin{longtable}{|p{5cm}|p{5.5cm}|p{5.5cm}|}
       \hline
@@ -260,7 +335,7 @@
             \item Client-side Scripting: it is mainly used for client-side scripting in web browsers, allowing programmers to
                   create dynamic content that interacts with the browser and the user. It can manipulate the content and behavior
                   of \acrshort{html} elements, respond to user actions without the need to reload the page for interacting with
-                  \acrshort{dom} to update page content dynamically. This enhances the \acrshort{ux} by making web applicaitons
+                  \acrshort{dom} to update page content dynamically. This enhances the \acrshort{ux} by making web applications
                   feel more responsive and integrated.
             \item Cross-Platform Compactibility: it is supported by all modern web browsers, including Chrome, Firefox, Safari,
                   Opera, and Edge, and can be used to build cross-platform web applications that run on any device or platform,
@@ -284,25 +359,25 @@
       \textbf{TypeScript}
 
       is an open-source programming language developed and maintained by Microsoft. It is a superset of \acrshort{js}, meaning that any valid
-      \acrshort{js} code is also valid in \acrshort{ts}. It adds optional static typing to \acrshort{js}, which allows developers to annotate
-      their code with type information, catch errors early in the development, and improve the maintainability or large codebases. Some
+      \acrshort{js} code is also valid in \acrshort{ts}. It adds optional static typing to \acrshort{js}, which allows developers to
+      annotate their code with type information, catch errors early in the development, and improve the maintainability or large codebases. Some
       developers prefer using \acrshort{ts} over \acrshort{js} for some of its key-features:
       \begin{itemize}
-            \item Static Typing: it checks the types of variables at compile-time, which enable developers to specify the types of variables,
-                  functions parameters, and return values. This introduces type safety, in contrast to \acrshort{js} which is dynamically typed,
-                  which means that the types of variables are determined at runtime.
+            \item Static Typing: it checks the types of variables at compile-time, which enable developers to specify the types of
+                  variables, functions parameters, and return values. This introduces type safety, in contrast to \acrshort{js} which is
+                  dynamically typed, which means that the types of variables are determined at runtime.
             \item Enums: it provides supports for enums, allowing developers to define a set of named constants with associated values.
             \item Generics: it supports generics, enabling the creation of reusable components that can work with a variety of data types.
-            \item Decorators: it supports decorators, which are a way to add annotations and a meta-programming syntax for class declarations
-                  and  members. Decorators can be used to modify classes, methods, and properties at design time, providing a powerful way to
-                  extend or modify the behaviour of classes and their members.
+            \item Decorators: it supports decorators, which are a way to add annotations and a meta-programming syntax for class
+                  declarations and  members. Decorators can be used to modify classes, methods, and properties at design time, providing a
+                  powerful way to extend or modify the behaviour of classes and their members.
             \item Interfaces and Classes: it supports \acrshort{oop} concepts such as classes, interfaces, inheritance, and access modifiers,
                   making it easier to organize and structure code.
             \item \acrshort{es}6+ Features: it supports many features introduced in \acrshort{ecma}Script standards beyond \acrshort{es}5,
                   such as arrow functions, classes, async/await syntax, and modules.
-            \item Backwards Compactibility: it is designed to be backwards compactible with \acrshort{js}, which means that developers can use
-                  it alongside \acrshort{js} code and integrate it into existing \acrshort{js} projects and environments, including, browsers,
-                  Node.js, and other \acrshort{js} runtime environments.
+            \item Backwards Compactibility: it is designed to be backwards compactible with \acrshort{js}, which means that developers can
+                  use it alongside \acrshort{js} code and integrate it into existing \acrshort{js} projects and environments, including,
+                  browsers, Node.js, and other \acrshort{js} runtime environments.
       \end{itemize}
 \end{multicols}
 
@@ -359,8 +434,8 @@
       \begin{itemize}
             \item Data Model: \acrshort{nosql} uses dynamic schema, which allows data to be inserted without having to define the schema
                   first, while \acrshort{sql} uses a fixed schema to store data.
-            \item Data Structure: \acrshort{nosql} \acrshort{db}s use a variety of data structures such as key-value pairs, document-oriented,
-                  graphs databases, and columns-oriented; unlike \acrshort{sql} which only uses tables to store data.
+            \item Data Structure: \acrshort{nosql} \acrshort{db}s use a variety of data structures such as key-value pairs,
+                  document-oriented, graphs databases, and columns-oriented; unlike \acrshort{sql} which only uses tables to store data.
             \item Querying: \acrshort{nosql} uses variety of query languages, such as Mongo\acrshort{db} query language or Cassandra's
                   \acrshort{cql}, while \acrshort{sql} databases only use \acrshort{sql} as the unified language to query data.
             \item Data Consistency and \acrshort{acid} Compliance: databases that are \acrshort{acid} compliant means that they follow a
@@ -372,9 +447,9 @@
                   systems.
             \item Scalability: \acrshort{nosql} databases are traditionally designed for horizontal scalability, meaning they can easily
                   scale out multiple servers or clusters to handle volumes of data and high throughput, which is more cost-effective and
-                  allows for better scalability. They are well-suited for distributed and cloud-based environments. \acrshort{sql} databases
-                  are traditionally designed for vertical scalability, meaning a single server is scaled up with more powerful hardware and
-                  power (\acrshort{cpu}, \acrshort{ram}) to a single server. This can become expensive and limit scalability.
+                  allows for better scalability. They are well-suited for distributed and cloud-based environments. \acrshort{sql}
+                  databases are traditionally designed for vertical scalability, meaning a single server is scaled up with more powerful
+                  hardware and power (\acrshort{cpu}, \acrshort{ram}) to a single server. This can become expensive and limit scalability.
       \end{itemize}
       "Serverless Architecture"
 \end{multicols}
@@ -470,6 +545,7 @@
 
 \begin{multicols}{2}
       \textbf{OpenAPI Standard}
+
       Previously known as Swagger, \acrshort{oas} is a specification for writing a public \acrshort{api}, with
       guidelines for details like endpoint naming conventions, data formats, and error messaging
       (\cite{openapistandard}). The standards required by Open\acrshort{api} and its automation of some tasks
@@ -644,9 +720,9 @@
       With that being said, the \acrshort{qaas} app needs to manage and make connection different sort of \acrshort{api}s.
       Those \acrshort{api}s are the following:
       \begin{itemize}
-            \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8. It is a cloud
-                  marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions through
-                  automation. It provides a single platform to manage the entire cloud customer lifecycle, from
+            \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8 (\textit{\cite{resello}}).
+                  It is a cloud marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions
+                  through automation. It provides a single platform to manage the entire cloud customer lifecycle, from
                   quote to cash to support, thus simplifying the process of buying, selling and managing cloud
                   solutions.
             \item SnelStart: is used for \acrshort{qict} automation of financial and accounting system software,
@@ -664,6 +740,11 @@
                   including remote monitoring and management, patch management, antivirus, backup and disaster
                   recovery, and network topology mapping. The return response from this \acrshort{api} is in \acrshort{xml}
                   and \acrshort{json} format, making it both a \acrshort{rest} and \acrshort{soap} \acrshort{api}.
+            \item PerfectView: is used for \gls{CRM} software (\textit{\cite{perfectView}}). It is designed to
+                  improve business relationships with customers, assist in customer retention, and drive sales growth.
+                  In the \acrshort{qaas} app, it is used to manage the relationships and interactions with the app's users,
+                  which could include tracking user interactions, managing customer support requests, and analyzing user
+                  data to improve the app's functionality and \acrshort{ux}.
       \end{itemize}
       \section{Research Sub-Question \#2}
       \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
@@ -683,19 +764,34 @@
 
       Endpoint can be defined as any remote computing devices that receives incoming communications and sends outgoing messages
       to the network it is connected to. Examples of endpoints include desktops, laptops, smartphones, tablets, servers, workstations,
-      and other \acrshort{iot} devices that is connected to a network. They are the first-line of defence for the Blue team today.
+      and other \acrshort{iot} devices that is connected to a network. They are the first-line of defence for the Blue Team today.
+
+      Examples of endpoints are:
+      \begin{itemize}
+            \item Computer (workstations, desktops)
+            \item Laptop
+            \item Server
+            \item Mobile devices
+      \end{itemize}
 
       \textbf{EPP}
+
+      \acrshort{epp} is an upgrade from legacy \acrshort{av}/anti-malware. \acrshort{epp} consists of solutions that work together to detect
+      and block security threats at the endpoint device level.
+
+      Important note that \acrshort{epp} is not to be confused with \acrshort{edr}. \acrshort{epp} is a separate service from \acrshort{edr},
+      in which in \acrshort{edr} platforms they often include \acrshort{epp} but not vice versa.
 
       \textbf{EDR}
 
       \acrshort{edr} \acrshort{aka} \acrshort{etdr}, is a group of integrated endpoint security solutions that combine data collection,
-      data analysis, forensics, and threat hunting with the end-goal of identifying and stopping any potential security breaches in due time.
+      data analysis, forensics, and \gls{threathunting} with the end-goal of identifying and stopping any potential security breaches in due time.
       \acrshort{edr} solutions are able to recognize any suspicious patterns that can be investigated later on, as they have been purposefully
       created to detect and respond in an active manner to advance malware, ransomware, and other cyber threats (the Response \acrshort{edr}).
-      \acrshort{edr}, as the name suggest, were developed specifically for endpoints, and not networks (\ref{sec:ndr}).
+      \acrshort{edr}, as the name suggest, were developed specifically for endpoints, and not networks (\ref{sec:ndr}), thus operate only
+      on endpoint level.
 
-      The number one thing that sets apart \acrshort{edr} from traditional \acrshort{av} is that traditional \acrshort{av} relies on
+      The number one thing that sets apart \acrshort{edr} from legacy (traditional) \acrshort{av} is that traditional \acrshort{av} relies on
       signature-based detection, usually having a defined set of list in their \acrshort{db}, where known malware signatures are compared
       against files or processes to identify threats. \acrshort{edr} on the other hand, uses a combination of signature-based detection, such
       as behavioural analysis, machine learning, and anomaly detection to identify and respond both known and unknown threats. \acrshort{edr}
@@ -704,61 +800,81 @@
 
       \textbf{MDR}
 
+      \acrshort{mdr} is what manage the \acrshort{edr} technology.
+
       \textbf{NDR} \label{sec:ndr}
+      \acrshort{ndr} products are designed to provide a complete visibility into the network, real-time detection of threats, and guided investigation
+      to accelerate and automate responses (\textit{\cite{sentinelOneNDR}}). \acrshort{ndr} takes a feed of raw network traffic from a \gls{networkTap},
+      port mirror, or virtual traffic mirroring in \acrshort{aws} and Azure. By analyzing this traffic in real-time, \acrshort{ndr} finally discovers
+      and classify every device communicating on the network. It identifies device roles, such as \acrshort{dns}, web server, medical device, \acrshort{etc}
+      and maps peer groups among those devices.
 
       \textbf{SIEM}
 
       is a software system that collects, aggregates, normalizes security data from a variety of sources within an IT infrastructure, and
       analyzes it according to pre-set rules, present it in human-readable format and therefore giving a comprehensive picture of the company's
-      information security. \acrshort{siem} tools evolved from the log management discipline and combine \acrshort{sim} and \acrshort{sem} technologies.
-      A \acrshort{siem} tool uses \acrshort{ai} to automate a number of manual procedures related to threat detection and incident response. Furthermore,
-      it assists enterprise security teams in spotting anomalies in user behavior.
+      information security (\cite{siemGartner}). \acrshort{siem} tools evolved from the log management discipline and combine \acrshort{sim} and
+      \acrshort{sem} technologies. A \acrshort{siem} tool uses \acrshort{ai} to automate a number of manual procedures related to threat detection
+      and incident response. Furthermore, it assists enterprise security teams in spotting anomalies in user behavior.
 
       \begin{itemize}
-            \item Input: logs, threat intel, vulnerability feeds, \acrshort{ndr}, and \acrshort{edr} data
+            \item Input: logs, threat intel, vulnerability feeds, \acrshort{ndr}, firewall, \acrshort{ips}, \acrshort{ids}, and \acrshort{edr} data
             \item Output: high-fidelity alerts prioritized by severity
             \item Infused with: \acrshort{ai}, \acrshort{ml}, and analytics
       \end{itemize}
 
+      \textbf{SOAR}
+
+      \acrshort{soar} solutions focus on automating incident response processes and triage capabilities. The key word here is
+      "orchestration" and "automation". In an ideal world, everything.
+      The main goal is to oversee security without human help as much as possible, boosting productivity and shorten the response time.
+      It might use \acrshort{ai} and \acrshort{ml} to assess security events and automate incident response procedures. These solutions
+      can be standalone product, or it can be added to \acrshort{siem} solutions since \acrshort{soar} does not excel in event analysis.
+
       \textbf{XDR}
 
-      is a security solution that gathers and analyzes data from multiple sources like endpoints, networks, cloud, emails, app, \acrshort{etc} It offers
-      great visibility into a company's \acrshort{it} infrastructure, helping the security employees to detect more threats, respond efficiently, and
-      deal with fewer false positive alerts \cite{xdrIDC}.
+      is a security solution that gathers and analyzes data from multiple sources like endpoints, networks, cloud, emails, app,
+      \acrshort{etc} It offers great visibility into a company's \acrshort{it} infrastructure, helping the security employees to detect
+      more threats, respond efficiently, and deal with fewer false positive alerts \cite{xdrIDC}.
 
-      This solution integrates several tools combining all the gathered data into a single platform to visualize the information. It might incorporate
-      automated processes (even complex ones), \acrshort{ml}, and advanced analytics to enable quicker and more effective incident response. It can
-      deal even with hidden and advanced malware.
+      This solution integrates several tools combining all the gathered data into a single platform to visualize the information. It might
+      incorporate automated processes (even complex ones), \acrshort{ml}, and advanced analytics to enable quicker and more effective
+      incident response. It can deal even with hidden and advanced malware.
 
       \textbf{MXDR}
 
-      Some people still call it \acrshort{mdr}, managed \acrshort{soc}, or managed security.
-
-      \textbf{SOAR}
-
-      \acrshort{soar} solutions focus on automating incident response processes and triage capabilities. The main goal is to oversee security without
-      human help as much as possible, boosting productivity and shorten the response time. It might use \acrshort{ai} and \acrshort{ml} to assess
-      security events and automate incident response procedures. These solutions can be standalone product, or it can be added to \acrshort{siem}
-      solutions since \acrshort{soar} does not excel in event analysis.
+      Some people may still call it \acrshort{mdr}, managed \acrshort{soc}, or managed security.
 
       \textbf{SOC}
 
-      \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.6\textwidth]{Figures/XDR.jpg}
-            \caption{How all terms related to various technologies in cybersecurity connected to each other}
-            \label{fig:xdr}
-      \end{figure}
+      \acrshort{soc} is the organizational context itself. It is a centralized facility or team within an organization that houses a
+      security team responsible for monitoring and analyzing another organization's (client) security position on an ongoing basis. They
+      can be seen as the safety team for client organizations. Please note that SentinelOne company itself is not a \acrshort{soc}, as it
+      is just a cybersecurity company that offers endpoint security solutions.
 
+\end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/XDR.jpg}
+      \caption{How all terms related to various technologies in cybersecurity connected to each other}
+      \label{fig:xdr}
+\end{figure}
+
+\begin{multicols}{2}
       \textit{Please note that as mentioned before, \acrshort{siem} can also take data from an \acrshort{edr} and \acrshort{ndr} but for
             the sake of simplicity, the diagram puts them as a separate pier systems.}
 
-      \subsection{SentinelOne Console}
+      \textbf{Site}
 
-      \subsection{SentinelOne Agent}
-      An Agent is a software program, deployed to each endpoint, including desktop, laptop, server or virtual environment,
-      and runs autonomously on each device, without reliance on Internet connection, enabling data gathering, detection, and
-      response to actions. Agents can be interpreted as an \acrshort{av}, collecting relevant security telemetry such as:
+      \textbf{Group}
+
+      \textbf{Agents}
+
+      An Agent is a software program, part of SentinelOne product, that is deployed to each endpoint, including desktop, laptop,
+      server or virtual environment, and runs autonomously on each device, without reliance on Internet connection, enabling data
+      gathering, detection, and response to actions. Agents can be interpreted as an \acrshort{av}, collecting relevant security
+      telemetry such as:
       \begin{itemize}
             \item Running processes
             \item Connected servers
@@ -766,19 +882,68 @@
       \end{itemize}
       This information can be useful to detect the presence of a threat or to use in forensic analysis and investigation after
       an attack has occurred (Recovery).
-      \subsection{Ranger}
-      Ranger is one of the SentinelOne product that provides a way of detecting other devices (computers and
+
+      \textbf{Ranger}
+
+      Ranger is an add-on SentinelOne product that provides a way of detecting other devices (computers and
       \acrshort{iot} devices) that are on the client's computer network. If a malicious attacker comes in and plugs his device
       into the network, all the other SentinelOne agents are going to read the network traffic, determine and classify whether
-      this is a new device, or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
-      detect technical information regarding the device. On a network, before a machine is connected and talks to other devices
-      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} request.
-      Ranger is going to read that \acrshort{arp} request and determine
-      \subsection{Sentinels}
-      Sentinels are the end-points,
+      that is a new device or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
+      detect technical information regarding the device.
 
-      \subsection{Incidents}
+      \textit{How do SentinelOne get all of this information from a device without having them even connected to the Internet?}
 
+      On a network, before a machine is connected and talks to other devices
+      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} Request.
+      As everything that is talking on Layer 2 is giving out their \acrshort{mac} address for exchange,
+
+      A lot of the times, most switches and routers do not change their default credentials
+
+      As was said before, every single item that is connected to a network is constantly broadcasting information out to the rest of
+      network, in order to get and maintain an \acrshort{ip} address to keep accessing the Internet, even when it is not actively using
+      it (\textit{see \acrshort{dhcp} Protocol \cite{dhcpProcess}}). In case of an endpoint that has SentinelOne installed on it that
+      has Ranger, that Ranger is going to listen to that \acrshort{nic} on that device, then capture and interpret all the data that
+      is flowing across the network, called \acrshort{mib}s, thus displaying it on the Console.
+
+      \begin{itemize}
+            \item Not reviewed
+            \item Not trusted
+            \item Under analysis
+            \item Allowed
+      \end{itemize}
+
+      Ranger is designed to detect and take out malicious actors that are in the local subnet, as they can a lot of information about the
+      devices (\textit{see \acrshort{arp} Poisoning \cite{arpSpoofing} and man-in-the-middle-attack \cite{man-in-the-middleAttack}}).
+      In the real-business scenario, a lot of the times, a company has a very secure perimeter firewall
+      (\textit{the big outer castle wall in castle-and-moat network security model \cite{castleMoatWallNetwork}}), but the inside network
+      are wide open (unless they are doing logical separations of their local network, such as using \acrshort{vlan}) for attacks inside
+      the network.
+
+      Unfortunately for this project scope, Ranger \acrshort{api} calls are off limit, as the company is still..., therefore displaying all
+      the Ranger ability to scan and the \acrshort{api} call of the author's account.
+
+      \textbf{Sentinels}
+
+      Sentinels refer to a term that describes SentinelOne ability to deploy and manage security agents on endpoints within an
+      organization, not part of SentinelOne product, like Ranger. This is part of the SentinelOne \acrshort{edr} capabilities, .
+      This tab also is where the users can deploy the Agents onto a machine.
+
+      \textbf{Visibility}
+
+      Unfortunately, \acrshort{qict} does not have Visibility turned on its tenant, thus this feature is also off limit for this project
+      scope. But in general, Visibility allows users to do deep querying to be able to identify different things, such as attributes of
+      a machine. It is useful when user is looking for threats or any additional information in Incident Response or \gls{threathunting},
+      which in most cases is proactive, Visibility can give the user a lot of power to use queries, and interrogate all the information
+      or telemetry that SentinelOne has pulled off from the connected machines.
+
+      \textbf{Incidents}
+
+      SentinelOne also provides list of cyber-incidents overview that have happened on all endpoints in the network connected to
+      SentinelOne. The page typically offers an overview of all detected security incidents, categorized based on severity levels
+      of types of threats.
+
+      Once a threat is detected, the user can take the following actions in the dashboard, provided that they have enough privileges
+      to do so:
       \begin{itemize}
             \item Kill: stops all processes related to that threat
             \item Quarantine: encrypts and moves the threat and its executables
@@ -789,62 +954,43 @@
                   then reboot the system and restore it to the safe state before the malware has executed.
       \end{itemize}
 
-      Additionally, the user can also perform an analysis verdict
+      Additionally, threats can also be filtered from:
+\end{multicols}
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+      \hline
+      \rowcolor{blue!20}
+      Analysis Verdict (performed by user, marking it as) & Threat Mitigation Status & Incident Status & \acrshort{ai} Confidence level \\
+      \endfirsthead
+      \hline
       \begin{itemize}
             \item False positive
             \item Suspicious
             \item True positive
             \item Undefined
-      \end{itemize}
-
-      Threat mitigation status
+      \end{itemize}                                &
       \begin{itemize}
             \item Mitigated
             \item Not mitigated
             \item Marked as benign
-      \end{itemize}
-
-      Incident status
+      \end{itemize}                              &
       \begin{itemize}
             \item Resolved
             \item Unresolved
             \item In progress
-      \end{itemize}
-
-      \acrshort{ai} confidence Level
+      \end{itemize}                                   &
       \begin{itemize}
             \item Malicious
             \item Suspicious
             \item \acrshort{na}
-      \end{itemize}
-
-      Classification
-      \begin{itemize}
-            \item Malware
-            \item \acrshort{pua}
-            \item Virus
-            \item Infostealer
-            \item Hacktool
-      \end{itemize}
-
-      \acrshort{os}
-      \begin{itemize}
-            \item Windows
-            \item Linux
-            \item Mac
-            \item Windows Legacy
-      \end{itemize}
-
-      Cloud Provider
-      \begin{itemize}
-            \item Azure
-            \item \acrshort{aws}
-            \item \acrshort{gcp}
-            \item \acrshort{oci}
-            \item ESXI
-      \end{itemize}
-
-      Engine
+      \end{itemize}                                                                                                                \\
+      \hline
+\end{longtable}
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+      \hline
+      \rowcolor{blue!20}
+      Engine                                           & Cloud Provider & \acrshort{os} & Classification \\
+      \endfirsthead
+      \hline
       \begin{itemize}
             \item SentinelOne Cloud
             \item On-Write Static \acrshort{ai} - Suspicious
@@ -862,11 +1008,37 @@
             \item Manual
             \item Application Control
             \item Threat Intelligence
-            \item WatchTower
+            \item \gls{watchtower}
             \item Driver Blocking
-      \end{itemize}
-
-      Initiated by:
+      \end{itemize} &
+      \begin{itemize}
+            \item Azure
+            \item \acrshort{aws}
+            \item \acrshort{gcp}
+            \item \acrshort{oci}
+            \item ESXi
+      \end{itemize}                             &
+      \begin{itemize}
+            \item Windows
+            \item Linux
+            \item Mac
+            \item Windows Legacy
+      \end{itemize}                             &
+      \begin{itemize}
+            \item Malware
+            \item \acrshort{pua}
+            \item Virus
+            \item Infostealer
+            \item Hacktool
+      \end{itemize}                                                                                \\
+      \hline
+\end{longtable}
+\begin{longtable}{|p{4cm}|p{4cm}|p{8cm}|}
+      \hline
+      \rowcolor{blue!20}
+      Initiated by                            & Time & Free text search                                                                                                                \\
+      \endfirsthead
+      \hline
       \begin{itemize}
             \item Agent Policy
             \item Full Disk Scan
@@ -878,32 +1050,43 @@
             \item Custom Alert
             \item Cloud Detection
             \item Threat Intelligence
-            \item WatchTower
-      \end{itemize}
-
-      Additionally, users can also search the mitigated threats by:
+            \item \gls{watchtower}
+      \end{itemize} &
+      \begin{itemize}
+            \item Recent
+            \item Last 24 Hours
+            \item Today
+            \item Last 48 Hours
+            \item Last 7 Days
+            \item Last 30 Days
+            \item This Month
+            \item Last 2 Month
+            \item Last 3 Month
+            \item Last Year
+            \item Custom Range
+      \end{itemize}                     &
       \begin{itemize}
             \item Content Hash
             \item Cloud Account
             \item Cloud Image
             \item Cloud Instance \acrshort{id}
-            \item Cloud Instance Size
+            \item  Cloud Instance Size
             \item Cloud Location
             \item Cloud Network
-            \item \acrshort{aws} Role
-            \item \acrshort{aws} Security Groups
-            \item \acrshort{aws} Subnet \acrshort{id}s
-            \item Azure Resource Group
+            \item   \acrshort{aws} Role
+            \item   \acrshort{aws} Security Groups
+            \item   \acrshort{aws} Subnet \acrshort{id}s
+            \item  Azure Resource Group
             \item \acrshort{gcp} Service Account
-            \item Threat Details: \acrshort{eg}: "This is a non-Microsoft binary that masquerades as a Microsoft executable"
+            \item Threat Details: \acrshort{eg} "This is a non-Microsoft binary that masquerades as a Microsoft executable"
             \item File Path: \acrshort{eg}: "\textbackslash Device\textbackslash HarddiskVolumeA\textbackslash Users\textbackslash Chris\textbackslash Downloads\textbackslash malicious.exe"
-            \item Endpoint Name" \acrshort{eg}: "LT-Christopher", "LT 10-08"
-            \item \acrshort{uuid}: \acrshort{eg}: "0ff2a3409f284776a23432e9f6894afa"
-            \item Agent Version (at detection): \acrshort{eg}: "23.1.4.650"
+            \item Endpoint Name: \acrshort{eg} "LT-Christopher", "LT 10-08"
+            \item \gls{UUID}: \acrshort{eg}: "0ff2a3409f284776a23432e9f6894afa"
+            \item Agent Version (at detection) \acrshort{eg}: "23.1.4.650"
             \item Agent Version (current)
             \item Domain (at detection time)
             \item Command Line Arguments
-            \item Initiated By (username): \acrshort{eg}: "LuukAdmiraalMKBIT"
+            \item Initiated By (username): \acrshort{eg} "LuukAdmiraalMKBIT"
             \item Storyline
             \item Originated Process
             \item Cluster Name
@@ -919,28 +1102,201 @@
             \item Container Labels
             \item External Ticket \acrshort{id}
             \item Node Labels
-      \end{itemize}
+      \end{itemize} \\
+      \hline
+\end{longtable}
 
+\begin{multicols}{2}
       Furthermore, it will also analyze for infected endpoint connectivity (offline/online), mitigated preemptively (yes/no),
       reboot required (yes/no), action failed (yes/no), pending actions (yes/no), and if note and external ticket exists (yes/no).
-      \subsection{Reports}
+
+      \textbf{Reports}
+
+      The reports in SentinelOne provide users with insights into the security posture and threat landscape across their organization's
+      endpoints. The reports offer customizable reporting capabilities, allowing users to generate reports tailored to their specific
+      requirements. Users can then choose from a variety of predefined report templates or create custom reports based on their unique
+      needs.
+
+      Furthermore, the users can also choose for the report to be made automatically, instead of manually filling them themselves. They can
+      schedule automated report generation at regular intervals, such as daily, weekly, or monthly.
+
+\end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=1.0\textwidth]{Figures/SentinelOne/Reports.png}
+      \caption{Examples of automatic reports that can be downloaded in SentinelOne}
+      \label{fig:Reports}
+\end{figure}
+
+
+\begin{multicols}{2}
       \subsection{Vigilance}
       It is a \acrshort{mdr} service - providing threat monitoring, hunting, and response, to its existing customers. It
       provides a 24/7 \acrshort{soc} with expert analysts and researchers to give customers near real-time threat monitoring,
       in-console threat annotations, and response to threats and suspicious events. Vigilance itself is a separate package from
       SentinelOne.
+
+      \subsection{SentinelOne API \& SDK}
+      SentinelOne provides both an \acrshort{api} and an \acrshort{sdk} to allow users to integrate SentinelOne with other
+      security tools and systems. The \acrshort{sdk} is called Nexus Embedded \acrshort{ai} (\textit{\cite{nexusSDK}}), which
+      enables organizations to scan files and detect malicious content among them.
+\end{multicols}
+
+\begin{lstlisting}[language=Python, caption=SentinelOne SDK implementation]
+      from SentinelDFI.scanner import *
+      s = Scanner(True)
+      verdict = s.scanFile("/home/test_me/malicious.docx")
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+      File hash: 421ac4189Seed605824fc4cae3e60219febfef
+      Verdict: malware
+      Score: 0.297529
+      Indicators: `Detected VBA Structure,Encrypted file,Encrypted Word Document,Has DDE`
+\end{lstlisting}
+
+\begin{multicols}{2}
+      There are many techniques that can be used to create a link (often called an interface). The technology for linking to
+      SentinelOne depends on the \textbf{purpose} and \textbf{capabilities} of the software to be linked:
+      \begin{itemize}
+            \item \textbf{REST, SOAP API/ Webservice}: modern software has its own inputs and outputs to exchange information.
+                  This is a sustainble and solid solution for the processing of data
+            \item \textbf{CSV/XLSX and XML via (S)FTP}:
+            \item \textbf{Webhooks}: similar to web services, but event based. A signal is automatically sent for each mutation,
+                  so that action to process the signal within the software can be taken.
+      \end{itemize}
+
+      \textbf{API Token}
+
+      To be able to access SentinelOne APIs, the user needs to have an \acrshort{api} token to prove their identity and that their
+      organization has SentinelOne subscription, therefore has right to access data. To create an \acrshort{api} token, the user needs
+      to follow the following steps
+
+      \begin{itemize}
+            \item Login to the \textbf{SentinelOne \acrshort{mgmt} Console} as an \textbf{Admin}
+            \item Navigate to \textbf{Logged User Account} from the top right panel in the navigation bar
+            \item Click on \textbf{My User}
+            \item In the \acrshort{api} token section, click \textbf{Generate}
+      \end{itemize}
+\end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/SentinelOne/login admin.png}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/SentinelOne/createToken.png}
+\end{figure}
+
+\begin{multicols}{2}
+      The \acrshort{api} token will then be shown only once, therefore the user needs to store it in a secure place. The token
+      generated by the user is time-limited. To renew the token, the user must generate a new one with the same above-steps.
+
+      \textbf{API Token Storage}
+
       \section{Research Sub-Question \#3}
-      Please keep in mind that in this sub-question, only the visualization techniques will be assessed, compared, contrasted,
-      evaluated, and discussed. The other factors such as pricing, technologies, and features will not be discussed in this sub-question.
+      Data visualization is the process of representing complex data (in the form of text and numbers) into a graphical representation,
+      such as: interactive charts, dashboards, pie charts, and so on. In the context of this project, the displays should be able to tell
+      interesting stories and share findings with diverse audience (the client, helpdesk, and cybersecurity analysts).
+
+      \subsection{Data Visualization Widgets in Flutter}
+      In Flutter, there are 2 famous library that supports a wide range of chart types, \href{https://pub.dev/packages/fl_chart}{fl\_chart}
+      and \href{https://pub.dev/packages/syncfusion_flutter_charts}{syncfusion\_flutter\_charts}. Each chart type is suitable for a
+      specific kind of data and provides a different way to visualize the data. Types of charts in both library include 30+ plotting series:
+      \begin{itemize}
+            \item Line chart: is used to display data points connected by straight line segments. They are commonly used to show trends
+                  over time.
+            \item Bar chart: it uses rectangular bars to represent data. The length of each bar corresponds to the value it represents.
+                  Bar charts are useful for comparing quantities of different categories.
+            \item Pie chart: represents data in the form of slices of a pie. Each slice corresponds to a category of the data, and the
+                  size of the slice is proportional to the quantity it represents.
+            \item Scatter chart: uses dots to represent data points on a two-dimensional plane. They are useful for showing the
+                  relationship between two variables.
+            \item Radar chart: \acrshort{aka} spider chart or star chart, is a way of comparing multiple quantitative variables. This
+                  makes them useful for seeing which variables have similar values or if there are any outliers among each variable.
+      \end{itemize}
+\end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Charts.png}
+      \caption{Chart types in Flutter fl\_chart}
+      \label{fig:charts}
+\end{figure}
+
+\begin{multicols}{2}
+      Each chart type is easily configured with built-in support for creating stunning visual effects, and any number of series can
+      be added to the chart. Features such as markers, data labels, data label builder, animation, gradient fill, dashes, sorting,
+      and annotations are easy to incorporate and customize.
+
+      Several main components of each chart type are:
+      \begin{itemize}
+            \item Chart data: the most important part is the data wanted to be displayed. This could be a simple list of numbers, or
+                  more complex data structure, depending on the type of chart.
+            \item Chart type: the second most important part is to specify the type of chart.
+            \item Axes: the x and y-axes of the chart. The axes provide a reference frame for the data points and can be customized
+                  to suit user's needs.
+            \item Grid: the grid lines on the chart. These lines can help users better understand the data by providing a reference
+                  frame.
+            \item Touch response: the way the chart responds to user's touch events. It can be customized by providing different types
+                  of interactivity, such as highlighting a data point when it is touched.
+      \end{itemize}
+
+      \textbf{Axis Types}
+
+      Axis features such as label intersecting, edge label placement, label rotation, axis opposition, inverse axis, and multiple axis
+      allow users to customize axis elements to make an axis more readable. Four of the axis types that are supported are:
+      \begin{itemize}
+            \item Numeric
+            \item Category
+            \item Date-time
+            \item Logarithmic
+      \end{itemize}
+
+      \textbf{User Interaction}
+
+      The package greatly enhance \acrshort{ux} by adding the following functionalities:
+      \begin{itemize}
+            \item Zooming and panning
+            \item Crosshairs
+            \item Trackballs
+            \item Drilling down
+            \item Events
+            \item Selection
+            \item Tooltips
+      \end{itemize}
+
+      \textbf{Legend}
+
+      The package also supports legends, which display additional information about a chart series. The legends can be used to
+      collapse the series, and can be wrapped or scrolled if items exceed the available bounds.
+
+      \subsection{Comparison to other EDR solutions}
+      To determine the best visualization techniques for SentinelOne, a comparison to other \acrshort{edr} solutions is needed.
+      In this section, the author has looked into other alternatives to SentinelOne, which are a single \acrshort{epp}/\acrshort{edr}
+      solution, created as a complete replacement of legacy \acrshort{av}. Please keep in mind that in this sub-question, only the
+      visualization techniques will be assessed, compared, contrasted, evaluated, and discussed. The other factors such as pricing,
+      technologies, and features will not be discussed in this sub-question.
+
       \subsection{Heimdal\textregistered}
+
+      On the homepage, information about each of the products/modules that are active under the current customer account is shown. The
+      chart, which can be seen include a variety of Bar charts, Pie charts, and Line charts, include data regarding attacks,
+      vulnerabilities, detections, infected/quarantined files, blocked/allowed processes, third-party application vulnerabilities or
+      \acrshort{os} updates, and quarantined/rejected e-mails.
+
       \subsection{Huntress}
       \subsection{CrowdStrike}
       CrowdStrike Falcon
       \subsection{Datto RMM}
       \subsection{Sophos}
       \subsection{Carbon Black}
-      \subsection{Trend Micro}
-      Trend Micro Apex One
+      \subsection{Trend Micro} % Fukujima
+      Trend Micro Apex One has customizable contents and layout of their dashboard. The colour here is a bit basic with only the typical
+      red, green, blue, and yellow.
       \subsection{Kaspersky Endpoint Security}
       \subsection{Bitdefender}
       Bitdefender Gravity Zone

@@ -62,6 +62,10 @@ style=apa,
 \definecolor{lightblue}{cmyk}{0.35,0,0,0}     %local variables in Visual Studio
 \definecolor{aqua}{cmyk}{0.65,0,0.23,0}       %class types in Visual Studio
 \definecolor{lightgreen}{cmyk}{0.12,0,0.33,0.05} %enumerations and methods in Visual Studio
+% Dart
+\definecolor{codePurple}{rgb}{0.58,0,0.82}
+\definecolor{dartBackcolour}{rgb}{0.95, 0.95, 0.96}
+
 
 
 \lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
@@ -82,17 +86,6 @@ style=apa,
   sensitive=true,
   backgroundcolor=\color{codeGray},
   basicstyle=\footnotesize\ttfamily\color{white},
-}
-
-\lstdefinelanguage{XML} { % Define XML language in listing
-    morestring=[b]",
-    morestring=[s]{>}{<},
-    morecomment=[s]{<?}{?>},
-    stringstyle=\color{black},
-    identifierstyle=\color{darkblue},
-    keywordstyle=\color{cyan},
-    morekeywords={xmlns,version,type},
-    backgroundcolor=\color{gray},
 }
 
 \lstdefinelanguage{JSON
@@ -135,6 +128,27 @@ style=apa,
       {[}{{{\color{black}{[}}}}{1}
       {]}{{{\color{black}{]}}}}{1},
 }
+
+\lstdefinelanguage{Dart}
+{
+    backgroundcolor=\color{dartBackcolour},   
+    commentstyle=\color{codeGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codeGray},
+    stringstyle=\color{codePurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    %frame=shadowbox
+}   
 
 \lstset{% Listing settings
     numbers=left,
@@ -184,15 +198,6 @@ style=apa,
     networks to find weaknesses (\cite{pentest})
     }  
 }
-\newglossaryentry{CRM}
-{
-    name=\acrshort{crm},
-    description={is a technology for managing all your company's relationships and interactions with 
-    customers and potential customers. It provides a centralized \acrshort{db} or system for storing and organizing customer 
-    data, as well as tools for managing sales, marketing, customer service, and other aspects of customer relationships. 
-    A \acrshort{crm} system helps companies stay connected to customers, streamline processes, and improve profitability (\cite{crm})
-    }
-}
 \newglossaryentry{RMM} {
     name=\acrshort{rmm},
     description={is a software platfomr that helps \acrshort{msp}s remotely monitor and manage their clients' endpoints, networks, 
@@ -229,7 +234,8 @@ style=apa,
 }
 \newglossaryentry{threathunting} {
     name=Threat Hunting,
-    description={
+    description={ \acrshort{aka} cyberthreat hunting, is a proactive approach to identifying previously unknown, or ongoing 
+    non-remediated threats, and searching for signs of potential cyber threats within an organization's network or system. 
     }
 }
 \newglossaryentry{ATT&CK} {
@@ -237,6 +243,61 @@ style=apa,
     description={
     }
 }
+\newglossaryentry{SNMP}{
+    name=\acrshort{snmp},
+    description={is a protocol that runs on a lot of network equipment for managing and monitoring network devices. 
+    }
+}
+\newglossaryentry{MIB}{
+    name=\acrshort{mib},
+    description={is a hierarchical \acrshort{db} used in \acrshort{snmp} to define the structure of the data that can be managed 
+    or monitored over a network. It contains \acrshort{oid}s which are unqiue identifiers used to specify a particular piece of 
+    information within the \acrshort{mib}.
+    }
+}
+\newglossaryentry{networkShare}{
+    name=Network Share,
+    description={
+    }
+}
+\newglossaryentry{UUID}{
+    name=\acrshort{uuid},
+    description={ is a 128-bit value used to uniquely identify an object or entity for information in computer system on the internet. The term
+    \acrshort{guid} is also used, mostly in Microsoft system.
+    }
+}
+\newglossaryentry{sha1}{
+    name=\acrshort{sha}1,
+    description={ is a hash function, in cryptography, which takes an input and produces a 160-bit hash value known as a message digest - typically 
+    rendered as 40 hexadecimal digits. It is often used to verify if a file has been unaltered.
+    }
+}
+\newglossaryentry{watchtower}{
+    name=Watctower,
+    description={ is a managed threat hunting offering that searches the environment for known and emerging threats in real-time.
+    }
+}
+\newglossaryentry{networkTap}{
+    name=Network \acrshort{tap},
+    description={ is a simple device that connects directly to the cabling infrastructure to split or copy packets for use ion analysis, security
+    or general network management.
+    }
+}
+\newglossaryentry{CRM}{
+    name=Network \acrshort{crm},
+    description={ is a process or strategy that companies use to manage and analyze customer interactions and data throughout the customer lifecycle.
+    \acrshort{crm} technology is a software system that helps organizations easily track all communications and nurture relationships with their leads 
+    and clients.
+    }
+}
+\newglossaryentry{ERP}{
+    name=Network \acrshort{erp},
+    description={ is a type of software that organizations use to manage core day-to-day business activities needed to run a company such as accounting,
+    finance, procurement, project management, manufacuring, risk management and compliance, \acrshort{hr}, and supply chain operations (\textit{\cite{erp}}). 
+    }
+}
+
+
 
 \newacronym{2fa}{2FA}{Two-Factor Authentication}
 \newacronym{acid}{ACID}{Atomicity, Consistency, Isolation, Durability}
@@ -286,6 +347,7 @@ style=apa,
 \newacronym{dos}{DoS}{Denial of Service}
 \newacronym{dhcp}{DHCP}{Dynamic Host Configuration Protocol}
 \newacronym{dll}{DLL}{Dynamic Link Library}
+\newacronym{dlp}{DLP}{Data Loss Prevention}
 \newacronym{dns}{DNS}{Domain Name System}
 \newacronym{dom}{DOM}{Document Object Model}
 \newacronym{dora}{DORA}{Discover, Offer, Request, Acknowledge}
@@ -306,11 +368,13 @@ style=apa,
 \newacronym{fwaas}{FWaaS}{Firewall as a Service}
 \newacronym{gb}{GB}{Gigabyte}
 \newacronym{gcp}{GCP}{Google Cloud Platform}
+\newacronym{gddpr}{GDDPR}{General Data Protection Regulation}
 \newacronym{gpo}{GPO}{Group Policy Object}
 \newacronym{grc}{GRC}{Governance, Risk, and Compliance}
 \newacronym{guid}{GUID}{Global Unique Identifier}
 \newacronym{hids}{HIDS}{Host-based Intrusion Detection System}
 \newacronym{hips}{HIPS}{Host-based Intrusion Prevention System}
+\newacronym{hipaa}{HIPAA}{Health Insurance Portability and Accountability Act}
 \newacronym{html}{HTML}{HyperText Markup Language}
 \newacronym{http}{HTTP}{Hypertext Transfer Protocol}
 \newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
@@ -334,6 +398,7 @@ style=apa,
 \newacronym{ips}{IPS}{Intrusion Prevention System}
 \newacronym{it}{IT}{Information Technology}
 \newacronym{itil}{ITIL}{Information Technology Infrastructure Library}
+\newacronym{itu}{ITU}{International Telecommunication Union}
 \newacronym{iso}{ISO}{International Organization for Standardization}
 \newacronym{isp}{ISP}{Information Security Policies}
 \newacronym{js}{JS}{JavaScript}
@@ -344,13 +409,16 @@ style=apa,
 \newacronym{mac}{MAC}{Media Access Control}
 \newacronym{malware}{Malware}{Malicious Software}
 \newacronym{mcda}{MCDA}{Multi-Criteria Decision Analysis}
-\newacronym{mdns}{mDNS}{multicast Domain Name System}
+\newacronym{mdns}{mDNS}{Multicast DNS}
 \newacronym{mdr}{MDR}{Managed Detection and Response}
 \newacronym{mfa}{MFA}{Multi-Factor Authentication}
+\newacronym{mgmt}{MGMT}{Management}
 \newacronym{mib}{MIB}{Management Information Base}
+\newacronym{MiB}{MiB}{Mebibytes}
 \newacronym{mkb}{MKB}{Midden- en Kleinbedrijf}
 \newacronym{ml}{ML}{Machine Learning}
 \newacronym{mttc}{MTTC}{Mean Time to Contain}
+\newacronym{mttd}{MTTD}{Mean Time to Detect}
 \newacronym{mttr}{MTTR}{Mean Time To Repair}
 \newacronym{ms}{MS}{Microsoft}
 \newacronym{msi}{MSI}{Microsoft Installer}
@@ -368,11 +436,14 @@ style=apa,
 \newacronym{nic}{NIC}{Network Interface Controller}
 \newacronym{nist}{NIST}{National Institute of Standards and Technology}
 \newacronym{nosql}{NoSQL}{Not Only SQL}
+\newacronym{nta}{NTA}{Network Traffic Analysis}
 \newacronym{oas}{OAS}{OpenAPI Specification}
 \newacronym{oauth}{OAuth}{Open Authorization}
 \newacronym{oci}{OCI}{Oracle Cloud Infrastructure}
 \newacronym{odbc}{ODBC}{Open Database Connectivity}
+\newacronym{oid}{OID}{Object Identifier}
 \newacronym{oop}{OOP}{Object-Oriented Programming}
+\newacronym{opsec}{OPSEC}{Operational Security}
 \newacronym{otp}{OTP}{One Time Password}
 \newacronym{os}{OS}{Operating System}
 \newacronym{osi}{OSI}{Open Systems Interconnection}
@@ -398,8 +469,10 @@ style=apa,
 \newacronym{seg}{SEG}{Secure E-mail Gateway}
 \newacronym{sem}{SEM}{Security Event Management}
 \newacronym{sftp}{SFTP}{Secure File Transfer Protocol}
+\newacronym{sha}{SHA}{Secure Hash Algorithm}
 \newacronym{sid}{SID}{Security Identifier}
 \newacronym{siem}{SIEM}{Security Information and Event Management}
+\newacronym{siemaas}{SIEMaaS}{SIEM as a Service}
 \newacronym{sim}{SIM}{Security Information Management}
 \newacronym{sec}{SEC}{Security and Exchange Commission}
 \newacronym{smtp}{SMTP}{Simple Mail Transfer Protocol}
@@ -407,8 +480,10 @@ style=apa,
 \newacronym{smb}{SMB}{Server Message Block}
 \newacronym{snmp}{SNMP}{Simple Network Management Protocol}
 \newacronym{soc}{SOC}{Security Operations Center}
+\newacronym{socaas}{SOCaaS}{SOC as a Service}
 \newacronym{soar}{SOAR}{Security Orchestration, Automation, and Response}
 \newacronym{soap}{SOAP}{Simple Object Access Protocol}
+\newacronym{sox}{SOX}{Sarbanes-Oxley Act}
 \newacronym{spog}{SPoG}{Single Pane of Glass}
 \newacronym{star}{STAR}{Situation, Task, Action, Result}
 \newacronym{sase}{SASE}{Secure Access Service Edged}
@@ -419,12 +494,15 @@ style=apa,
 \newacronym{ssl}{SSL}{Secure Sockets Layer}
 \newacronym{swg}{SWG}{Secure Web Gateway}
 \newacronym{swot}{SWOT}{Strengths, Weaknesses, Opportunities, and Threats}
+\newacronym{tap}{TAP}{Test Access Point}
 \newacronym{tcp}{TCP}{Transmission Control Protocol}
+\newacronym{tdir}{TDIR}{Threat Detection and Incident Response}
 \newacronym{totp}{TOTP}{Time-based One Time Password}
 \newacronym{toml}{TOML}{Tom's Obvious, Minimal Language}
 \newacronym{ts}{TS}{TypeScript}
 \newacronym{uefi}{UEFI}{Unified Extensible Firmware Interface}
 \newacronym{uba}{UBA}{User Behavior Analytics}
+\newacronym{ueba}{UEBA}{User and Entity Behavior Analytics}
 \newacronym{ui}{UI}{User Interface}
 \newacronym{udp}{UDP}{User Datagram Protocol}
 \newacronym{uri}{URI}{Uniform Resource Identifier}
@@ -464,5 +542,5 @@ style=apa,
 \include{Sections/Conclusions}
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
-\include{Sections/Appendix}
+% \include{Sections/Appendix}
 \end{document}

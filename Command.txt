@@ -12,5 +12,5 @@ texcount -inc main.tex
 
 Update reference.bib
 pdflatex main.tex
-bibtex main.aux
+bibtex main.aux // Fix bibtex error by adding '&' 
 biber main

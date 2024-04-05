@@ -201,25 +201,26 @@ style=apa,
 \newglossaryentry{RMM} {
     name=\acrshort{rmm},
     description={is a software platfomr that helps \acrshort{msp}s remotely monitor and manage their clients' endpoints, networks, 
-    and computers (\cite{rmm}).}
+    and computers (\cite{rmm})}
 }
 \newglossaryentry{API} {
     name=\acrshort{api},
     description={is a software intermediary that allows two applications to talk to each other. In other words, an \acrshort{api} 
-    is the messenger that delivers request to the provider that was requested from and then delivers the response back (\cite{api}). 
+    is the messenger that delivers request to the provider that was requested from and then delivers the response back 
+    (\textbf{\cite{api}}) 
     }
 }
 \newglossaryentry{AD} {
     name=\acrshort{ad},
     description={is a directory service developed by Microsoft for Windows domain network. It provides a database and set of 
-    services that connect users with the network resources they need to get their work done(\cite{api})
+    services that connect users with the network resources they need to get their work done(\textbf{\cite{AD}})
     }
 }
 \newglossaryentry{REST} {
     name=\acrshort{rest},
     description={is a software architectural style for providing standards between computer systems on the web, making it easier
     to communicate with each other. It is often characterized by how they are stateless and separate the concerns of client and
-    server. (\cite{api})
+    server (\textbf{\cite{restAPI}})
     }
 }
 \newglossaryentry{zerotrust} {
@@ -235,24 +236,27 @@ style=apa,
 \newglossaryentry{threathunting} {
     name=Threat Hunting,
     description={ \acrshort{aka} cyberthreat hunting, is a proactive approach to identifying previously unknown, or ongoing 
-    non-remediated threats, and searching for signs of potential cyber threats within an organization's network or system. 
+    non-remediated threats, and searching for signs of potential cyber threats within an organization's network or system
+    (\textit{\cite{threatHunting}})
     }
 }
 \newglossaryentry{ATT&CK} {
-    name=Att&ck,
-    description={
+    name=\acrshort{att&ck},
+    description={ \acrshort{aka} MITRE \acrshort{att&ck}, is a guideline for classifying and describing cyberattacks and intrusions
+    (\textit{\cite{att&ck}})
     }
 }
 \newglossaryentry{SNMP}{
     name=\acrshort{snmp},
-    description={is a protocol that runs on a lot of network equipment for managing and monitoring network devices. 
+    description={is a protocol that runs on a lot of network equipment for managing and monitoring network devices 
+    (\textit{\cite{snmpMonitoring}}) 
     }
 }
 \newglossaryentry{MIB}{
     name=\acrshort{mib},
     description={is a hierarchical \acrshort{db} used in \acrshort{snmp} to define the structure of the data that can be managed 
-    or monitored over a network. It contains \acrshort{oid}s which are unqiue identifiers used to specify a particular piece of 
-    information within the \acrshort{mib}.
+    or monitored over a network It contains \acrshort{oid}s which are unqiue identifiers used to specify a particular piece of 
+    information within the \acrshort{mib}
     }
 }
 \newglossaryentry{networkShare}{
@@ -263,39 +267,75 @@ style=apa,
 \newglossaryentry{UUID}{
     name=\acrshort{uuid},
     description={ is a 128-bit value used to uniquely identify an object or entity for information in computer system on the internet. The term
-    \acrshort{guid} is also used, mostly in Microsoft system.
+    \acrshort{guid} is also used, mostly in Microsoft system (\textit{\cite{uuid}})
     }
 }
 \newglossaryentry{sha1}{
     name=\acrshort{sha}1,
     description={ is a hash function, in cryptography, which takes an input and produces a 160-bit hash value known as a message digest - typically 
-    rendered as 40 hexadecimal digits. It is often used to verify if a file has been unaltered.
+    rendered as 40 hexadecimal digits. It is often used to verify if a file has been unaltered
     }
 }
 \newglossaryentry{watchtower}{
     name=Watctower,
-    description={ is a managed threat hunting offering that searches the environment for known and emerging threats in real-time.
+    description={ is a managed threat hunting offering that searches the environment for known and emerging threats in real-time 
+    (\textit{\cite{watchtower}})
     }
 }
 \newglossaryentry{networkTap}{
     name=Network \acrshort{tap},
     description={ is a simple device that connects directly to the cabling infrastructure to split or copy packets for use ion analysis, security
-    or general network management.
+    or general network management
     }
 }
 \newglossaryentry{CRM}{
-    name=Network \acrshort{crm},
+    name=\acrshort{crm},
     description={ is a process or strategy that companies use to manage and analyze customer interactions and data throughout the customer lifecycle.
     \acrshort{crm} technology is a software system that helps organizations easily track all communications and nurture relationships with their leads 
-    and clients.
+    and clients \textit{\cite{crm}}
     }
 }
 \newglossaryentry{ERP}{
-    name=Network \acrshort{erp},
+    name=\acrshort{erp},
     description={ is a type of software that organizations use to manage core day-to-day business activities needed to run a company such as accounting,
-    finance, procurement, project management, manufacuring, risk management and compliance, \acrshort{hr}, and supply chain operations (\textit{\cite{erp}}). 
+    finance, procurement, project management, manufacuring, risk management and compliance, \acrshort{hr}, and supply chain operations (\textit{\cite{erp}}) 
     }
 }
+\newglossaryentry{NoSQL}{
+    name=\acrshort{nosql},
+    description={ is a category of \acrshort{db} that provides a mechanism for storage and retrieval of data that is modelled in ways other
+    than the tabular relations used in \acrshort{rdbms} (\textit{\cite{nosql}}). \acrshort{nosql} \acrshort{db}s are typically designed to handle large
+    volumes of unstructured or semi-structured data, such as \acrshort{json}, \acrshort{xml}, or binary objects, and they offer
+    a flexible data model that can evolve over time. Both databases in Firebase, Firestore, and Real-time Database are \acrshort{nosql}
+    databases. 
+    }
+}
+\newglossaryentry{cronJob}{
+    name=Cron Job,
+    description={ is a job scheduler responsible on scheduling tasks on repeated schedule on a server (\textit{\cite{cronJob}})
+    }
+}
+\newglossaryentry{JSON}{
+    name=\acrshort{json},
+    description={  is a lightweight data-interchange format that is easy for humans to read and write while being
+    also easy for machines to parse and generate too. It is based on a subset of the \acrshort{js}
+    and is commonly used for representing structured data.(\textit{\cite{cronJob}})
+    }
+}
+\newglossaryentry{CAPTCHA}{
+    name=\acrshort{captcha},
+    description={ is a type of challenge-response test used in computing to determine whether or not the user is human 
+    (\textit{\cite{captcha}})
+    }
+}
+\newglossaryentry{reCAPTCHA}{
+    name=re\gls{CAPTCHA},
+    description={ is a \acrshort{captcha} system owned by Google to enable web hosts to distinguish between human and 
+    automated access to websites (\textit{\cite{ReCaptcha}})
+    }
+}
+
+
 
 
 
@@ -319,6 +359,7 @@ style=apa,
 \newacronym{baas}{BaaS}{Back-end as a Service}
 \newacronym{bv}{B.V.}{Besloten Vennootschap}
 \newacronym{casb}{CASB}{Cloud Access Security Broker}
+\newacronym{captcha}{CAPTCHA}{Completely Automated Public Turing test to tell Computers and Humans Apart}
 \newacronym{c&c}{C&C}{Command-and-Control}
 \newacronym{cdr}{CDR}{Content Disarm and Reconstruction}
 \newacronym{cmd}{CMD}{Command Prompt}
@@ -361,7 +402,6 @@ style=apa,
 \newacronym{etc}{etc.,}{et cetera}
 \newacronym{etdr}{ETDR}{Endpoint Threat Detection and Response}
 \newacronym{exe}{.exe}{Executable}
-\newacronym{fcm}{FCM}{Firebase Cloud Messaging}
 \newacronym{fips}{FIPS}{Federal Information Processing Standards}
 \newacronym{foak}{FOAK}{First of a Kind}
 \newacronym{ftp}{FTP}{File Transfer Protocol}
@@ -436,6 +476,7 @@ style=apa,
 \newacronym{nic}{NIC}{Network Interface Controller}
 \newacronym{nist}{NIST}{National Institute of Standards and Technology}
 \newacronym{nosql}{NoSQL}{Not Only SQL}
+\newacronym{npm}{NPM}{Node Package Manager}
 \newacronym{nta}{NTA}{Network Traffic Analysis}
 \newacronym{oas}{OAS}{OpenAPI Specification}
 \newacronym{oauth}{OAuth}{Open Authorization}
@@ -534,6 +575,9 @@ style=apa,
 \clearpage
 \addcontentsline{toc}{section}{List of Example Code Listings}
 \lstlistoflistings
+\clearpage
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
 \clearpage
 \printglossaries
 \include{Sections/Introduction}

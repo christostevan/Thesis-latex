@@ -65,26 +65,26 @@ style=apa,
 % Dart
 \definecolor{codePurple}{rgb}{0.58,0,0.82}
 \definecolor{dartBackcolour}{rgb}{0.95, 0.95, 0.96}
-
-
+\definecolor{tealString}{HTML}{CE9178}
 
 \lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, 
-    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const },
+    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const,
+    import, export },
   keywordstyle=\color{blue}\bfseries,
   ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{black},
+  identifierstyle=\color{white},
   sensitive=false,
   comment=[l]{//},
   morecomment=[l]{//},
   morecomment=[s]{/*}{*/},
   commentstyle=\color{codeGreen}\ttfamily,
-  stringstyle=\color{codeRed}\ttfamily,
+  stringstyle=\color{tealString}\ttfamily,
   morestring=[b]',
   morestring=[b]",
   ndkeywords={class, export, boolean, throw, implements, import, this, constructor, boolean, string, number},
   sensitive=true,
-  backgroundcolor=\color{codeGray},
+  backgroundcolor=\color{darkgrey},
   basicstyle=\footnotesize\ttfamily\color{white},
 }
 
@@ -102,7 +102,7 @@ style=apa,
     showstringspaces=false,
     breaklines=true,
     frame=lines,
-    backgroundcolor=\color{gray},
+    backgroundcolor=\color{darkgrey},
     string=[s]{"}{"},
     comment=[l]{:\ "},
     morecomment=[l]{:"},
@@ -200,7 +200,7 @@ style=apa,
 }
 \newglossaryentry{RMM} {
     name=\acrshort{rmm},
-    description={is a software platfomr that helps \acrshort{msp}s remotely monitor and manage their clients' endpoints, networks, 
+    description={is a software platform that helps \acrshort{msp}s remotely monitor and manage their clients' endpoints, networks, 
     and computers (\cite{rmm})}
 }
 \newglossaryentry{API} {
@@ -214,13 +214,6 @@ style=apa,
     name=\acrshort{ad},
     description={is a directory service developed by Microsoft for Windows domain network. It provides a database and set of 
     services that connect users with the network resources they need to get their work done(\textbf{\cite{AD}})
-    }
-}
-\newglossaryentry{REST} {
-    name=\acrshort{rest},
-    description={is a software architectural style for providing standards between computer systems on the web, making it easier
-    to communicate with each other. It is often characterized by how they are stateless and separate the concerns of client and
-    server (\textbf{\cite{restAPI}})
     }
 }
 \newglossaryentry{zerotrust} {
@@ -290,22 +283,24 @@ style=apa,
 }
 \newglossaryentry{CRM}{
     name=\acrshort{crm},
-    description={ is a process or strategy that companies use to manage and analyze customer interactions and data throughout the customer lifecycle.
-    \acrshort{crm} technology is a software system that helps organizations easily track all communications and nurture relationships with their leads 
-    and clients \textit{\cite{crm}}
+    description={ is a process or strategy that companies use to manage and analyze customer interactions and data throughout the customer '
+    lifecycle. \acrshort{crm} technology is a software system that helps organizations easily track all communications and nurture relationships 
+    with their leads and clients \textit{\cite{crm}}
     }
 }
 \newglossaryentry{ERP}{
     name=\acrshort{erp},
-    description={ is a type of software that organizations use to manage core day-to-day business activities needed to run a company such as accounting,
-    finance, procurement, project management, manufacuring, risk management and compliance, \acrshort{hr}, and supply chain operations (\textit{\cite{erp}}) 
+    description={ is a type of software that organizations use to manage core day-to-day business activities needed to run a company such as 
+    accounting,
+    finance, procurement, project management, manufacuring, risk management and compliance, \acrshort{hr}, and supply chain operations 
+    (\textit{\cite{erp}}) 
     }
 }
 \newglossaryentry{NoSQL}{
     name=\acrshort{nosql},
     description={ is a category of \acrshort{db} that provides a mechanism for storage and retrieval of data that is modelled in ways other
-    than the tabular relations used in \acrshort{rdbms} (\textit{\cite{nosql}}). \acrshort{nosql} \acrshort{db}s are typically designed to handle large
-    volumes of unstructured or semi-structured data, such as \acrshort{json}, \acrshort{xml}, or binary objects, and they offer
+    than the tabular relations used in \acrshort{rdbms} (\textit{\cite{nosql}}). \acrshort{nosql} \acrshort{db}s are typically designed to 
+    handle large volumes of unstructured or semi-structured data, such as \gls{JSON}, \acrshort{xml}, or binary objects, and they offer
     a flexible data model that can evolve over time. Both databases in Firebase, Firestore, and Real-time Database are \acrshort{nosql}
     databases. 
     }
@@ -313,13 +308,6 @@ style=apa,
 \newglossaryentry{cronJob}{
     name=Cron Job,
     description={ is a job scheduler responsible on scheduling tasks on repeated schedule on a server (\textit{\cite{cronJob}})
-    }
-}
-\newglossaryentry{JSON}{
-    name=\acrshort{json},
-    description={  is a lightweight data-interchange format that is easy for humans to read and write while being
-    also easy for machines to parse and generate too. It is based on a subset of the \acrshort{js}
-    and is commonly used for representing structured data.(\textit{\cite{cronJob}})
     }
 }
 \newglossaryentry{CAPTCHA}{
@@ -334,10 +322,41 @@ style=apa,
     automated access to websites (\textit{\cite{ReCaptcha}})
     }
 }
-
-
-
-
+\newglossaryentry{RESTful API}{
+    name=\acrshort{rest}ful \acrshort{api},
+    description={ is an \acrshort{api} that follow \GLS{REST gls} principles (\cite{restguidingprinciples}). It considered 
+    the gold standard for scalability and are highly compatible with microservice architecture. It is the often used protocol 
+    in the context of building \acrshort{api}s for web-based applications
+    }
+}
+\newglossaryentry{REST gls} {
+    name=\acrshort{rest},
+    description={is a software architectural style for providing standards between computer systems on the web, making it easier
+    to communicate with each other. It is often characterized by how they are stateless and separate the concerns of client and
+    server (\textbf{\cite{restAPI}})
+    }
+}
+\newglossaryentry{SOAP API}{
+    name=\acrshort{soap} \acrshort{api},
+    description={ is an \acrshort{api} strictly based on \acrshort{xml} for the message structure and \acrshort{http} for the 
+    protocols (\textit{\cite{soapAPI}})
+    }
+}
+\newglossaryentry{XML}{
+    name=\acrshort{xml},
+    description={ is a markup language that defines a set of rules for encoding documents in a format that
+    is both human and machine-readable. It provides a way to structure data in a hierarchical format using
+    tags to define elements and attributes within those elements (\textit{\cite{xml}})
+    }
+}
+\newglossaryentry{JSON}{
+    name=\acrshort{json},
+    description={ is a lightweight data-interchange format that is easy for humans to read and write while being
+    also easy for machines to parse and generate too. It is based on a subset of the JavaScript programming language
+    and is commonly used for representing structured data. \acrshort{json} is often used for transmitting data between
+    a server and a web application, as well as for storing configuration data (\textit{\cite{json}})
+    }
+}
 
 \newacronym{2fa}{2FA}{Two-Factor Authentication}
 \newacronym{acid}{ACID}{Atomicity, Consistency, Isolation, Durability}
@@ -380,6 +399,7 @@ style=apa,
 \newacronym{css}{CSS}{Cascading Style Sheets}
 \newacronym{csf}{CSF}{Cybersecurity Framework}
 \newacronym{cql}{CQL}{Cassandra Query Language}
+\newacronym{cve}{CVE}{Common Vulnerabilities and Exposures}
 \newacronym{cwpp}{CWPP}{Cloud Workload Protection Platform}
 \newacronym{db}{DB}{Database}
 \newacronym{devops}{DevOps}{Development and Operations}
@@ -494,6 +514,7 @@ style=apa,
 \newacronym{pii}{PII}{Personally Identifiable Information}
 \newacronym{plc}{PLC}{Programmable Logic Controller}
 \newacronym{pua}{PUA}{Potentially Unwanted Application}
+\newacronym{pubsub}{Pub/Sub}{Publisher/Subscriber}
 \newacronym{qaas}{QaaS}{Quality as a Service}
 \newacronym{qict}{Q-ICT}{Quality ICT}
 \newacronym{ql}{QL}{Query Language}
@@ -573,7 +594,7 @@ style=apa,
 \addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 \clearpage
-\addcontentsline{toc}{section}{List of Example Code Listings}
+\addcontentsline{toc}{section}{List of Example Code Examples}
 \lstlistoflistings
 \clearpage
 \addcontentsline{toc}{section}{List of Tables}
@@ -581,6 +602,7 @@ style=apa,
 \clearpage
 \printglossaries
 \include{Sections/Introduction}
+\include{Sections/researchDesign}
 \include{Sections/Research}
 \include{Sections/Realization}
 \include{Sections/Conclusions}

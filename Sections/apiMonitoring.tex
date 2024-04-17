@@ -12,6 +12,62 @@
 % \newacronym{cco}{CCO}{Chief Communications Officer}
 % 
 
+\acrshort{qict} typically engage in various activities, including:
+\begin{itemize}
+      \item \textbf{Continuous Monitoring and Maintenance}: implementing tools and processes for continuous
+            monitoring of clients' systems, devices, networks, and systems to detect and respond to security
+            threats in real-time and address emerging threats and vulnerabilities.
+      \item \textbf{Vulnerability Assessment}: conducting regular vulnerability assessments and penetration
+            testing to identify weaknesses in clients' systems and infrastructure
+      \item \textbf{Incident Response}: developing and implementing plans and protocols for responding to
+            and mitigating cybersecurity incidents effectively and efficiently.
+      \item \textbf{Penetration Testing}: simulating cyberattacks to identify weaknesses in the client's
+            defences and assess their ability to withstand and respond to real-world cyber threats.
+      \item \textbf{Security Incident Investigation}: conducting thorough investigations into security
+            incidents to identify the root cause and impact of the incident and develop strategies to prevent
+            future occurrences.
+\end{itemize}
+\subsubsection{Working Methodology}
+The company currently utilizes the five functions defined by \acrshort{nist} as part of its \acrshort{csf} as
+the framework to help the company manage and improve their cybersecurity risk management processes. These five
+functions are part of the \acrshort{fips} 199. All functions serve as level categories for organizing
+cybersecurity activities within an organization and are as follows (\cite{nist}):
+\begin{itemize}
+      \item \textbf{Identify}: develop the organizational understanding to manage cybersecurity risk to
+            systems, assets, data, and capabilities. This includes the development of an organizational
+            understanding to manage cybersecurity risk to systems, assets, data, and capabilities. It also
+            includes the development of a cybersecurity risk management strategy that is aligned with the
+            organization's mission, goals, and objectives and the establishment of a governance structure to
+            ensure that the strategy is effectively implemented and maintained.
+      \item \textbf{Protect}: develop and implement the appropriate safeguards to ensure delivery of critical
+            infrastructure services. It can help the company assists clients in implementing security controls,
+            encryption mechanism, access controls, and other security measures to protect their systems and
+            data from unauthorized access, disclosure, and alteration or modification.
+      \item \textbf{Detect}: develop and implement the appropriate activities to identify and detect the
+            occurrence of a cybersecurity event in timely manner to facilitate rapid response and mitigation
+            efforts. This includes the development of a cybersecurity event detection capability that is
+            integrated with the company's incident response and recovery capabilities. It will help the
+            company to implement monitoring and detection mechanisms, such as intrusion detection systems,
+            log analysis tools, and \acrshort{siem} systems, to detect and identify to cybersecurity incidents
+            promptly.
+      \item \textbf{Respond}: develop and implement the appropriate activities to act in responding
+            regarding a detected cybersecurity event, containing the impact, and restoring normal operations.
+            It involves activities such as developing incident response plans, conducting incident response
+            drills and exercises, establishing communication channels with stakeholders, and implementing
+            recovery strategies to minimize the impact of cybersecurity incidents on business operations and
+            services.
+      \item \textbf{Recover}: develop and implement the appropriate activities to maintain plans for
+            resilience and to restore any capabilities or services that were impaired due to a cybersecurity
+            incident and event, along with implementing improvements to prevent future incidents. In this
+            activity,  the company should be able to develop and implement recovery plans, conduct
+            post-incident reviews and analysis, identify areas for improvement, and implement measures and
+            improvements to enhance resilience and prevention future incidents.
+\end{itemize}
+
+
+Furthermore, the company also uses the \acrshort{iso} 27001 as the main standard for information security
+management and the \acrshort{nist} 800-53 as the main standard for security and privacy controls for federal
+information systems and organizations.
 
 \item Real-time database:
 
@@ -306,78 +362,78 @@ class _MyCheckboxState extends State<MyCheckbox> {
 \begin{multicols}{2}
 
 
-\textbf{Composite API}: it connects multiple \acrshort{api}s into a single data or interface or process to
-streamline the development operations, therefore allowing developers to bundle and send requests from different
-\acrshort{api}s as they do not have to write separate code for every individual \acrshort{api}. Usually,
-one or more related \acrshort{api}s are combined to improve performance. They reduce the load to the server
-as they are treated as a single call. In the microservice-based architecture
-(\textit{\nameref{microservicesapi}}), a single user action might involve multiple calls, which can come as
-a drawback as they generate enormous number of individual \acrshort{api} calls. In that scenario, the orchestration
-of this type of \acrshort{api} is very helpful as this work faster and is easier to implement. It is more secure
-than using multiple, individualized solutions, and it may also support multiple \acrshort{api} protocol types.
+      \textbf{Composite API}: it connects multiple \acrshort{api}s into a single data or interface or process to
+      streamline the development operations, therefore allowing developers to bundle and send requests from different
+      \acrshort{api}s as they do not have to write separate code for every individual \acrshort{api}. Usually,
+      one or more related \acrshort{api}s are combined to improve performance. They reduce the load to the server
+      as they are treated as a single call. In the microservice-based architecture
+      (\textit{\nameref{microservicesapi}}), a single user action might involve multiple calls, which can come as
+      a drawback as they generate enormous number of individual \acrshort{api} calls. In that scenario, the orchestration
+      of this type of \acrshort{api} is very helpful as this work faster and is easier to implement. It is more secure
+      than using multiple, individualized solutions, and it may also support multiple \acrshort{api} protocol types.
 
-A good example of this type is Shopify \acrshort{api}, which provides synchronization to large volumes of data and
-actions with other platforms that are dependent on each other in one request, such as Etsy, eBay, and Amazon. Rather
-than having multiple \acrshort{api}s to manage the automation of inventory, shipping, and taxes across multiple shopfronts,
-a single \acrshort{api} can be used for syncing and integration. Similar in ordering via a food app, the customers can
-use multiple GET calls, retrieving the food, and finally placing the request as a POST call.
-\subsubsection{Different Types of API by Architecture}
-\textbf{Monolithic API}: this is a single, coherent codebase type of architecture, providing access to a complex data
-source. Most public \acrshort{api}s are monolithic \acrshort{api}s, because it is familiar to most web developers, and
-they often closely follow the \acrshort{mvc} architecture of a relational \acrshort{db}. They provide predictable
-functionality across a range of resources, and they generally remain fairly stable over time because they serve so
-many use cases for many users.
+      A good example of this type is Shopify \acrshort{api}, which provides synchronization to large volumes of data and
+      actions with other platforms that are dependent on each other in one request, such as Etsy, eBay, and Amazon. Rather
+      than having multiple \acrshort{api}s to manage the automation of inventory, shipping, and taxes across multiple shopfronts,
+      a single \acrshort{api} can be used for syncing and integration. Similar in ordering via a food app, the customers can
+      use multiple GET calls, retrieving the food, and finally placing the request as a POST call.
+      \subsubsection{Different Types of API by Architecture}
+      \textbf{Monolithic API}: this is a single, coherent codebase type of architecture, providing access to a complex data
+      source. Most public \acrshort{api}s are monolithic \acrshort{api}s, because it is familiar to most web developers, and
+      they often closely follow the \acrshort{mvc} architecture of a relational \acrshort{db}. They provide predictable
+      functionality across a range of resources, and they generally remain fairly stable over time because they serve so
+      many use cases for many users.
 
-However, as the name suggests, they are monolithic, and therefore can be difficult to scale or refactor, because so much
-data is interconnected with them. When developers worry about releasing "breaking changes", they are often working with
-monolithic architectures, where changing even minor details can have unpredictable consequences.
+      However, as the name suggests, they are monolithic, and therefore can be difficult to scale or refactor, because so much
+      data is interconnected with them. When developers worry about releasing "breaking changes", they are often working with
+      monolithic architectures, where changing even minor details can have unpredictable consequences.
 
-\textbf{Microservices API} \label{microservicesapi}: this is the main alternative to monolithic \acrshort{api}
-architecture. This architecture is more common for internal and partner \acrshort{api}, though public \acrshort{api}
-may also be part of an organization's overall microservice architecture. Most development teams using a
-\acrshort{ci}/\acrshort{cd} process make use of many microservices as part of their code lifecycle, each serving a
-discrete, independent purpose. For example, an e-commerce company might have an internal microservice that
-provides inventory data, and another to validate employee geolocation on changes to inventory data, while
-software developers pushing code automatically call microservices for testing and governance. As workflows
-change, individual microservices can be swapped out, updated, or replaced without affecting the overall parts
-of the system.
+      \textbf{Microservices API} \label{microservicesapi}: this is the main alternative to monolithic \acrshort{api}
+      architecture. This architecture is more common for internal and partner \acrshort{api}, though public \acrshort{api}
+      may also be part of an organization's overall microservice architecture. Most development teams using a
+      \acrshort{ci}/\acrshort{cd} process make use of many microservices as part of their code lifecycle, each serving a
+      discrete, independent purpose. For example, an e-commerce company might have an internal microservice that
+      provides inventory data, and another to validate employee geolocation on changes to inventory data, while
+      software developers pushing code automatically call microservices for testing and governance. As workflows
+      change, individual microservices can be swapped out, updated, or replaced without affecting the overall parts
+      of the system.
 
-\textbf{Unified API}: this type is common among Partner \acrshort{api}s. It serves similar purpose to Composite
-\acrshort{api}s, but instead it bundles related calls to multiple different \acrshort{api}s, instead of to multiple
-endpoints on a single \acrshort{api}.
+      \textbf{Unified API}: this type is common among Partner \acrshort{api}s. It serves similar purpose to Composite
+      \acrshort{api}s, but instead it bundles related calls to multiple different \acrshort{api}s, instead of to multiple
+      endpoints on a single \acrshort{api}.
 
-\begin{longtable}{|p{8cm}||p{8cm}|}
-      \hline
-      \rowcolor{blue!20}
-      \acrshort{rest}                                                            & \acrshort{soap}                              \\
-      \endfirsthead
-      \hline
-      Works with \acrshort{xml}, \acrshort{json}, \acrshort{http} and plain text & Works with \acrshort{xml} by design          \\
-      \hline
-      Loose and flexible guidelines based on architectures                       & Strict, clearly-defined rules                \\
-      \hline
-      Modest security                                                            & Advanced security                            \\
-      \hline
-      Works well with data                                                       & Works well with processes (actions)          \\
-      \hline
-      Uses low bandwidth and is highly scalable                                  & Uses more bandwidth with limited scalability \\
-      \hline
-      \caption{Comparison of REST and SOAP}
-      \label{tab:restvsoap}
-\end{longtable}
+      \begin{longtable}{|p{8cm}||p{8cm}|}
+            \hline
+            \rowcolor{blue!20}
+            \acrshort{rest}                                                            & \acrshort{soap}                              \\
+            \endfirsthead
+            \hline
+            Works with \acrshort{xml}, \acrshort{json}, \acrshort{http} and plain text & Works with \acrshort{xml} by design          \\
+            \hline
+            Loose and flexible guidelines based on architectures                       & Strict, clearly-defined rules                \\
+            \hline
+            Modest security                                                            & Advanced security                            \\
+            \hline
+            Works well with data                                                       & Works well with processes (actions)          \\
+            \hline
+            Uses low bandwidth and is highly scalable                                  & Uses more bandwidth with limited scalability \\
+            \hline
+            \caption{Comparison of REST and SOAP}
+            \label{tab:restvsoap}
+      \end{longtable}
 
-\begin{multicols}{2}
-      \textbf{GraphQL API}:
-      is contract-driven and come with introspection out-of-the-box. It was developed by Facebook for internal purposes
-      in 2012, and it was open-sourced in 2015. Now it is maintained by the Graph\acrshort{ql} Foundation (\cite{graphql}).
-      Building an \acrshort{api} with Graph\acrshort{ql} is very easy in comparison to true \acrshort{rest} \acrshort{api}s,
-      which require extensive knowledge of \acrshort{http} to build intelligently.
+      \begin{multicols}{2}
+            \textbf{GraphQL API}:
+            is contract-driven and come with introspection out-of-the-box. It was developed by Facebook for internal purposes
+            in 2012, and it was open-sourced in 2015. Now it is maintained by the Graph\acrshort{ql} Foundation (\cite{graphql}).
+            Building an \acrshort{api} with Graph\acrshort{ql} is very easy in comparison to true \acrshort{rest} \acrshort{api}s,
+            which require extensive knowledge of \acrshort{http} to build intelligently.
 
-      The downside is, however, that they do not scale well and require tight coupling between the client and the
-      server. Graph\acrshort{ql} queries get more expensive to parse and execute plans for as they get bigger and
-      lack certain concepts native to \acrshort{http}, such as content and language negotiation.
-\end{multicols}
-\begin{lstlisting}[language=JavaScript, caption=GraphQL's Schema Example]
+            The downside is, however, that they do not scale well and require tight coupling between the client and the
+            server. Graph\acrshort{ql} queries get more expensive to parse and execute plans for as they get bigger and
+            lack certain concepts native to \acrshort{http}, such as content and language negotiation.
+      \end{multicols}
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Schema Example]
       type Query {
             user(id: ID!): User
             posts: [Post!]!
@@ -392,7 +448,7 @@ endpoints on a single \acrshort{api}.
             body: String!
       }
 \end{lstlisting}
-\begin{lstlisting}[language=JavaScript, caption=GraphQL's Request Example to Specific Data]
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Request Example to Specific Data]
       {
             posts {
                   title
@@ -402,7 +458,7 @@ endpoints on a single \acrshort{api}.
             }
       }
 \end{lstlisting}
-\begin{lstlisting}[language=JavaScript, caption=GraphQL's Return Data Example]
+      \begin{lstlisting}[language=JavaScript, caption=GraphQL's Return Data Example]
 {
       "data": {
             "posts": [
@@ -416,50 +472,50 @@ endpoints on a single \acrshort{api}.
       }
 }            
 \end{lstlisting}
-\begin{figure}[htbp] % here, top, bottom, page of floats
-      \centering
-      \includegraphics[width=0.8\textwidth]{Figures/graphql.jpg}
-      \caption{GraphQL vs. REST Architecture}
-      \label{fig:graphqlvsrestarchitecture}
-\end{figure}
-\begin{multicols}{2} % (json-rpc, xml-rpc, grpc) Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
-      \textbf{RPC API} : \acrshort{rpc} is a protocol return \acrshort{xml} or \acrshort{json} response. This protocol
-      calls a method rather than a data resource, and remains one of the oldest and most stable protocols for
-      \acrshort{api}s. While \acrshort{rest}ful \acrshort{api} returns a document, the response from a \acrshort{rpc}
-      server is a confirmation that the function was triggered, or an error indicating  why it failed to run.
+      \begin{figure}[htbp] % here, top, bottom, page of floats
+            \centering
+            \includegraphics[width=0.8\textwidth]{Figures/graphql.jpg}
+            \caption{GraphQL vs. REST Architecture}
+            \label{fig:graphqlvsrestarchitecture}
+      \end{figure}
+      \begin{multicols}{2} % (json-rpc, xml-rpc, grpc) Webhooks API, Socket API Database API, Third-party API, Apache Thrift API, MsgPack API, SSE API, 
+            \textbf{RPC API} : \acrshort{rpc} is a protocol return \acrshort{xml} or \acrshort{json} response. This protocol
+            calls a method rather than a data resource, and remains one of the oldest and most stable protocols for
+            \acrshort{api}s. While \acrshort{rest}ful \acrshort{api} returns a document, the response from a \acrshort{rpc}
+            server is a confirmation that the function was triggered, or an error indicating  why it failed to run.
 
-      \acrshort{rpc} is much faster than \acrshort{rest}, but the specifics depend on implementation. Unlike
-      \acrshort{rest} or \acrshort{soap}, the message format varies. \acrshort{rpc} is tailored toward a client-server
-      architecture and generally over a network.
+            \acrshort{rpc} is much faster than \acrshort{rest}, but the specifics depend on implementation. Unlike
+            \acrshort{rest} or \acrshort{soap}, the message format varies. \acrshort{rpc} is tailored toward a client-server
+            architecture and generally over a network.
 
-      Components of a \acrshort{rpc} system:
-      \begin{itemize}[label=$\star$]
-            \item Client: the requesting device.
-            \item Client stub: how the client will pack/unpack its materials.
-            \item \acrshort{rpc} runtime: the messaging system (a courier between the client and server).
-            \item Server stub: how the server will pack/unpack its materials.
-            \item Server: the supplying device.
-      \end{itemize}
+            Components of a \acrshort{rpc} system:
+            \begin{itemize}[label=$\star$]
+                  \item Client: the requesting device.
+                  \item Client stub: how the client will pack/unpack its materials.
+                  \item \acrshort{rpc} runtime: the messaging system (a courier between the client and server).
+                  \item Server stub: how the server will pack/unpack its materials.
+                  \item Server: the supplying device.
+            \end{itemize}
 
-      The popular frameworks of \acrshort{rpc}s are Apache Thrift, \acrshort{grpc}, and \acrshort{json}-\acrshort{rpc},
-      and \acrshort{xml}-\acrshort{rpc}.
+            The popular frameworks of \acrshort{rpc}s are Apache Thrift, \acrshort{grpc}, and \acrshort{json}-\acrshort{rpc},
+            and \acrshort{xml}-\acrshort{rpc}.
 
-      \textit{gRPC}: developed by Google and released to public in 2015 to use, \acrshort{grpc} is an open-source
-      \acrshort{rpc} architecture that can operate in numerous environments.
+            \textit{gRPC}: developed by Google and released to public in 2015 to use, \acrshort{grpc} is an open-source
+            \acrshort{rpc} architecture that can operate in numerous environments.
 
-      The \acrshort{grpc} transport layer primarily relies on \acrshort{http}. The ability for developers to specify
-      custom functions that allow for flexible inter-service communication is a significant feature of \acrshort{grpc}.
-      This \acrshort{api} protocol also offers extra features such as timeouts, authentication, and flow control.
+            The \acrshort{grpc} transport layer primarily relies on \acrshort{http}. The ability for developers to specify
+            custom functions that allow for flexible inter-service communication is a significant feature of \acrshort{grpc}.
+            This \acrshort{api} protocol also offers extra features such as timeouts, authentication, and flow control.
 
-      In the \acrshort{grpc} protocol, data is transmitted in protocol buffers, a platform and language-agnostic mechanism
-      that allows for data to be structured intuitively. This mechanism defines the service and then the data structures
-      that the service will use. Compiling is taken care by protoc, the protocol buffer compiler.
+            In the \acrshort{grpc} protocol, data is transmitted in protocol buffers, a platform and language-agnostic mechanism
+            that allows for data to be structured intuitively. This mechanism defines the service and then the data structures
+            that the service will use. Compiling is taken care by protoc, the protocol buffer compiler.
 
-      The output of this process is a comprehensive class containing the user's defined data types and basic set of methods
-      in the chosen development language. Users can implement in-depth \acrshort{api} operations using this class.
-\end{multicols}
+            The output of this process is a comprehensive class containing the user's defined data types and basic set of methods
+            in the chosen development language. Users can implement in-depth \acrshort{api} operations using this class.
+      \end{multicols}
 
-\begin{lstlisting}[caption=gRPC Service For a Calculator In a Protobuf File]
+      \begin{lstlisting}[caption=gRPC Service For a Calculator In a Protobuf File]
       syntax = "proto3";
 
       package calculator;
@@ -488,18 +544,18 @@ endpoints on a single \acrshort{api}.
       }
 \end{lstlisting}
 
-\begin{multicols}{2}
-      \textit{Apache Thrift}: developed by Facebook, Thrift itself is a lightweight, language-agnostic software stack.
-      This \acrshort{api} protocol supports \acrshort{http} transmission, along with binary transport formats. Thrift
-      is capable of clean abstraction and implementations for data serialization and transport and application-level
-      processing. Its primary objective is point-to-point \acrshort{rpc} implementation.
+      \begin{multicols}{2}
+            \textit{Apache Thrift}: developed by Facebook, Thrift itself is a lightweight, language-agnostic software stack.
+            This \acrshort{api} protocol supports \acrshort{http} transmission, along with binary transport formats. Thrift
+            is capable of clean abstraction and implementations for data serialization and transport and application-level
+            processing. Its primary objective is point-to-point \acrshort{rpc} implementation.
 
-      Apache can support 28 programming languages, allowing programs written in any of these languages to communicate
-      with each other and request remote services using \acrshort{api}s.
-      \textbf{WebSocket}:
-\end{multicols}
+            Apache can support 28 programming languages, allowing programs written in any of these languages to communicate
+            with each other and request remote services using \acrshort{api}s.
+            \textbf{WebSocket}:
+      \end{multicols}
 
-\begin{lstlisting}[language=JavaScript, caption=WebSocket's Example]
+      \begin{lstlisting}[language=JavaScript, caption=WebSocket's Example]
       // Client-side code
       const socket = new WebSocket('wss://example.com/socket'); // Replace with actual server's websocket URL
       
@@ -526,15 +582,15 @@ endpoints on a single \acrshort{api}.
       });
 \end{lstlisting}
 
-\begin{multicols}{2}
-      \textbf{Socket}: is a software abstraction that allows programs running on different devices to
-      communicate with each other over a network. It provides a standard interface for network
-      communication, enabling data to be sent and received between applications running on separate
-      computers. Sockets are commonly used in networking applications to establish connections and
-      exchange data.
-\end{multicols}
+      \begin{multicols}{2}
+            \textbf{Socket}: is a software abstraction that allows programs running on different devices to
+            communicate with each other over a network. It provides a standard interface for network
+            communication, enabling data to be sent and received between applications running on separate
+            computers. Sockets are commonly used in networking applications to establish connections and
+            exchange data.
+      \end{multicols}
 
-\begin{lstlisting}[language=Python, caption=TCP Server Example Using Sockets in Python]
+      \begin{lstlisting}[language=Python, caption=TCP Server Example Using Sockets in Python]
       import socket
 
       # Create a TCP/IP socket
@@ -567,173 +623,173 @@ endpoints on a single \acrshort{api}.
                   client_socket.close()
 \end{lstlisting}
 
-%       Additionally, threats can also be filtered from:
-% \end{multicols}
-% \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
-%       \hline
-%       \rowcolor{blue!20}
-%       Analysis Verdict (performed by user, marking it as) & Threat Mitigation Status & Incident Status & \acrshort{ai} Confidence level \\
-%       \endfirsthead
-%       \hline
-%       \begin{itemize}
-%             \item False positive
-%             \item Suspicious
-%             \item True positive
-%             \item Undefined
-%       \end{itemize}                                &
-%       \begin{itemize}
-%             \item Mitigated
-%             \item Not mitigated
-%             \item Marked as benign
-%       \end{itemize}                              &
-%       \begin{itemize}
-%             \item Resolved
-%             \item Unresolved
-%             \item In progress
-%       \end{itemize}                                   &
-%       \begin{itemize}
-%             \item Malicious
-%             \item Suspicious
-%             \item \acrshort{na}
-%       \end{itemize}                                                                                                                \\
-%       \hline
-%       \caption{Different filters that can be applied to the Incidents page \#1}
-% \end{longtable}
-% \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
-%       \hline
-%       \rowcolor{blue!20}
-%       Engine                                           & Cloud Provider & \acrshort{os} & Classification \\
-%       \endfirsthead
-%       \hline
-%       \begin{itemize}
-%             \item SentinelOne Cloud
-%             \item On-Write Static \acrshort{ai} - Suspicious
-%             \item Behavioral \acrshort{ai}
-%             \item On-Write Static \acrshort{ai}
-%             \item Reputation
-%             \item Cloud Detection
-%             \item User-Defined Blocklist
-%             \item Documents, Scripts
-%             \item Anti Exploitation / Fileless
-%             \item Intrusion Detection
-%             \item Potentially unwanted application
-%             \item Lateral Movement
-%             \item Remote Shell
-%             \item Manual
-%             \item Application Control
-%             \item Threat Intelligence
-%             \item \gls{watchtower}
-%             \item Driver Blocking
-%       \end{itemize} &
-%       \begin{itemize}
-%             \item Azure
-%             \item \acrshort{aws}
-%             \item \acrshort{gcp}
-%             \item \acrshort{oci}
-%             \item ESXi
-%       \end{itemize}                             &
-%       \begin{itemize}
-%             \item Windows
-%             \item Linux
-%             \item Mac
-%             \item Windows Legacy
-%       \end{itemize}                             &
-%       \begin{itemize}
-%             \item Malware
-%             \item \acrshort{pua}
-%             \item Virus
-%             \item Infostealer
-%             \item Hacktool
-%       \end{itemize}                                                                                \\
-%       \hline
-%       \caption{Different filters that can be applied to the Incidents page \#2}
-% \end{longtable}
-% \begin{longtable}{|p{4cm}|p{4cm}|p{8cm}|}
-%       \hline
-%       \rowcolor{blue!20}
-%       Initiated by                            & Time & Free text search                                                                                                                \\
-%       \endfirsthead
-%       \hline
-%       \begin{itemize}
-%             \item Agent Policy
-%             \item Full Disk Scan
-%             \item Local agent command
-%             \item Deep Visibility Command
-%             \item Management console \acrshort{api}
-%             \item On-Demand Scan
-%             \item Custom Rule
-%             \item Custom Alert
-%             \item Cloud Detection
-%             \item Threat Intelligence
-%             \item \gls{watchtower}
-%       \end{itemize} &
-%       \begin{itemize}
-%             \item Recent
-%             \item Last 24 Hours
-%             \item Today
-%             \item Last 48 Hours
-%             \item Last 7 Days
-%             \item Last 30 Days
-%             \item This Month
-%             \item Last 2 Month
-%             \item Last 3 Month
-%             \item Last Year
-%             \item Custom Range
-%       \end{itemize}                     &
-%       \begin{itemize}
-%             \item Content Hash
-%             \item Cloud Account
-%             \item Cloud Image
-%             \item Cloud Instance \acrshort{id}
-%             \item  Cloud Instance Size
-%             \item Cloud Location
-%             \item Cloud Network
-%             \item   \acrshort{aws} Role
-%             \item   \acrshort{aws} Security Groups
-%             \item   \acrshort{aws} Subnet \acrshort{id}s
-%             \item  Azure Resource Group
-%             \item \acrshort{gcp} Service Account
-%             \item Threat Details: \acrshort{eg} "This is a non-Microsoft binary that masquerades as a Microsoft executable"
-%             \item File Path: \acrshort{eg}: "\textbackslash Device\textbackslash HarddiskVolumeA\textbackslash Users\textbackslash Chris\textbackslash Downloads\textbackslash malicious.exe"
-%             \item Endpoint Name: \acrshort{eg} "LT-Christopher", "LT 10-08"
-%             \item \gls{UUID}: \acrshort{eg}: "0ff2a3409f284776a23432e9f6894afa"
-%             \item Agent Version (at detection) \acrshort{eg}: "23.1.4.650"
-%             \item Agent Version (current)
-%             \item Domain (at detection time)
-%             \item Command Line Arguments
-%             \item Initiated By (username): \acrshort{eg} "LuukAdmiraalMKBIT"
-%             \item Storyline
-%             \item Originated Process
-%             \item Cluster Name
-%             \item Node Name
-%             \item Namespace Name
-%             \item Namespace Labels
-%             \item Controller Name
-%             \item Controller Labels
-%             \item Pod Name
-%             \item Pod Labels
-%             \item Container Name
-%             \item Image Name
-%             \item Container Labels
-%             \item External Ticket \acrshort{id}
-%             \item Node Labels
-%       \end{itemize} \\
-%       \hline
-%       \caption{Different filters that can be applied to the Incidents page \#3}
-% \end{longtable}
+      %       Additionally, threats can also be filtered from:
+      % \end{multicols}
+      % \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+      %       \hline
+      %       \rowcolor{blue!20}
+      %       Analysis Verdict (performed by user, marking it as) & Threat Mitigation Status & Incident Status & \acrshort{ai} Confidence level \\
+      %       \endfirsthead
+      %       \hline
+      %       \begin{itemize}
+      %             \item False positive
+      %             \item Suspicious
+      %             \item True positive
+      %             \item Undefined
+      %       \end{itemize}                                &
+      %       \begin{itemize}
+      %             \item Mitigated
+      %             \item Not mitigated
+      %             \item Marked as benign
+      %       \end{itemize}                              &
+      %       \begin{itemize}
+      %             \item Resolved
+      %             \item Unresolved
+      %             \item In progress
+      %       \end{itemize}                                   &
+      %       \begin{itemize}
+      %             \item Malicious
+      %             \item Suspicious
+      %             \item \acrshort{na}
+      %       \end{itemize}                                                                                                                \\
+      %       \hline
+      %       \caption{Different filters that can be applied to the Incidents page \#1}
+      % \end{longtable}
+      % \begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+      %       \hline
+      %       \rowcolor{blue!20}
+      %       Engine                                           & Cloud Provider & \acrshort{os} & Classification \\
+      %       \endfirsthead
+      %       \hline
+      %       \begin{itemize}
+      %             \item SentinelOne Cloud
+      %             \item On-Write Static \acrshort{ai} - Suspicious
+      %             \item Behavioral \acrshort{ai}
+      %             \item On-Write Static \acrshort{ai}
+      %             \item Reputation
+      %             \item Cloud Detection
+      %             \item User-Defined Blocklist
+      %             \item Documents, Scripts
+      %             \item Anti Exploitation / Fileless
+      %             \item Intrusion Detection
+      %             \item Potentially unwanted application
+      %             \item Lateral Movement
+      %             \item Remote Shell
+      %             \item Manual
+      %             \item Application Control
+      %             \item Threat Intelligence
+      %             \item \gls{watchtower}
+      %             \item Driver Blocking
+      %       \end{itemize} &
+      %       \begin{itemize}
+      %             \item Azure
+      %             \item \acrshort{aws}
+      %             \item \acrshort{gcp}
+      %             \item \acrshort{oci}
+      %             \item ESXi
+      %       \end{itemize}                             &
+      %       \begin{itemize}
+      %             \item Windows
+      %             \item Linux
+      %             \item Mac
+      %             \item Windows Legacy
+      %       \end{itemize}                             &
+      %       \begin{itemize}
+      %             \item Malware
+      %             \item \acrshort{pua}
+      %             \item Virus
+      %             \item Infostealer
+      %             \item Hacktool
+      %       \end{itemize}                                                                                \\
+      %       \hline
+      %       \caption{Different filters that can be applied to the Incidents page \#2}
+      % \end{longtable}
+      % \begin{longtable}{|p{4cm}|p{4cm}|p{8cm}|}
+      %       \hline
+      %       \rowcolor{blue!20}
+      %       Initiated by                            & Time & Free text search                                                                                                                \\
+      %       \endfirsthead
+      %       \hline
+      %       \begin{itemize}
+      %             \item Agent Policy
+      %             \item Full Disk Scan
+      %             \item Local agent command
+      %             \item Deep Visibility Command
+      %             \item Management console \acrshort{api}
+      %             \item On-Demand Scan
+      %             \item Custom Rule
+      %             \item Custom Alert
+      %             \item Cloud Detection
+      %             \item Threat Intelligence
+      %             \item \gls{watchtower}
+      %       \end{itemize} &
+      %       \begin{itemize}
+      %             \item Recent
+      %             \item Last 24 Hours
+      %             \item Today
+      %             \item Last 48 Hours
+      %             \item Last 7 Days
+      %             \item Last 30 Days
+      %             \item This Month
+      %             \item Last 2 Month
+      %             \item Last 3 Month
+      %             \item Last Year
+      %             \item Custom Range
+      %       \end{itemize}                     &
+      %       \begin{itemize}
+      %             \item Content Hash
+      %             \item Cloud Account
+      %             \item Cloud Image
+      %             \item Cloud Instance \acrshort{id}
+      %             \item  Cloud Instance Size
+      %             \item Cloud Location
+      %             \item Cloud Network
+      %             \item   \acrshort{aws} Role
+      %             \item   \acrshort{aws} Security Groups
+      %             \item   \acrshort{aws} Subnet \acrshort{id}s
+      %             \item  Azure Resource Group
+      %             \item \acrshort{gcp} Service Account
+      %             \item Threat Details: \acrshort{eg} "This is a non-Microsoft binary that masquerades as a Microsoft executable"
+      %             \item File Path: \acrshort{eg}: "\textbackslash Device\textbackslash HarddiskVolumeA\textbackslash Users\textbackslash Chris\textbackslash Downloads\textbackslash malicious.exe"
+      %             \item Endpoint Name: \acrshort{eg} "LT-Christopher", "LT 10-08"
+      %             \item \gls{UUID}: \acrshort{eg}: "0ff2a3409f284776a23432e9f6894afa"
+      %             \item Agent Version (at detection) \acrshort{eg}: "23.1.4.650"
+      %             \item Agent Version (current)
+      %             \item Domain (at detection time)
+      %             \item Command Line Arguments
+      %             \item Initiated By (username): \acrshort{eg} "LuukAdmiraalMKBIT"
+      %             \item Storyline
+      %             \item Originated Process
+      %             \item Cluster Name
+      %             \item Node Name
+      %             \item Namespace Name
+      %             \item Namespace Labels
+      %             \item Controller Name
+      %             \item Controller Labels
+      %             \item Pod Name
+      %             \item Pod Labels
+      %             \item Container Name
+      %             \item Image Name
+      %             \item Container Labels
+      %             \item External Ticket \acrshort{id}
+      %             \item Node Labels
+      %       \end{itemize} \\
+      %       \hline
+      %       \caption{Different filters that can be applied to the Incidents page \#3}
+      % \end{longtable}
 
-% \begin{multicols}{2}
-Furthermore, it will also analyze for infected endpoint connectivity (offline/online), mitigated preemptively (yes/no),
-reboot required (yes/no), action failed (yes/no), pending actions (yes/no), and if note and external ticket exists (yes/no).
+      % \begin{multicols}{2}
+      Furthermore, it will also analyze for infected endpoint connectivity (offline/online), mitigated preemptively (yes/no),
+      reboot required (yes/no), action failed (yes/no), pending actions (yes/no), and if note and external ticket exists (yes/no).
 
-\begin{multicols}{2}
-      \textbf{MsgPack}: is an open standard for compact binary data serialization, ideal for efficient data transfer.
-      \acrshort{msgpack} supports a variety of data types, including integers, floating-point numbers, strings,
-      arrays, maps (key-value pairs), and more. It is designed to be platform-agnostic, meaning that the data can be
-      serialized in one programming language and deserialize it in another without compactibility issues.
-\end{multicols}
+      \begin{multicols}{2}
+            \textbf{MsgPack}: is an open standard for compact binary data serialization, ideal for efficient data transfer.
+            \acrshort{msgpack} supports a variety of data types, including integers, floating-point numbers, strings,
+            arrays, maps (key-value pairs), and more. It is designed to be platform-agnostic, meaning that the data can be
+            serialized in one programming language and deserialize it in another without compactibility issues.
+      \end{multicols}
 
-\begin{lstlisting}[language=Python, caption=MsgPack Serialization and Deserialization in Python]
+      \begin{lstlisting}[language=Python, caption=MsgPack Serialization and Deserialization in Python]
       import msgpack
 
       # Creating a Python dictionary to represent some data
@@ -761,50 +817,228 @@ reboot required (yes/no), action failed (yes/no), pending actions (yes/no), and 
       print("Unpacked data:", unpacked_data)
 \end{lstlisting}
 
+\end{multicols}
 
-\subsection{What is API Monitoring?}
-\acrshort{api} monitoring is the process of gathering, visualizing, tracking, analyzing, and alerting on the
-performance, availability, and the \acrshort{api} telemetry data to ensure that \acrshort{api} requests are
-handled as expected.
-\subsection{How Does API Monitoring Work?}
-\acrshort{api} monitoring automatically checks \acrshort{api} performance and availability at regular intervals,
-to ensure that the \acrshort{api} runs appropriately. This can be done in a few different ways, depending on the
-type of the \acrshort{api} being monitored~\ref{chap:typesofapis}.
+\begin{multicols}{2}
+      \subsubsection{Different Types of API By Audience}
+      To understand better about the 5 internal \acrshort{api}s that are used by the \acrshort{qaas} app, including SentinelOne,
+      it is important to understand the different types of \acrshort{api}s by its audience and protocol. There are 3 main types of
+      \acrshort{api}s by audience, they are:
 
-For example, let's take Postman, a popular free \acrshort{api} monitoring tools that allows developers to easily
-monitor, analyze, and debug their \acrshort{api}s. In this example, the system might look for common errors, such
-as 500-level responses or timeouts, when making requests to the \acrshort{api}. It also checks for latency issues
-or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can
-be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time.
-This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as
-automated alerts, detailed analytics, and comprehensive reporting capabilities. Features that an \acrshort{api}
-monitoring might have are listed in the following (\cite{postmanapimonitoring}):
+      \textbf{Public API}: also called external or Open \acrshort{api}, and as the name suggests it is available
+      to everyone. They are open to the public to use and integrate with their applications. Developers can quickly
+      implement them using little to no authorization, with few require sign-up and generation of the \acrshort{api} Keys
+      to access them. This can make them to not be the best regarding security - just because "public" means expanded
+      visibility - but sharing data with them is easier.
+
+      Examples of a public \acrshort{api} are OpenWeatherMap, Google Maps navigation, Facebook and the Twitter \acrshort{api},
+      which the latter allows  developers to access Twitter's functionality and data.
+
+      \textbf{Internal API}: also called Private \acrshort{api}, and is used within a private organization to make internal
+      apps "talk" to each other. To interact with the data, a developer needs to be actively granted permission to access it,
+      because the data and functionality available through the \acrshort{api} are proprietary to the company. They are often
+      set up with extensive logging and load-balancing capabilities because they must have greater fault tolerance and
+      security than public \acrshort{api}s. They also do not follow the Open\acrshort{api} standard as consistently
+      as public \acrshort{api}s, since their producers and consumers typically work together closely, data formats
+      can be negotiated based on specific use cases. As they are built by specifically the company; it will only have
+      \acrshort{api} protocol types that the organization wants to support. All the \acrshort{api}s managed by the
+      \acrshort{qaas} app fall into this category. This solution tend to be very secure, as they are entirely internal.
+
+      \textbf{Partner API}: also called Shared \acrshort{api}, this \acrshort{api} is made considering the scalability
+      while developing the business, which will share a few \acrshort{api}s across a few other licensed organizations,
+      enabling service offerings across business (\acrshort{b2b}). This \acrshort{api} is shared only with the intended
+      users; others might not have access to them because they are not shared publicly, thus making it exists somewhere
+      between public and private \acrshort{api}s. They often function to share data between two companies or organizations
+      for a specific business purpose, while still ensuring strict privacy protection.
+
+      These \acrshort{api}s indeed require authorization to access them (like having a PayPal account or an \acrshort{api}
+      key). All the clients who are part of the business can access and integrate using those \acrshort{api}s. Few
+      \acrshort{api}s will only provide read access, and few will provide read/write access via shared \acrshort{api}s.
+      This depends on the business process model.
+
+      For example, travel booking \acrshort{api}s are shared with travel agencies to increase their visibility and
+      booking. Websites like Expedia, Make My Trip, and Trivago are excellent examples of this kind of \acrshort{api}.
+
+      \subsubsection{Different Types of API Protocols}\label{chap:typesofapis}
+      \textbf{\acrshort{soap} \acrshort{api}s}: are strictly based on \acrshort{xml} for the message structure and
+      \acrshort{http} for the protocols. \acrshort{soap} itself is a protocol and sending a \acrshort{soap}
+      request is like using an envelope to send a message. \acrshort{soap} \acrshort{api}s consume extra
+      overhead and more bandwidth, and require more work on both the client and server ends. Like envelopes,
+      \acrshort{soap} encloses more stringent security compared to \acrshort{rest}. \acrshort{xml}-encoded
+      \acrshort{soap} messages use the format defined below:
+      \begin{itemize}
+            \item \textbf{Envelope}: the root element of the message, which encapsulates the entire
+                  \acrshort{soap} message. It 'envelopes' the message by placing tags at the start and the end.
+            \item \textbf{Header (optional)}: defines specific additional message requirements, such as authentication.
+            \item \textbf{Body}: the request of response is included here.
+            \item \textbf{Fault (optional)}: information about errors that might arise during the execution of the
+                  \acrshort{api} call or response is highlighted here, along with information on how one can address
+                  these errors.
+      \end{itemize}
+\end{multicols}
+
+\begin{lstlisting}[language=XML, caption=Example of a SOAP request, label=lst:soaprequest]
+      <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:example="http://example.com">
+            <SOAP-ENV:Header/>
+            <SOAP-ENV:Body>
+                  <example:GetUser>
+                        <example:UserID>123</example:UserID>
+                  </example:GetUser>
+            </SOAP-ENV:Body>
+      </SOAP-ENV:Envelope>
+\end{lstlisting}
+
+\begin{multicols}{2}
+      \textbf{REST API}: if \acrshort{soap} is like an envelope, \gls{REST} is like a  more lightweight postcard.
+      \acrshort{rest} \acrshort{api}s are considered the gold standard for scalability and are highly compatible with
+      microservice architecture. It is the often used protocol in the context of building \acrshort{api}s for web-based
+      applications. \acrshort{rest} itself is not a protocol, but an architectural style for designing networked
+      applications, defining a set of constraints and principles that define how web services should be structured
+      and interact with each other.
+
+      \acrshort{api}s that follow \acrshort{rest} principles are called \acrshort{rest}ful \acrshort{api}s. The
+      are \acrshort{rest}ful as long as they comply with the 6 guiding constraints of a \acrshort{rest}ful system
+      (\cite{restguidingprinciples}):
+      \begin{itemize}
+            \item \textbf{Client-server architecture}: the architecture is composed of clients, servers, and
+                  resources, and it handles requests through \acrshort{http}.
+            \item \textbf{Statelessness}: no client is stored on the server between requests. The server should
+                  process and complete each request independently. Information about the session state is, instead,
+                  held with the client. The clients can do this via query parameters, headers, \acrshort{uri}s,
+                  request body, \acrshort{etc}
+            \item \textbf{Cacheable}: simply, the clients should be able to determine whether this response is cacheable
+                  from their side, and if so, for how long. If a response is cacheable, the client has the right to return the
+                  data from its cache for an equivalent request and specified period, without sending another request to the
+                  server. A well managed caching mechanism can eliminate the need for some client-server interactions
+            \item \textbf{Layered system}: client-server interactions can be mediated by additional layers. These
+                  layers could offer additional features like load balancing, shared caches, or security.
+            \item \textbf{Uniform interface}: this is the core to design \acrshort{rest}ful \acrshort{api}s.
+                  There should be a uniform and standard way of interacting with a given server for all client
+                  types. The uniform interface helps to simplify the overall architecture of the system. This includes
+                  4 facets:
+                  \begin{itemize}
+                        \item Resource identification in request: resources are uniquely identified in requests and are separate
+                              from the representations that are returned to the client using \acrshort{uri}.
+                        \item Resource manipulation through representations: clients receive files of a uniform that represent resources.
+                              These representations must have enough information to allow modification or deletion of the resource's
+                              state in the server, as long as they have the required permissions.
+                        \item Self-descriptive messages: each message returned to a client contains enough information to describe
+                              how the client should process the information further, such as additional actions that can be
+                              performed on the resource.
+                        \item Hypermedia as the engine of application state: after accessing a resource, the \acrshort{rest} client
+                              should be able to discover through hyperlinks all other actions that are currently available.
+                  \end{itemize}
+            \item \textbf{Code on demand (optional)}: servers can extend the functionality of a client by transferring
+                  executable code.
+      \end{itemize}
+      \acrshort{rest} \acrshort{api}s are high-performing (especially over \acrshort{http}2), time-tested, and support
+      many data formats. They also decouple the client and server, making sure of independent evolution. However,
+      building a true \acrshort{rest} \acrshort{api} is difficult because it requires a disciplined adherence to the
+      Uniform Interface constraint (\cite{restapiuniforminterface}). Some organizations trade off the long-term benefits
+      of a truly \acrshort{rest} \acrshort{api} for other \acrshort{http} \acrshort{api} protocols that have similar
+      benefits but adhere to \acrshort{rest} constraints more liberally. \acrshort{rest} requests typically include these
+      key components:
+      \begin{itemize}
+            \item \textbf{Endpoint}: the uniform resource identifier that locates the resource on the internet is
+                  part of this component. \acrshort{url}s are the most common type of \acrshort{uri}.
+            \item \textbf{HTTP Method}: this component outlines the four basic processes that a resource can be subjected
+                  to: POST (create a resource), GET (retrieve a resource), PUT (update a resource), and DELETE
+                  (remove a resource).
+            \item \textbf{Headers}: data related to the server and the client are stored in this component. Like in
+                  \acrshort{soap}, one can also use \acrshort{rest} headers to store authentication measures such as
+                  \acrshort{api} keys, server \acrshort{ip} addresses, and the response format.
+            \item \textbf{Body}: this component contains additional information for the server, such as data that needs to
+                  be added or replaced.
+      \end{itemize}
+\end{multicols}
+\begin{lstlisting}[language=JavaScript, caption=Different HTTP methods in REST]
+            GET /users <@\textnormal{Retrieve list of all users}@>
+            GET /users/{id} <@\textnormal{Retrieve details a specific user by their ID}@>
+            POST /users <@\textnormal{Create a new user}@>
+            PUT /users/{id} <@\textnormal{Update a specific user by their ID}@>
+            DELETE /users/{id} <@\textnormal{Delete a specific user by their ID}@>
+\end{lstlisting}
+\begin{lstlisting}[language=JavaScript, caption=REST's Example Request]
+            GET https://api.example.com/users/123
+\end{lstlisting}
+\begin{multicols}{2}
+      All three of the \acrshort{rest}, \acrshort{soap}, and Graph\acrshort{ql} use the \acrshort{http} protocol for
+      communication therefore falls into \acrshort{http} \acrshort{api}s category. They are the commonly used for web
+      services  and allow applications to interact with each other over the internet. \acrshort{http} is superbly
+      suited for applications following a request-response paradigm.
+
+
+
+      \subsection{What is API Monitoring?}
+      \acrshort{api} monitoring is the process of gathering, visualizing, tracking, analyzing, and alerting on the
+      performance, availability, and the \acrshort{api} telemetry data to ensure that \acrshort{api} requests are
+      handled as expected.
+      \subsection{How Does API Monitoring Work?}
+      \acrshort{api} monitoring automatically checks \acrshort{api} performance and availability at regular intervals,
+      to ensure that the \acrshort{api} runs appropriately. This can be done in a few different ways, depending on the
+      type of the \acrshort{api} being monitored~\ref{chap:typesofapis}.
+
+      For example, let's take Postman, a popular free \acrshort{api} monitoring tools that allows developers to easily
+      monitor, analyze, and debug their \acrshort{api}s. In this example, the system might look for common errors, such
+      as 500-level responses or timeouts, when making requests to the \acrshort{api}. It also checks for latency issues
+      or sudden spikes in traffic that could indicate potential system problems. In addition, this monitoring system can
+      be configured to track specific metrics such as total requests, response times, and other \acrshort{kpi}s over time.
+      This will then provide real-time insights into \acrshort{api} performance and offers a range of features such as
+      automated alerts, detailed analytics, and comprehensive reporting capabilities. Features that an \acrshort{api}
+      monitoring might have are listed in the following (\cite{postmanapimonitoring}):
+      \begin{itemize}
+            \item \textbf{Endpoint Surveillance}: it begins by closely tracking the various endpoints of an \acrshort{api}
+                  system. These endpoints represent specific functionalities or resources that the \acrshort{api} provides.
+            \item \textbf{Request-Response Analysis}: monitoring tools can simulate \acrshort{api} requests by sending
+                  predefined inputs and parameters to specific endpoints, then analyzing the responses for relevant factors
+                  such as response time or data accuracy.
+            \item \textbf{Performance Metrics Measurement}: \acrshort{kpi}s, such as response time, latency, and error rates,
+                  are measured and tracked over time. This metrics offers insights into the overall health and efficiency of
+                  an \acrshort{api}.
+            \item \textbf{Error Detection and Logging}: actively identifying and log any errors or anomalies in \acrshort{api}
+                  resources with an \acrshort{api} monitoring program. This includes capturing \acrshort{http} error codes,
+                  unexpected data/file formats, and alerting of any deviations from expected behaviour.
+            \item \textbf{Security Checks}: \acrshort{api} monitoring assess \acrshort{api} transactions for unauthorized
+                  access attempts, potential vulnerabilities, and adherence to security protocols.
+            \item \textbf{Alerting and Notification System}: automated alerting systems can be configured with high levels of
+                  customization to notify relevant stakeholders when specific \acrshort{api} performance thresholds are breached
+                  or exceeded or when abnormal behaviour is detected.
+            \item \textbf{Usage Analysis Gathering}: collect usage analytics for insights into how a given \acrshort{api} is
+                  being used. This data helps software organizations plan for scalability, optimize resource allocation, and
+                  understand user behaviour.
+            \item \textbf{Logging for Auditing}: detailed logs of \acrshort{api} interactions are maintained for auditing
+                  purposes. These \acrshort{api} logs are valuable resources for post-incident analysis and tracking historical
+                  performance and behavioural trends.
+            \item \textbf{Continuous Monitoring}: the tool is a constantly ongoing, real-time process that ensures that
+                  issues of any scope are identified and addressed promptly.
+      \end{itemize}
+      With those functionalities in mind, \acrshort{api} monitoring tools can then automatically check \acrshort{api}
+      performance and availability at specified intervals of time to ensure that the monitored \acrshort{api}s run
+      appropriately. The specific timing of those intervals is unique to each \acrshort{api} product.
+
+\end{multicols}
+
+\begin{lstlisting}[language=Python, caption=SentinelOne SDK implementation]
+      from SentinelDFI.scanner import *
+      s = Scanner(True)
+      verdict = s.scanFile("/home/test_me/malicious.docx")
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+      File hash: 421ac4189Seed605824fc4cae3e60219febfef
+      Verdict: malware
+      Score: 0.297529
+      Indicators: `Detected VBA Structure,Encrypted file,Encrypted Word Document,Has DDE`
+\end{lstlisting}
+
+\begin{multicols}{2}
+
+There are many techniques that can be used to create a link (often called an interface). The technology for linking to
+SentinelOne depends on the \textbf{purpose} and \textbf{capabilities} of the software to be linked:
 \begin{itemize}
-      \item \textbf{Endpoint Surveillance}: it begins by closely tracking the various endpoints of an \acrshort{api}
-            system. These endpoints represent specific functionalities or resources that the \acrshort{api} provides.
-      \item \textbf{Request-Response Analysis}: monitoring tools can simulate \acrshort{api} requests by sending
-            predefined inputs and parameters to specific endpoints, then analyzing the responses for relevant factors
-            such as response time or data accuracy.
-      \item \textbf{Performance Metrics Measurement}: \acrshort{kpi}s, such as response time, latency, and error rates,
-            are measured and tracked over time. This metrics offers insights into the overall health and efficiency of
-            an \acrshort{api}.
-      \item \textbf{Error Detection and Logging}: actively identifying and log any errors or anomalies in \acrshort{api}
-            resources with an \acrshort{api} monitoring program. This includes capturing \acrshort{http} error codes,
-            unexpected data/file formats, and alerting of any deviations from expected behaviour.
-      \item \textbf{Security Checks}: \acrshort{api} monitoring assess \acrshort{api} transactions for unauthorized
-            access attempts, potential vulnerabilities, and adherence to security protocols.
-      \item \textbf{Alerting and Notification System}: automated alerting systems can be configured with high levels of
-            customization to notify relevant stakeholders when specific \acrshort{api} performance thresholds are breached
-            or exceeded or when abnormal behaviour is detected.
-      \item \textbf{Usage Analysis Gathering}: collect usage analytics for insights into how a given \acrshort{api} is
-            being used. This data helps software organizations plan for scalability, optimize resource allocation, and
-            understand user behaviour.
-      \item \textbf{Logging for Auditing}: detailed logs of \acrshort{api} interactions are maintained for auditing
-            purposes. These \acrshort{api} logs are valuable resources for post-incident analysis and tracking historical
-            performance and behavioural trends.
-      \item \textbf{Continuous Monitoring}: the tool is a constantly ongoing, real-time process that ensures that
-            issues of any scope are identified and addressed promptly.
+      \item \textbf{REST, SOAP API/ Webservice}: modern software has its own inputs and outputs to exchange information.
+            This is a sustainble and solid solution for the processing of data
+      \item \textbf{CSV/XLSX and XML via (S)FTP}:
+      \item \textbf{Webhooks}: like web services, but event based. A signal is automatically sent for each mutation,
+            so that action to process the signal within the software can be taken.
 \end{itemize}
-With those functionalities in mind, \acrshort{api} monitoring tools can then automatically check \acrshort{api}
-performance and availability at specified intervals of time to ensure that the monitored \acrshort{api}s run
-appropriately. The specific timing of those intervals is unique to each \acrshort{api} product.

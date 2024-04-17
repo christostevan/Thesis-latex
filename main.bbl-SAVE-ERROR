@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{computicate}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6eee2366ad6ff950848799c387bebfd5}{%
+           family={Acronis},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{fullhash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{bibnamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authorbibnamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authornamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authorfullhash}{6eee2366ad6ff950848799c387bebfd5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{solutions.acronis.com}
+      \field{title}{Computicate}
+      \verb{urlraw}
+      \verb https://solutions.acronis.com/en-us/integrations/computicate/
+      \endverb
+      \verb{url}
+      \verb https://solutions.acronis.com/en-us/integrations/computicate/
+      \endverb
+    \endentry
     \entry{nexusSDK}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1d7f8b250db6e5608c4427028de3652b}{%
@@ -54,39 +81,31 @@
       \verb https://www.ipxo.com/blog/address-resolution-protocol/
       \endverb
     \endentry
-    \entry{typesofapi}{article}{}
+    \entry{cronJobQaaSAppFunction}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e3ab3ff9168d6ccdb6b608735259e72c}{%
-           family={Bahl},
-           familyi={B\bibinitperiod},
-           given={Jason},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2645cc6f58cede0759b4878895ac6fb6}{%
+           family={Cronitor},
+           familyi={C\bibinitperiod}}}%
       }
-      \strng{namehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{fullhash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{bibnamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authorbibnamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authornamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authorfullhash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \strng{namehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{fullhash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{bibnamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authorbibnamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authornamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authorfullhash}{2645cc6f58cede0759b4878895ac6fb6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{10}
-      \field{journaltitle}{Stoplight}
-      \field{month}{2}
-      \field{title}{API Types and Protocols}
-      \field{year}{2022}
-      \field{dateera}{ce}
+      \field{journaltitle}{contab.guru}
+      \field{title}{crontab guru}
       \verb{urlraw}
-      \verb https://stoplight.io/api-types
+      \verb https://crontab.guru/#0_0_*/7_*_*
       \endverb
       \verb{url}
-      \verb https://stoplight.io/api-types
+      \verb https://crontab.guru/#0_0_*/7_*_*
       \endverb
     \endentry
     \entry{restguidingprinciples}{article}{}
@@ -130,6 +149,64 @@
       \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
       \endverb
     \endentry
+    \entry{appCheckFirebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase App Check}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/app-check
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/app-check
+      \endverb
+    \endentry
+    \entry{firebaseExtension}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase Extensions}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/extensions
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/extensions
+      \endverb
+    \endentry
     \entry{firebaseproducts}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
@@ -142,19 +219,50 @@
       \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
       \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
       \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{3}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{3}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{GCP, Google Cloud Platform}
+      \field{journaltitle}{Firebase.google.com}
       \field{title}{Firebase Products - Google}
       \verb{urlraw}
       \verb https://firebase.google.com/products-build
       \endverb
       \verb{url}
       \verb https://firebase.google.com/products-build
+      \endverb
+    \endentry
+    \entry{scheduleFunction}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Schedule functions}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/functions/schedule-functions?gen=2nd
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/functions/schedule-functions?gen=2nd
       \endverb
     \endentry
     \entry{siemGartner}{article}{}
@@ -248,39 +356,205 @@
       \verb https://cloud.google.com/security/products/secret-manager
       \endverb
     \endentry
-    \entry{restapiuniforminterface}{article}{}
+    \entry{restAPI}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=78d90274320aad18387b37ebc1341173}{%
-           family={Hazaz},
-           familyi={H\bibinitperiod},
-           given={Yual},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={IBM},
+           familyi={I\bibinitperiod}}}%
       }
-      \strng{namehash}{78d90274320aad18387b37ebc1341173}
-      \strng{fullhash}{78d90274320aad18387b37ebc1341173}
-      \strng{bibnamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authorbibnamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authornamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authorfullhash}{78d90274320aad18387b37ebc1341173}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CyberHoot}
+      \field{title}{What is a REST API?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/topics/rest-apis#:~:text=A%20REST%20API%20(also%20called,transfer%20(REST)%20architectural%20style).
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/topics/rest-apis#:~:text=A%20REST%20API%20(also%20called,transfer%20(REST)%20architectural%20style).
+      \endverb
+    \endentry
+    \entry{soapAPI}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=732f22f00a78ea9a4bc22a9ee9eca883}{%
+           family={Indeed},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{fullhash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{bibnamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authorbibnamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authornamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authorfullhash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{8}
-      \field{journaltitle}{Amplication}
-      \field{month}{12}
-      \field{title}{Understanding REST APIs: Key Principles and Best Practices Explained}
-      \field{year}{2022}
+      \field{day}{4}
+      \field{journaltitle}{Indeed Editorial Team}
+      \field{month}{2}
+      \field{title}{What Is SOAP API? (Plus Comparison to REST API and Benefits)}
+      \field{year}{2023}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb https://amplication.com/blog/rest-apis-what-why-and-how/
+      \verb https://www.indeed.com/career-advice/career-development/what-is-soap-api#:~:text=SOAP%20API%2C%20or%20simple%20object,Extensible%20Markup%20Language%20(XML).
       \endverb
       \verb{url}
-      \verb https://amplication.com/blog/rest-apis-what-why-and-how/
+      \verb https://www.indeed.com/career-advice/career-development/what-is-soap-api#:~:text=SOAP%20API%2C%20or%20simple%20object,Extensible%20Markup%20Language%20(XML).
+      \endverb
+    \endentry
+    \entry{indivSolution}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=35e96bc4a1f5cf20c6b7c95e78f2a2b4}{%
+           family={Solutions},
+           familyi={S\bibinitperiod},
+           prefix={inDiv},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{fullhash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{bibnamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authorbibnamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authornamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authorfullhash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{indiv.nl}
+      \field{title}{InDiv Solutions Focus op online Webshop laten maken}
+      \verb{urlraw}
+      \verb https://webba.nlhttps://indiv.nl/
+      \endverb
+      \verb{url}
+      \verb https://webba.nlhttps://indiv.nl/
+      \endverb
+    \endentry
+    \entry{firebasePic}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30136395f01879792198317c11831ea4}{%
+           family={Kubernetes},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{30136395f01879792198317c11831ea4}
+      \strng{fullhash}{30136395f01879792198317c11831ea4}
+      \strng{bibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorbibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authornamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorfullhash}{30136395f01879792198317c11831ea4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{journaltitle}{kunbernetes.io}
+      \field{month}{9}
+      \field{title}{CronJob}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#:~:text=A%20CronJob%20creates%20Jobs%20on,schedule%2C%20written%20in%20Cron%20format.
+      \endverb
+      \verb{url}
+      \verb https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#:~:text=A%20CronJob%20creates%20Jobs%20on,schedule%2C%20written%20in%20Cron%20format.
+      \endverb
+    \endentry
+    \entry{resello}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e884c507c5198a4578a84498f7a323e2}{%
+           family={LinkedIn},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{bibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorbibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authornamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhash}{e884c507c5198a4578a84498f7a323e2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{LinkedIn.com}
+      \field{title}{Resello: powered by Pax8}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/company/resello-bv/
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/company/resello-bv/
+      \endverb
+    \endentry
+    \entry{memoICT}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2bf470dfad1f7b42ce0e7992cfa3d4b}{%
+           family={MemoICT},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{fullhash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{bibnamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authorbibnamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authornamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authorfullhash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{memo-ict.nl}
+      \field{title}{Home | Memo ICT | De Shopware specialist}
+      \verb{urlraw}
+      \verb https://memo-ict.nl/
+      \endverb
+      \verb{url}
+      \verb https://memo-ict.nl/
+      \endverb
+    \endentry
+    \entry{qictProducts}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6ccb36f51ae897206809649738c9d2f1}{%
+           family={MKBiT},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{fullhash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{bibnamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authorbibnamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authornamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authorfullhash}{6ccb36f51ae897206809649738c9d2f1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MKBiT.nl}
+      \field{title}{Service centraal}
+      \verb{urlraw}
+      \verb https://mkbit.nl/producten/
+      \endverb
+      \verb{url}
+      \verb https://mkbit.nl/producten/
       \endverb
     \endentry
     \entry{nosql}{article}{}
@@ -310,63 +584,112 @@
       \verb https://www.mongodb.com/nosql-explained
       \endverb
     \endentry
-    \entry{nist}{article}{}
+    \entry{ondernemendEmmen}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
-           family={NIST},
-           familyi={N\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=415efed359c7877c01c48170cf29dad7}{%
+           family={OndernemmendEmmen},
+           familyi={O\bibinitperiod}}}%
       }
-      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \strng{namehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{fullhash}{415efed359c7877c01c48170cf29dad7}
+      \strng{bibnamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authorbibnamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authornamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authorfullhash}{415efed359c7877c01c48170cf29dad7}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{16}
-      \field{journaltitle}{NIST Government}
-      \field{month}{3}
-      \field{title}{The Five Functions}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{journaltitle}{ondernemendemmen.nl}
+      \field{title}{Ondernemend Emmen: Home}
       \verb{urlraw}
-      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \verb https://www.ondernemendemmen.nl/
       \endverb
       \verb{url}
-      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \verb https://www.ondernemendemmen.nl/
       \endverb
     \endentry
-    \entry{openapistandard}{article}{}
+    \entry{peatDigital}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=336ff1e9aa6177ea7a71984fa8c241b9}{%
-           family={Swagger},
+        {{un=0,uniquepart=base,hash=9036a8cb34a4092e34c6557371fd1578}{%
+           family={PeatDigital},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{fullhash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{bibnamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authorbibnamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authornamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authorfullhash}{9036a8cb34a4092e34c6557371fd1578}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{peatdigital.nl}
+      \field{title}{Home | Peat Digital| Specialisten in online marketing}
+      \verb{urlraw}
+      \verb https://peatdigital.nl/
+      \endverb
+      \verb{url}
+      \verb https://peatdigital.nl/
+      \endverb
+    \endentry
+    \entry{perfectView}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9fbc041f3c85856f10ad9a099491a246}{%
+           family={PerfectView},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{fullhash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{bibnamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authorbibnamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authornamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authorfullhash}{9fbc041f3c85856f10ad9a099491a246}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PerfectViewCRM.nl}
+      \field{title}{PefectView CRM Online | Krachtige Nederlandse CRM}
+      \verb{urlraw}
+      \verb https://www.perfectviewcrm.nl/
+      \endverb
+      \verb{url}
+      \verb https://www.perfectviewcrm.nl/
+      \endverb
+    \endentry
+    \entry{sentinelOneNDR}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b65e42632af7803e4dffbc5fd462c905}{%
+           family={SentinelOne},
            familyi={S\bibinitperiod}}}%
       }
-      \strng{namehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{fullhash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{bibnamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authorbibnamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authornamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authorfullhash}{336ff1e9aa6177ea7a71984fa8c241b9}
+      \strng{namehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{fullhash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{bibnamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authorbibnamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authornamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authorfullhash}{b65e42632af7803e4dffbc5fd462c905}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Swagger.io}
-      \field{title}{OpenAPI Specification}
+      \field{journaltitle}{SentinelOne®}
+      \field{title}{What Is Network Detection and Response (NDR)?}
       \verb{urlraw}
-      \verb https://swagger.io/specification/
+      \verb https://www.sentinelone.com/cybersecurity-101/what-is-network-detection-and-response-ndr/
       \endverb
       \verb{url}
-      \verb https://swagger.io/specification/
+      \verb https://www.sentinelone.com/cybersecurity-101/what-is-network-detection-and-response-ndr/
       \endverb
     \endentry
     \entry{castleMoatWallNetwork}{article}{}
@@ -384,6 +707,7 @@
       \strng{authorbibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
       \strng{authornamehash}{a38fd29ea2acf6b75ffa31051626998b}
       \strng{authorfullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -402,6 +726,69 @@
       \endverb
       \verb{url}
       \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+    \endentry
+    \entry{cronJob}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=a38fd29ea2acf6b75ffa31051626998b}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{fullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{bibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authorbibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authornamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authorfullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{journaltitle}{CyberHoot}
+      \field{month}{3}
+      \field{title}{Castle-and-Moat Network Security Model}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+      \verb{url}
+      \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+    \endentry
+    \entry{tomTelecom}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c4533b792c0e24bbad6beaaa123700c}{%
+           family={TOMTelecom},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{fullhash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{bibnamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authorbibnamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authornamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authorfullhash}{0c4533b792c0e24bbad6beaaa123700c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{tomtelecom.nl}
+      \field{title}{Wie zijn wij}
+      \verb{urlraw}
+      \verb https://www.tomtelecom.nl/wiezijnwij/
+      \endverb
+      \verb{url}
+      \verb https://www.tomtelecom.nl/wiezijnwij/
       \endverb
     \endentry
     \entry{xdrIDC}{article}{}
@@ -474,6 +861,33 @@
       \verb https://ictresearchmethods.nl/
       \endverb
     \endentry
+    \entry{webba}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=23de2930550f7de0d29b1a441252d8af}{%
+           family={Webba},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{fullhash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{bibnamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authorbibnamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authornamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authorfullhash}{23de2930550f7de0d29b1a441252d8af}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{wenbba.nl}
+      \field{title}{Webba | Experts in design, techniek en online marketing}
+      \verb{urlraw}
+      \verb https://webba.nl/
+      \endverb
+      \verb{url}
+      \verb https://webba.nl/
+      \endverb
+    \endentry
     \entry{algolia}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
@@ -494,7 +908,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
       \field{title}{Algolia}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Algolia
@@ -503,7 +917,7 @@
       \verb https://en.wikipedia.org/wiki/Algolia
       \endverb
     \endentry
-    \entry{arpSpoofing}{article}{}
+    \entry{api}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -524,15 +938,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
-      \field{title}{ARP spoofing}
+      \field{title}{API}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/ARP_spoofing
+      \verb https://en.wikipedia.org/wiki/API
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/ARP_spoofing
+      \verb https://en.wikipedia.org/wiki/API
       \endverb
     \endentry
-    \entry{firebase}{article}{}
+    \entry{arpSpoofing}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -552,16 +966,16 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Wikipedia, free encyclopedias}
-      \field{title}{Firebase}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{ARP spoofing}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Firebase
+      \verb https://en.wikipedia.org/wiki/ARP_spoofing
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Firebase
+      \verb https://en.wikipedia.org/wiki/ARP_spoofing
       \endverb
     \endentry
-    \entry{flutter}{article}{}
+    \entry{captcha}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -582,15 +996,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
-      \field{title}{Flutter (software)}
+      \field{title}{CAPTCHA}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \verb https://en.wikipedia.org/wiki/CAPTCHA
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \verb https://en.wikipedia.org/wiki/CAPTCHA
       \endverb
     \endentry
-    \entry{man-in-the-middleAttack}{article}{}
+    \entry{ReCaptcha}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -611,16 +1025,304 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{CAPTCHA}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/ReCAPTCHA
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/ReCAPTCHA
+      \endverb
+    \endentry
+    \entry{crm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{6}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Customer relationship management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+    \endentry
+    \entry{threatHunting}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{7}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Cyber threat hunting}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Cyber_threat_hunting
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Cyber_threat_hunting
+      \endverb
+    \endentry
+    \entry{erp}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{8}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Enterprise resource}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Enterprise_resource_planning
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Enterprise_resource_planning
+      \endverb
+    \endentry
+    \entry{firebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{9}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Firebase}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+    \endentry
+    \entry{json}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{10}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{10}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{JSON}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/JSON
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/JSON
+      \endverb
+    \endentry
+    \entry{man-in-the-middleAttack}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{11}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{11}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
       \field{title}{Man-in-the-middle attack}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Man-in-the-middle_attack
       \endverb
       \verb{url}
       \verb https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+      \endverb
+    \endentry
+    \entry{pentest}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{12}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{12}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Penetration Test}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+    \endentry
+    \entry{rmm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{13}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{13}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Remote monitoring and management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+    \endentry
+    \entry{xml}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{14}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{14}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{XML}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/XML
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/XML
       \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{computicate}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6eee2366ad6ff950848799c387bebfd5}{%
+           family={Acronis},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{fullhash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{bibnamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authorbibnamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authornamehash}{6eee2366ad6ff950848799c387bebfd5}
+      \strng{authorfullhash}{6eee2366ad6ff950848799c387bebfd5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{solutions.acronis.com}
+      \field{title}{Computicate}
+      \verb{urlraw}
+      \verb https://solutions.acronis.com/en-us/integrations/computicate/
+      \endverb
+      \verb{url}
+      \verb https://solutions.acronis.com/en-us/integrations/computicate/
+      \endverb
+    \endentry
     \entry{nexusSDK}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1d7f8b250db6e5608c4427028de3652b}{%
@@ -656,39 +1358,31 @@
       \verb https://www.ipxo.com/blog/address-resolution-protocol/
       \endverb
     \endentry
-    \entry{typesofapi}{article}{}
+    \entry{cronJobQaaSAppFunction}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e3ab3ff9168d6ccdb6b608735259e72c}{%
-           family={Bahl},
-           familyi={B\bibinitperiod},
-           given={Jason},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2645cc6f58cede0759b4878895ac6fb6}{%
+           family={Cronitor},
+           familyi={C\bibinitperiod}}}%
       }
-      \strng{namehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{fullhash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{bibnamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authorbibnamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authornamehash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \strng{authorfullhash}{e3ab3ff9168d6ccdb6b608735259e72c}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \strng{namehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{fullhash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{bibnamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authorbibnamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authornamehash}{2645cc6f58cede0759b4878895ac6fb6}
+      \strng{authorfullhash}{2645cc6f58cede0759b4878895ac6fb6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{10}
-      \field{journaltitle}{Stoplight}
-      \field{month}{2}
-      \field{title}{API Types and Protocols}
-      \field{year}{2022}
-      \field{dateera}{ce}
+      \field{journaltitle}{contab.guru}
+      \field{title}{crontab guru}
       \verb{urlraw}
-      \verb https://stoplight.io/api-types
+      \verb https://crontab.guru/#0_0_*/7_*_*
       \endverb
       \verb{url}
-      \verb https://stoplight.io/api-types
+      \verb https://crontab.guru/#0_0_*/7_*_*
       \endverb
     \endentry
     \entry{restguidingprinciples}{article}{}
@@ -732,6 +1426,64 @@
       \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
       \endverb
     \endentry
+    \entry{appCheckFirebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase App Check}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/app-check
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/app-check
+      \endverb
+    \endentry
+    \entry{firebaseExtension}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase Extensions}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/extensions
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/extensions
+      \endverb
+    \endentry
     \entry{firebaseproducts}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
@@ -744,19 +1496,50 @@
       \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
       \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
       \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{3}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{3}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{GCP, Google Cloud Platform}
+      \field{journaltitle}{Firebase.google.com}
       \field{title}{Firebase Products - Google}
       \verb{urlraw}
       \verb https://firebase.google.com/products-build
       \endverb
       \verb{url}
       \verb https://firebase.google.com/products-build
+      \endverb
+    \endentry
+    \entry{scheduleFunction}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Schedule functions}
+      \verb{urlraw}
+      \verb https://firebase.google.com/docs/functions/schedule-functions?gen=2nd
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/docs/functions/schedule-functions?gen=2nd
       \endverb
     \endentry
     \entry{siemGartner}{article}{}
@@ -850,39 +1633,205 @@
       \verb https://cloud.google.com/security/products/secret-manager
       \endverb
     \endentry
-    \entry{restapiuniforminterface}{article}{}
+    \entry{restAPI}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=78d90274320aad18387b37ebc1341173}{%
-           family={Hazaz},
-           familyi={H\bibinitperiod},
-           given={Yual},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={IBM},
+           familyi={I\bibinitperiod}}}%
       }
-      \strng{namehash}{78d90274320aad18387b37ebc1341173}
-      \strng{fullhash}{78d90274320aad18387b37ebc1341173}
-      \strng{bibnamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authorbibnamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authornamehash}{78d90274320aad18387b37ebc1341173}
-      \strng{authorfullhash}{78d90274320aad18387b37ebc1341173}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CyberHoot}
+      \field{title}{What is a REST API?}
+      \verb{urlraw}
+      \verb https://www.ibm.com/topics/rest-apis#:~:text=A%20REST%20API%20(also%20called,transfer%20(REST)%20architectural%20style).
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/topics/rest-apis#:~:text=A%20REST%20API%20(also%20called,transfer%20(REST)%20architectural%20style).
+      \endverb
+    \endentry
+    \entry{soapAPI}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=732f22f00a78ea9a4bc22a9ee9eca883}{%
+           family={Indeed},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{fullhash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{bibnamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authorbibnamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authornamehash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \strng{authorfullhash}{732f22f00a78ea9a4bc22a9ee9eca883}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{8}
-      \field{journaltitle}{Amplication}
-      \field{month}{12}
-      \field{title}{Understanding REST APIs: Key Principles and Best Practices Explained}
-      \field{year}{2022}
+      \field{day}{4}
+      \field{journaltitle}{Indeed Editorial Team}
+      \field{month}{2}
+      \field{title}{What Is SOAP API? (Plus Comparison to REST API and Benefits)}
+      \field{year}{2023}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb https://amplication.com/blog/rest-apis-what-why-and-how/
+      \verb https://www.indeed.com/career-advice/career-development/what-is-soap-api#:~:text=SOAP%20API%2C%20or%20simple%20object,Extensible%20Markup%20Language%20(XML).
       \endverb
       \verb{url}
-      \verb https://amplication.com/blog/rest-apis-what-why-and-how/
+      \verb https://www.indeed.com/career-advice/career-development/what-is-soap-api#:~:text=SOAP%20API%2C%20or%20simple%20object,Extensible%20Markup%20Language%20(XML).
+      \endverb
+    \endentry
+    \entry{indivSolution}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=35e96bc4a1f5cf20c6b7c95e78f2a2b4}{%
+           family={Solutions},
+           familyi={S\bibinitperiod},
+           prefix={inDiv},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{fullhash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{bibnamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authorbibnamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authornamehash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \strng{authorfullhash}{35e96bc4a1f5cf20c6b7c95e78f2a2b4}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{indiv.nl}
+      \field{title}{InDiv Solutions Focus op online Webshop laten maken}
+      \verb{urlraw}
+      \verb https://webba.nlhttps://indiv.nl/
+      \endverb
+      \verb{url}
+      \verb https://webba.nlhttps://indiv.nl/
+      \endverb
+    \endentry
+    \entry{firebasePic}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30136395f01879792198317c11831ea4}{%
+           family={Kubernetes},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{30136395f01879792198317c11831ea4}
+      \strng{fullhash}{30136395f01879792198317c11831ea4}
+      \strng{bibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorbibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authornamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorfullhash}{30136395f01879792198317c11831ea4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{journaltitle}{kunbernetes.io}
+      \field{month}{9}
+      \field{title}{CronJob}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#:~:text=A%20CronJob%20creates%20Jobs%20on,schedule%2C%20written%20in%20Cron%20format.
+      \endverb
+      \verb{url}
+      \verb https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#:~:text=A%20CronJob%20creates%20Jobs%20on,schedule%2C%20written%20in%20Cron%20format.
+      \endverb
+    \endentry
+    \entry{resello}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e884c507c5198a4578a84498f7a323e2}{%
+           family={LinkedIn},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{bibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorbibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authornamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhash}{e884c507c5198a4578a84498f7a323e2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{LinkedIn.com}
+      \field{title}{Resello: powered by Pax8}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/company/resello-bv/
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/company/resello-bv/
+      \endverb
+    \endentry
+    \entry{memoICT}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2bf470dfad1f7b42ce0e7992cfa3d4b}{%
+           family={MemoICT},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{fullhash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{bibnamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authorbibnamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authornamehash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \strng{authorfullhash}{f2bf470dfad1f7b42ce0e7992cfa3d4b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{memo-ict.nl}
+      \field{title}{Home | Memo ICT | De Shopware specialist}
+      \verb{urlraw}
+      \verb https://memo-ict.nl/
+      \endverb
+      \verb{url}
+      \verb https://memo-ict.nl/
+      \endverb
+    \endentry
+    \entry{qictProducts}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6ccb36f51ae897206809649738c9d2f1}{%
+           family={MKBiT},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{fullhash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{bibnamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authorbibnamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authornamehash}{6ccb36f51ae897206809649738c9d2f1}
+      \strng{authorfullhash}{6ccb36f51ae897206809649738c9d2f1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MKBiT.nl}
+      \field{title}{Service centraal}
+      \verb{urlraw}
+      \verb https://mkbit.nl/producten/
+      \endverb
+      \verb{url}
+      \verb https://mkbit.nl/producten/
       \endverb
     \endentry
     \entry{nosql}{article}{}
@@ -912,63 +1861,112 @@
       \verb https://www.mongodb.com/nosql-explained
       \endverb
     \endentry
-    \entry{nist}{article}{}
+    \entry{ondernemendEmmen}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
-           family={NIST},
-           familyi={N\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=415efed359c7877c01c48170cf29dad7}{%
+           family={OndernemmendEmmen},
+           familyi={O\bibinitperiod}}}%
       }
-      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \strng{namehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{fullhash}{415efed359c7877c01c48170cf29dad7}
+      \strng{bibnamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authorbibnamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authornamehash}{415efed359c7877c01c48170cf29dad7}
+      \strng{authorfullhash}{415efed359c7877c01c48170cf29dad7}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{16}
-      \field{journaltitle}{NIST Government}
-      \field{month}{3}
-      \field{title}{The Five Functions}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{journaltitle}{ondernemendemmen.nl}
+      \field{title}{Ondernemend Emmen: Home}
       \verb{urlraw}
-      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \verb https://www.ondernemendemmen.nl/
       \endverb
       \verb{url}
-      \verb https://www.nist.gov/cyberframework/online-learning/five-functions
+      \verb https://www.ondernemendemmen.nl/
       \endverb
     \endentry
-    \entry{openapistandard}{article}{}
+    \entry{peatDigital}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=336ff1e9aa6177ea7a71984fa8c241b9}{%
-           family={Swagger},
+        {{un=0,uniquepart=base,hash=9036a8cb34a4092e34c6557371fd1578}{%
+           family={PeatDigital},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{fullhash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{bibnamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authorbibnamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authornamehash}{9036a8cb34a4092e34c6557371fd1578}
+      \strng{authorfullhash}{9036a8cb34a4092e34c6557371fd1578}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{peatdigital.nl}
+      \field{title}{Home | Peat Digital| Specialisten in online marketing}
+      \verb{urlraw}
+      \verb https://peatdigital.nl/
+      \endverb
+      \verb{url}
+      \verb https://peatdigital.nl/
+      \endverb
+    \endentry
+    \entry{perfectView}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9fbc041f3c85856f10ad9a099491a246}{%
+           family={PerfectView},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{fullhash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{bibnamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authorbibnamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authornamehash}{9fbc041f3c85856f10ad9a099491a246}
+      \strng{authorfullhash}{9fbc041f3c85856f10ad9a099491a246}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PerfectViewCRM.nl}
+      \field{title}{PefectView CRM Online | Krachtige Nederlandse CRM}
+      \verb{urlraw}
+      \verb https://www.perfectviewcrm.nl/
+      \endverb
+      \verb{url}
+      \verb https://www.perfectviewcrm.nl/
+      \endverb
+    \endentry
+    \entry{sentinelOneNDR}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b65e42632af7803e4dffbc5fd462c905}{%
+           family={SentinelOne},
            familyi={S\bibinitperiod}}}%
       }
-      \strng{namehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{fullhash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{bibnamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authorbibnamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authornamehash}{336ff1e9aa6177ea7a71984fa8c241b9}
-      \strng{authorfullhash}{336ff1e9aa6177ea7a71984fa8c241b9}
+      \strng{namehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{fullhash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{bibnamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authorbibnamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authornamehash}{b65e42632af7803e4dffbc5fd462c905}
+      \strng{authorfullhash}{b65e42632af7803e4dffbc5fd462c905}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Swagger.io}
-      \field{title}{OpenAPI Specification}
+      \field{journaltitle}{SentinelOne®}
+      \field{title}{What Is Network Detection and Response (NDR)?}
       \verb{urlraw}
-      \verb https://swagger.io/specification/
+      \verb https://www.sentinelone.com/cybersecurity-101/what-is-network-detection-and-response-ndr/
       \endverb
       \verb{url}
-      \verb https://swagger.io/specification/
+      \verb https://www.sentinelone.com/cybersecurity-101/what-is-network-detection-and-response-ndr/
       \endverb
     \endentry
     \entry{castleMoatWallNetwork}{article}{}
@@ -986,6 +1984,7 @@
       \strng{authorbibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
       \strng{authornamehash}{a38fd29ea2acf6b75ffa31051626998b}
       \strng{authorfullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \field{extraname}{1}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
@@ -1004,6 +2003,69 @@
       \endverb
       \verb{url}
       \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+    \endentry
+    \entry{cronJob}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=a38fd29ea2acf6b75ffa31051626998b}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{fullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{bibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authorbibnamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authornamehash}{a38fd29ea2acf6b75ffa31051626998b}
+      \strng{authorfullhash}{a38fd29ea2acf6b75ffa31051626998b}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{journaltitle}{CyberHoot}
+      \field{month}{3}
+      \field{title}{Castle-and-Moat Network Security Model}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+      \verb{url}
+      \verb https://cyberhoot.com/cybrary/castle-and-moat-network-model/
+      \endverb
+    \endentry
+    \entry{tomTelecom}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c4533b792c0e24bbad6beaaa123700c}{%
+           family={TOMTelecom},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{fullhash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{bibnamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authorbibnamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authornamehash}{0c4533b792c0e24bbad6beaaa123700c}
+      \strng{authorfullhash}{0c4533b792c0e24bbad6beaaa123700c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{tomtelecom.nl}
+      \field{title}{Wie zijn wij}
+      \verb{urlraw}
+      \verb https://www.tomtelecom.nl/wiezijnwij/
+      \endverb
+      \verb{url}
+      \verb https://www.tomtelecom.nl/wiezijnwij/
       \endverb
     \endentry
     \entry{xdrIDC}{article}{}
@@ -1076,6 +2138,33 @@
       \verb https://ictresearchmethods.nl/
       \endverb
     \endentry
+    \entry{webba}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=23de2930550f7de0d29b1a441252d8af}{%
+           family={Webba},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{fullhash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{bibnamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authorbibnamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authornamehash}{23de2930550f7de0d29b1a441252d8af}
+      \strng{authorfullhash}{23de2930550f7de0d29b1a441252d8af}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{wenbba.nl}
+      \field{title}{Webba | Experts in design, techniek en online marketing}
+      \verb{urlraw}
+      \verb https://webba.nl/
+      \endverb
+      \verb{url}
+      \verb https://webba.nl/
+      \endverb
+    \endentry
     \entry{algolia}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
@@ -1096,7 +2185,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Wikipedia, free encyclopedias}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
       \field{title}{Algolia}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Algolia
@@ -1105,7 +2194,7 @@
       \verb https://en.wikipedia.org/wiki/Algolia
       \endverb
     \endentry
-    \entry{arpSpoofing}{article}{}
+    \entry{api}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -1126,15 +2215,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
-      \field{title}{ARP spoofing}
+      \field{title}{API}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/ARP_spoofing
+      \verb https://en.wikipedia.org/wiki/API
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/ARP_spoofing
+      \verb https://en.wikipedia.org/wiki/API
       \endverb
     \endentry
-    \entry{firebase}{article}{}
+    \entry{arpSpoofing}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -1154,16 +2243,16 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Wikipedia, free encyclopedias}
-      \field{title}{Firebase}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{ARP spoofing}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Firebase
+      \verb https://en.wikipedia.org/wiki/ARP_spoofing
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Firebase
+      \verb https://en.wikipedia.org/wiki/ARP_spoofing
       \endverb
     \endentry
-    \entry{flutter}{article}{}
+    \entry{captcha}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -1184,15 +2273,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
-      \field{title}{Flutter (software)}
+      \field{title}{CAPTCHA}
       \verb{urlraw}
-      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \verb https://en.wikipedia.org/wiki/CAPTCHA
       \endverb
       \verb{url}
-      \verb https://en.wikipedia.org/wiki/Flutter_(software)
+      \verb https://en.wikipedia.org/wiki/CAPTCHA
       \endverb
     \endentry
-    \entry{man-in-the-middleAttack}{article}{}
+    \entry{ReCaptcha}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
            family={Wikipedia},
@@ -1213,12 +2302,273 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{CAPTCHA}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/ReCAPTCHA
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/ReCAPTCHA
+      \endverb
+    \endentry
+    \entry{crm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{6}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Customer relationship management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Customer_relationship_management
+      \endverb
+    \endentry
+    \entry{threatHunting}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{7}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{7}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Cyber threat hunting}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Cyber_threat_hunting
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Cyber_threat_hunting
+      \endverb
+    \endentry
+    \entry{erp}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{8}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{8}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Enterprise resource}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Enterprise_resource_planning
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Enterprise_resource_planning
+      \endverb
+    \endentry
+    \entry{firebase}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{9}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Firebase}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Firebase
+      \endverb
+    \endentry
+    \entry{json}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{10}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{10}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{JSON}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/JSON
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/JSON
+      \endverb
+    \endentry
+    \entry{man-in-the-middleAttack}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{11}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{11}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
       \field{title}{Man-in-the-middle attack}
       \verb{urlraw}
       \verb https://en.wikipedia.org/wiki/Man-in-the-middle_attack
       \endverb
       \verb{url}
       \verb https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+      \endverb
+    \endentry
+    \entry{pentest}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{12}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{12}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Penetration Test}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Penetration_test
+      \endverb
+    \endentry
+    \entry{rmm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{13}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{13}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{Remote monitoring and management}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Remote_monitoring_and_management
+      \endverb
+    \endentry
+    \entry{xml}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{14}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{14}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia, free encyclopedia}
+      \field{title}{XML}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/XML
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/XML
       \endverb
     \endentry
   \enddatalist

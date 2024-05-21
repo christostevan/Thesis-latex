@@ -8,10 +8,18 @@
 
       \section{Research Sub-Question \#1: What is the current state of the QaaS app?}
 
+      The \acrshort{qaas} app is an \gls{ERP} web application that is used by \acrshort{qict} and its clients.
+      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to
+      For \acrshort{qict} employees themselves, it is an \acrshort{erp} system that is used to manage the clients and their
+      \acrshort{ict} infrastructure. It is made in Dart with Flutter as the front-end framework. There are 2 main parts of the
+      \acrshort{qaas} app, the front-end and the back-end. The front-end is made in Flutter, and the back-end is made in Node.js with
+      TypeScript as the template. The back-end is hosted on Firebase Cloud Functions which are used to connect and make \acrshort{http}
+      calls to the internal \acrshort{api}s, and the front-end is hosted on Firebase Hosting.
+
       \subsubsection{APIs and Technologies}
       The \acrshort{qaas} app also utilizes several \acrshort{api}s and technologies to help with its operations.
       It needs to manage and make connection different sort of \acrshort{api}s to help with the operations of the
-      an \acrshort{erp} application. Those \acrshort{api}s are the following:
+      \acrshort{erp} application. Those \acrshort{api}s are the following:
       \begin{itemize}
             \item Resello: is used for \acrshort{qict} \acrshort{ms} subscriptions owned by Pax8 (\textit{\cite{resello}}).
                   It is a cloud marketplace that simplifies the way \acrshort{sme}s buy, sell, and manage cloud solutions
@@ -53,14 +61,6 @@
       \end{itemize}
 
       \subsection{The QaaS App Infrastructure}
-
-      The \acrshort{qaas} app is an \gls{ERP} web application that is used by \acrshort{qict} and its clients.
-      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to
-      For \acrshort{qict} employees themselves, it is an \acrshort{erp} system that is used to manage the clients and their
-      \acrshort{ict} infrastructure. It is made in Dart with Flutter as the front-end framework. There are 2 main parts of the
-      \acrshort{qaas} app, the front-end and the back-end. The front-end is made in Flutter, and the back-end is made in Node.js with
-      TypeScript as the template. The back-end is hosted on Firebase Cloud Functions which are used to connect and make \acrshort{http}
-      calls to the internal \acrshort{api}s, and the front-end is hosted on Firebase Hosting.
 \end{multicols}
 
 \begin{figure}[htbp]
@@ -109,7 +109,8 @@
                   \begin{itemize}
                         \item 1st Generation: Most of the Firebase Cloud Functions that are used in the \acrshort{qaas} app
                               is in this version. The company wishes to migrate all the functions to the 2nd generation in
-                              the future.
+                              the future. Furthermore, for the integration of SentinelOne with the \acrshort{qaas} app, the
+                              company wishes to utilize the 2nd generation of Cloud Functions.
                         \item 2nd Generation: The company wishes that the author's graduation project will utilize the 2nd
                               generation of Cloud Functions. Features in the 2nd generation including:
                               \begin{itemize}
@@ -367,6 +368,8 @@
 
       Modules are
 
+      User tags
+
       \subsection{Conclusion}
       The \acrshort{qaas} app is an \acrshort{erp} web application that is used by \acrshort{qict} and its clients.
       It is made in Dart with Flutter as the front-end framework, and Node.js with the back-end  framework with
@@ -381,9 +384,7 @@
       highest level of access and control over the app.
 
       \section{Research Sub-Question \#2: How can SentinelOne be integrated with the QaaS app?}
-      \subsection{SentinelOne} % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
-      To answer this research sub-question, a general understanding of what SentinelOne is needed to know what
-      methods should be utilized to integrate it with the \acrshort{qaas} app.
+      % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
 
       SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to
       help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze
@@ -688,16 +689,17 @@
 \end{figure}
 
 \begin{multicols}{2}
-      \section{Research Sub-Question \#3}
+      \section{Research Sub-Question \#4: What are the best data visualization techniques for SentinelOne?}
       Data visualization is the process of representing complex data (in the form of text and numbers) into a
       graphical representation, such as: interactive charts, dashboards, pie charts, and so on. In the context
       of this project, the displays should be able to tell interesting stories and share findings with diverse
       audience (the client, helpdesk, and cybersecurity analysts).
 
       \subsection{Data Visualization Widgets in Flutter}
-      In Flutter, there are 2 famous library that supports a wide range of chart types,
-      \href{https://pub.dev/packages/fl_chart}{fl\_chart} and
-      \href{https://pub.dev/packages/syncfusion_flutter_charts}{syncfusion\_flutter\_charts}. Each chart type is
+      In Flutter, there are 3 famous library that supports a wide range of chart types,
+      \href{https://pub.dev/packages/fl_chart}{fl\_chart},
+      \href{https://pub.dev/packages/syncfusion_flutter_charts}{syncfusion\_flutter\_charts}, and
+      \href{https://pub.dev/packages/flutter_echarts}{flutter\_echarts}. Each chart type is
       suitable for a specific kind of data and provides a different way to visualize the data. Types of charts in
       both libraries include 30+ plotting series:
       \begin{itemize}

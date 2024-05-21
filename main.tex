@@ -69,7 +69,7 @@ style=apa,
 
 \lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, 
-    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const,
+    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const, string,
     import, export },
   keywordstyle=\color{blue}\bfseries,
   ndkeywordstyle=\color{darkgray}\bfseries,
@@ -82,10 +82,16 @@ style=apa,
   stringstyle=\color{tealString}\ttfamily,
   morestring=[b]',
   morestring=[b]",
-  ndkeywords={class, export, boolean, throw, implements, import, this, constructor, boolean, string, number},
+  ndkeywords={class, export, boolean, throw, implements, import, this, constructor, boolean, number},
   sensitive=true,
   backgroundcolor=\color{darkgrey},
   basicstyle=\footnotesize\ttfamily\color{white},
+}
+
+\lstdefinelanguage{DOS}
+{
+    backgroundcolor=\color{black},
+    basicstyle=\scriptsize\color{white}\ttfamily
 }
 
 \lstdefinelanguage{JSON

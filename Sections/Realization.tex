@@ -1,7 +1,178 @@
 \chapter{Realization}
 
-Firebase Cloud HTTP GET
+\begin{multicols}{2}
+  Because the \acrshort{qaas} web application itself is already built on top of existing frameworks, libraries, and technologies, the integration of the SentinelOne
+  was relatively straightforward. The \acrshort{api} itself is well-documented, and the \acrshort{npm} package provided by SentinelOne is easy to use. The only challenge
+  was to understand the data structure of the SentinelOne, choosing the right and more important data to display, modelling it in the \acrshort{qaas} database, and then
+  displaying it in the web application.
 
-SentinelOne \acrshort{npm} package
+  \section{The Back-end}
 
-\section{Synchronization with N-Central API}
+  As stated before, \acrshort{qict} wishes to utilize the 2nd generation of Firebase Cloud Functions, therefore a new Firebase project was created and stored on the cloud
+  (\textit{using Azure DevOps}). The author also needs to make a decision in regards on how the infrastructure of the codebase should be structured. Because \acrshort{qict}
+  is always critical and open to feedback, the author is given access to the old Firebase codebase (\textit{utilizing version 1.0}), and find any potential upsides and
+  downsides of that project repository. The author then, by an informed decision, is allowed to decide whether to structure the new codebase in the same way as the old one.
+  The author has certainly decided to create some new adjustments to the new codebase. For example, instead of stacking all functionalities that a Firebase Cloud Function
+  might have, the author has decided to improve the codebase especially regarding the separation of concerns. Specifically, the response from the \acrshort{api} is
+  modelled using Interfaces and Classes object within the Models directory, allowing for a consistent reuse across different functions. Additionally, distinct Routers and Controllers
+  directories has been established, each with specific responsibilities. The Routers directory primarily handles external communications with the \acrshort{api},
+  utilizing \texttt{Axios} (\textit{\cite{axiosNpm}}) for handling the GET requests. The Controllers directory, contains the back-end logic of the cloud function,
+  bridging Models and Routers and ensuring comprehensive error documentation. This structure defines the behavior of the Firebase Cloud Function version 2.0 of the
+  \acrshort{qaas} app.
+
+  Moreover, there are Utilities and Middlewares directories, which are used to handle common functionalities and errors. The Utilities directory contains functions that
+  are used across the codebase, such as logging errors, and the Middlewares directory contains functions that are used to handle the request and response of the
+  cloud function. For example, the \texttt{logError} function in the Utilities directory is used to log errors in the console, and the \texttt{handleError} function in
+  the Middlewares directory is used to handle errors in the response of the cloud function. This structure allows for a more organized and maintainable codebase.
+
+  The types of functions that are used throughout the project are the following:
+  \begin{itemize}
+    \item \texttt{onCall}: This type of function is used to handle callable functions, which are called from the client-side. It is used to handle requests from the
+          client-side. This is the main function in which the SentinelOne data is fetched and processed.
+    \item \texttt{onRequest}: This type of function is used to handle \acrshort{http} requests, which are called from the client-side. It is mainly for initial testing, as
+          setting this function up is easier and faster. However, the author does not recommend using this in the production, as it lacks authentication and security
+          for the end-user.
+    \item \texttt{onSchedule}: This type of function is used to handle scheduled functions, normally called cron-jobs, which are called at a specific time. It is used
+          to handle scheduled tasks that need to be executed at a specific time. There is only one scheduled function in the project, which is used to replace the old
+          SentinelOne \acrshort{api} key with a new one that is securely stored in Google Secret Manager, therefore ensuring proper connection and access to the secret
+          vault, every month.
+  \end{itemize}
+
+\end{multicols}
+
+
+\begin{lstlisting}[language=JavaScript, caption={An example of Firebase HTTP Request onCall Cloud Function version 1.0}]
+  import * as functions from "firebase-functions";
+  import * as admin from "firebase-admin";
+  import { Secrets } from "../Firebase/Secrets";
+  import { FirebaseCall } from "../Firebase/FirebaseCall";
+  import axios from 'axios'; 
+
+  export default functions
+    .region("europe-west1")
+    .https.onCall(async (data, context) => {
+        try {
+          // context.app will be undefined if the request doesn't include a valid
+          // App Check token.
+          if (context.app === undefined) {
+            throw new functions.https.HttpsError(
+              "failed-precondition",
+              "The function must be called from an App Check verified app."
+            );
+          } 
+        } catch (error) {
+          console.error("An error occurred in the Firebase HTTP Request onCall Cloud Function: ", error);
+          throw new functions.https.HttpsError("internal", "An error occurred while processing the request.");
+        }
+  });
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption={onCall Cloud Function version 2.0, where the parameters of the function is less and the way it handles the authorization is different}]
+  import axios from "axios";
+  import * as functions from "firebase-functions/v2";
+  import { CallableRequest } from "firebase-functions/v2/https";
+  import admin from "firebase-admin";
+
+  import { region, sentinelOneURL, sentinelOneApiVersion } from "../../../config";
+  import { logError } from "../../../Middleware/LogError";
+  import { getSecret } from "../../../Util/Secret";
+
+  export const getSentinelOneData = functions.https.onCall({ region: region }, async (context: CallableRequest<any>) => {
+    try {
+      // Authentication check
+      if (!context.auth) {
+        throw new functions.https.HttpsError("unauthenticated", "The function must be called while authenticated.");
+      }
+      const data = context.data;
+  
+      // // Checking if the request contains the necessary data
+      if (!data || !data.siteId || !data.userId || !data.dataType) {
+        throw new functions.https.HttpsError("invalid-argument", "The necessary requirement(s) are missing or invalid in your request.");
+      }  
+    } catch(ex: unknown) {
+
+    }
+  });
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption=LogError functionality in the Utilities folder]
+  export function logError(error: unknown, context: string): void {
+    if (isAxiosError(error)) {
+      // AxiosError object, log detailed request and response information
+      console.error(`[${context}] Axios error occurred: ${error.message}`);
+      console.error(`Response data: ${error.response?.data}`);
+      console.error(`Status code: ${error.response?.status}`);
+      console.error(`Headers: ${JSON.stringify(error.response?.headers, null, 2)}`);
+    } else if (error instanceof Error) {
+      // Standard Error object, log message and stack
+      console.error(`[${context}] An error occurred: ${error.message} \n Stack: ${error.stack}`);
+    } else {
+      // Non-Error object, log with a generic message
+      console.error(`[${context}] An unknown error occurred:`, error);
+    }
+  }
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=JavaScript, caption={An example of how that utility is used in the Cloud Function, the reasong why exception type is unknown is to comply with the ESLint rules that does not recommend to use the any type to the variables}]
+  try {
+
+  }
+  catch (ex: unknown) {
+    console.log(`An error occured in the getFirestoreData function: ${ex}`);
+    logError(ex, "getFirestoreData");
+  } finally {
+    throw new functions.https.HttpsError("internal", "An error occurred while getting the data in Firestore.");
+  }
+\end{lstlisting}
+
+\begin{multicols}{2}
+  \subsection{SentinelOne NPM package}
+
+  \subsection{Compliance with ESLint compiler}
+  \acrshort{js} in nature is a loosely typed language, and it is easy to make mistakes in the code as its variables do not have a fixed type. While this sometimes can be
+  beneficial as it makes the development faster and more flexible, it also introduces challenges, particularly in debugging and maintaining the code. To prevent this,
+  both the author and the Company Supervisor have decided to use and adhere to \acrshort{ts} and ESLint rules, to ensure static typing, code quality
+  and consistency to the coding standards.
+\end{multicols}
+
+
+\begin{lstlisting}[language=JavaScript, caption={Example of challenges in JavaScript because of its loosely typed nature that creates lack of type safety, type coercion, and type conversion}]
+  function add(a, b) {
+    return a + b;
+  }
+  console.log(add(5, '2')); // "52" instead of 7
+\end{lstlisting}
+
+\begin{lstlisting}[language=DOS, caption={Another example of JavaScript challenges}]
+    C:\Users\ChristopherSulistiyo>node
+    Welcome to Node.js v22.1.0.
+    Type ".help" for more information.
+    > true == 1
+    true
+    > true === 1
+    false
+    > true + true + true === 3
+    true
+    > 0 == "0"
+    true
+    > "0" ==- null
+    true
+    > NaN.valueOf()
+    NaN
+    > -null
+    -0
+    > 99999999999999999999
+    100000000000000000000
+    > -0 == "0"
+    true
+    > parseInt("0.00005")
+    0
+    > parseInt(0.00000005)
+    5
+
+    > let a = []
+    undefined
+    > a.length == a
+    true
+  \end{lstlisting}

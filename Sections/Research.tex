@@ -368,8 +368,24 @@
 
       Modules are
 
-      User tags
+      User tags are used for differentiating different companies.
+\end{multicols}
 
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Qaas App/Modules/afbeelding (1).png}
+      \caption{Different modules in the QaaS app in which the IT admin can determine which pages can be accessed by which user tags}
+      \label{fig:qaasAppModules}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Qaas App/Modules/afbeelding (2).png}
+      \caption{Different user tags in the QaaS app in which correlates to what actions can a user do within the web application}
+      \label{fig:userTages}
+\end{figure}
+
+\begin{multicols}{2}
       \subsection{Conclusion}
       The \acrshort{qaas} app is an \acrshort{erp} web application that is used by \acrshort{qict} and its clients.
       It is made in Dart with Flutter as the front-end framework, and Node.js with the back-end  framework with
@@ -383,7 +399,7 @@
       Admin. The modules help with the control of the app's features and functionalities, and the IT Admin has the
       highest level of access and control over the app.
 
-      \section{Research Sub-Question \#2: How can SentinelOne be integrated with the QaaS app?}
+      \section{Research Sub-Question \#2: What is SentinelOne EDR Platform?}
       % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
 
       SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to
@@ -635,7 +651,8 @@
       has Ranger, that Ranger is going to listen to that \acrshort{nic} on that device, then capture and interpret all the data that
       is flowing across the network, called \acrshort{mib}s, thus displaying it on the Console.
 
-      \subsection{SentinelOne API}
+      \section{Research Sub-Question \#3: How can SentinelOne be integrated with the QaaS app?}
+
       SentinelOne provides an \acrshort{api} to allow users to integrate SentinelOne with other security tools and systems. Additionally,
       SentinelOne also provide an \acrshort{sdk} enables organizations to scan files and detect malicious content among them, called
       Nexus Embedded \acrshort{ai} (\textit{\cite{nexusSDK}}), but this thesis will focus solely on SentinelOne \acrshort{api}s.

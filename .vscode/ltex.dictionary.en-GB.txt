@@ -21,3 +21,4 @@ Behavioral
 Fileless
 Infostealer
 Hacktool
+hyperlogs

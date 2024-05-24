@@ -236,7 +236,7 @@
       \verb https://firebase.google.com/products-build
       \endverb
     \endentry
-    \entry{scheduleFunction}{article}{}
+    \entry{serviceAccounts}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
            family={Firebase},
@@ -252,6 +252,35 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase Service Accounts Overview}
+      \verb{urlraw}
+      \verb https://firebase.google.com/support/guides/service-accounts
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/support/guides/service-accounts
+      \endverb
+    \endentry
+    \entry{scheduleFunction}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{5}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{5}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -584,6 +613,33 @@
       \verb https://www.mongodb.com/nosql-explained
       \endverb
     \endentry
+    \entry{axiosNpm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bb30e85411b56df41296726ab445dc8f}{%
+           family={npm},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{fullhash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{bibnamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authorbibnamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authornamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authorfullhash}{bb30e85411b56df41296726ab445dc8f}
+      \field{sortinit}{n}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npmjs.com}
+      \field{title}{Axios - NPM}
+      \verb{urlraw}
+      \verb https://www.npmjs.com/package/axios
+      \endverb
+      \verb{url}
+      \verb https://www.npmjs.com/package/axios
+      \endverb
+    \endentry
     \entry{ondernemendEmmen}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=415efed359c7877c01c48170cf29dad7}{%
@@ -663,6 +719,33 @@
       \endverb
       \verb{url}
       \verb https://www.perfectviewcrm.nl/
+      \endverb
+    \endentry
+    \entry{redisDataStructure}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e111446745a1825b862f8727ae63bce4}{%
+           family={Redis},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{bibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorbibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authornamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhash}{e111446745a1825b862f8727ae63bce4}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{redis.io}
+      \field{title}{Data structures}
+      \verb{urlraw}
+      \verb https://redis.io/redis-enterprise/data-structures/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/redis-enterprise/data-structures/
       \endverb
     \endentry
     \entry{sentinelOneNDR}{article}{}
@@ -789,6 +872,41 @@
       \endverb
       \verb{url}
       \verb https://www.tomtelecom.nl/wiezijnwij/
+      \endverb
+    \endentry
+    \entry{redisIsNoLongerFree}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=27352b81388a59bd5c714c3e47b11209}{%
+           family={Trollope},
+           familyi={T\bibinitperiod},
+           given={Rowan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{fullhash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{bibnamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authorbibnamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authornamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authorfullhash}{27352b81388a59bd5c714c3e47b11209}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{journaltitle}{redis.io}
+      \field{month}{3}
+      \field{title}{Redis Adopts Dual Source-Available Licensing}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://redis.io/blog/redis-adopts-dual-source-available-licensing/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/blog/redis-adopts-dual-source-available-licensing/
       \endverb
     \endentry
     \entry{xdrIDC}{article}{}
@@ -1513,7 +1631,7 @@
       \verb https://firebase.google.com/products-build
       \endverb
     \endentry
-    \entry{scheduleFunction}{article}{}
+    \entry{serviceAccounts}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
            family={Firebase},
@@ -1529,6 +1647,35 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradate}{4}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Firebase.google.com}
+      \field{title}{Firebase Service Accounts Overview}
+      \verb{urlraw}
+      \verb https://firebase.google.com/support/guides/service-accounts
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/support/guides/service-accounts
+      \endverb
+    \endentry
+    \entry{scheduleFunction}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=035489ff8d092741943e4a83241f5af9}{%
+           family={Firebase},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{fullhash}{035489ff8d092741943e4a83241f5af9}
+      \strng{bibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorbibnamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authornamehash}{035489ff8d092741943e4a83241f5af9}
+      \strng{authorfullhash}{035489ff8d092741943e4a83241f5af9}
+      \field{extraname}{5}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{5}
       \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
@@ -1861,6 +2008,33 @@
       \verb https://www.mongodb.com/nosql-explained
       \endverb
     \endentry
+    \entry{axiosNpm}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bb30e85411b56df41296726ab445dc8f}{%
+           family={npm},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{fullhash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{bibnamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authorbibnamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authornamehash}{bb30e85411b56df41296726ab445dc8f}
+      \strng{authorfullhash}{bb30e85411b56df41296726ab445dc8f}
+      \field{sortinit}{n}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npmjs.com}
+      \field{title}{Axios - NPM}
+      \verb{urlraw}
+      \verb https://www.npmjs.com/package/axios
+      \endverb
+      \verb{url}
+      \verb https://www.npmjs.com/package/axios
+      \endverb
+    \endentry
     \entry{ondernemendEmmen}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=415efed359c7877c01c48170cf29dad7}{%
@@ -1940,6 +2114,33 @@
       \endverb
       \verb{url}
       \verb https://www.perfectviewcrm.nl/
+      \endverb
+    \endentry
+    \entry{redisDataStructure}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e111446745a1825b862f8727ae63bce4}{%
+           family={Redis},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{fullhash}{e111446745a1825b862f8727ae63bce4}
+      \strng{bibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorbibnamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authornamehash}{e111446745a1825b862f8727ae63bce4}
+      \strng{authorfullhash}{e111446745a1825b862f8727ae63bce4}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{redis.io}
+      \field{title}{Data structures}
+      \verb{urlraw}
+      \verb https://redis.io/redis-enterprise/data-structures/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/redis-enterprise/data-structures/
       \endverb
     \endentry
     \entry{sentinelOneNDR}{article}{}
@@ -2066,6 +2267,41 @@
       \endverb
       \verb{url}
       \verb https://www.tomtelecom.nl/wiezijnwij/
+      \endverb
+    \endentry
+    \entry{redisIsNoLongerFree}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=27352b81388a59bd5c714c3e47b11209}{%
+           family={Trollope},
+           familyi={T\bibinitperiod},
+           given={Rowan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{fullhash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{bibnamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authorbibnamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authornamehash}{27352b81388a59bd5c714c3e47b11209}
+      \strng{authorfullhash}{27352b81388a59bd5c714c3e47b11209}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{journaltitle}{redis.io}
+      \field{month}{3}
+      \field{title}{Redis Adopts Dual Source-Available Licensing}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://redis.io/blog/redis-adopts-dual-source-available-licensing/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/blog/redis-adopts-dual-source-available-licensing/
       \endverb
     \endentry
     \entry{xdrIDC}{article}{}

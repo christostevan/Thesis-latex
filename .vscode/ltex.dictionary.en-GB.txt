@@ -22,3 +22,5 @@ Fileless
 Infostealer
 Hacktool
 hyperlogs
+phising
+siganture-based

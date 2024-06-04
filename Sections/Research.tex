@@ -9,8 +9,11 @@
       \section{Research Sub-Question \#1: What is the current state of the QaaS app?}
 
       The \acrshort{qaas} app is an \gls{ERP} web application that is used by \acrshort{qict} and its clients.
-      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to
-      For \acrshort{qict} employees themselves, it is an \acrshort{erp} system that is used to manage the clients and their
+      For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to see what kind of information are available
+      regarding their \acrshort{ict} infrastructure, based on the subscriptions that they have with \acrshort{qict}.
+      For example, a customer that subscribes on N-Central and SentinelOne will be able to see the status of their
+      devices from N-Central \acrshort{api}, and the health of their devices from SentinelOne \acrshort{api}.
+      For \acrshort{qict} employees themselves, it serves as an internal system that is used to manage the clients and their
       \acrshort{ict} infrastructure. It is made in Dart with Flutter as the front-end framework. There are 2 main parts of the
       \acrshort{qaas} app, the front-end and the back-end. The front-end is made in Flutter, and the back-end is made in Node.js with
       TypeScript as the template. The back-end is hosted on Firebase Cloud Functions which are used to connect and make \acrshort{http}
@@ -45,7 +48,7 @@
             \item PerfectView: is used for \gls{CRM} software (\textit{\cite{perfectView}}). It is designed to
                   improve business relationships with customers, assist in customer retention, and drive sales growth.
                   In the \acrshort{qaas} app, it is used to manage the relationships and interactions with the app's users,
-                  which could include tracking user interactions, managing customer support requests, and analyzing user
+                  which could include tracking user interactions, managing customer support requests and analyzing user
                   data to improve the app's functionality and \acrshort{ux}.
       \end{itemize}
 
@@ -208,18 +211,18 @@
       \begin{itemize}
             \item onRequest: this method is used to create an \acrshort{http} function that is triggered by an \acrshort{http}
                   request. They are more general-purpose compared to Callable Functions and can be used to create \acrshort{rest}ful
-                  \acrshort{api}s, handle form submissions, or perform any other server-side operations that require \acrshort{http}
+                  \acrshort{api}s, handle form submissions or perform any other server-side operations that require \acrshort{http}
                   requests. Unlike Callable Functions, onRequest functions do not handle authentication or data serialization, so
                   the developers need to manage this aspect manually. This functions only accepts \texttt{Request} and
                   \texttt{Response}, but not \texttt{NextFunction}. In the context of \acrshort{qaas} app, this function is only used
                   for testing purposes, and the developer will need to migrate to onCall when deploying on the Live environment.
             \item onCall: is a little different from onRequest. Instead of using Request and Response, it uses data and context.
-                  In version 2.0, it only accepts request as \texttt{CallableRequest<any>} that can get any headers and body
+                  In version 2.0, it only accepts requests as \texttt{CallableRequest<any>} that can get any headers and body
                   of the request sent by user. It is used to create Callable Functions, and they are designed to be called directly
                   from client applications, such as mobile or web apps. They automatically handle authentication and data serialization,
                   making it easier to secure call backend code from client applications, and this is what the \acrshort{qaas} app
                   primarily uses for calling its internal \acrshort{api}s as it ensures that the client is authenticated and authorized
-                  to make the call. Callable functionsa are triggered by an \acrshort{http} request but are specifically designed to be
+                  to make the call. Callable functions are triggered by an \acrshort{http} request but are specifically designed to be
                   called from Firebase client \acrshort{sdk}s.
 
       \end{itemize}
@@ -300,8 +303,6 @@
       \textbf{Pub/Sub Triggers}: are the functions triggered by messages published to a \acrshort{pubsub} topic.
       It is a messaging service that enables decoupling of applications by sending messages between independent components.
 
-      \textbf{Cloud Firestore Functions}
-
       \textbf{Schedule functions}: this is a Firebase's own term for \gls{cronJob} (\textit{\cite{scheduleFunction}}).
       They are used within the \acrshort{qaas} app to run tasks at regular intervals, such as sending reminders, keeping
       data up-to-date with the internal \acrshort{api}s (like customer list), or performing maintenance tasks.
@@ -341,49 +342,58 @@
             \item Centralized Management: it stores and manages all secrets in one place, simplifying access and control.
       \end{itemize}
 
-      Google Secret Manager comes from \acrshort{gcp}, and \acrshort{gcp} and Firebase are a separate cloud solutions. But, because
+      Google Secret Manager comes from \acrshort{gcp}, and \acrshort{gcp} and Firebase are a separate cloud solution. But, because
       both are part of Google, Firebase Cloud Functions can typically access \acrshort{gcp} Secret Manager by editing that specific function
       that the developer wanted to grant access to.
 
-      \subsubsection{Modules and Templates of the QaaS App}
+      \subsubsection{Modules and User Tags  of the QaaS App} % Templates
 
-      The \acrshort{qaas} has several templates and modules that are used to build the app. The templates can be
-      interpreted as level of access to the app, showing what permission a user has to the app. There are 3 different
-      templates based on 3 different users:
+      The \acrshort{qaas} has several user tags that are used to build the app. The tags can be interpreted as level of access to the app,
+      showing what permission a user has to the app. Because of coding inconsistency, there are 2 naming of functionality, which are user
+      tags and user roles, both serving the same purpose. User tags can be assigned or revoked to a user by the \acrshort{it} admin
+      willingly.
+
+      Modules are the page division of the \acrshort{qaas} app. They are interlinked with User Tags to create the navigation logic of the app.
+      All pages will have different functions, corresponding to its interconnected \acrshort{api}. Examples of modules in the \acrshort{qaas} app
+      are:
 
       \begin{itemize}
-            \item \textbf{Clients}: this template is used by the general users of the app. They have limited access to
-                  the app's features and functionalities, such as viewing and updating their profile and accessing the app's
-                  resources. They can only see the data relevant to their own account and cannot access or modify data
-                  belonging to other client from different company.  The Client template is designed for users who have the
-                  lowest level of access and control over the app.
-            \item \textbf{Helpdesk}: this template is used within the Helpdesk department of \acrshort{qict}. They have more
-                  access to the viewing of app functionality than the Clients.
-            \item \textbf{IT Admin}: the \acrshort{it} admin have almost the same level of access as the Helpdesk. The only
-                  difference is that they have the ability to create, edit, and delete users, manage user permissions, and
-                  configure the app settings. They can also grant and revoke access to a user and to the app's features and
-                  functionalities, which are called Modules. The admin template is designed for users who have the highest level
-                  of access and control over the app, which is to the developers.
+            \item Klanten Koppeling
+            \item \acrshort{ids} Systeem
+            \item Budget Overzicht
+            \item Intake Overzicht
+            \item Account Beheer
+            \item Periode Vergelijking
+            \item Klanten
+            \item Security (Bodyguard.io)
+            \item Apparaten (N-Central)
+            \item Abonementen
+            \item Facturitatie
+            \item Intake
+            \item Pakbonnen
       \end{itemize}
 
-      Modules are
-
-      User tags are used for differentiating different companies.
 \end{multicols}
 
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.8\textwidth]{Figures/Qaas App/Modules/afbeelding (1).png}
-      \caption{Different modules in the QaaS app in which the IT admin can determine which pages can be accessed by which user tags}
+      \caption{Different user tags in the QaaS app in which the IT admin can determine which pages can be accessed by which user tags}
       \label{fig:qaasAppModules}
 \end{figure}
 
 \begin{figure}[htbp]
       \centering
-      \includegraphics[width=0.8\textwidth]{Figures/Qaas App/Modules/afbeelding (2).png}
-      \caption{Different user tags in the QaaS app in which correlates to what actions can a user do within the web application}
-      \label{fig:userTages}
+      \includegraphics[width=0.8\textwidth]{Figures/Qaas App/User tags.png}
+      \caption{An example of how a user tag can access certain pages in the Flutter code}
 \end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Qaas App/User Tag Checker.png}
+      \caption{Check for the appropriate user tags in Firebase for extra database protection}
+\end{figure}
+
 
 \begin{multicols}{2}
       \subsection{Conclusion}
@@ -403,7 +413,7 @@
       % vs CrowdStrike with Carbanak and FIN7 methodology, Huntresss, datto rmm
 
       SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities to
-      help organizations defend against advanced cyber threats. It leverages \acrlong{ai} and machine learning to analyze
+      help organizations defend against advanced cyber threats. It leverages \acrshort{ai} and \acrshort{ml} to analyze
       and respond to security threats in real-time, providing organizations with comprehensive protection against malware,
       ransomware, and other cyber threats. It also provides visibility into clients' \acrshort{it} systems and infrastructure,
       enabling organizations to gain insights into potential security risks and vulnerabilities and take proactive measures
@@ -425,84 +435,106 @@
             \item Mobile devices
       \end{itemize}
 
-      \textbf{EPP}
+      % \textbf{NGAV}
 
-      \acrshort{epp} is an upgrade from legacy \acrshort{av}/anti-malware. \acrshort{epp} consists of solutions that work together to detect
-      and block security threats at the endpoint device level.
+      % \acrshort{ngav} is a cybersecurity solution designed to protect endpoints from malware by working  through siganture-based detection.
+      % Traditional \acrshort{av} usually identify and block known threats by comparing the fingerprint of a file to a database of known
+      % malicious ones. \acrshort{ngav} improves this by utilizing \acrshort{ai} and behavioural analysis t block known and unknown
+      % threats, including zero-day attacks, and other sophisticated maware that may evade signature detection. However, the scope of
+      % \acrshort{ngav} is limited to only prevention, and they do not give Security Teams the telemetry needed to address the rapidly
+      % evolving threat landscape.
 
-      Important note that \acrshort{epp} is not to be confused with \acrshort{edr}. \acrshort{epp} is a separate service from \acrshort{edr},
-      in which in \acrshort{edr} platforms they often include \acrshort{epp} but not vice versa.
+      % \textbf{EPP}
+
+      % \acrshort{epp} is also an upgrade from legacy \acrshort{av}/anti-malware. \acrshort{epp} consists of solutions that work together to detect
+      % and block security threats at the endpoint device level. An \acrshort{epp} solution contains a combination of \acrshort{ngav}s, focusing
+      % on providing tools designed to protect network-connected devices - endpoints - from malware, ransomware, and other cyber threats. It aims
+      % to provide holistic approach to securing endpoints, which include desktop, laptops, servers, and mobile devices, by combining multiple
+      % security functions into a single platform.
+
+      % The concept of \acrshort{epp} has evolved over time to include more advanced features and functionalities, leading to the emergence
+      % of other solutions such as Next-generation \acrshort{epp} (NG EPP), \acrshort{nges}, and \acrshort{ngfw}.
 
       \textbf{EDR}
 
       \acrshort{edr} \acrshort{aka} \acrshort{etdr}, is a group of integrated endpoint security solutions that combine data collection,
       data analysis, forensics, and \gls{threathunting} with the end-goal of identifying and stopping any potential security breaches in due
-      time. \acrshort{edr} solutions are able to recognize any suspicious patterns that can be investigated later on, as they have been
+      time. \acrshort{edr} solutions can recognize any suspicious patterns that can be investigated later, as they have been
       purposefully created to detect and respond in an active manner to advance malware, ransomware, and other cyber threats (the Response
       \acrshort{edr}). \acrshort{edr}, as the name suggest, were developed specifically for endpoints, and not networks (\ref{sec:ndr}), thus
       operate only on endpoint level.
 
-      The number one thing that sets apart \acrshort{edr} from legacy (traditional) \acrshort{av} is that traditional \acrshort{av} relies on
+      The number one thing that sets apart \acrshort{edr} from traditional \acrshort{av} is that traditional \acrshort{av} relies on
       signature-based detection, usually having a defined set of list in their \acrshort{db}, where known malware signatures are compared
       against files or processes to identify threats. \acrshort{edr} on the other hand, uses a combination of signature-based detection, such
       as behavioural analysis, machine learning, and anomaly detection to identify and respond both known and unknown threats. \acrshort{edr}
       solutions focus on detecting malicious activities at the endpoint level, including file modifications, process execution, and network
       connections, focusing on malicious behaviour compared to only concerning with malicious software like what traditional \acrshort{av} does.
+      While this seems similar to \acrshort{ngav}, what sets apart \acrshort{edr} from \acrshort{ngav} is that \acrshort{edr} solutions are
+      more focused on detecting and responding to threats after they have infiltrated the network, whereas \acrshort{ngav} aims only to
+      prevent threats from executing in the first place through advanced detection techniques, a functionality that is crucial in an \acrshort{av}.
 
-      \textbf{MDR}
+      % \textbf{MDR}
 
-      \acrshort{mdr} is what manage the \acrshort{edr} technology.
+      % \acrshort{mdr} is what manage the \acrshort{edr} technology. An \acrshort{mdr} will consist of multiple \acrshort{edr} solutions in
+      % which it adds the human role aspect to the operational framework necessary to effectively manage and respond to threats. For example,
+      % a \acrshort{mdr} service provider will have a team of security analysts that will monitor and respond to security alerts generated by
+      % the \acrshort{edr} solutions, then utilize their own experts to analyze alerts, investigate incidents, and execute responses.
 
-      \textbf{NDR} \label{sec:ndr}
-      \acrshort{ndr} products are designed to provide a complete visibility into the network, real-time detection of threats, and guided
-      investigation to accelerate and automate responses (\textit{\cite{sentinelOneNDR}}). \acrshort{ndr} takes a feed of raw network traffic
-      from a \gls{networkTap}, port mirror, or virtual traffic mirroring in \acrshort{aws} and Azure. By analyzing this traffic in real-time,
-      \acrshort{ndr} finally discovers and classify every device communicating on the network. It identifies device roles, such as \acrshort{dns},
-      web server, medical device, \acrshort{etc} and maps peer groups among those devices.
+      % \textbf{NDR} \label{sec:ndr}
+      % \acrshort{ndr} products are designed to provide a complete visibility into the network, real-time detection of threats, and guided
+      % investigation to accelerate and automate responses (\textit{\cite{sentinelOneNDR}}). \acrshort{ndr} takes a feed of raw network traffic
+      % from a \gls{networkTap}, port mirror, or virtual traffic mirroring in \acrshort{aws} and Azure. By analyzing this traffic in real-time,
+      % \acrshort{ndr} finally discovers and classify every device communicating on the network. It identifies device roles, such as \acrshort{dns},
+      % web server, medical device, \acrshort{etc} and maps peer groups among those devices.
 
-      \textbf{SIEM}
+      % \textbf{SIEM}
 
-      is a software system that collects, aggregates, normalizes security data from a variety of sources within an IT infrastructure, and
-      analyzes it according to pre-set rules, present it in human-readable format and therefore giving a comprehensive picture of the company's
-      information security (\cite{siemGartner}). \acrshort{siem} tools evolved from the log management discipline and combine \acrshort{sim} and
-      \acrshort{sem} technologies. A \acrshort{siem} tool uses \acrshort{ai} to automate several manual procedures related to threat
-      detection and incident response. Furthermore, it assists enterprise security teams in spotting anomalies in user behavior.
+      % is a software system that collects, aggregates, normalizes security data from a variety of sources within an IT infrastructure, and
+      % analyzes it according to pre-set rules, present it in human-readable format and therefore giving a comprehensive picture of the company's
+      % information security (\cite{siemGartner}). \acrshort{siem} tools evolved from the log management discipline and combine \acrshort{sim} and
+      % \acrshort{sem} technologies. A \acrshort{siem} tool uses \acrshort{ai} to automate several manual procedures related to threat
+      % detection and incident response. Furthermore, it assists enterprise security teams in spotting anomalies in user behavior.
 
-      \begin{itemize}
-            \item Input: logs, threat intel, vulnerability feeds, \acrshort{ndr}, firewall, \acrshort{ips}, \acrshort{ids}, and \acrshort{edr}
-                  data
-            \item Output: high-fidelity alerts prioritized by severity
-            \item Infused with: \acrshort{ai}, \acrshort{ml}, and analytics
-      \end{itemize}
+      % \begin{itemize}
+      %       \item Input: logs, threat intel, vulnerability feeds, \acrshort{ndr}, firewall, \acrshort{ips}, \acrshort{ids}, and \acrshort{edr}
+      %             data
+      %       \item Output: high-fidelity alerts prioritized by severity
+      %       \item Infused with: \acrshort{ai}, \acrshort{ml}, and analytics
+      % \end{itemize}
 
-      \textbf{SOAR}
+      % \textbf{SOAR}
 
-      \acrshort{soar} solutions focus on automating incident response processes and triage capabilities. The key word here is
-      "orchestration" and "automation". In an ideal world, everything.
-      The main goal is to oversee security without human help as much as possible, boosting productivity and shortening the response time.
-      It might use \acrshort{ai} and \acrshort{ml} to assess security events and automate incident response procedures. These solutions
-      can be standalone product, or it can be added to \acrshort{siem} solutions since \acrshort{soar} does not excel in event analysis.
+      % \acrshort{soar} solutions focus on automating incident response processes and triage capabilities. The key word here is
+      % "orchestration" and "automation". In an ideal world, everything.
+      % The main goal is to oversee security without human help as much as possible, boosting productivity and shortening the response time.
+      % It might use \acrshort{ai} and \acrshort{ml} to assess security events and automate incident response procedures. These solutions
+      % can be standalone product, or it can be added to \acrshort{siem} solutions since \acrshort{soar} does not excel in event analysis.
 
-      \textbf{XDR}
+      % \textbf{XDR}
 
-      is a security solution that gathers and analyzes data from multiple sources like endpoints, networks, cloud, emails, app,
-      \acrshort{etc} It offers great visibility into a company's \acrshort{it} infrastructure, helping the security employees to detect
-      more threats, respond efficiently, and deal with fewer false positive alerts \cite{xdrIDC}.
+      % is a security solution that gathers and analyzes data from multiple sources like endpoints, networks, cloud, emails, app,
+      % \acrshort{etc} It offers great visibility into a company's \acrshort{it} infrastructure, helping the security employees to detect
+      % more threats, respond efficiently, and deal with fewer false positive alerts \cite{xdrIDC}.
 
-      This solution integrates several tools combining all the gathered data into a single platform to visualize the information. It might
-      incorporate automated processes (even complex ones), \acrshort{ml}, and advanced analytics to enable quicker and more effective
-      incident response. It can even deal with hidden and advanced malware.
+      % This solution integrates several tools combining all the gathered data into a single platform to visualize the information. It might
+      % incorporate automated processes (even complex ones), \acrshort{ml}, and advanced analytics to enable quicker and more effective
+      % incident response. It can even deal with hidden and advanced malware.
 
-      \textbf{MXDR}
+      % \textbf{MXDR}
 
-      Some people may still call it \acrshort{mdr}, managed \acrshort{soc}, or managed security.
+      % Some people may still call it \acrshort{mdr}, managed \acrshort{soc}, or managed security, it is an extension of \acrshort{mdr},
+      % providing more comprehensive coverage and capabilities to address the evolving cybersecurity landscape. It aims to cover a wider
+      % range of security concerns and employs more advance technologies for threat detection and prevention than \acrshort{mdr}, while
+      % also offering more proactive, engaging threat hunting and predicitive analysis to anticipate and prevent threats, whereas
+      % \acrshort{mdr} tends to be more reactive, focusing on responding to alerts.
 
-      \textbf{SOC}
+      % \textbf{SOC}
 
-      \acrshort{soc} is the organizational context itself. It is a centralized facility or team within an organization that houses a
-      security team responsible for monitoring and analyzing another organization's (client) security position on an ongoing basis. They
-      can be seen as the safety team for client organizations. Please note that SentinelOne company itself is not a \acrshort{soc}, as it
-      is just a cybersecurity company that offers endpoint security solutions.
+      % \acrshort{soc} is the organizational context itself. It is a centralized facility or team within an organization that houses a
+      % security team responsible for monitoring and analyzing another organization's (client) security position on an ongoing basis. They
+      % can be seen as the safety team for client organizations. Please note that SentinelOne company itself is not a \acrshort{soc}, as it
+      % is just a cybersecurity company that offers endpoint security solutions.
 
 \end{multicols}
 
@@ -514,30 +546,43 @@
 \end{figure}
 
 \begin{multicols}{2}
-      \textit{Please note that as mentioned before, \acrshort{siem} can also take data from an \acrshort{edr} and \acrshort{ndr} but for
-            the sake of simplicity, the diagram puts them as a separate pier systems}. In terms of SentinelOne, it has all the features that
-      are mentioned in the diagram, except for \acrshort{soc}, as was mentioned before.
+      % \textit{Please note that as mentioned before, \acrshort{siem} can also take data from an \acrshort{edr} and \acrshort{ndr} but for
+      %       the sake of simplicity, the diagram puts them as a separate pier systems}. In terms of SentinelOne, it has all the features that
+      % are mentioned in the diagram, except for \acrshort{soc}, as was mentioned before.
 
-      \textbf{Console}
+      \textbf{SentinelOne Console}
+
+      SentinelOne \acrshort{mgmt} Console is the \acrshort{gui} provided by SentinelOne for managing and administering the platform. It serves
+      as the primary dashboard for security operators and administrators to interact with SentinelOne product suite, enabling them to monitor,
+      configure, and respond to cybersecurity threats across their organization's endpoints, servers, and cloud environments.
 
       \textbf{Global}
 
       The Global tab refers to the environment of the highest level of advisors. It consists of organizations that have access to global level
       that propagate down to the tenant level, which means they can put policies, scripts, and other configurations that will be applied to all
-      console and all of their customers.
-
-      \textbf{Tenant}
-
-      \textbf{Mentees}
+      consoles and all their customers.
 
       \textbf{Site}
 
-      Site is just a name
+      Site is just a name that refers to logical grouping of devices that are managed together under a single administrative domain, or a company.
+      A company customer can have multiple sites, and each site can have multiple devices. Each site \acrshort{id} is unique and is used to
+      identify the site in the SentinelOne console.
 
       \textbf{Group}
 
-      Group refers to logical grouping of devices within SentinelOne \acrshort{mgmt} Console. Groups can be created and deleted by the
-      admin user, and
+      Group refers to logical grouping of devices within SentinelOne \acrshort{mgmt} Console.  It is a way to organize and manage collections
+      of endpoints, servers, and other entities within the platform. It allows admins to apply policies, deploy agents, and perform other
+      management tasks across a defined set of assets in an organized and efficient manner. This hierarchical structure is crucial for
+      managing large-scale deployments and ensuring that security policies and configurations are consistently applied across relevant assets.
+      Groups can be created and deleted by the admin user, and devices can be moved between groups. An example of a group in \acrshort{qict}
+      site is:
+
+      \begin{itemize}
+            \item Default Group
+            \item Laptops
+            \item Workstations
+            \item Servers
+      \end{itemize}
 
       \textbf{Agents}
 
@@ -558,7 +603,7 @@
       Ranger is an add-on SentinelOne product that provides a way of detecting other devices (computers and
       \acrshort{iot} devices) that are on the client's computer network. If a malicious attacker comes in and plugs his device
       into the network, all the other SentinelOne agents are going to read the network traffic, determine and classify whether
-      that is a new device or a rogue device. As long as a device has Ranger on that network subnet, SentinelOne can gather and
+      that is a new device or a rogue device. If a device has Ranger on that network subnet, SentinelOne can gather and
       detect technical information regarding the device.
 
       \begin{itemize}
@@ -582,7 +627,7 @@
 
       Sentinels refer to a term that describes SentinelOne ability to deploy and manage security agents on endpoints within an
       organization, not part of SentinelOne product, like Ranger. This is part of the SentinelOne \acrshort{edr} capabilities,
-      where the user admin can deploy the agents on the endpoints, and manage them from the SentinelOne console. The admin can
+      where the user admin can deploy the agents on the endpoints and manage them from the SentinelOne console. The admin can
       also create policies, scripts, and other configurations that will be applied to all the agents in the network.
 
       \textbf{Visibility}
@@ -595,7 +640,7 @@
 
       \textbf{Incidents}
 
-      Incident is just a name of a page in SentinelOne dashboard that provides a list of cyber-incidents overview that have happened on all
+      Incident is just the name of a page in SentinelOne dashboard that provides a list of cyber-incidents overview that have happened on all
       endpoints detected by Agents in the network connected to SentinelOne by Ranger. The page typically offers an overview of all detected
       security incidents, categorized based on severity levels of types of threats.
 
@@ -630,26 +675,41 @@
 \end{figure}
 
 \begin{multicols}{2}
-      \textbf{Vigilance}
+      % \textbf{Vigilance}
 
-      It is a \acrshort{mdr} service - providing threat monitoring, hunting, and response, to its existing customers. It
-      provides a 24/7 \acrshort{soc} with expert analysts and researchers to give customers near real-time threat monitoring,
-      in-console threat annotations, and response to threats and suspicious events. Vigilance itself is a separate package from
-      SentinelOne.
+      % It is a \acrshort{mdr} service - providing threat monitoring, hunting, and response, to its existing customers. It
+      % provides a 24/7 \acrshort{soc} with expert analysts and researchers to give customers near real-time threat monitoring,
+      % in-console threat annotations, and response to threats and suspicious events. Vigilance itself is a separate package from
+      % SentinelOne that requires a separate purchase and subscription.
 
-      \textbf{\textit{How does SentinelOne get all this information from a device without having them even connected to the Internet?}}
+      % \textbf{\textit{How does SentinelOne get all this information from a device without having them even connected to the Internet?}}
 
-      On a network, before a machine is connected and talks to other devices
-      and gateways, it is going to do a broadcast and gives up information about itself. This is called an \acrshort{arp} Request.
-      As everything that is talking on Layer 2 is giving out their \acrshort{mac} address for exchange,
+      % On a network, before a machine is connected and talks to other devices and gateways, it is going to do a broadcast and gives up information about itself.
+      % This is called an \acrshort{arp} Request. As everything that is talking on Layer 2 is giving out their \acrshort{mac} address for exchange,
+      % SentinelOne is going to listen to that broadcast and then capture that information. This is how SentinelOne can get information about a device
+      % that is not connected to the Internet.
 
-      A lot of the times, most switches and routers do not change their default credentials
+      % A lot of the times, most switches and routers do not change their default credentials and are not configured properly, which makes it easy
+      % for an attacker to get in and do a malicious act.
 
-      As was said before, every single item that is connected to a network is constantly broadcasting information out to the rest of
-      network, in order to get and maintain an \acrshort{ip} address to keep accessing the Internet, even when it is not actively using
-      it (\textit{see \acrshort{dhcp} Protocol \cite{dhcpProcess}}). In case of an endpoint that has SentinelOne installed on it that
-      has Ranger, that Ranger is going to listen to that \acrshort{nic} on that device, then capture and interpret all the data that
-      is flowing across the network, called \acrshort{mib}s, thus displaying it on the Console.
+      % As was said before, every single item that is connected to a network is constantly broadcasting information out to the rest of
+      % network, in order to get and maintain an \acrshort{ip} address to keep accessing the Internet, even when it is not actively using
+      % it (\textit{see \acrshort{dhcp} Protocol \cite{dhcpProcess}}). In case of an endpoint that has SentinelOne installed on it that
+      % has Ranger, that Ranger is going to listen to that \acrshort{nic} on that device, then capture and interpret all the data that
+      % is flowing across the network, called \acrshort{mib}s, thus displaying it on the Console.
+
+      \subsection{Conclusion}
+
+      SentinelOne is a cybersecurity organization that provides \acrshort{edr} solutions for endpoint protection, detection, and response
+      capabilities to help organizations defend against advanced cyber threats. It leverages \acrshort{ai} and machine learning to
+      analyze and respond to security threats in real-time, providing organizations with comprehensive protection against
+      malware, ransomware, and other cyber threats. SentinelOne provides a wide range of features and capabilities, including
+      endpoint protection, detection, and response, as well as visibility into clients' \acrshort{it} systems and infrastructure.
+      SentinelOne has multiple components, such as Agents that are responsible for collecting security telemetry of an endpoint,
+      Ranger that is responsible for detecting other devices on the network, and other components that work together to provide
+      comprehensive security solutions for organizations. It is famous for its autonomous features and cloud-native architecture,
+      make it well-suited for securing modern \acrshort{it} environments against evolving cyber threats.
+
 
       \section{Research Sub-Question \#3: How can SentinelOne be integrated with the QaaS app?}
 
@@ -673,29 +733,26 @@
       identity and that their organization has SentinelOne subscription, therefore has right to access data.
       \acrshort{api} tokens can be created in the SentinelOne \acrshort{mgmt} Console.
 
-      The \acrshort{api} token will be shown only once; therefore the user needs to store it in a secure place.
+      The \acrshort{api} token will be shown only once; therefore, the user needs to store it in a secure place.
       The token generated by the user is time-limited. To renew the token, the user must generate a new one with
       the same above-steps.
 
       \subsection{Conclusion}
-      SentinelOne is a cybersecurity platform that provides endpoint protection, detection, and response capabilities
-      to help organizations defend against advanced cyber threats. It leverages \acrshort{ai} and machine learning to
-      analyze and respond to security threats in real-time, providing organizations with comprehensive protection against
-      malware, ransomware, and other cyber threats. % SentinelOne provides a wide range of features and capabilities, including
+      % SentinelOne provides a wide range of features and capabilities, including
       % endpoint protection, detection, and response, as well as visibility into clients' \acrshort{it} systems and infrastructure.
-      SentinelOne also provides a \acrshort{rest}ful \acrshort{api} that allows users to interact with the SentinelOne platform
+      SentinelOne provides a \acrshort{rest}ful \acrshort{api} that allows users to interact with the SentinelOne platform
       programmatically, enabling integration with other security tools and systems. The \acrshort{api} provides a wide range of
       functionalities, including the ability to retrieve information about devices, incidents, and threats, as well as the ability
       to perform actions such as quarantining devices, remediating threats, and generating reports. The author will use the official
       SentinelOne \acrshort{api} documentation to integrate SentinelOne with the \acrshort{qaas} app to display the data of
       \acrshort{qict} and its 400 clients in the \acrshort{qaas} app. The functionality such as filtering, sorting, and pagination
-      will also be taken into account to make the data more user-friendly. The author will utilize different kinds of Firebase Cloud
+      will also be considered to make the data more user-friendly. The author will utilize different kinds of Firebase Cloud
       Functions (\acrshort{http} onCall, Pub/Sub Triggers, Schedule functions) to call the SentinelOne \acrshort{api}s and display
       data. Firestore will also be used to store the user's preference from the \acrshort{qaas} app, such as the user's choice of
       what data they want to see, and visualization types. The author will also utilize Google Secret Manager to store the
       \acrshort{api} token and other sensitive information securely, so it will not be displayed in the code to avoid any security
       risks. Furthermore, \acrshort{ai} powered search engine Algolia will be used to search for specific data in the \acrshort{qaas} app,
-      as well as Firestore
+      as well as Firestore to make the search faster and more accurate.
 
 \end{multicols}
 
@@ -748,15 +805,15 @@
 
       Several main components of each chart type are:
       \begin{itemize}
-            \item Chart data: the most important part is the data wanted to be displayed. This could be a simple
+            \item Chart data: the most important part is the data that wanted to be displayed. This could be a simple
                   list of numbers, or more complex data structure, depending on the type of chart.
             \item Chart type: the second most important part is to specify the type of chart.
             \item Axes: the x and y-axes of the chart. The axes provide a reference frame for the data points and
-                  can be customized to suit user's needs.
+                  can be customized to suit the user's needs.
             \item Grid: the grid lines on the chart. These lines can help users better understand the data by
                   providing a reference frame.
             \item Touch response: the way the chart responds to user's touch events. It can be customized by
-                  providing different types of interactivity, such as highlighting a data point when it is touched.
+                  providing different types of interactivities, such as highlighting a data point when it is touched.
       \end{itemize}
 
       \textbf{Axis Types}
@@ -773,7 +830,7 @@
 
       \textbf{User Interaction}
 
-      The package greatly enhance \acrshort{ux} by adding the following functionalities:
+      The packages greatly enhance \acrshort{ux} by adding the following functionalities:
       \begin{itemize}
             \item Zooming and panning
             \item Crosshairs
@@ -786,78 +843,175 @@
 
       \textbf{Legend}
 
-      The package also supports legends, which display additional information about a chart series. The legends
+      The packages also support legends, which display additional information about a chart series. The legends
       can be used to collapse the series and can be wrapped or scrolled if items exceed the available bounds.
 
       \subsection{Comparison to other EDR solutions}
       To determine the best visualization techniques for SentinelOne, a comparison to other \acrshort{edr}
       solutions is needed. In this section, the author has looked into other alternatives to SentinelOne, which are
       a single \acrshort{epp}/\acrshort{edr} solution, created as a complete replacement of legacy \acrshort{av}.
-      Please keep in mind that in this sub-question, only the visualization techniques will be assessed, compared,
-      contrasted, evaluated, and discussed. The other factors such as pricing, technologies, and features will not
-      be discussed in this sub-question.
-
-      \subsubsection{Heimdal\textregistered}
-
-      On the homepage, information about each of the products/modules that are active under the current customer
-      account is shown. The chart, which can be seen include a variety of Bar charts, Pie charts, and Line charts,
-      include data regarding attacks, vulnerabilities, detections, infected/quarantined files, blocked/allowed
-      processes, third-party application vulnerabilities or \acrshort{os} updates, and quarantined/rejected e-mails.
+      Please keep in mind that in this sub-question, only visualization techniques and features of the solutions
+      will be assessed, compared, contrasted, evaluated, and discussed. Factors such as pricing and technologies
+      will not be discussed in this sub-question. The author also does not have access to the actual dashboards,
+      therefore pictures of the dashboards are likewise taken from the Internet or are available from the official
+      website. This is because \acrshort{qict} is not utilizing these solutions, setting up an account and getting
+      access to the dashboards will raise the project's budget, which is not feasible.
 
       \subsubsection{CrowdStrike}
 
+      CrowdStrike is an American cybersecurity company based in Austin, Texas, that provides cloud workload and
+      endpoint security, threat intelligence, and cyberattack response service. In the dashboard, CrowdStrike
+      offers fully customizable widgets to ensure that the various roles on security teams are provided with
+      the information that they need. The dashboard allows static prebuilt widgets that can be moved around on
+      a page, and customizable data views that enable each individual widget to be tailored for the users.
+
+      Features of CrowdStrike dashboard including:
+
+      \begin{itemize}
+            \item \textbf{Role assignment}: allows the user to assign roles to the users, so that they can see
+                  the data that is relevant to their role. For example, \acrshort{it} admins are allowed to have
+                  an eye on the status of the CrowdStrike Falcon Sensors within the environment. This enables them
+                  to  understand if there are any gaps and allows them to remediate any issues. A \acrshort{soc}
+                  analysts, executives, and vulnerability analysts can easily see any security threats detected
+                  or blocked.
+            \item \textbf{Fully customizable}: widgets can be customized to display just the right data needed.
+                  Users can add filters and change the lens with which to view the data, from donut to line charts.
+            \item \textbf{Advance dynamic filtering options}: filters can be applied dynamically to the dashboard,
+                  with data from a single source. This could help analysts focus on the most important criteria
+                  in their \gls{threathunting}.
+            \item \textbf{Customized Scheduled Reports}: reports based off dashboards or other data sources can
+                  be generated and sent automatically on a specified schedule.
+      \end{itemize}
+\end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/CrowdStrike/visualization-widgets.png}
+      \caption{Visualization widgets in CrowdStrike}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/CrowdStrike/add-widget.png}
+      \caption{Adding a widget in CrowdStrike}
+\end{figure}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/CrowdStrike/Scheduled_Report.png}
+      \caption{Create scheduled report in CrowdStrike}
+\end{figure}
+
+\begin{multicols}{2}
 
       \subsubsection{Trend Micro} % Fukujima
-      Trend Micro Apex One has customizable contents and layout of their dashboard. Workload Security uses Session
-      to save user's settings and remember the last view of the dashboard the next time the user log in.
-      The colour here is a bit basic with only the typical
-      red, green, blue, and yellow.
+      It is an American Japanese cybersecurity software company, providing cloud and enterprise cybersecurity in
+      environments like \acrshort{aws}, Microsoft, and Google Trend Micro Apex One has customizable contents and
+      layout of their dashboard. Workload Security uses Session to save user's settings and remember the last view
+      of the dashboard the next time the user logs in. The colour shown in the dashboard is more basic compared to
+      the other solution with only the typical red, green, blue, and yellow. Components of the
+      Trend Micro dashboard is:
 
-      Based on the three examples above, some conclusion can be drawn about the techniques they use in their
-      dashboard:
+      \begin{itemize}
+            \item \textbf{Tabs}: are the container for widgets. Tabs can be added or modified as needed. A dashboard
+                  can support up to 10 tags, and each tab can hold up to 10 widgets.
+            \item \textbf{Widgets}: like other solutions, widgets represent the core components of the dashboard.
+                  They contain visual charts and graphs that track threats and associate them with log statistics
+                  aggregated from one or several gateways.
+            \item \textbf{Event}: contains a log of record when a protection module rule or condition is triggered
+                  by Deep Security Agents. CrowdStrike Agents and Deep Security Manager also records when
+                  administrative or system-related events occur (a "system event"), such as administrator logging,
+                  or agent software being upgraded. Even data is used to populate the various reports and graphs
+                  in Deep Security Manager.
+            \item \textbf{Filter by tags}: in CrowdStrike Deep Security\textregistered, a tag is a unit of meta-data
+                  that can be applied to an Event to create an additional attribute for the Event that is not
+                  originally contained within the Event itself. Tags can be used to filter Events to simplify
+                  the task of the Event monitoring and management. A typical use of tagging is to distinguish between
+                  Events that require action and those that have been investigated and found to be benign.
+            \item \textbf{Filter by date and time range}: allows the user to filter the data by date and time range.
+                  For example, data can be displayed from either the last 24 hours, or the last 7 days.
+      \end{itemize}
 
-      \textbf{Visualization techniques}
+      % \subsubsection{Heimdal\textregistered{} And Huntress}
 
-      All three solutions use a combination and types of bar charts, pie charts, and line charts to display data.
-      This due to the fact that the type of data they are trying to display is categorical and numerical data.
-      Categorical data is data that can be divided into distinct groups or categories with no inherent order, and
-      one category  can only have one value.
+      % Other \acrshort{edr} solutions to compare are Heimdal and Huntress. The author is not going to get deep into details of
+      % the 2, as they have have similar features to the previous 2 solutions. Heimdal is a Danish cybersecurity company that
+      % provides a range of security solutions, including endpoint security, network security, and email security. Huntress, on
+      % the other hand an American cybersecurity company that provides \acrshort{edr} solution that is fully managed and
+      % monitored 24/7 by human \acrshort{soc}, who detect and investigate alerts, triage alerts, and provide actionable
+      % remediation steps or one-click solutions. On the homepage,  information about each of the products/modules that are
+      % active under the current customer account is shown. The chart,  which can be seen include a variety of Bar charts, Pie
+      % charts, and Line charts, include data regarding attacks,  vulnerabilities, detections, infected/quarantined files,
+      % blocked/allowed processes, third-party application  vulnerabilities or \acrshort{os} updates, and quarantined/rejected
+      % e-mails. Like the previous 2 solutions, they also have customizable dashboard that allows users to add, remove, and
+      % rearrange widgets to suit their needs. The  dashboard also has filtering based on date time or other criteria. Furthermore,
+      % there are access roles within Heimdal (admin and customer) that allow the user to see only the data that is relevant to
+      % their role.
 
-      Pie charts are used to visualize relative proportions or percentages of different categories within a
-      dataset. Each category is represented by a slice of pie, with the size of each slice corresponding to the
-      proportion of that category relative to the whole dataset.
-
-      Bar graphs are used to compare the quantities or frequencies of different categories. Each category is
-      represented by a separate bar, with the height (or length, in horizontal bar graphs) of the bar indicating
-      the value of that category.
-
-      In the case of SentinelOne integration to the \acrshort{qaas} app, both bar and pie charts can be used with
-      the addition of line charts to display the timeline of a Threat Incident, and Scatter charts to show the
-      relationship between two variables.
-
-      \textbf{Customizable Widgets}
-
-      All three solutions allow users to customize the layout and contents of their dashboards. This is important
-      as different users may have different preferences and requirements for the data they want to see. Customizable
-      widgets allow users to choose which data they want to display, how they want to display it, and where they
-      want to display it on the dashboard.
-
-      The SentinelOne dashboard of the \acrshort{qaas} app should have this functionality, therefore it should
-      store user's preference
-      \textbf{Coloring}
 
       \subsection{Conclusion}
-      In Flutter, there are two main libraries that support a wide range of chart types, which are: fl\_chart and
-      syncfusion\_flutter\_charts. Each chart type is suitable for a specific kind of data and provides a different
-      way to visualize the data. The SentinelOne data will mainly be displayed by using pie chart and bar graph
-      because the data is categorical and numerical. Comparing to the other \acrshort{edr} platform, the dashboard
-      of the \acrshort{qaas} app should have customizable widgets, allowing users to choose which data they want
-      to display, how they want to display it, and where they want to display it on the dashboard. The dashboard
-      should also store user's preferences and settings, so that the user can see the same view the next time they
-      log in. The colour of visualization charts should not be more than the typical red, green, blue, and yellow,
-      as it can be overwhelming and confusing to the user. Red colour is usually used to indicate a problem or a
-      threat,  green colour is used to indicate that everything is okay, while grey colour is used to indicate that
-      the data is neutral or not critical, or that the data is not available. Different colours such as purple,
-      blue, and yellow will also be used to indicate different categories of data. Additionally, the dashboard
-      should also have a legend to display additional information about the chart series.
+      In Flutter, there are three main libraries that support a wide range of chart types, which are: fl\_chart,
+      flutter\_echarts, and syncfusion\_flutter\_charts. Each chart type is suitable for a specific kind of data
+      and provides a different way to visualize the data. The SentinelOne data will mainly be displayed by using
+      pie chart and bar graph because the data is categorical and numerical. Comparing to the other \acrshort{edr}
+      platform, the dashboard of the \acrshort{qaas} app should have customizable widgets, allowing users to
+      choose which data they want to display, how they want to display it, and where they want to display it on
+      the dashboard. The dashboard should also store user's preferences and settings, so that the user can see
+      the same view the next time they log in. The colour of visualization charts should not be more than the
+      typical red, green, blue, and yellow, as it can be overwhelming and confusing to the user. Red colour is
+      usually used to indicate a problem or a threat,  green colour is used to indicate that everything is okay,
+      while grey colour is used to indicate that the data is neutral or not critical, or that the data is not
+      available. Different colours such as purple, blue, and yellow will also be used to indicate different
+      categories of data. Additionally, the dashboard should also have a legend to display additional information
+      about the chart series. Filtering, sorting, and searching the data should be added to the dashboard to make
+      the data more user-friendly and interactive.
 \end{multicols}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Trend Micro/dashboard-1.png}
+      \caption{Dashboard in Trend Micro}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Trend Micro/tABS.jpg}
+      \caption{A Tab in Trend Micro can contain up to 10 widgets}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Trend Micro/darg-and-drop.png}
+      \caption{Change the layout of the dashboard in Trend Micro by dragging and dropping the widgets}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Trend Micro/date-time-range.png}
+      \caption{Filter the data by date and time range in Trend Micro}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Trend Micro/path.png}
+      \caption{Add a tag to the data in Trend Micro}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.8\textwidth]{Figures/Heimdal/Home.png}
+      \caption{The dashboard of Heimdal\textregistered{}}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.9\textwidth]{Figures/Huntress/dashboard.png}
+      \caption{The dashboard of Huntress}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.9\textwidth]{Figures/Huntress/incidents.png}
+      \caption{Seeing incidents in Huntress}
+\end{figure}

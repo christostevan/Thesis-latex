@@ -40,7 +40,7 @@ style=apa,
 ]{biblatex}
 \addbibresource{references.bib}
 \makeglossaries
-\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{darkblue}{rgb}{0.337, 0.612, 0.839}
 \definecolor{codeGreen}{rgb}{0,0.6,0}
 \definecolor{codeRed}{rgb}{0.6,0,0}
 \definecolor{codeGray}{rgb}{0.5,0.5,0.5}
@@ -67,26 +67,6 @@ style=apa,
 \definecolor{dartBackcolour}{rgb}{0.95, 0.95, 0.96}
 \definecolor{tealString}{HTML}{CE9178}
 
-\lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
-  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, 
-    in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with, const, string,
-    import, export },
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{white},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{codeGreen}\ttfamily,
-  stringstyle=\color{tealString}\ttfamily,
-  morestring=[b]',
-  morestring=[b]",
-  ndkeywords={class, export, boolean, throw, implements, import, this, constructor, boolean, number},
-  sensitive=true,
-  backgroundcolor=\color{darkgrey},
-  basicstyle=\footnotesize\ttfamily\color{white},
-}
 
 \lstdefinelanguage{DOS}
 {
@@ -99,7 +79,6 @@ style=apa,
     morestring=[b]",
     morestring=[d]',
     basicstyle=\normalfont\ttfamily,
-    commentstyle=\color{eclipseStrings}, % style of comments
     stringstyle=\color{codeRed}, 
     numbers=left,
     numberstyle=\scriptsize, % \tiny
@@ -135,15 +114,47 @@ style=apa,
       {]}{{{\color{black}{]}}}}{1},
 }
 
+\lstdefinelanguage{JavaScript}{ % Define JavaScript language in listing
+  keywords={export, import, return, try, catch },
+  keywordstyle=\color{lavender}\bfseries,
+  ndkeywords={ Customer, string, null, CustomerModel, unknown },
+  ndkeywordstyle=\color{green}\bfseries,
+  emph={class, private, readonly, interface, undefined, async },
+  emphstyle=\color{blue}\bfseries,
+  emphstyle={[2]\color{yellow}},
+  emph={[2]stringify, serializeCustomerToJson, deserializeJsonToCustomer, parse, logError, data, collection},
+  identifierstyle=\color{lightblue},
+  commentstyle=\color{codeGreen}\ttfamily,
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morecomment=[s]{`}{`},
+  morestring=[b]',
+  morestring=[b]",
+  morestring=[b]`,
+  stringstyle=\color{tealString}\ttfamily,
+  sensitive=true,
+  backgroundcolor=\color{darkgrey},
+  basicstyle=\footnotesize\ttfamily\color{lightgreen},
+}
+
 \lstdefinelanguage{Dart}
 {
-    backgroundcolor=\color{dartBackcolour},   
-    commentstyle=\color{codeGreen},
-    keywordstyle=\color{magenta},
+    morekeywords={abstract, as, assert, async, await, break, case, catch, class, const, continue, covariant, default, deferred, do, else, enum, 
+    export, extends, extension, external, factory, false, final, finally, for, Function, get, hide, if, implements, import, in, inline, interface, 
+    is, late, library, mixin, new, null, on, operator, part,
+    rethrow, return, set, show, static, super, switch, sync, this, throw, true, try, typedef, var, void, while, with, yield},
+    backgroundcolor=\color{darkgrey},  
+    comment=[l]{//}, 
+    commentstyle=\color{codeGreen}\ttfamily,
+    keywordstyle=\color{blue}\bfseries,
     numberstyle=\tiny\color{codeGray},
-    stringstyle=\color{codePurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
+    stringstyle=\color{tealString}\ttfamily,
+    basicstyle=\ttfamily\color{white},
+    breakatwhitespace=false,
+    morestring=[b]", % Strings
+    morestring=[b]', % Character
+    sensitive=true,         
     breaklines=true,                 
     captionpos=b,                    
     keepspaces=true,                 
@@ -187,14 +198,14 @@ style=apa,
     escapeinside={<@}{@>}, 
     keywordstyle=\color{blue},
     morekeywords={partial, var, value, get, set},
-    emphstyle=\color{lavender},
-    emph={if, else, return, throw, switch, case},
-    emphstyle={[2]\color{lightblue}},
-    emph={[2]someLocalVariable, someGlobalVariable},
-    emphstyle={[3]\color{aqua}},
-    emph={[3]SomeOwnClassType},
-    emphstyle={[4]\color{lightgreen}},
-    emph={[4]ToLower},
+    % emphstyle=\color{lavender},
+    % emph={if, else, return, throw, switch, case},
+    % emphstyle={[2]\color{lightblue}},
+    % emph={[2]someLocalVariable, someGlobalVariable},
+    % emphstyle={[3]\color{aqua}},
+    % emph={[3]SomeOwnClassType},
+    % emphstyle={[4]\color{lightgreen}},
+    % emph={[4]ToLower},
 }
 
 \newglossaryentry{Pentest}
@@ -246,7 +257,7 @@ style=apa,
     }
 }
 \newglossaryentry{SNMP}{
-    name=\acrshort{snmp},
+    name=\acrshort{snmp},rl
     description={is a protocol that runs on a lot of network equipment for managing and monitoring network devices 
     (\textit{\cite{snmpMonitoring}}) 
     }
@@ -284,7 +295,7 @@ style=apa,
 \newglossaryentry{networkTap}{
     name=Network \acrshort{tap},
     description={ is a simple device that connects directly to the cabling infrastructure to split or copy packets for use ion analysis, security
-    or general network management
+    or general network management (\textit{\cite{networkTap}}).
     }
 }
 \newglossaryentry{CRM}{
@@ -435,6 +446,7 @@ style=apa,
 \newacronym{gb}{GB}{Gigabyte}
 \newacronym{gcp}{GCP}{Google Cloud Platform}
 \newacronym{gddpr}{GDDPR}{General Data Protection Regulation}
+\newacronym{gui}{GUI}{Graphical User Interface}
 \newacronym{gpo}{GPO}{Group Policy Object}
 \newacronym{grc}{GRC}{Governance, Risk, and Compliance}
 \newacronym{guid}{GUID}{Global Unique Identifier}
@@ -480,6 +492,7 @@ style=apa,
 \newacronym{mfa}{MFA}{Multi-Factor Authentication}
 \newacronym{mgmt}{MGMT}{Management}
 \newacronym{mib}{MIB}{Management Information Base}
+\newacronym{mime}{MIME}{Multipurpose Internet Mail Extensions}
 \newacronym{MiB}{MiB}{Mebibytes}
 \newacronym{mkb}{MKB}{Midden- en Kleinbedrijf}
 \newacronym{ml}{ML}{Machine Learning}
@@ -499,6 +512,9 @@ style=apa,
 \newacronym{nav}{NAV}{Network Anlysis and Visibility}
 \newacronym{ndr}{NDR}{Network Detection and Response}
 \newacronym{ngav}{NGAV}{Next-Generation Antivirus}
+\newacronym{nges}{NGES}{Next-generation Endpoint Security}
+\newacronym{ngfw}{NGFW}{Next-Generation Firewall}
+\newacronym{nhl}{NHL}{Noordelijke Hogeschool Leeuwarden}
 \newacronym{nic}{NIC}{Network Interface Controller}
 \newacronym{nist}{NIST}{National Institute of Standards and Technology}
 \newacronym{nosql}{NoSQL}{Not Only SQL}
@@ -605,7 +621,6 @@ style=apa,
 \clearpage
 \addcontentsline{toc}{section}{List of Tables}
 \listoftables
-\clearpage
 \printglossaries
 \include{Sections/Introduction}
 \include{Sections/researchDesign}
@@ -614,5 +629,5 @@ style=apa,
 \include{Sections/Conclusions}
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
-% \include{Sections/Appendix}
+\include{Sections/Appendix}
 \end{document}

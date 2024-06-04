@@ -1,13 +1,53 @@
 \chapter*{Summary}
 
-SentinelOne is a cybersecurity company based in California, United States that has a product of the same name. It is an
-\acrshort{edr} platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the
-traditional \acrshort{av}. It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is
-deployed on the endpoint itself. The purpose of an \acrshort{edr} platform is to have a centralized
+% The field of cybersecurity is a rapidly evolving field, with new threats and vulnerabilities being discovered every day.
+% The traditional approach to cybersecurity is to have a firewall, antivirus, and a backup solution. However, with the rise of
+% more sophisticated threats, more cyber actors are looking for the new vulnerabilities in a network. This means that malware
+% too, is evolving. There are now an increased in sophistication, using advance techniques to evade detection, more targeted
+% attacks, aiming for specific industries or organizations to maximize damage or achieve specific goals. Thus, cybersecurity
+% is becoming more and more relevant to business organizations, primarily because a successful cyberattack can cause severe
+% damage to an organization, whether it is on their reputation or financial loss. Small businesses are not immune to this, and
+% they are often the target of cyberattacks due to their lack of resources to invest in cybersecurity, especially when they
+% do not have their employees trained in cybersecurity.
 
 \acrshort{qict} is a small cybersecurity consultant firm based in Emmen, Drenthe, the Netherlands. It is a partner of Pax8,
 which is a Microsoft distributor, therefore they handle all cybersecurity related to Windows and Microsoft products. They
 have over 400 clients, all spread throughout the Netherlands, and their main target audience is small to medium-sized
 businesses. Recently, as of last year with the assistance of their partner, Pax8, \acrshort{qict} has purchased the rights
 to a SentinelOne subscription. Since then, they have been utilizing the product to provide better endpoint security to their clients.
-\acrshort{qict} itself
+
+SentinelOne is a cybersecurity company based in California, United States that has a product of the same name. It is an
+\acrshort{edr} platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the
+traditional \acrshort{av}. It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is
+deployed on the endpoint itself. The purpose of an \acrshort{edr} platform is to have a centralized location to monitor and
+respond to threats on all endpoints in a network, in a company. SentinelOne has Agents that act as a replacement for the
+traditional \acrshort{av}. The traditional \acrshort{av} relies heavily on signature-based detection, which requires
+identifying a unique string of bytes (signature) from known malware, usually stored in a \acrshort{db}. This method
+struggles against new, unknown (zero-day) threats and malware that changes frequently. SentinelOne, on the other hand,
+and similar next-generation solutions use behavioural analysis to identify malware based on its actions rather than its code.
+This allows them to detect and respond to new, unknown threats that traditional \acrshort{av} solutions would miss.
+
+The \acrshort{qaas} app is an internal system of \acrshort{qict}, serving as an \acrshort{erp} web application to manage
+their clients, products, and services. The \acrshort{qaas} itself has already 5 \acrshort{api}s connected to it, which are:
+N-Central, Bodyguard.io, Resello, Snelstart, and PerfectView. N-Central is used for monitoring and managing the clients'
+networks. Bodyguard.io is used for email security, to prevent any malicious downloads from phising e-mails. Resello,
+which is a product of Pax8, is used to manage the clients' Microsoft subscriptions. Snelstart is used for the financial administration
+of \acrshort{qict}. PerfectView is used for the \acrshort{crm} of \acrshort{qict}. Together, these \acrshort{api}s provide
+\acrshort{qict} with the tools to manage their clients, products, and services. A client that has one of \acrshort{qict}'s subscription,
+can access the \acrshort{qaas} app and see their subscription, and the status of their network, and the status of their endpoints.
+
+The integration of the SentinelOne \acrshort{api} into the \acrshort{qaas} app is possible through SentinelOne \acrshort{rest} \acrshort{api},
+with the use of \acrshort{qaas} app existing framework and services, Flutter and Firebase. Once a SentinelOne Agent is properly installed on an
+endpoint, create a new SentinelOne account with appropriate read permissions, and store the generated \acrshort{api} key in Google Secret Manager,
+where it is there in the cloud, secured and encrypted. Therefore, required Firebase Cloud Functions are created to interact with the SentinelOne
+\acrshort{api} to retrieve the data from SentinelOne, and store it in Firebase Firestore. The Flutter client then will interact with the
+Firestore to retrieve the data from SentinelOne, and display it to the user.
+
+Based on comparing to other existing \acrshort{edr} platforms, a visualization is necessary, to provide a better understanding of the data.
+The visualization should be as simple as possible, so as not to overwhelm the user with too much information. The users should be able to
+customize the visualization widgets to their liking, choosing what kind of data they want to see, and how they want to see it. The visualization
+regarding SentinelOne should be able to show the status of the endpoints, the threats detected, and the actions taken by the SentinelOne Agent.
+The type of data that can be visualized are limited, normally it requires an index and a value (\acrshort{eg} number or date time) to be visualized.
+Flutter itself already has 3 packages that can be used to make visualization charts, which are: fl\_chart, charts\_flutter, and syncfusion\_flutter\_charts.
+
+

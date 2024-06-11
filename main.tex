@@ -23,6 +23,7 @@
 \usepackage[parfill]{parskip}
 \usepackage{listings} % For writing code lines
 \usepackage{fontspec}
+\usepackage{pdfpages}
 \setmainfont{Times New Roman}
 \usepackage{geometry}
  \geometry{ % APA all lines need to be equal 24mm
@@ -257,11 +258,12 @@ style=apa,
     }
 }
 \newglossaryentry{SNMP}{
-    name=\acrshort{snmp},rl
+    name=\acrshort{snmp},
     description={is a protocol that runs on a lot of network equipment for managing and monitoring network devices 
     (\textit{\cite{snmpMonitoring}}) 
     }
 }
+
 \newglossaryentry{MIB}{
     name=\acrshort{mib},
     description={is a hierarchical \acrshort{db} used in \acrshort{snmp} to define the structure of the data that can be managed 
@@ -610,6 +612,8 @@ style=apa,
 
 \begin{document}
 \include{Sections/Front-Page}
+\include{Sections/VersionControl}
+\include{Sections/SupervisorApproval}
 \include{Sections/Summary}
 \tableofcontents
 \clearpage

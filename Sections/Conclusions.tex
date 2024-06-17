@@ -1,23 +1,22 @@
 \chapter{Conclusion and Recommendation}
 \section{Conclusion}
-Cybersecurity is a complex field and threat actors are ever evolving their tradecraft in clever ways. Every single
+Cybersecurity is a complex field and threat actors are ever evolving their trade-craft in clever ways. Every single
 running business is not too small to be attacked, but they may be too small for them to make the news. Therefore, transparency
 to the clients is important, because lack of visibility to the clients can lead to a loss of trust. This graduation project serves
 as the first iteration by \acrshort{qict} about the integration of SentinelOne to its internal application, the \acrshort{qaas} app.
 
-The \acrshort{qaas} app is a cloud-based application that is used by \acrshort{qict} to provide a better service to their clients.
+The \acrshort{qaas} app is a cloud-based web application that is used by \acrshort{qict} to provide a better service to their clients.
 The app itself is a multi-tenant application, meaning that it can be used by multiple clients at the same time. The app is made
-using Flutter, a cross-platform framework that is developed by Google, and Firebase as the back-end cloud solution. The app itself
+using Flutter, a cross-platform framework that is developed by Google, and Firebase as the back-end cloud solution. The app
 has several modules that are used by different user roles, such as the clients, the helpdesk, and the \acrshort{it} admins. The app
 is also integrated with several \acrshort{api}s, such as the N-Central, Resello, Snelstart, Bodyguard.io, and PerfectView. The app
 also uses Algolia, an \acrshort{ai} powered search engine, to make the search faster and more accurate by allowing typos.
 
-The \acrshort{qaas} app itself has 3 different user roles in its system: the clients, the helpdesk, and the \acrshort{it} admins.
-Alongside that, there are also modules, user tags, and templates. Modules are basically the page view of the app, assigning modules
-to an appropriate user role is done by the \acrshort{it} admins. User tags are assigned to a user to give them permission to see
-or edit certain modules. Templates
+The \acrshort{qaas} app itself has 3 different modules and user tags to help with the authorization of the app.
+Modules are basically the page view of the app, assigning modules to an appropriate user tag is done by the \acrshort{it} admins. User
+tags are assigned to a user to give them permission to see or edit certain modules.
 
-SentinelOne is a cybersecurity company based in California, United States that has a product of the same name. It is an \acrshort{edr}
+SentinelOne is an American cybersecurity company that has a product of the same name. It is an \acrshort{edr}
 platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the traditional \acrshort{av}.
 It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is deployed on the endpoint itself.
 The purpose of an \acrshort{edr} platform is to have a centralized view of all the endpoints that are connected to the platform, and
@@ -53,7 +52,7 @@ sorting, and pagination will be handled by inputting the correct headers to the 
 
 In the research phase of this project, the Company Supervisor mentioned that there are some issues regarding the data coming
 from N-Central \acrshort{api} (which also one of the \acrshort{api} used for security) that sometimes can cause data discrepancy. The author
-has looked into some N-Central data and noticed some similarities with some SentinelOne data structure. The idea of this recommendation
+has looked into said N-Central data and noticed some similarities with some SentinelOne data structure. The idea of this recommendation
 is to combine the data from SentinelOne and N-Central that have similar structure, to then make the data to be more accurate and reliable.
 
 For example, N-Central has one \acrshort{api} that can automatically check for an update of an application
@@ -80,6 +79,12 @@ The idea is to put SentinelOne data into the Redis \acrshort{db} too, with the l
 and then fetch the data from the Redis \acrshort{db} instead of directly fetching it from Firestore and SentinelOne \acrshort{api}
 constantly. Implementing Redis will make querying the data faster than Firestore, providing better \acrshort{ux} for the users.
 
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=1.0\textwidth]{Figures/Redis Caching.jpg}
+      \caption{How the infrastructure would look if Redis is implemented}
+\end{figure}
+
 However, there is one potential downside that the author sees when using Redis in this project. According to these articles
 (\textit{\cite{redisIsNoLongerFree}}, and \textit{\cite{redisMomento}}), as of March 2024, Redis is no  longer open source. They
 changed the official licence for all future versions. This has serious consequences for the open-source community and some companies
@@ -88,55 +93,45 @@ of Redis from a Redis provider without a direct partnership with Redis. Nonethel
 author believes that in the long run, using Redis as a means of caching the data will be beneficial for the \acrshort{qaas} app,
 especially when the number of customers have grown and the SentinelOne data gets called more frequently.
 
-
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{Figures/Redis Providers.jpg}
-  \caption{Redis providers now cannot distribute Redis anymore without a direct partnership with Redis, thefore Redis itself controlling
-    the pricing.}
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.9\textwidth]{Figures/Redis Providers.jpg}
+      \caption{Redis providers now cannot distribute Redis anymore without a direct partnership with Redis, therefore Redis itself controls
+            the pricing.}
 \end{figure}
 
+% \subsection{Compacting everything into one function}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{Figures/Redis Caching.jpg}
-  \caption{How the infrastructure would look if Redis is implemented}
-\end{figure}
+% In the initial phase of the development, the author thought that it was a good idea to make just one function for fetching all data
+% related to SentinelOne, for the purpose of simplicity for other developers, as there are already more than 50 functions that the
+% \acrshort{qaas} app has. However, near the end of the development, the author realize that this may not be the best approach because
+% of the number of requests that one user can make when navigating in the SentinelOne page of the \acrshort{qaas} app. In essence,
+% when landing through the dashboard, 4 requests already need to be made to fetch the necessary data to be displayed. And every time
+% the user refreshes that page or navigate back by using the header button in which the traversal process is done by pushing another
+% route to the navigation stack, therefore calling the \texttt{FutureBuilder} of that page again and making the same 4 initial requests.
+% After much research, the author found out that Cloud Function v2.0 has no limit on the number of requests that can be made,
+% (\textit{\cite{firebaseCloudFunctionLimit}}). As for the costing, the price can be increased after the limit of 2 million requests
+% per month has been exceeded by \$0.40 per million requests (\textit{\cite{pricing}}).
 
-
-\subsection{Compacting everything into one function}
-
-In the initial phase of the development, the author thought that it was a good idea to make just one function for fetching all data
-related to SentinelOne, for the purpose of simplicity for other developers, as there are already more than 50 functions that the
-\acrshort{qaas} app has. However, near the end of the development, the author realize that this may not be the best approach because
-of the number of requests that one user can make when navigating in the SentinelOne page of the \acrshort{qaas} app. In essence,
-when landing through the dashboard, 4 requests already need to be made to fetch the necessary data to be displayed. And every time
-the user refreshes that page or navigate back by using the header button in which the traversal process is done by pushing another
-route to the navigation stack, therefore calling the \texttt{FutureBuilder} of that page again and making the same 4 initial requests.
-After much research, the author found out that Cloud Function v2.0 has no limit on the number of requests that can be made,
-(\textit{\cite{firebaseCloudFunctionLimit}}). As for the costing, the price can be increased after the limit of 2 million requests
-per month has been exceeded by \$0.40 per million requests (\textit{\cite{pricing}}).
-
-It seems that the issue is not going to make any significant damage to the app, if none. However, if the author needs to be
-critical and if given the chance to start over again, the author would have gone to a slightly different approach by separating
-the cloud functions into few parts to reduce the number of responsibility that a function must do. This way, the author can
-optimize the performance of the app, and make the code more readable and maintainable.
+% It seems that the issue is not going to make any significant damage to the app, if none. However, if the author needs to be
+% critical and if given the chance to start over again, the author would have gone to a slightly different approach by separating
+% the cloud functions into few parts to reduce the number of responsibility that a function must do. This way, the author can
+% optimize the performance of the app, and make the code more readable and maintainable.
 % Modules issue
 
 % N-Central API issue: Not all data is correct
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{Figures/Cloud Function no limit.png}
-  \caption{The table comparison from the article (\textit{\cite{firebaseCloudFunctionLimit}}) showing that Cloud Function v2.0 has no
-    limit on the number of requests that can be made.}
-\end{figure}
+% \begin{figure}[H]
+%       \centering
+%       \includegraphics[width=0.9\textwidth]{Figures/Cloud Function no limit.png}
+%       \caption{The table comparison from the article (\textit{\cite{firebaseCloudFunctionLimit}}) showing that Cloud Function v2.0 has no
+%             limit on the number of requests that can be made.}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.9\textwidth]{Figures/Pricing.png}
-  \caption{The pricing information for Cloud Function v2.0 (\textit{\cite{pricing}}).}
-\end{figure}
+% \begin{figure}[H]
+%       \centering
+%       \includegraphics[width=0.9\textwidth]{Figures/Pricing.png}
+%       \caption{The pricing information for Cloud Function v2.0 (\textit{\cite{pricing}}).}
+% \end{figure}
 
 
 % \subsection{Structure of the front-end codebase}

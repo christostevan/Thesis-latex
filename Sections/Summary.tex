@@ -13,7 +13,20 @@
 \acrshort{qict} is a small cybersecurity consultant firm based in Emmen, Drenthe, the Netherlands. It is a partner of Pax8,
 which is a Microsoft distributor, therefore they handle all cybersecurity related to Windows and Microsoft products. They
 have over 400 clients, all spread throughout the Netherlands, and their main target audience is small to medium-sized
-businesses. Recently, as of last year with the assistance of their partner, Pax8, \acrshort{qict} has purchased the rights
+businesses. They have their own internal system, called \acrshort{qaas}, which is a web application integrated with
+various cybersecurity and financial tools that \acrshort{qict} uses to manage their business processes regarding their
+clients, products, and services.
+
+The \acrshort{qaas} app is an internal system of \acrshort{qict}, serving as an \acrshort{erp} web application to manage
+their clients, products, and services. The \acrshort{qaas} itself has already 5 \acrshort{api}s connected to it, which are:
+N-Central, Bodyguard.io, Resello, Snelstart, and PerfectView. N-Central is used for monitoring and managing the clients'
+networks. Bodyguard.io is used for email security, to prevent any malicious downloads from phising e-mails. Resello,
+which is a product of Pax8, is used to manage the clients' Microsoft subscriptions. Snelstart is used for the financial administration
+of \acrshort{qict}. PerfectView is used for the \acrshort{crm} of \acrshort{qict}. Together, these \acrshort{api}s provide
+\acrshort{qict} with the tools to manage their clients, products, and services. A client that has one of \acrshort{qict}'s subscription,
+can access the \acrshort{qaas} app and see their subscription, and the status of their network, and the status of their endpoints.
+
+Recently, as of last year with the assistance of their partner, Pax8, \acrshort{qict} has purchased the rights
 to a SentinelOne subscription. Since then, they have been utilizing the product to provide better endpoint security to their clients.
 
 SentinelOne is a cybersecurity company based in California, United States that has a product of the same name. It is an
@@ -26,15 +39,6 @@ identifying a unique string of bytes (signature) from known malware, usually sto
 struggles against new, unknown (zero-day) threats and malware that changes frequently. SentinelOne, on the other hand,
 and similar next-generation solutions use behavioural analysis to identify malware based on its actions rather than its code.
 This allows them to detect and respond to new, unknown threats that traditional \acrshort{av} solutions would miss.
-
-The \acrshort{qaas} app is an internal system of \acrshort{qict}, serving as an \acrshort{erp} web application to manage
-their clients, products, and services. The \acrshort{qaas} itself has already 5 \acrshort{api}s connected to it, which are:
-N-Central, Bodyguard.io, Resello, Snelstart, and PerfectView. N-Central is used for monitoring and managing the clients'
-networks. Bodyguard.io is used for email security, to prevent any malicious downloads from phising e-mails. Resello,
-which is a product of Pax8, is used to manage the clients' Microsoft subscriptions. Snelstart is used for the financial administration
-of \acrshort{qict}. PerfectView is used for the \acrshort{crm} of \acrshort{qict}. Together, these \acrshort{api}s provide
-\acrshort{qict} with the tools to manage their clients, products, and services. A client that has one of \acrshort{qict}'s subscription,
-can access the \acrshort{qaas} app and see their subscription, and the status of their network, and the status of their endpoints.
 
 The integration of the SentinelOne \acrshort{api} into the \acrshort{qaas} app is possible through SentinelOne \acrshort{rest} \acrshort{api},
 with the use of \acrshort{qaas} app existing framework and services, Flutter and Firebase. Once a SentinelOne Agent is properly installed on an

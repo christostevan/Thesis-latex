@@ -1,6 +1,25 @@
 \chapter{Realization}
 
-The \acrshort{qaas} web application consist of complex
+The integration of SentinelOne to the \acrshort{qaas} web application consist of doing multiple steps such as:
+\begin{enumerate}
+  \item Study the existing codebase of the \acrshort{qaas} App in Flutter
+  \item Setting the Firebase Cloud Functions, which includes:
+        \begin{itemize}
+          \item Creating a new Firebase environment in Node.js with \acrshort{ts} as a template in generation 2.0
+        \end{itemize}
+  \item Studying the SentinelOne \acrshort{api} documentation to determine which data is useful to share in the client
+  \item Testing the \acrshort{http} request connection to SentinelOne \acrshort{api}s
+  \item Modelling the \acrshort{json} data response in Flutter in separate classes
+  \item Setting up and creating a new secret in Google Secret Manager about the authorized SentinelOne \acrshort{api} token
+  \item Setting up permission of the Service Account in Firebase so that the Cloud Functions can access the Secret Manager
+  \item Setting up how the database is structured in the Firestore based on their organization \acrshort{id}
+  \item Setting up the read, write, and update permission of the Firestore database so that not every user can make changes to the
+        \acrshort{db}
+  \item Fixing bugs and checking for responsiveness for different screen sizes
+  \item Unit testing by making sure every functionality work as intended and every widget in the client is wrapped so that there will
+        be not overflow or pixel issues in the screen that has higher resolution
+  \item Deploying everything to the Preview channel of the live environment
+\end{enumerate}
 
 % Because the \acrshort{qaas} web application itself is already built on top of existing frameworks, libraries, and technologies, the
 % integration of the SentinelOne was relatively straightforward. The \acrshort{api} itself provided by SentinelOne is well-documented,
@@ -38,10 +57,10 @@ The types of functions that are used throughout the project are the following:
   \item \texttt{onRequest}: This type of function is used to handle \acrshort{http} requests, which are called from the client-side.
         It is mainly for initial testing, as setting this function up is easier and faster. However, the author does not recommend
         using this in the production, as it lacks authentication and security for the end-user.
-  \item \texttt{onSchedule}: This type of function is used to handle scheduled functions, normally called cron-jobs, which are called
-        at a specific time. It is used to handle scheduled tasks that need to be executed at a specific time. There is only one
-        scheduled function in the project, which is used to replace the old SentinelOne \acrshort{api} key with a new one that is
-        securely stored in Google Secret Manager, therefore ensuring proper connection and access to the secret vault, every month.
+        % \item \texttt{onSchedule}: This type of function is used to handle scheduled functions, normally called cron-jobs, which are called
+        %       at a specific time. It is used to handle scheduled tasks that need to be executed at a specific time. There is only one
+        %       scheduled function in the project, which is used to replace the old SentinelOne \acrshort{api} key with a new one that is
+        %       securely stored in Google Secret Manager, therefore ensuring proper connection and access to the secret vault, every month.
   \item \texttt{Cloud Firestore Triggers}: this function is used for the Algolia extension, which is used to listen to changes in the
         Firestore database and update the Algolia index accordingly. This function is used to keep the Algolia index up-to-date with
         the Firestore database, ensuring that the search functionality works correctly.
@@ -74,7 +93,6 @@ function, the author can then easily configure on which Secrets his cloud functi
 %   more flexible, it also introduces challenges, particularly in debugging and maintaining the code. To prevent this, both the author and
 %   the Company Supervisor have decided to use and adhere to \acrshort{ts} and ESLint rules, to ensure static typing, code quality and
 %   consistency to the coding standards.
-% \end{multicols}
 
 % \begin{lstlisting}[language=JavaScript, caption={Example of Class and Interface defined in Models}]
 
@@ -300,8 +318,6 @@ function, the author can then easily configure on which Secrets his cloud functi
 %     true
 %   \end{lstlisting}
 
-% \begin{multicols}{2}
-
 % \subsection{SentinelOne NPM packages}
 % \acrshort{npm} packages are a necessary component when developing a project in JavaScript, as they are used for managing dependencies
 % in Node.js projects. Below are the \acrshort{npm} packages that are used in the project:
@@ -319,7 +335,6 @@ function, the author can then easily configure on which Secrets his cloud functi
 %         functions locally before deploying them to the Firebase Cloud.
 % \end{itemize}
 
-
 \subsection{Firestore database structure}
 
 Inside the Firestore, there are various collections (tables) that hold different data. Most of the collections are used to store the
@@ -329,7 +344,7 @@ depending on how SentinelOne structures the data in its \acrshort{json} format. 
 in common, which is the siteId. The idea is to store all the clients' data in one collection, therefore differentiating the data
 based on client's company, an index of client's site ID (which is unique from each other) is used to separate the data.
 
-The second category is the specific SentinelOne data, win which the data does not only belong to a specific site ID, but also to a
+The second category is the specific SentinelOne data, win which the data does not only belong to a specific site \acrshort{id}, but also to a
 specific ID from another SentinelOne data. For example, each threat can have their own unique timeline of events that have happened.
 Therefore, another field is required that is used as a second index to reference the desired data. The first and second category will
 then have different logic in the cloud function to fetch the data.
@@ -395,8 +410,6 @@ converted to and from \acrshort{json}.
 
 
 \begin{lstlisting}[language=JavaScript, caption={Model class in the back-end}]
-
-
   export interface Customer {
   customerId: string;
   customerName: string;
@@ -539,43 +552,42 @@ For every Algolia extension, it is recommended to create a separate \acrshort{ap
 The author is using the custom \acrshort{api} key that was made by the Company Supervisor, that has restriction on the index that it can access, and the
 operations that it can do.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Firebase Algolia Extension.png}
-  \caption{The Algolia configuration when installing the extension in the Firebase Console}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Firebase Algolia Extension.png}
+%   \caption{The Algolia configuration when installing the extension in the Firebase Console}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Algolia API Key needed.png}
-  \caption{The Algolia \acrshort{api} key that is needed to be included in the Firebase Console when installing the extension}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Algolia API Key needed.png}
+%   \caption{The Algolia \acrshort{api} key that is needed to be included in the Firebase Console when installing the extension}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Create new Algolia keys.png}
-  \caption{Creating a new Algolia key to use in the Firebase Extension}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Create new Algolia keys.png}
+%   \caption{Creating a new Algolia key to use in the Firebase Extension}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Create new Algolia keys.png}
-  \caption{Creating a new Algolia key to use in the Firebase Extension}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Create new Algolia keys.png}
+%   \caption{Creating a new Algolia key to use in the Firebase Extension}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Algolia API Key restrictions.png}
-  \caption{Algolia \acrshort{api} key restrictions that can be set up when creating a new key}
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Algolia API Key restrictions.png}
+%   \caption{Algolia \acrshort{api} key restrictions that can be set up when creating a new key}
+% \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/Algolia Configuration.png}
-  \caption{All indexes need to have a configuration in which what searchable attributes that the user can search for, based on the
-    modelling of the JSON data structure}
-
-\end{figure}
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/Algolia Configuration.png}
+%   \caption{All indexes need to have a configuration in which what searchable attributes that the user can search for, based on the
+%     modelling of the JSON data structure}
+% \end{figure}
 
 \section{The Front-end}
 
@@ -614,7 +626,7 @@ that can cause the widget to be cut off or not shown at all.
 
 %   This way, a \acrshort{pdf} or \acrshort{html} file can be downloaded on the client side using any type of web browser when running the
 %   \acrshort{qaas} app.
-% \end{multicols}
+
 
 % \begin{lstlisting}[language=Dart, caption={How calling and modelling a response works in Flutter}]
 
@@ -760,7 +772,6 @@ that can cause the widget to be cut off or not shown at all.
 %   }
 % \end{lstlisting}
 
-% \begin{multicols}{2}
 \section{Deploying everything to the Live environment}
 
 In the final phase of the project, after making sure that everything works and tested properly, the author needed to deploy the project

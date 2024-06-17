@@ -1,11 +1,13 @@
 \chapter{Introduction}
+
 \section{Project Background}
+
 In today's rapidly evolving digital landscape, cybersecurity remains a paramount concern for organizations
 across all industries. With the proliferation of sophisticated cyber threats and the increasing complexity of
 \acrshort{it} infrastructures, business are constantly seeking new and innovative ways to protect their
 digital assets and fortify their defences and safeguard sensitive data. In this pursuit, cybersecurity
 consultant firms have emerged as a critical ally for organizations, providing expert guidance and support in
-the development and implementation of robust cybersecurity strategies, playing a pivotal role in offering
+the development and implementation of robust cybersecurity strategies and playing a pivotal role in offering
 expertise and guidance to help organizations navigate the intricate realm of cybersecurity.
 
 One of the key strategies employed by cybersecurity consultants is the integration of third-party security
@@ -16,10 +18,20 @@ can enhance their capabilities and provide a more comprehensive and effective se
 clients, streamline their operations, provide clients with robust, proactive security measures, and improve
 their overall service delivery.
 
-SentinelOne emerges as one of the leading organizations in the cybersecurity real, offering cutting-edge
-endpoint protection and threat intelligence solutions. It leverages advance \acrshort{ai} and \acrshort{ml}
-algorithms, providing comprehensive protection against malware, ransomware, and other cyber-threats. It is one
-of the must-have protection tools for business organizations looking to bolster their cybersecurity posture
+When talking about cybersecurity solutions, SentinelOne emerges as one of the leading organizations in the field
+(\textit{\cite{gartnerEDR}}), offering cutting-edge endpoint protection and threat intelligence solutions. It leverages advance
+\acrshort{ai} and \acrshort{ml} algorithms, providing comprehensive protection against malware, ransomware, and other cyber-threats.
+
+SentinelOne provides invaluable data for cybersecurity analysts and \acrshort{soc} teams by delivering comprehensive insights into
+malware analysis, threat hunting, and threat detection. Its advanced \acrshort{edr} capabilities enable real-time monitoring and
+automated threat response, allowing cybersecurity experts to quickly identify and neutralize potential threats. The platform's
+detailed telemetry data aids uncovering the behaviour and origin of malicious software. For threat hunting, SentinelOne's robust
+search capabilities and contextual data provide the tools needed to proactively identify and mitigate security risks.
+
+Additionally, its automated detection and response mechanism enhance protection and prevention efforts, ensuring that security teams
+are prepared to act swiftly and effectively in the event of a real-time cybersecurity incident. This kind of information and functionality
+empowers the blue team to develop informed strategies and execute precise, timely interventions to safeguard organizational assets. It is
+definitely one of the must-have protection tools for business organizations looking to bolster their cybersecurity posture
 and safeguard their digital assets.
 
 As the main topic of this graduation work placement project, the author
@@ -29,82 +41,9 @@ into \acrshort{qict} clients by providing them with real-time data and visibilit
 enabling them to make informed decisions and take proactive measures to protect their own digital assets and
 mitigate security risks.
 
-\section{Problem Statement}
-The company currently manages numerous third-party \acrshort{api}s for the above-mentioned purposes.
-Currently, the company has already offered SentinelOne endpoint protection subscription to its clients.
-However, the clients cannot access to SentinelOne dashboard without \acrshort{qict} making the
-necessary accounts for them first. Making the accounts for the clients can be a time-consuming process,
-seeing that the clients reach up to 400 active customers, therefore an integration of SentinelOne
-to \acrshort{qict}'s own internal system is more advantageous to the company by allowing clients to see
-their SentinelOne data related to their system and endpoint health directly through \acrshort{qict}'s
-platform. Moreover, it is not beneficial from a business perspective to direct customers to external
-security solutions, as most of the data in SentinelOne is in English and \acrshort{qict} want to be the
-primary resource for cybersecurity assistance for its clients around the Netherlands.
+\section{Background Introduction}
 
-Furthermore, the SentinelOne dashboard is not user-friendly to the clients. It is made to directly assist cybersecurity
-specialist like threat analysts working in \acrshort{soc} department or \acrshort{it} administrators. Therefore,
-\acrshort{qict} also wishes that this integration to be designed as user-friendly as possible, considering
-that most clients have limited or no knowledge at all about cybersecurity or computers. The integration of SentinelOne to the
-\acrshort{qaas} App simply adds a layer of functionality and transparency to the clients, enabling them to see and easily
-understand the data.
-
-Thus, the company has tasked the author with the development of the SentinelOne security threat platform
-integration for continuous cybersecurity monitoring within the \acrshort{qaas} app as the main topic of his
-graduation work  placement project.
-
-\section{Project Objectives}
-In the end of this project which consist of 90-99 working days, the following objectives should be achieved:
-\begin{enumerate}
-      \item Effectively integrates and leverages the SentinelOne \acrshort{edr} platform for continuous
-            cybersecurity monitoring within the \acrshort{qaas} app.
-      \item The \acrshort{qaas} app should have a way to visualize the data retrieved from the SentinelOne
-            \acrshort{api} in a user-friendly manner in order for the client users helpdesk support, financial
-            department, cybersecurity department, software development department, and other employees within
-            \acrshort{qict}  departments to see the data easier.
-            %     \item Combine the SentinelOne data with N-Central \acrshort{api}
-            %     \item Utilize Vigilance package of SentinelOne
-            %     \item Ensure proper unit testing, code refactoring, commenting, and adherence to the overall code
-            %           conventional guidelines and best practices in both the test and live environments of the
-            %           \acrshort{qaas} app.
-\end{enumerate}
-Therefore, by the end of this project, SentinelOne platform will complement the \acrshort{qaas} app with the ability to
-visualize and display the intricate data related to endpoint security, such as threat intelligence, endpoint
-security logs, configuration details, user activity logs, telemetry data, alerts, notifications, remediation
-actions, reports and analytics, \acrshort{etc}.  This project will not however, make any changes related to how
-the internal system architecture of SentinelOne, including the structure of its Agents and the algorithms driven by
-\acrshort{ai} and \acrshort{ml}.
-\section{Reading Guide}
-This report is structured as follows:
-\begin{itemize}
-      \item \textbf{Summary}: provides a brief and concise overview of the entire report, including the
-            research questions, key findings, and conclusion. Its purpose is to provide readers with a
-            quick and comprehensive understanding of the report.
-      \item \textbf{Introduction}: provides an overview of the project background, the research topic of the
-            company, and the project objectives. It introduces the context of the research and outlines the
-            structure of the report.
-      \item \textbf{Research Design}: outlines the methodologies employed during the research
-            process. It describes the research approach, data collection methods, selected measuring instruments,
-            data analysis techniques used to address the research questions, reliability, validity, and general
-            applicability.
-      \item \textbf{Research Results}: presents the research results, including the research methodology, the findings,
-            and the analysis of the research questions. Firstly, it describes the methodologies employed
-            during the research, and then it provides a detailed account of the research process and the
-            outcomes of the research.
-      \item \textbf{Realization}: provides a detailed description of the software end-product developed during
-            this work placement project. It outlines insights into design, development, and implementation
-            phases. It also highlights key features, functionalities, and technology specifications used in
-            the project.
-      \item \textbf{Conclusions and Recommendations}: the Conclusion summarizes the key findings and results
-            achieved during the research and realization phases. The Recommendation section outlines the
-            proposed next steps and future research areas to further enhance the project and address any
-            outstanding issues. It discusses potential areas for further exploration or refinement.
-      \item \textbf{References}: lists all the sources cited in the report following the appropriate to
-            \acrshort{apa} 7th edition citation style.
-      \item \textbf{Appendices}: includes any additional supplementary information, data, or materials that
-            are relevant to the report but not included in the main body of the report.
-\end{itemize}
-
-\section{The Company}
+\subsection{The Company}
 
 \acrshort{qict}, is a small cybersecurity consultancy based in Emmen, northeast of the Netherlands. The company follows
 a flat organizational structure, which means that there are few or no levels of middle management between the staff and
@@ -112,12 +51,6 @@ everything communication directly goes with the director. Their customers are \a
 from 1 to 100. \acrshort{qict} is therefore asked to monitor their clients' devices and ensuring the overall security of their
 systems, \acrshort{it} infrastructure, and digital assets. As of now, \acrshort{qict} has over 400 active customers. Some notable clients
 are: Kigpolis Verzekeringen, CLS Europe, and Heli Holland.
-
-\begin{figure}[htbp]
-      \centering
-      \includegraphics[width=1.0\textwidth]{Figures/OrganizationalDiagram_QICT.png}
-      \caption{Flat (hierarchical) structure of \acrshort{qict}, along with its departments and their managers.}
-\end{figure}
 
 \subsubsection{Departments}
 
@@ -150,17 +83,176 @@ Those departments are the following:
             developers that work closely with clients to understand their unique cybersecurity challenges and
             design solutions that effectively address those concerns, while utilizing their expertise in
             programming languages, software frameworks, and cybersecurity principle to develop secure and
-            reliable applications. This is the department where the author is currently working on his
-            graduation workplacement project. Mainly, this department uses Dart with Flutter as the main
-            front-end development framework, and Node.js with TypeScript template as the main back-end
-            development framework. Furthermore, it utilizes Google Firebase as the  main cloud solution for
-            the applications it develops as it works together with Flutter, but it expresses its
-            desires to expand more into \acrshort{ms} Azure in the future.
+            reliable applications. \textbf{This is the department where the author is currently working on his graduation work-placement
+                  project}. Mainly, this department uses Dart with Flutter as the main front-end for building the \acrshort{ui}, and Firebase
+            as the main back-end cloud solution. Furthermore, it utilizes Google Firebase as the  main cloud solution for the applications it
+            develops as it works together with Flutter, but it expresses its desires to expand more into \acrshort{ms} Azure in the future.
       \item \textit{Financial Department}: it is responsible for managing the financial aspects of the company
             to ensure its financial health and stability. It includes Accountant and Financial Advisor, and
             they are responsible for analyzing financial data, identifying trends, and making strategic
             financial decisions to support the company's growth and objectives.
 \end{enumerate}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=1.0\textwidth]{Figures/OrganizationalDiagram_QICT.png}
+      \caption{Flat (hierarchical) structure of \acrshort{qict}, along with its departments and their managers.}
+\end{figure}
+
+% \subsubsection{Working Methodology}
+% The company currently utilizes the five functions defined by \acrshort{nist} as part of its \acrshort{csf} as
+% the framework to help the company manage and improve their cybersecurity risk management processes. These five
+% functions are part of the \acrshort{fips} 199. All functions serve as level categories for organizing
+% cybersecurity activities within an organization and are as follows (\cite{nist}):
+% \begin{itemize}
+%       \item \textbf{Identify}: develop the organizational understanding to manage cybersecurity risk to
+%             systems, assets, data, and capabilities. This includes the development of an organizational
+%             understanding to manage cybersecurity risk to systems, assets, data, and capabilities. It also
+%             includes the development of a cybersecurity risk management strategy that is aligned with the
+%             organization's mission, goals, and objectives and the establishment of a governance structure to
+%             ensure that the strategy is effectively implemented and maintained.
+%       \item \textbf{Protect}: develop and implement the appropriate safeguards to ensure delivery of critical
+%             infrastructure services. It can help the company assists clients in implementing security controls,
+%             encryption mechanism, access controls, and other security measures to protect their systems and
+%             data from unauthorized access, disclosure, and alteration or modification.
+%       \item \textbf{Detect}: develop and implement the appropriate activities to identify and detect the
+%             occurrence of a cybersecurity event in timely manner to facilitate rapid response and mitigation
+%             efforts. This includes the development of a cybersecurity event detection capability that is
+%             integrated with the company's incident response and recovery capabilities. It will help the
+%             company to implement monitoring and detection mechanisms, such as intrusion detection systems,
+%             log analysis tools, and \acrshort{siem} systems, to detect and identify to cybersecurity incidents
+%             promptly.
+%       \item \textbf{Respond}: develop and implement the appropriate activities to act in responding
+%             regarding a detected cybersecurity event, containing the impact, and restoring normal operations.
+%             It involves activities such as developing incident response plans, conducting incident response
+%             drills and exercises, establishing communication channels with stakeholders, and implementing
+%             recovery strategies to minimize the impact of cybersecurity incidents on business operations and
+%             services.
+%       \item \textbf{Recover}: develop and implement the appropriate activities to maintain plans for
+%             resilience and to restore any capabilities or services that were impaired due to a cybersecurity
+%             incident and event, along with implementing improvements to prevent future incidents. In this
+%             activity,  the company should be able to develop and implement recovery plans, conduct
+%             post-incident reviews and analysis, identify areas for improvement, and implement measures and
+%             improvements to enhance resilience and prevention future incidents.
+% \end{itemize}
+
+% \begin{figure}[htbp]
+%       \centering
+%       \includegraphics[width=0.8\textwidth]{Figures/qict-working-method.png}
+%       \caption{\acrshort{nist} working methodology that is followed by \acrshort{qict}}
+% \end{figure}
+
+\subsubsection{Unofficial Partnerships}
+
+\acrshort{qict} has several unofficial partnerships with other organizations, they are normally located in the same building that
+\acrshort{qict} rents its office from. These organizations help \acrshort{qict} in their own speciality, and \acrshort{qict} helps them
+in return. These organizations are:
+
+\begin{itemize}
+      \item MemoICT: is a Shopware company that helps with e-commerce.
+      \item Ondernemend Emmen: helps with international entrepreneurship, knowledge sharing, and networking.
+      \item Peat Digital: helps with online marketing to promote \acrshort{qict} products more into wider audience.
+      \item Webba: helps with web development, especially designing \acrshort{qict}, \acrshort{mkb}iT, and \acrshort{qaas}.nu website.
+      \item InDiv Solutions: also helps \acrshort{qict} with the front-end side of their website development.
+      \item Pax8: is another official \acrshort{ms} official partner that resell \acrshort{ms} subscriptions and products. It is a
+            company based in \acrshort{uk} that helps \acrshort{qict} with their clients manage their subscriptions.
+\end{itemize}
+
+Recently, as since of last year, \acrshort{qict} has obtained the rights to the SentinelOne environment and official sell its subscription
+to \acrshort{qict} customers under their own name. \acrshort{qict} will then act as the management of the client's domain in SentinelOne
+that subscribes to them through \acrshort{qict}. Because SentinelOne is relatively new to the \acrshort{qict}, it has not fully integrated
+with the internal system yet. This will be discussed further in the Problem Statement section.
+
+\subsubsection{Internal System and Tools}
+
+\textbf{The QaaS App}
+
+The \acrshort{qaas} app is web application that is used by \acrshort{qict} and its clients.
+For \acrshort{qict}'s clients, it is a \acrshort{saas} that is used to see what kind of information are available
+regarding their \acrshort{ict} infrastructure, based on the subscriptions that they have with \acrshort{qict}.
+For example, a customer that subscribes on N-Central and SentinelOne will be able to see the status of their
+devices from N-Central \acrshort{api}, and the health of their devices from SentinelOne \acrshort{api}.
+For \acrshort{qict} employees themselves, it serves as an internal system that is used to manage the clients and their
+\acrshort{ict} infrastructure.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=1.0\textwidth]{Figures/Qaas App/Landing Page.png}
+      \caption{The login page of the \acrshort{qaas} app, implementing Google \acrshort{2fa} and re\acrshort{captcha}}
+\end{figure}
+
+\textbf{APIs and Tools}
+
+The \acrshort{qaas} app also utilizes several \acrshort{api}s and technologies to help with its operations.
+It needs to manage and make connection different sort of \acrshort{api}s to help with the operations as an
+\acrshort{erp} application. Those \acrshort{api}s are the following:
+\begin{itemize}
+      \item Resello: is used for \acrshort{qict}'s \acrshort{ms} subscriptions owned by Pax8 (\textit{\cite{resello}}).
+            It is a cloud marketplace that simplifies the way \acrshort{sme} companies buy, sell, and manage cloud solutions
+            through automation. It provides a single platform to manage the entire cloud customer lifecycle, from
+            quote to cash to support, thus simplifying the process of buying, selling and managing cloud
+            solutions. Furthermore, it normally uses \gls{SOAP API} for its communication.
+      \item SnelStart: is used for \acrshort{qict} automation of financial and accounting system software,
+            such as managing invoices, \acrshort{etc} for \acrshort{sme}s. It offers a range of products and
+            services to help businesses manage their finances, including accounting software, invoicing software, and financial management
+            tools.
+      \item Bodyguard.io: is a \acrshort{cdr} tool used for security tab. It is a product from a Dutch company
+            that filters and scrutinizes downloads from web browsers to detect and prevent malicious files with
+            real-time download scanning capabilities. It normally uses \gls{RESTful API} for its communication.
+      \item N-Central: is a product from N-Able and is used for monitoring clients' devices and ensuring the
+            overall security of their systems, \acrshort{it} infrastructure, and digital assets. It is a
+            \gls{RMM} platform designed to help \acrshort{msp} and \acrshort{it} professionals to
+            remotely monitor and manage their clients' devices and networks. It provides a comprehensive
+            set of tools and features for monitoring, managing, and securing clients' devices and networks,
+            including patch management, \acrshort{av}, backup and disaster reovery, virus scanner,
+            network topology mapping, disk encryption, and Windows update that supports showing \acrshort{os},
+            disk, and status update. The return response from this \acrshort{api} is in \gls{XML}
+            and \acrshort{json} format, making it both a \gls{REST gls} and \acrshort{soap} \acrshort{api}.
+      \item PerfectView: is used for \gls{CRM} software (\textit{\cite{perfectView}}). It is designed to
+            improve business relationships with customers, assist in customer retention, and drive sales growth.
+            In the \acrshort{qaas} app, it is used to manage the relationships and interactions with the app's users,
+            which could include tracking user interactions, managing customer support requests and analyzing user
+            data to improve the app's functionality and \acrshort{ux}.
+\end{itemize}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=1.0\textwidth]{Figures/QaaS App Infraastructure.jpg}
+      \caption{The infrastructure of the QaaS app}
+\end{figure}
+
+Besides all the 5 internal \acrshort{api}s that \acrshort{qict} uses, the company also uses several technologies to help them with their
+operations. Those tools are:
+
+\begin{itemize}
+      \item Computicate (now newly named Acronis): is used as their ticketing system, providing ticketing solution services to customers for
+            a wide range of events and activities (\textit{\cite{computicate}}).
+      \item TOMTelecom: is used for their company's phone system. It is responsible for structured process of call routing on incoming calls
+            from customers to the appropriate department or individuals, ensuring effective communication and issue resolution
+            (\textit{\cite{tomTelecom}}).
+\end{itemize}
+
+\subsubsection{Subscriptions}
+
+\acrshort{qict} has monthly subscription that it offers to its clients. Subscription within the \acrshort{qict} is divided into smaller
+proportions which are the following:
+\begin{enumerate}
+      \item \acrshort{qaas} Safe: includes security package, patch management, monitoring for workstations or laptop, and traditional
+            \acrshort{av} like BitDefender. This traditional \acrshort{av} product will be removed soon as SentinelOne \acrshort{edr} platform
+            itself is properly integrated to the \acrshort{qaas} environment since it is already an upgrade from traditional \acrshort{av}. This
+            subscription is required for every user in a company to be the official client of \acrshort{qict}. SentinelOne payment subscription
+            will also be included in this after the integration.
+      \item \acrshort{qaas} Safe+: for advance security protection. Bodyguard.io is included. This subscription is still a proof of concept
+            within the stakeholders.
+      \item \acrshort{qaas} Help: is used for a free call service to the helpdesk between working hours (Monday to Friday, 08:30 - 17:00).
+            This subscription will utilize external tracking system to check whether a user has this subscription to ensure proper billing.
+            Then a financial and ticketing system like SnelStart and Computicket is used for billing users who call the Helpdesk who do
+            not have this subscription.
+      \item \acrshort{qaas} Back-up: for back-ups from the data of the customer from MS 365 Cloud provider. It is for restoring if data is
+            lost. The data will be stored off-site in OneDrive as the cloud personal storage since \acrshort{qict} is a Microsoft partner.
+            This subscription has also a collaboration with N-Central for its back-up and disaster recovery solutions.
+\end{enumerate}
+
 
 % \subsubsection{Q-ICT Sister Companies}
 
@@ -184,112 +276,130 @@ Those departments are the following:
 % is directed by Pierre Kleine Schaars. This terminology is not to be confused with the \acrshort{qaas} app, which is the internal app of
 % all the three companies.
 
-% \subsubsection{Products and Subscriptions}
+% \begin{figure}[htbp]
+%       \centering
+%       \includegraphics[width=1.0\textwidth]{Figures/q-ict.jpg}
+%       \caption{The relation between the three companies}
+% \end{figure}
+
+\subsubsection{Products and Services}
 
 % Besides cybersecurity, together with \acrshort{mkb}iT and \acrshort{qaas}.nu, \acrshort{qict} offers a wide range of products and
 % services to its clients. Those products are (\textit{\cite{qictProducts}}):
 
-% \begin{itemize}
-%       \item Customized software development: this field is one of the main responsibilities of \acrshort{qict} itself, it provides
-%             customers with tailor-made software solutions that are designed to meet their specific needs and requirements. The company
-%             works closely with clients to understand their unique challenges and develop software applications that effectively address
-%             those concerns.
-%       \item Online-backup: the company offers a service where the clients can store copies of their files, documents, and data on remote
-%             servers via the internet. These remote servers are hosted in secure data centres. Furthermore, \acrshort{mkb}iT also provides
-%             \acrshort{db} migration in case any event of disasters occurred.
-%       \item Active monitoring: the company will offer its customers the chance to oversee, track, and manage their computer systems,
-%             networks, or applications in real-time. It serves various purposes, including ensuring system stability, optimizing
-%             performance, enhancing security, and providing valuable insights into the usage patterns and behaviours of users or devices.
-%             In the future, it wants to bring more automation to its system, providing customers with automatic messages when a disk space
-%             becomes full, or when there is an error message in clients' computers.
-%       \item Anti-spam software: a specific type of software application that is designed by \acrshort{mkb}iT to detect, prevent, and block
-%             unsolicited and unwanted e-mail messages, commonly known as spam, from reaching clients' e-mail inboxes. They are typically
-%             sent in bulk to many recipients without their consent, often containing advertisements, phishing attempts, malware, or other
-%             malicious content. It has features such as whitelist, blacklist, and filter e-mails per e-mail account or e-mail address.
-%       \item Microsoft 365 products: the company is also providing access to Microsoft's suite of cloud-based productivity tools and
-%             services, including installation services, to its clients. These include Microsoft Word, Excel, PowerPoint, Outlook, and more,
-%             which are all accessible online through a web browser or can be installed on local devices such as computers and smartphones.
-%       \item \acrshort{av} software: it resells and gives clients advice and comparisons on good antivirus software from manufacturers like
-%             McAfee, Bitdefender, and Kaspersky. This software is designed to detect, prevent, and remove malware from computer systems.
-%       \item Cloud services: the company also provides clients with a tailor-made cloud solution based on their specific wishes and
-%             problems, whether it is using a public, private, or hybrid cloud. It delivers a range of computing resources, applications,
-%             and services over the internet through cloud computing technologies. These services enable the clients to access and use
-%             computing resources without the need to own or maintain physical hardware and software infrastructure, enabling their
-%             employees to access their files anytime, anywhere, without others having to access them.
-% \end{itemize}
+Some products of \acrshort{qict} are already discussed briefly in the subscription section. But here are the full review:
 
-% In addition, for the software development, \acrshort{qict} also uses other \acrshort{ms} technologies such as Power Platform
-% (\acrshort{ie} Power Automate, Power BI, Power Apps, Power Virtual Agents, and Power Pages), Dynamics 365, and Azure to help with their
-% software development, therefore the clients who are asking for the product to be developed with the help of  those \acrshort{ms}
-% technologies will also have those subscriptions of the products, therefore paying extra charge.
-
-% The company also offers subscriptions, such as:
-
-% \begin{itemize}
-%       \item \acrshort{qaas} Safe:
-%       \item \acrshort{qaas} Help:
-%       \item \acrshort{qaas} Backup:
-% \end{itemize}
-
-% \subsubsection{Unofficial Partnerships}
-
-% \acrshort{qict} has several unofficial partnerships with other organizations, they are normally located in the same building that
-% \acrshort{qict} rents its office from. These organizations help \acrshort{qict} in their own speciality, and \acrshort{qict} helps them
-% in return. These organizations are:
-
-% \begin{itemize}
-%       \item MemoICT: is a Shopware company that helps with e-commerce.
-%       \item Ondernemend Emmen: helps with international entrepreneurship, knowledge sharing, and networking.
-%       \item Peat Digital: helps with online marketing to promote \acrshort{qict} products more into wider audience.
-%       \item Webba: helps with web development, especially designing \acrshort{qict}, \acrshort{mkb}iT, and \acrshort{qaas}.nu website.
-%       \item InDiv Solutions: also helps \acrshort{qict} with the front-end side of their website development.
-% \end{itemize}
-
-\subsubsection{Working Methodology}
-The company currently utilizes the five functions defined by \acrshort{nist} as part of its \acrshort{csf} as
-the framework to help the company manage and improve their cybersecurity risk management processes. These five
-functions are part of the \acrshort{fips} 199. All functions serve as level categories for organizing
-cybersecurity activities within an organization and are as follows (\cite{nist}):
 \begin{itemize}
-      \item \textbf{Identify}: develop the organizational understanding to manage cybersecurity risk to
-            systems, assets, data, and capabilities. This includes the development of an organizational
-            understanding to manage cybersecurity risk to systems, assets, data, and capabilities. It also
-            includes the development of a cybersecurity risk management strategy that is aligned with the
-            organization's mission, goals, and objectives and the establishment of a governance structure to
-            ensure that the strategy is effectively implemented and maintained.
-      \item \textbf{Protect}: develop and implement the appropriate safeguards to ensure delivery of critical
-            infrastructure services. It can help the company assists clients in implementing security controls,
-            encryption mechanism, access controls, and other security measures to protect their systems and
-            data from unauthorized access, disclosure, and alteration or modification.
-      \item \textbf{Detect}: develop and implement the appropriate activities to identify and detect the
-            occurrence of a cybersecurity event in timely manner to facilitate rapid response and mitigation
-            efforts. This includes the development of a cybersecurity event detection capability that is
-            integrated with the company's incident response and recovery capabilities. It will help the
-            company to implement monitoring and detection mechanisms, such as intrusion detection systems,
-            log analysis tools, and \acrshort{siem} systems, to detect and identify to cybersecurity incidents
-            promptly.
-      \item \textbf{Respond}: develop and implement the appropriate activities to act in responding
-            regarding a detected cybersecurity event, containing the impact, and restoring normal operations.
-            It involves activities such as developing incident response plans, conducting incident response
-            drills and exercises, establishing communication channels with stakeholders, and implementing
-            recovery strategies to minimize the impact of cybersecurity incidents on business operations and
-            services.
-      \item \textbf{Recover}: develop and implement the appropriate activities to maintain plans for
-            resilience and to restore any capabilities or services that were impaired due to a cybersecurity
-            incident and event, along with implementing improvements to prevent future incidents. In this
-            activity,  the company should be able to develop and implement recovery plans, conduct
-            post-incident reviews and analysis, identify areas for improvement, and implement measures and
-            improvements to enhance resilience and prevention future incidents.
+      \item Customized software development: this field is one of the main responsibilities of \acrshort{qict} itself, it provides
+            customers with tailor-made software solutions that are designed to meet their specific needs and requirements. The company
+            works closely with clients to understand their unique challenges and develop software applications that effectively address
+            those concerns.
+      \item Online-backup: the company offers a service where the clients can store copies of their files, documents, and data on remote
+            servers via the internet. These remote servers are hosted in secure data centres. Furthermore, \acrshort{mkb}iT also provides
+            \acrshort{db} migration in case any event of disasters occurred.
+      \item Active monitoring: the company will offer its customers the chance to oversee, track, and manage their computer systems,
+            networks, or applications in real-time. It serves various purposes, including ensuring system stability, optimizing
+            performance, enhancing security, and providing valuable insights into the usage patterns and behaviours of users or devices.
+            In the future, it wants to bring more automation to its system, providing customers with automatic messages when a disk space
+            becomes full, or when there is an error message in clients' computers.
+      \item Anti-spam software: a specific type of software application that is designed by \acrshort{mkb}iT to detect, prevent, and block
+            unsolicited and unwanted e-mail messages, commonly known as spam, from reaching clients' e-mail inboxes. They are typically
+            sent in bulk to many recipients without their consent, often containing advertisements, phishing attempts, malware, or other
+            malicious content. It has features such as whitelist, blacklist, and filter e-mails per e-mail account or e-mail address.
+      \item Microsoft 365 products: the company is also providing access to Microsoft's suite of cloud-based productivity tools and
+            services, including installation services, to its clients. These include Microsoft Word, Excel, PowerPoint, Outlook, and more,
+            which are all accessible online through a web browser or can be installed on local devices such as computers and smartphones.
+      \item \acrshort{av} software: it resells and gives clients advice and comparisons on good antivirus software from manufacturers like
+            McAfee and Bitdefender. This software is designed to detect, prevent, and remove malware from computer systems.
+      \item Cloud services: the company also provides clients with a tailor-made cloud solution based on their specific wishes and
+            problems, whether it is using a public, private, or hybrid cloud. It delivers a range of computing resources, applications,
+            and services over the internet through cloud computing technologies. These services enable the clients to access and use
+            computing resources without the need to own or maintain physical hardware and software infrastructure, enabling their
+            employees to access their files anytime, anywhere, without others having to access them.
 \end{itemize}
 
-\begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.8\textwidth]{Figures/qict-working-method.png}
-      \caption{\acrshort{nist} working methodology that is followed by \acrshort{qict}}
-\end{figure}
+In addition, for the software development, \acrshort{qict} also uses other \acrshort{ms} technologies such as Power Platform
+(\acrshort{ie} Power Automate, Power BI, Power Apps, Power Virtual Agents, and Power Pages), Dynamics 365, and Azure to help with their
+software development, therefore the clients who are asking for the product to be developed with the help of  those \acrshort{ms}
+technologies will also have those subscriptions of the products, therefore paying extra charge.
 
-% \begin{figure}[htbp]
-%       \centering
-%       \includegraphics[width=0.8\textwidth]{Figures/Organogram-MKBiT.png}
-%       \caption{Level of structure of \acrshort{mkb}iT}
-% \end{figure}
+\section{Problem Statement}
+The company currently manages numerous third-party \acrshort{api}s mentioned above for various purposes.
+Currently, the company has already offered SentinelOne endpoint protection subscription to its clients.
+However, the clients cannot access to SentinelOne dashboard without \acrshort{qict} making the
+necessary accounts for every single individual first. Making the accounts for the clients can be a time-consuming process,
+seeing that the clients reach up to 400 active companies, therefore an integration of SentinelOne
+to \acrshort{qict}'s own internal system is more advantageous to the company by allowing clients to see
+their SentinelOne data related to their system and endpoint health directly through \acrshort{qict}'s
+platform. Moreover, it is not beneficial from a business perspective to direct customers to other external
+security solutions, as most of the data in SentinelOne is in English and \acrshort{qict} want to be the
+primary resource for cybersecurity assistance for its clients around the Netherlands.
+
+Furthermore, the SentinelOne dashboard is not user-friendly to the clients. It is made to directly assist cybersecurity
+specialist like threat analysts working in \acrshort{soc} department or \acrshort{it} administrators. Therefore,
+\acrshort{qict} also wishes that this integration to be designed as user-friendly as possible, considering
+that most clients have limited or no knowledge at all about cybersecurity or computers. Thus, the integration of SentinelOne to the
+\acrshort{qaas} App simply adds a layer of functionality to the clients, enabling them to see and easily
+understand the data. In essence, SentinelOne will complement the \acrshort{qaas} app by providing enhancement to the
+app so that it can show, visualize and display the intricate data related to endpoint security such as real-time insights,
+comprehensive audit trails, threat intelligence, endpoint security logs, configuration details, user activity logs, telemetry data,
+alerts, remediation actions, reports and analytics, and more. This will then add more value to the \acrshort{qaas} App as an advance
+threat detection platform providing user-friendly security dashboard that offers detailed insights into device health and status. This
+project will not however, make any changes related to how the internal system architecture of SentinelOne, including the structure of
+its Agents and the algorithms driven by \acrshort{ai} and \acrshort{ml}.
+
+By this integration, the \acrshort{qaas} App will also complement SentinelOne by promoting it to the broader audience, especially here
+in the Netherlands. By embedding SentinelOne's advanced security features into the \acrshort{qaas} App, \acrshort{qict} showcases the
+robustness and reliability of SentinelOne's solutions to its extensive client base. This integration acts as a powerful endorsement,
+demonstrating SentinelOne's effectiveness in real-world scenarios and highlighting its value in providing comprehensive cybersecurity
+protection.
+
+Thus, the company has tasked the author with the development of the SentinelOne security threat platform
+integration for continuous cybersecurity monitoring within the \acrshort{qaas} app as the main topic of his
+graduation work  placement project.
+
+\section{Project Objectives}
+In the end of this project which consist of 90-99 working days, the following objectives should be achieved:
+\begin{enumerate}
+      \item Effectively integrates and leverages the SentinelOne \acrshort{edr} platform for continuous
+            cybersecurity monitoring within the \acrshort{qaas} app.
+      \item The \acrshort{qaas} app should have a way to visualize the data retrieved from the SentinelOne
+            \acrshort{api} in a user-friendly manner in order for the client users helpdesk support, financial
+            department, cybersecurity department, software development department, and other employees within
+            \acrshort{qict}  departments to see the data easier.
+            %     \item Combine the SentinelOne data with N-Central \acrshort{api}
+            %     \item Utilize Vigilance package of SentinelOne
+            %     \item Ensure proper unit testing, code refactoring, commenting, and adherence to the overall code
+            %           conventional guidelines and best practices in both the test and live environments of the
+            %           \acrshort{qaas} app.
+\end{enumerate}
+\section{Reading Guide}
+This report is structured as follows:
+\begin{itemize}
+      \item \textbf{Summary}: provides a brief and concise overview of the entire report, including the
+            research questions, key findings, and conclusion. Its purpose is to provide readers with a
+            quick and comprehensive understanding of the report.
+      \item \textbf{Introduction}: provides an overview of the project background, the research topic of the
+            company, and the project objectives. It introduces the context of the research and outlines the
+            structure of the report.
+      \item \textbf{Research Design}: outlines the methodologies employed during the research
+            process. It describes the research approach, data collection methods, selected measuring instruments,
+            data analysis techniques used to address the research questions, reliability, validity, and general
+            applicability.
+      \item \textbf{Research Results}: presents the research results, including the research methodology, the findings,
+            and the analysis of the research questions. Firstly, it describes the methodologies employed
+            during the research, and then it provides a detailed account of the research process and the
+            outcomes of the research.
+      \item \textbf{Realization}: provides a detailed description of the software end-product developed during
+            this work placement project. It outlines insights into design, development, and implementation
+            phases. It also highlights key features, functionalities, and technology specifications used in
+            the project.
+      \item \textbf{Conclusions and Recommendations}: the Conclusion summarizes the key findings and results
+            achieved during the research and realization phases. The Recommendation section outlines the
+            proposed next steps and future research areas to further enhance the project and address any
+            outstanding issues. It discusses potential areas for further exploration or refinement.
+      \item \textbf{References}: lists all the sources cited in the report following the appropriate to
+            \acrshort{apa} 7th edition citation style.
+      \item \textbf{Appendices}: includes any additional supplementary information, data, or materials that
+            are relevant to the report but not included in the main body of the report.
+\end{itemize}

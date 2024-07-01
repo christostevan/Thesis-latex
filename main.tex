@@ -4,6 +4,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{appendix}
 \usepackage{bookmark}
+\usepackage{forest}
 \usepackage{float}
 \usepackage{hyperref}
 \hypersetup{ % Setting the reference colors
@@ -214,19 +215,19 @@ style=apa,
 {
     name=\acrshort{pentest},
     description={\acrshort{aka} ethical hacking, is a simulated cyberattack where professional ethical hackers break into corporate 
-    networks to find weaknesses (\cite{pentest})
+    networks to find weaknesses (\textit{\cite{pentest}})
     }  
 }
 \newglossaryentry{RMM} {
     name=\acrshort{rmm},
     description={is a software platform that helps \acrshort{msp}s remotely monitor and manage their clients' endpoints, networks, 
-    and computers (\cite{rmm})}
+    and computers (\textit{\cite{rmm}})}
 }
 \newglossaryentry{API} {
     name=\acrshort{api},
     description={is a software intermediary that allows two applications to talk to each other. In other words, an \acrshort{api} 
     is the messenger that delivers request to the provider that was requested from and then delivers the response back 
-    (\textbf{\cite{api}}) 
+    (\textit{\cite{api}}) 
     }
 }
 \newglossaryentry{AD} {
@@ -353,7 +354,7 @@ style=apa,
     name=\acrshort{rest},
     description={is a software architectural style for providing standards between computer systems on the web, making it easier
     to communicate with each other. It is often characterized by how they are stateless and separate the concerns of client and
-    server (\textbf{\cite{restAPI}})
+    server (\textit{\cite{restAPI}})
     }
 }
 \newglossaryentry{SOAP API}{
@@ -401,6 +402,7 @@ style=apa,
 \newacronym{captcha}{CAPTCHA}{Completely Automated Public Turing test to tell Computers and Humans Apart}
 \newacronym{c&c}{C&C}{Command-and-Control}
 \newacronym{cdr}{CDR}{Content Disarm and Reconstruction}
+\newacronym{ceh}{CEH}{Certified Ethical Hacker}
 \newacronym{cmd}{CMD}{Command Prompt}
 \newacronym{ceo}{CEO}{Chief Executive Officer}
 \newacronym{ciso}{CISO}{Chief Information Security Officer}
@@ -432,6 +434,7 @@ style=apa,
 \newacronym{dns}{DNS}{Domain Name System}
 \newacronym{dom}{DOM}{Document Object Model}
 \newacronym{dora}{DORA}{Discover, Offer, Request, Acknowledge}
+\newacronym{eccouncil}{EC-Council}{International Council of E-Commerce Consultants}
 \newacronym{ecma}{ECMA}{European Computer Manufacturers Association}
 \newacronym{edr}{EDR}{Endpoint Detection and Response}
 \newacronym{eg}{e.g.,}{exempli gratia}
@@ -619,14 +622,15 @@ style=apa,
 \include{Sections/Summary}
 \tableofcontents
 \clearpage
-\addcontentsline{toc}{section}{List of Figures}
+% \addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 \clearpage
-\addcontentsline{toc}{section}{List of Example Code Examples}
+% \addcontentsline{toc}{section}{List of Example Code Examples}111
 \lstlistoflistings
 \clearpage
-\addcontentsline{toc}{section}{List of Tables}
+% \addcontentsline{toc}{section}{List of Tables}
 \listoftables
+
 \printglossaries
 \include{Sections/Introduction}
 \include{Sections/researchDesign}

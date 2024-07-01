@@ -10,48 +10,66 @@
 % they are often the target of cyberattacks due to their lack of resources to invest in cybersecurity, especially when they
 % do not have their employees trained in cybersecurity.
 
-\acrshort{qict} is a small cybersecurity consultant firm based in Emmen, Drenthe, the Netherlands. It is a partner of Pax8,
-which is a Microsoft distributor, therefore they handle all cybersecurity related to Windows and Microsoft products. They
-have over 400 clients, all spread throughout the Netherlands, and their main target audience is small to medium-sized
-businesses. They have their own internal system, called \acrshort{qaas}, which is a web application integrated with
-various cybersecurity and financial tools that \acrshort{qict} uses to manage their business processes regarding their
-clients, products, and services.
+\acrshort{qict} is a small cybersecurity consultant firm based in Emmen, Drenthe, the Netherlands. They act as a trusted IT
+provider that will handle all clients' IT infrastructure. The services they offered are network, storage and server management,
+reselling Microsoft 365 subscriptions as an official partner of Microsoft, data backup and recovery, financial data analytics to
+help clients gain valuable insights into their business, cloud migration and services, technical remote and on-site support by
+their helpdesk services, customized software development and system integration, cybersecurity consulting and strategies, and
+more. They have over 500 clients, all spread throughout the Netherlands, and their main target audience is small to medium-sized
+businesses, ranging from the employee size of 1-100, that do not have an IT department, therefore lacking the technical knowledge. Q-ICT
+is therefore given the responsibility to manage and securing clients IT infrastructure, and clients will ask for their supports in
+case of technicality issues arise.
 
-The \acrshort{qaas} app is an internal system of \acrshort{qict}, serving as an \acrshort{erp} web application to manage
-their clients, products, and services. The \acrshort{qaas} itself has already 5 \acrshort{api}s connected to it, which are:
-N-Central, Bodyguard.io, Resello, Snelstart, and PerfectView. N-Central is used for monitoring and managing the clients'
-networks. Bodyguard.io is used for email security, to prevent any malicious downloads from phising e-mails. Resello,
-which is a product of Pax8, is used to manage the clients' Microsoft subscriptions. Snelstart is used for the financial administration
-of \acrshort{qict}. PerfectView is used for the \acrshort{crm} of \acrshort{qict}. Together, these \acrshort{api}s provide
-\acrshort{qict} with the tools to manage their clients, products, and services. A client that has one of \acrshort{qict}'s subscription,
-can access the \acrshort{qaas} app and see their subscription, and the status of their network, and the status of their endpoints.
+Q-ICT have their own internal system made by themselves, called the \acrshort{qaas} App, which is a web application integrated with
+various cybersecurity,  management and financial tools that \acrshort{qict} uses to manage their business processes regarding their clients,
+subscriptions, products, and services. It has 5 \acrshort{api}s connected to it. Together, these \acrshort{api}s provide \acrshort{qict} with
+the tools to be used by both \acrshort{qict} employees and the clients. A client of Q-ICT can access the \acrshort{qaas} app and see the status
+of their network, security of their endpoints, their financial status, their subscriptions within Microsoft 365, etc. The QaaS App therefore
+acts as a customer insight management tool for the clients of Q-ICT. For the employees of Q-ICT it is a centralized operation platform designed
+to streamline and manage all of Q-ICT's day-to-day business activities. Last year, \acrshort{qict} has purchased the rights to a SentinelOne
+subscription with the help of one of their partner companies, Pax8. Since then, they have been utilizing this product to provide better endpoint
+security to their clients, migrating from Bitdefender, a traditional antivirus solution, into more modern solutions such as EDR system provided
+by SentinelOne.
 
-Recently, as of last year with the assistance of their partner, Pax8, \acrshort{qict} has purchased the rights
-to a SentinelOne subscription. Since then, they have been utilizing the product to provide better endpoint security to their clients.
-
-SentinelOne is a cybersecurity company based in California, United States that has a product of the same name. It is an
-\acrshort{edr} platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the
-traditional \acrshort{av}. It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is
-deployed on the endpoint itself. The purpose of an \acrshort{edr} platform is to have a centralized location to monitor and
-respond to threats on all endpoints in a network, in a company. SentinelOne has Agents that act as a replacement for the
-traditional \acrshort{av}. The traditional \acrshort{av} relies heavily on signature-based detection, which requires
-identifying a unique string of bytes (signature) from known malware, usually stored in a \acrshort{db}. This method
-struggles against new, unknown (zero-day) threats and malware that changes frequently. SentinelOne, on the other hand,
-and similar next-generation solutions use behavioural analysis to identify malware based on its actions rather than its code.
+SentinelOne is an American cybersecurity company that has a product of the same name. It is an Endpoint Detection and Response platform, which
+purpose is to detect and respond to threats of an endpoint in real-time, replacing the traditional antivirus. Its Agents, which serves as
+a next generation antivirus, utilize \acrshort{ai} and \acrshort{ml} to detect and respond to threats, and it is deployed on the endpoint itself.
+Traditional antivirus uses methods that often struggles against new, unknown (zero-day) threats and malware that changes frequently. SentinelOne,
+on the other hand, and other similar next-generation antivirus solutions use behavioural analysis to identify malware based on its actions rather than its code.
 This allows them to detect and respond to new, unknown threats that traditional \acrshort{av} solutions would miss.
+The purpose of an \acrshort{edr} platform is to have a centralized location to monitor and respond to threats on all endpoints in a network,
+in a company. With this new cybersecurity tools in their system, Q-ICT hope to gives one of the best world-class cybersecurity solutions from Gartner
+magic quadrant to small and medium business enterprises in the Netherlands, therefore contributing to the improvement of cybersecurity standards
+in the Netherlands.
+
+Q-ICT then also would like to take one step further and provide transparency to their client to maintain the trust in their relationship with
+their clients and reinforcing their confidence in Q-ICT's services by displaying client's SentinelOne data exclusively to them in the QaaS App.
+This integration of SentinelOne to the QaaS App will prevent Q-ICT from creating accounts to each user of their 500 client companies, and
+increasing the sell value of the QaaS App. Q-ICT also would like to have more control over what data to display to the clients, as almost all
+of them are non-technical users, therefore providing them with a dashboard that is more user-friendly with visualization on the data to
+simplify them to the common users. Q-ICT also would like to have more control on adding additional capabilities on the QaaS App based on
+what SentinelOne system can do, such as adding files into blocklist or whitelist, remediate and rollback an endpoint operating system,
+network isolation, and more.
 
 The integration of the SentinelOne \acrshort{api} into the \acrshort{qaas} app is possible through SentinelOne \acrshort{rest} \acrshort{api},
 with the use of \acrshort{qaas} app existing framework and services, Flutter and Firebase. Once a SentinelOne Agent is properly installed on an
-endpoint, create a new SentinelOne account with appropriate read permissions, and store the generated \acrshort{api} key in Google Secret Manager,
-where it is there in the cloud, secured and encrypted. Therefore, required Firebase Cloud Functions are created to interact with the SentinelOne
-\acrshort{api} to retrieve the data from SentinelOne, and store it in Firebase Firestore. The Flutter client then will interact with the
-Firestore to retrieve the data from SentinelOne, and display it to the user.
+endpoint, a SentinelOne token from the parent environment with all the read permission needs to be created and stored in Google Secret Manager,
+where it is there in the cloud, secured and encrypted. An API rate limiting needs to be created to not flood the API server with requests each
+time a user refreshes the page. After that, client's SentinelOne data needs to be connected with their already existing  information in the
+QaaS environment, proper limitations need to be set in the user's permission to prevent them from accessing data that do not belong to them,
+especially when doing filtering or searching. The new module needs to be deployed in the live environment and tested with client's real data
+and elevated privileges in the SentinelOne environment.
 
-Based on comparing to other existing \acrshort{edr} platforms, a visualization is necessary, to provide a better understanding of the data.
-The visualization should be as simple as possible, so as not to overwhelm the user with too much information. The users should be able to
-customize the visualization widgets to their liking, choosing what kind of data they want to see, and how they want to see it. The visualization
-regarding SentinelOne should be able to show the status of the endpoints, the threats detected, and the actions taken by the SentinelOne Agent.
-The type of data that can be visualized are limited, normally it requires an index and a value (\acrshort{eg} number or date time) to be visualized.
-Flutter itself already has 3 packages that can be used to make visualization charts, which are: fl\_chart, charts\_flutter, and syncfusion\_flutter\_charts.
+This project would be the first iteration to the integration of SentinelOne module to the QaaS App. Further user pilot testing by the real
+clients and additional requirements from the inside market are recommended to further improve the module and add additional features.
 
+% Therefore, required Firebase Cloud Functions are created to interact with the SentinelOne
+% \acrshort{api} to retrieve the data from SentinelOne, and store it in Firebase Firestore. The Flutter client then will interact with the
+% Firestore to retrieve the data from SentinelOne and display it to the user.
+
+% Based on comparing to other existing \acrshort{edr} platforms, a visualization is necessary, to provide a better understanding of the data.
+% The visualization should be as simple as possible, so as not to overwhelm the user with too much information. The users should be able to
+% customize the visualization widgets to their liking, choosing what kind of data they want to see, and how they want to see it. The visualization
+% regarding SentinelOne should be able to show the status of the endpoints, the threats detected, and the actions taken by the SentinelOne Agent.
+% The type of data that can be visualized are limited, normally it requires an index and a value (\acrshort{eg} number or date time) to be visualized.
 

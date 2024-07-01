@@ -6,3 +6,4 @@
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QSentinelOne Sentinels.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QSentinelOne Agent.\\E$"}
 {"rule":"PRP_VB","sentence":"^\\QThis means showing data related cyber-threat detection and remote it infrastructure management within\\E$"}
+{"rule":"TO_NON_BASE","sentence":"^\\QWith this data, clients can see which applications on their devices are outdated, allowing them to prioritizing patching and updates.\\E$"}

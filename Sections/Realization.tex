@@ -1,25 +1,111 @@
 \chapter{Realization}
 
-The integration of SentinelOne to the \acrshort{qaas} web application consist of doing multiple steps such as:
-\begin{enumerate}
-  \item Study the existing codebase of the \acrshort{qaas} App in Flutter
-  \item Setting the Firebase Cloud Functions, which includes:
-        \begin{itemize}
-          \item Creating a new Firebase environment in Node.js with \acrshort{ts} as a template in generation 2.0
-        \end{itemize}
-  \item Studying the SentinelOne \acrshort{api} documentation to determine which data is useful to share in the client
-  \item Testing the \acrshort{http} request connection to SentinelOne \acrshort{api}s
-  \item Modelling the \acrshort{json} data response in Flutter in separate classes
-  \item Setting up and creating a new secret in Google Secret Manager about the authorized SentinelOne \acrshort{api} token
-  \item Setting up permission of the Service Account in Firebase so that the Cloud Functions can access the Secret Manager
-  \item Setting up how the database is structured in the Firestore based on their organization \acrshort{id}
-  \item Setting up the read, write, and update permission of the Firestore database so that not every user can make changes to the
-        \acrshort{db}
-  \item Fixing bugs and checking for responsiveness for different screen sizes
-  \item Unit testing by making sure every functionality work as intended and every widget in the client is wrapped so that there will
-        be not overflow or pixel issues in the screen that has higher resolution
-  \item Deploying everything to the Preview channel of the live environment
-\end{enumerate}
+\section{Methodology and Approach}
+
+The modulebook guideline for this graduation project allows the author to choose among different SLDC methodologies, such
+as SCRUM, the traditional Waterfall, or Kanban. Aligning with the company's current working methodology, SCRUM is chosen.
+
+The working flow of the project is explained as follows: the author does a Sprint Planning meeting with the Company Supervisor, usually after the
+last week Retrospective, to discuss
+what features will be added to the project. In there the newest User Stories from the stakeholders will be assessed, and the
+Sprint Backlog will be updated. The author can then start a new iteration of a sprint, which usually lasted for 1-2 weeks. During a sprint,
+the author needs to work on a selected task in the Sprint Backlog, usually the highest priority and keeping update on the current status.
+A daily stand-up meeting is held to update other developers that are involved with the collaboration of the project. The Sprint Review,
+and Retrospective are held once every week, usually on Monday at 09:30. Here, the team will demonstrate
+the completed work to the Product Owner or stakeholders and gather feedback. The author then will discuss what went well and what
+didn't. A document regarding this should already be prepared 30 minutes to Company Supervisor and stakeholders before the Retrospective.
+The session also includes Code Review with other developers that will showcase the code created and discuss the more detailed part of the
+Sprint within the Development team.
+
+An environment in Azure DevOps is set at the beginning of the project as the project management tool, which is used for visual aid
+and a planning tool. Tasks were created and moved around, as needed, and the columns were used to keep track of the progress of the
+project. The board also consist of list of bugs that were found and needed to be fixed immediately before the next release or planning
+of a next sprint.
+
+All the project activities and in-depth explanation of how the SCRUM methodology is used are already described in Project Plan in the appendix of this paper
+(\ref{appendix:project-plan}).
+
+% \subsection{Activities}
+
+% In appendix of this paper, a document called Project Plan can be found which details the activities that haven been
+% performed throughout the duration of the project. A Gantt chart is also
+
+% \subsection{SCRUM Roles}
+
+% According to (\textit{\cite{scrumAgile}}), a SCRUM team consist of SCRUM master, Product Owner, and the Scrum Team.
+
+% The Product Owner for this project will be the stakeholders of \acrshort{qict} themselves, which mainly consists of the
+% managers, the security department leader, and the Company Supervisor. They know exactly what they want to achieve with the
+% project, and they make most of the user stories of the project.
+
+
+% \subsection{Events}
+
+% Events in SCRUM are time-boxed iterations, which means each iteration repeats these events and each event has its own time
+% limit. The events used in this project are as follows:
+
+% \textbf{Sprint}
+
+% A sprint is a consistent iteration where User Stories are completed. It is usually about one or two weeks.
+
+% \textbf{Planning Poker}
+
+% \textbf{Daily Stand-up}
+
+% Daily stand-up are short meetings, usually lasted around 15-45 minutes to ensure that everyone is aware of what others
+% are doing. For this project, it serves more to tell the Product Owner what have the author done in the previous day.
+% Except on Monday, the daily stand-up is scheduled at 09:30, usually done online in a Teams call.
+
+% \textbf{Sprint Review}
+
+% It is a periodic meeting that happens at the end of every Sprint to show the client and the stakeholders the progress of the
+% assignment so that they can either approve it or ask for changes. For this project, a sprint review is set every Monday
+% at 09:00 for the Development team. This is where the Product Owner (Company Supervisor) checks if the sprint has been
+% completed and implemented properly.
+
+% \textbf{Sprint Retrospective}
+
+% It is a meeting that happens after the Sprint Review to detect and improve a project's obstacles so that the same mistakes
+% will not be made in future sprints. In this project, it is more like a private meeting between the author and the Product
+% Owner to discuss what are the issues that the author has faced during the development of this project or to discuss any problems
+% he faced within the organization as well.
+
+
+% \subsection{SCRUM Artefacts}
+
+% They are the documents of value to provide transparency and Opportunities for inspection and adaptation. All the artefacts of
+% this project can be found in the appendices. This document will only discuss their definitions, which are the following:
+
+% \textbf{Definition of Done}
+
+% A document stating that User Stories can be considered done when it has passed the stages written in the document.
+
+% \textbf{Product Backlog}
+
+% \textbf{Burndown Chart}
+
+% \textbf{Sprint Backlog}
+
+% The integration of SentinelOne to the \acrshort{qaas} web application consists of doing multiple steps such as:
+% \begin{enumerate}
+%       \item Study the existing codebase of the \acrshort{qaas} App in Flutter
+%       \item Setting the Firebase Cloud Functions, which includes:
+%             \begin{itemize}
+%                   \item Creating a new Firebase environment in Node.js with \acrshort{ts} as a template in generation 2.0
+%             \end{itemize}
+%       \item Studying the SentinelOne \acrshort{api} documentation to determine which data is useful to share in the client
+%       \item Testing the \acrshort{http} request connection to SentinelOne \acrshort{api}s
+%       \item Modelling the \acrshort{json} data response in Flutter in separate classes
+%       \item Setting up and creating a new secret in Google Secret Manager about the authorized SentinelOne \acrshort{api} token
+%       \item Setting up permission of the Service Account in Firebase so that the Cloud Functions can access the Secret Manager
+%       \item Setting up how the database is structured in the Firestore based on their organization \acrshort{id}
+%       \item Setting up the read, write, and update permission of the Firestore database so that not every user can make changes to the
+%             \acrshort{db}
+%       \item Fixing bugs and checking for responsiveness for different screen sizes
+%       \item Unit testing by making sure every functionality works as intended and every widget in the client is wrapped so that there will
+%             be not overflow or pixel issues in the screen that has higher resolution
+%       \item Deploying everything to the Preview channel of the live environment
+% \end{enumerate}
 
 % Because the \acrshort{qaas} web application itself is already built on top of existing frameworks, libraries, and technologies, the
 % integration of the SentinelOne was relatively straightforward. The \acrshort{api} itself provided by SentinelOne is well-documented,
@@ -27,7 +113,43 @@ The integration of SentinelOne to the \acrshort{qaas} web application consist of
 % and reading the already existing front-end codebase, the JSON data structure of the SentinelOne \acrshort{api}, choosing the right
 % and more important  data to display, modelling it in the \acrshort{qaas} database, and then displaying it in the web application.
 
-\section{The Back-end}
+\section{Product}
+
+The product delivered by the author, is a fully operational dashboard module inside the QaaS App that has integrated with SentinelOne API.
+The dashboard is designed to simplify and display various kind of data coming from SentinelOne, and visualized them in widgets based on
+what kind of data they want to be visualized and the graph types. The widgets are customizable based on user preferences, and their latest
+session will be stored in the database, where the user can get their latest settings about the dashboard the next time they are logged in.
+Factors such as API rate limitation, renewing API tokens through scheduled cronjobs, making a secure connection by sending only user's
+Firebase Token ID (which will be a useless sequence of numbers if intercepted by malicious actors) and doing the calculation in
+the back-end itself to get the user and company ID are considered during the development of this project.
+
+% The workflow is as follows: a user must be logged in to the QaaS environment implementing reCAPTCHA and \acrshort{2fa} by Google. They can
+% then navigate to the Security tab of the QaaS App, in which they can see the N-Central and SentinelOne dashboard. Once the user is in the
+% SentinelOne dashboard of the QaaS App, a widget describing about the overview of their system health status can be seen.
+
+% \begin{figure}[H]
+%       \centering
+%       \includegraphics[width=0.8\textwidth]{Figures/Dashboard/Dashboard initial.png}
+%       \caption{Initial view of what the user can see}
+% \end{figure}
+
+% In there, the user can perform actions to the widgets such as creating, updating and deleting them.
+% Users can then go to
+
+% For the helpdesk, they can see and connect customers to SentinelOne environment based on their site ID.
+
+\section{Development}
+
+This section will provide general explanation on the development of this project, mainly in the back-end and front-end. It will discuss the
+system architecture, tools and technologies used, and the data flow. The requirements analysis and acceptance criteria are defined before
+to ensure
+
+The overview about the components and entities of this project can be
+seen in the Class Diagram is also located in there  (\ref{appendix:fd}) as well. The more detailed explanation
+about how the system and database infrastructure are designed can be found in the Technical Design at the appendices of this project
+(\ref{appendix:technical-design}).
+
+\subsection{The Back-end}
 
 % As stated before, \acrshort{qict} wishes to utilize the 2nd generation of Firebase Cloud Functions, therefore a new Firebase project
 % was created and stored on the cloud (\textit{using Azure DevOps}). The author also needs to make a decision in regards on how the
@@ -49,24 +171,24 @@ The integration of SentinelOne to the \acrshort{qaas} web application consist of
 % directory is used to log errors in the console, and the \texttt{handleError} function in the Middlewares directory is used to handle
 % errors in the response of the cloud function. This structure allows for a more organized and maintainable codebase.
 
-Firebase Cloud Functions and Cloud Firestore were the main technologies that build the infrastructure of the back-end of this project.
+Firebase Cloud Functions and Cloud Firestore were the main technologies that built the infrastructure of the back-end of this project.
 The types of functions that are used throughout the project are the following:
 \begin{itemize}
-  \item \texttt{onCall}: This type of function is used to handle callable functions, which are called from the client-side. It is used
-        to handle requests from the client-side. This is the main function in which the SentinelOne data is fetched and processed.
-  \item \texttt{onRequest}: This type of function is used to handle \acrshort{http} requests, which are called from the client-side.
-        It is mainly for initial testing, as setting this function up is easier and faster. However, the author does not recommend
-        using this in the production, as it lacks authentication and security for the end-user.
-        % \item \texttt{onSchedule}: This type of function is used to handle scheduled functions, normally called cron-jobs, which are called
-        %       at a specific time. It is used to handle scheduled tasks that need to be executed at a specific time. There is only one
-        %       scheduled function in the project, which is used to replace the old SentinelOne \acrshort{api} key with a new one that is
-        %       securely stored in Google Secret Manager, therefore ensuring proper connection and access to the secret vault, every month.
-  \item \texttt{Cloud Firestore Triggers}: this function is used for the Algolia extension, which is used to listen to changes in the
-        Firestore database and update the Algolia index accordingly. This function is used to keep the Algolia index up-to-date with
-        the Firestore database, ensuring that the search functionality works correctly.
+      \item \texttt{onCall}: This type of function is used to handle callable functions, which are called from the client-side. It is used
+            to handle requests from the client-side. This is the main function in which the SentinelOne data is fetched and processed.
+      \item \texttt{onRequest}: This type of function is used to handle \acrshort{http} requests, which are called from the client-side.
+            It is mainly for initial testing, as setting this function up is easier and faster. However, the author does not recommend
+            using this in the production, as it lacks authentication and security for the end-user.
+      \item \texttt{onSchedule}: This type of function is used to handle scheduled functions, normally called cron-jobs, which are called
+            at a specific time. It is used to handle scheduled tasks that need to be executed at a specific time. There is only one
+            scheduled function in the project, which is used to replace the old SentinelOne \acrshort{api} key with a new one that is
+            securely stored in Google Secret Manager, therefore ensuring proper connection and access to the secret vault, every month.
+      \item \texttt{Cloud Firestore Triggers}: this function is used for the Algolia extension, which is used to listen to changes in the
+            Firestore database and update the Algolia index accordingly. This function is used to keep the Algolia index up-to-date with
+            the Firestore database, ensuring that the search functionality works correctly.
 \end{itemize}
 
-\subsection{Setting up permissions with Google Secret Manager}
+\subsubsection{Setting up permissions with Google Secret Manager}
 
 Because every call to the SentinelOne \acrshort{api} requires an authorization through a valid SentinelOne \acrshort{api} key, it is
 crucial to store this key securely on the Internet, where not everyone can access it. Following the guideline from the Company
@@ -76,7 +198,7 @@ Functions work well with Secret Manager, as they are both Google Cloud products.
 a specific cloud function to have access to the latest version of a specific Secret, providing that they are stored within the same
 project directory.
 
-\subsubsection{Service Account}
+\textbf{Service Account}
 
 The first crucial step in setting up the permissions with Google Secret Manager is to create a Service Account. A Service Account is
 a special type of Google account that belongs to the application or a virtual machine, instead of to an individual end-user. It is
@@ -335,7 +457,7 @@ function, the author can then easily configure on which Secrets his cloud functi
 %         functions locally before deploying them to the Firebase Cloud.
 % \end{itemize}
 
-\subsection{Firestore database structure}
+\subsubsection{Firestore database structure}
 
 Inside the Firestore, there are various collections (tables) that hold different data. Most of the collections are used to store the
 data that is fetched from the SentinelOne \acrshort{api}, and one collection is used to store the user's session and preference data.
@@ -395,129 +517,13 @@ then have different logic in the cloud function to fetch the data.
 %             \end{itemize}
 % \end{itemize}
 
-\subsection{Modelling in the back-end}
+\subsubsection{Modelling in the back-end}
 The \acrshort{json} data is modelled in the back-end first, then in the front-end, to ensure that the data is consistent across the
 application. The data is modelled using interfaces and classes, which are defined in the Models directory. The interfaces define the
 structure of the data, and the classes provide methods to serialize and deserialize the data. This ensures that the data can be easily
 converted to and from \acrshort{json}.
 
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/User Preference.png}
-  \caption{Granting access of read, write, and update from User Preference collection to users in the Firebase Console}
-\end{figure}
-
-
-\begin{lstlisting}[language=JavaScript, caption={Model class in the back-end}]
-  export interface Customer {
-  customerId: string;
-  customerName: string;
-  orgUnitType: string;
-  parentId: string;
-  city: string;
-  stateProv: string;
-  country: string;
-  county: string | null;
-  postalCode: string;
-  contactEmail: string;
-}
-
-/**
- * Class for CustomerModel.
- */
-export class CustomerModel {
-  private readonly firestore: FirebaseFirestore.Firestore;
-  private readonly collectionName = "customers";
-  private readonly context = "CustomerModel";
-
-  /**
-   * Constructor for CustomerModel.
-   */
-  constructor() {
-    this.firestore = admin.firestore();
-  }
-
-  /**
-   * Serializes a Customer object to a JSON string.
-   * @param {Customer} customer The Customer object to serialize.
-   * @return {string} The serialized JSON string.
-   */
-  serializeCustomerToJson(customer: Customer): string {
-    return JSON.stringify(customer);
-  }
-
-  /**
-   * Deserializes a JSON string to a Customer object.
-   * @param {string} json The JSON string to deserialize.
-   * @return {Customer} The deserialized Customer object.
-   */
-  deserializeJsonToCustomer(json: string): Customer {
-    return JSON.parse(json) as Customer;
-  }
-
-  /**
-   * Creates a new customer in Firestore.
-   * @param {Customer} customer Customer to add to Firestore.
-   * @return {Promise<FirebaseFirestore.DocumentReference<FirebaseFirestore.DocumentData>> | undefined}.
-   */
-  async createCustomer(customer: Customer): Promise<FirebaseFirestore.DocumentReference<FirebaseFirestore.DocumentData> | undefined> {
-    try {
-      return this.firestore.collection(this.collectionName).add(customer);
-    } catch (ex: unknown) {
-      logError(ex, this.context + ".createCustomer");
-    }
-    return undefined;
-  }
-
-  /**
-   * Retrieves a customer by its ID from Firestore.
-   * @param {string} customerId The ID of the customer to retrieve.
-   * @return {Promise<Customer | undefined>} A promise that resolves with the customer object if found, or undefined if not found or an error occurs.
-   */
-  async getCustomer(customerId: string): Promise<Customer | undefined> {
-    try {
-      const doc = await this.firestore.collection(this.collectionName).doc(customerId).get();
-      if (!doc.exists) {
-        return undefined;
-      }
-      return doc.data() as Customer;
-    } catch (ex: unknown) {
-      logError(ex, this.context + ".getCustomer");
-      return undefined;
-    }
-  }
-
-  /**
-   * Updates an existing customer in Firestore.
-   * @param {string} customerId The ID of the customer to update.
-   * @param {Partial<Customer>} customer The partial customer object containing updates.
-   * @return {Promise<void>} A promise that resolves when the update is complete.
-   */
-  async updateCustomer(customerId: string, customer: Partial<Customer>): Promise<void> {
-    try {
-      await this.firestore.collection(this.collectionName).doc(customerId).update(customer);
-    } catch (ex: unknown) {
-      logError(ex, this.context + ".updateCustomer");
-    }
-  }
-
-  /**
-   * Deletes a customer from Firestore.
-   * @param {string} customerId The ID of the customer to delete.
-   * @return {Promise<void>} A promise that resolves when the customer is successfully deleted.
-   */
-  async deleteCustomer(customerId: string): Promise<void> {
-    try {
-      await this.firestore.collection(this.collectionName).doc(customerId).delete();
-    } catch (ex: unknown) {
-      logError(ex, this.context + ".deleteCustomer");
-    }
-  }
-
-}
-\end{lstlisting}
-\subsection{Setting up permissions with Firestore}
+\subsubsection{Setting up permissions with Firestore}
 
 This has got to do with the Firestore database and the access level of permission that a Firebase Cloud Function has. In the
 SentinelOne integration project, the table that contains SentinelOne data cannot be changed by the client, only by fetching new
@@ -526,7 +532,7 @@ changed accordingly by the user, the User Preference table. This table can be ch
 logged in to the \acrshort{qaas} app.
 
 
-\subsection{Connection to Algolia}
+\subsubsection{Connection to Algolia}
 
 As originally stated, the author and Company Supervisor directly intended on using Algolia search as the SentinelOne
 \acrshort{api} search, although far from being bad, does have type intolerance. The purpose of this is to enhance the \acrshort{ux}
@@ -538,10 +544,10 @@ that they have in the \acrshort{qaas} app. For this specific project, the author
 the project. In there, the author can already see all the duplicate indexes coming from Firestore that serves as the point of reverence when letting
 the \acrshort{ai} Algolia engine to do the searching. From Algolia dashboard, several default \acrshort{api} keys can be seen, including:
 \begin{itemize}
-  \item Application \acrshort{id}: unique application identifier
-  \item Search \acrshort{api} key: usable for search queries and for listing the indices.
-  \item Write \acrshort{api} key: is used to create, update, and delete indices. Cannot be used to manage other \acrshort{api} keys.
-  \item Admin \acrshort{api} key: like write keys but can be used to manage other \acrshort{api} keys.
+      \item Application \acrshort{id}: unique application identifier
+      \item Search \acrshort{api} key: usable for search queries and for listing the indices.
+      \item Write \acrshort{api} key: is used to create, update, and delete indices. Cannot be used to manage other \acrshort{api} keys.
+      \item Admin \acrshort{api} key: like write keys but can be used to manage other \acrshort{api} keys.
 \end{itemize}
 
 The way the extension itself works is that it acts as a pre-written cloud function like Cloud Firestore Triggers (\textit{\cite{cloudTriggers}}),
@@ -589,15 +595,208 @@ operations that it can do.
 %     modelling of the JSON data structure}
 % \end{figure}
 
-\section{The Front-end}
+\subsection{The Front-end}
 
 In the front-end side of this project, it is just a matter of calling the Cloud Functions, modelling the \acrshort{json} response
 coming from the Cloud Functions (whether it is from Firestore or SentinelOne), making the visualization graphs using the available
 Flutter package, setting the logic on how to navigate between pages passing the correct data, the logic for how to display the data
 correctly in paginated data tables and visualization widgets, and lastly, the searching, filtering, and filtering functionality.
 
+% Figure below will show how the API data is modelled in the front-end, and how the Controller will call the API and model the response.
+
+% \begin{lstlisting}[language=Dart, caption={How calling and modelling a response works in Flutter}]
+
+%   class Agent extends BaseModel {
+%     Agent({
+%       required this.id,
+%       required this.name,
+%       required this.age,
+%     });
+
+%     factory Agent.fromJson(Map<String, dynamic> json) {
+%       return Agent(
+%         id: json['id'] as String,
+%         name: json['name'] as String,
+%         age: json['age'] as int,
+%       );
+%     }
+
+%     final String id;
+%     final String name;
+%     final int age;
+
+%     Map<String, dynamic> toJson() {
+%       return {
+%         'id': id,
+%         'name': name,
+%         'age': age,
+%       };
+%     }
+%   }
+
+%   import '../models/agent' as agent;
+%   class SentinelOneController {
+%       static Future<List<BaseModel>?> getSentinelOneData({
+%             required String modelType,
+%             required String siteId,
+%             required String userId,
+%             Map<String, dynamic>? additionalParams,
+%             String? dataId,
+%             bool? getImmediately,
+%             String? sortBy,
+%             String? sortOrder,
+%           }) async {
+%             try {
+%               final HttpsCallable callable =
+%                   FirebaseFunctions.instanceFor(region: 'europe-west3').httpsCallable(
+%                 'getSentinelOneData',
+%                 options: HttpsCallableOptions(
+%                   timeout: const Duration(seconds: 540),
+%                 ),
+%               );
+
+%               final String? firebaseToken = await AuthController().getFirebaseIdToken();
+
+%               final Map<String, dynamic> headers = <String, dynamic>{
+%                 'dataType': modelType,
+%                 'dataId': dataId,
+%                 'urlParameters': additionalParams,
+%                 'getImmediately': getImmediately,
+%                 'sortBy': sortBy,
+%                 'sortOrder': sortOrder,
+%                 'firebaseToken': firebaseToken,
+%               };
+
+%               final HttpsCallableResult<dynamic> results = await callable.call(headers);
+%               final Map<String, dynamic> responseData =
+%                   results.data as Map<String, dynamic>;
+%               final dynamic data = responseData['data'];
+%               switch (modelType) {
+%                 case 'Endpoints':
+%                   if (data is List<dynamic>) {
+%                     return data
+%                         .map((dynamic json) =>
+%                             agent.Agent.fromJson(json as Map<String, dynamic>))
+%                         .toList();
+%                   } else if (data is Map<String, dynamic>) {
+%                     return <agent.Agent>[agent.Agent.fromJson(data)];
+%                   }
+%                   default:
+%                   return List<Data>.empty();
+%               }
+%     } on FirebaseFunctionsException catch(e) {
+%       if (kDebugMode) {
+%         print('Firebase error when fetching the data: $e');
+%       }
+%     } catch (e, stack) {
+%       if (kDebugMode) {
+%         print('Application error: $e \nStack: $stack');
+%       }
+%     }
+%     return List<Data>.empty();
+%   }
+% }
+% \end{lstlisting}
+
+% As mentioned in the Project Plan, the SentinelOne module needs to be developed without breaking changes to the codebase, that can be used and managed independently of other
+% features of the application. This allows for a high level of flexibility and customization, and it makes it easy to integrate the module with the existing software.
+% Figure below shows the directory structure for the SentinelOne module created by the student
+
+% \begin{forest}
+%       for tree={
+%       grow=east,
+%       draw,
+%       minimum size=1.5em,
+%       inner sep=2pt,
+%       s sep=5mm,
+%       anchor=west,
+%       l=1.5cm,
+%       edge path={
+%                   \noexpand\path [draw, \forestoption{edge}] (!u.parent anchor) -- +(15pt,0) |- (.child anchor)\forestoption{edge label};
+%             },
+%       parent anchor=east,
+%       child anchor=west,
+%       align=center,
+%       font=\sffamily,
+%       edge={line width=1pt},
+%       if n children=0{}{edge={line width=0.5pt}}
+%       }
+%       [QaaS
+%             [View
+%                         [SentinelOne
+%                                     [Dashboard
+%                                                 [Specific Pages]
+%                                                 [Activity Logs]
+%                                                 [Reports]
+%                                                 [Exclusion creation]
+%                                                 [Settings]
+%                                     ]
+%                         ]
+%             ]
+%             [Controller
+%                         [SentinelOne
+%                                     [Widget Controller]
+%                                     [Firestore Controller]
+%                                     [User Session Controller]
+%                                     [SentinelOne Controller]
+%                         ]
+%             ]
+%             [Enum]
+%             [Model
+%                         [SentinelOne
+%                                     [Agent
+%                                                 [Installed Application]
+%                                     ]
+%                                     [Threat
+%                                                 [Threat Timeline]
+%                                                 [Threat Event]
+%                                                 [Agent details]
+%                                     ]
+%                                     [Risky Application
+%                                                 [CVE details by NIST]
+%                                                 [Agent details]
+%                                     ]
+%                                     [User]
+%                                     [Policy]
+%                                     [Group]
+%                                     [Report]
+%                                     [Site]
+%                                     [Activity log]
+%                         ]
+%             ]
+%             [Config
+%                         [FirebaseConfig
+%                                     [Firestore permissions]
+%                         ]
+%             ]
+%             [shared
+%                         [logics
+%                                     [Calculations
+%                                                 [Bytes to Mb and Gb conversion]
+%                                     ]
+%                                     [String formatter]
+%                                     [DateTime formatter]
+%                                     [DateTime with timezone formatter]
+%                                     [Sha1 hasher]
+%                                     [Custom regex formatter]
+%                         ]
+%                         [widgets
+%                                     [SentinelOne
+%                                                 [tables]
+%                                                 [graphs]
+%                                                 [dropdown]
+%                                                 [radio button]
+%                                                 [popup]
+%                                                 [News Feed]
+%                                                 [Custom notes]
+%                                     ]
+%                         ]
+%             ]
+%       ]
+% \end{forest}
+
 After ensuring that the logic of the front-end works perfectly for showing the data, the last step that was needed to be undertaken
-was polishing, which includes: checking for bugs and translation error, unit testing, making sure that the malfunctioning part that
+was polishing, which includes: checking for bugs, translation error, and making sure that the malfunctioning part that
 were not yet fixed due to time constraint are not shown and testing for responsiveness on different devices. The last part was
 proven to be quite a long process, because almost every widget that the author has created needed to be wrapped around another
 Flexible widget that can expand and shrink based on the screen size, and to make sure that there is no infinity width or height
@@ -628,75 +827,6 @@ that can cause the widget to be cut off or not shown at all.
 %   \acrshort{qaas} app.
 
 
-% \begin{lstlisting}[language=Dart, caption={How calling and modelling a response works in Flutter}]
-
-%   class Data extends BaseModel {
-%     Data({
-%       required this.id,
-%       required this.name,
-%       required this.age,
-%     });
-
-%     factory Data.fromJson(Map<String, dynamic> json) {
-%       return Data(
-%         id: json['id'] as String,
-%         name: json['name'] as String,
-%         age: json['age'] as int,
-%       );
-%     }
-
-%     final String id;
-%     final String name;
-%     final int age;
-
-%     Map<String, dynamic> toJson() {
-%       return {
-%         'id': id,
-%         'name': name,
-%         'age': age,
-%       };
-%     }
-%   }
-
-%   static Future<List<Data>> getData() async {
-%     try {
-%       final HttpsCallable callable =
-%           FirebaseFunctions.instanceFor(region: 'europe-west3').httpsCallable(
-%         'getData',
-%         options: HttpsCallableOptions(
-%           timeout: const Duration(seconds: 540),
-%         ),
-%       );
-
-%       final Map<String, dynamic> headers = <String, dynamic>{
-%         'dataType': 'abcd',
-%       };
-
-%       final HttpsCallableResult<dynamic> results = await callable.call(headers);
-%       final Map<String, dynamic> responseData =
-%           results.data as Map<String, dynamic>;
-%       final dynamic data = responseData['data'];
-
-%       if (data is List<dynamic>) {
-%         return data
-%             .map((dynamic json) =>
-%                 Data.fromJson(json as Map<String, dynamic>))
-%             .toList();
-%       } else if (data is Map<String, dynamic>) {
-%         return <Data>[Data.fromJson(data)];
-%       }
-%     } on FirebaseFunctionsException catch(e) {
-%       if (kDebugMode) {
-%         print('Firebase error when fetching the data: $e');
-%       }
-%     } catch (e, stack) {
-%       if (kDebugMode) {
-%         print('Application error: $e \nStack: $stack');
-%       }
-%     }
-%     return List<Data>.empty();
-%   }
-% \end{lstlisting}
 
 
 % \begin{lstlisting}[language=JavaScript, caption={How downloading a PDF/HTML file works on the back-end}]
@@ -775,23 +905,28 @@ that can cause the widget to be cut off or not shown at all.
 \section{Deploying everything to the Live environment}
 
 In the final phase of the project, after making sure that everything works and tested properly, the author needed to deploy the project
-from the test environment to the live environment, so that other users can also access it. Below are the steps undertaken to deploy the
-project to the live environment:
+from the test environment to the live environment, so that other users can also access it.
 
-\begin{enumerate}
-  \item Make sure to log in to the admin account of the Firebase Console.
-  \item Make sure to select the right environment.
-  \item Create a specific branch in the Azure DevOps repository for the live environment (live-\textit{date}).
-  \item Switch the firebase options to the live environment in the Flutter new client.
-  \item Make sure there are no debug app check tokens in the index.html of the Flutter project.
-  \item Build the Flutter client project.
-  \item Deploy the new Flutter client code to Firebase, now the front-end is updated.
-  \item Add/ update/ delete any Firebase cloud functions for the new version to get added into the live environment.
-  \item Create \acrshort{api} secrets in the live environment if needed.
-  \item Allow secret access to the specific cloud functions.
-  \item Make sure the Firebase security rules are up-to-date in the live environment.
-  \item Mirror Cloud Firestore data in Algolia if needed.
-  \item Change allowed Algolia indexes in Algoia \acrshort{api} key functions, this decides which indexes the developers
-        are allowing to search on with this specific Algolia search \acrshort{api} key.
-  \item Build Firestore indexes if needed, for where/ orderby queries, this is usually done before client deployment.
-\end{enumerate}
+The full guide on how to deploy the application from the test environment to the live environment is available in the appendix
+\ref{appendix:deployment-manual}.
+
+% Below are the steps undertaken to deploy the
+% project to the live environment:
+
+% \begin{enumerate}
+% \item Make sure to log in to the admin account of the Firebase Console.
+%   \item Make sure to select the right environment.
+%   \item Create a specific branch in the Azure DevOps repository for the live environment (live-\textit{date}).
+%   \item Switch the firebase options to the live environment in the Flutter new client.
+%   \item Make sure there are no debug app check tokens in the index.html of the Flutter project.
+%   \item Build the Flutter client project.
+%   \item Deploy the new Flutter client code to Firebase, now the front-end is updated.
+%   \item Add/ update/ delete any Firebase cloud functions for the new version to get added into the live environment.
+%   \item Create \acrshort{api} secrets in the live environment if needed.
+%   \item Allow secret access to the specific cloud functions.
+%   \item Make sure the Firebase security rules are up-to-date in the live environment.
+%   \item Mirror Cloud Firestore data in Algolia if needed.
+%   \item Change allowed Algolia indexes in Algoia \acrshort{api} key functions, this decides which indexes the developers
+%         are allowing to search on with this specific Algolia search \acrshort{api} key.
+%   \item Build Firestore indexes if needed, for where/ orderby queries, this is usually done before client deployment.
+% \end{enumerate}

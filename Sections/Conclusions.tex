@@ -5,41 +5,64 @@ running business is not too small to be attacked, but they may be too small for 
 to the clients is important, because lack of visibility to the clients can lead to a loss of trust. This graduation project serves
 as the first iteration by \acrshort{qict} about the integration of SentinelOne to its internal application, the \acrshort{qaas} app.
 
-The \acrshort{qaas} app is a cloud-based web application that is used by \acrshort{qict} to provide a better service to their clients.
-The app itself is a multi-tenant application, meaning that it can be used by multiple clients at the same time. The app is made
-using Flutter, a cross-platform framework that is developed by Google, and Firebase as the back-end cloud solution. The app
-has several modules that are used by different user roles, such as the clients, the helpdesk, and the \acrshort{it} admins. The app
-is also integrated with several \acrshort{api}s, such as the N-Central, Resello, Snelstart, Bodyguard.io, and PerfectView. The app
-also uses Algolia, an \acrshort{ai} powered search engine, to make the search faster and more accurate by allowing typos.
+The purpose of this project is to research into SentinelOne and its \acrshort{api} capabilities, and develop a dashboard that
+serves as one of the module for the \acrshort{qaas} app. It keeps a transparent relation with customers by informing them about the aspect of
+their \acrshort{it} system, especially about the security status. The project has 2 main phases, the research and realization parts.
+The research was aimed at studying the technologies behind the \acrshort{qaas} App, SentinelOne \acrshort{api} functionalities, and
+visualization techniques to display the data to the non-technical users. The realization was aimed at displaying the data in the \acrshort{qaas}
+App with functionalities such as widget visualization based on user preference, Algolia extension integration, \acrshort{api} rate limiting,
+data filtering and pagination.
 
-The \acrshort{qaas} app itself has 3 different modules and user tags to help with the authorization of the app.
-Modules are basically the page view of the app, assigning modules to an appropriate user tag is done by the \acrshort{it} admins. User
-tags are assigned to a user to give them permission to see or edit certain modules.
+All the objectives set and agreed in the beginning by the stakeholders and the author were met, and the project can be considered successful.
+The author has completed the research, as this document proves, the realization phase has been successfully developed, and all mandatory
+and agreed-upon documents has been sent to \acrshort{qict} and the educational institution, NHL Stenden.
 
-SentinelOne is an American cybersecurity company that has a product of the same name. It is an \acrshort{edr}
-platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the traditional \acrshort{av}.
-It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is deployed on the endpoint itself.
-The purpose of an \acrshort{edr} platform is to have a centralized view of all the endpoints that are connected to the platform, and
-to provide real-time monitoring of the threats that are detected by the Agent. The platform itself is also integrated with several
-\acrshort{api}s, such as the \acrshort{api} for the Agents for endpoints, the Rangers for networks, and the application management,
-each data is uniquely processed and stored in separate \acrshort{db}s.
+The research and realization has provided valuable insights into Q-ICT about the kind of data that SentinelOne provides. The author has
+gained deeper understanding into the field of cybersecurity, especially about SentinelOne, and furthermore familiarity with Flutter and
+Firebase. The research has answered the main question with positive answer, that the integration of SentinelOne into the \acrshort{qaas} app
+is possible.
 
-SentinelOne \acrshort{edr} platform is possible to be integrated with the \acrshort{qaas} app, which was made in Flutter with
-Firebase as the back-end cloud solution, utilizing SentinelOne \acrshort{api} to fetch the data. In order that this \acrshort{api}
-to be able to send the correct data, the necessary Agents and Ranger need to be set up properly in a client's machine. This Agent will
-then gather the data from the client's machine and send it to the management \acrshort{db}, providing real-time monitoring. Additionally,
-a SentinelOne account with the necessary rights to read the data with its \acrshort{api} key is also needed to be configured. Lastly, a
-SentinelOne \acrshort{api} key that is based on a SentinelOne account needs to be set up with a proper role to read the data, and secured
-in  the cloud where it is encrypted like Google Secret Manager or Azure Key Vault.
+The new SentinelOne module to the \acrshort{qaas} App has no breaking changes, only adding more data and features to the database and the app.
+In the end, the product were brought to the live channel where it was introduced to the live data from 500 companies using the API token with
+higher authority. It was then monitored closely by the development team and bugs were tracked and noted. Tools like Azure DevOps as the
+Agile project provider, and Git as the version control. The new module has been tested with in Preview channel on the live environment,
+with the data from 500 companies and a higher permission in the API token to be able to see the data.
 
-Based on comparison with other \acrshort{edr} platforms, it is concluded that when making a visual representation for the users, it is
-important that the images are understandable and user-friendly to the users to create a strong message when displaying a complex data
-or information. The visualization widget also needs to be customizable, so that the user can choose which data they want to see in the
-dashboard. The colours of these visualization widgets do not need to be too flashy, as it can distract the user from the data itself. Instead,
-opting for colour that is more suitable to the general theme of the app is preferable. In the front-end, the visualization is done using the
-Flutter framework. The framework itself have several packages that can do this: \textit{fl\_chart}, \textit{syncfusion\_flutter\_charts},
-and \textit{flutter\_echarts}. The author chose to use all the three packages as all of them have their own strengths and weaknesses, along
-with making customization options for the user to choose which types of visualization and what data they want to see.
+% The \acrshort{qaas} app is a cloud-based web application that is used by \acrshort{qict} to provide a better service to their clients.
+% The app itself is a multi-tenant application, meaning that it can be used by multiple clients at the same time. The app is made
+% using Flutter, a cross-platform framework that is developed by Google, and Firebase as the back-end cloud solution. The app
+% has several modules that are used by different user roles, such as the clients, the helpdesk, and the \acrshort{it} admins. The app
+% is also integrated with several \acrshort{api}s, such as the N-Central, Resello, Snelstart, Bodyguard.io, and PerfectView. The app
+% also uses Algolia, an \acrshort{ai} powered search engine, to make the search faster and more accurate by allowing typos.
+
+% The \acrshort{qaas} app itself has 3 different modules and user tags to help with the authorization of the app.
+% Modules are basically the page view of the app, assigning modules to an appropriate user tag is done by the \acrshort{it} admins. User
+% tags are assigned to a user to give them permission to see or edit certain modules.
+
+% SentinelOne is an American cybersecurity company that has a product of the same name. It is an \acrshort{edr}
+% platform, which purpose is to detect and respond to threats of an endpoint in real-time, replacing the traditional \acrshort{av}.
+% It utilizes \acrshort{ai} and \acrshort{ml} on an Agent to detect and respond to threats, and it is deployed on the endpoint itself.
+% The purpose of an \acrshort{edr} platform is to have a centralized view of all the endpoints that are connected to the platform, and
+% to provide real-time monitoring of the threats that are detected by the Agent. The platform itself is also integrated with several
+% \acrshort{api}s, such as the \acrshort{api} for the Agents for endpoints, the Rangers for networks, and the application management,
+% each data is uniquely processed and stored in separate \acrshort{db}s.
+
+% SentinelOne \acrshort{edr} platform is possible to be integrated with the \acrshort{qaas} app, which was made in Flutter with
+% Firebase as the back-end cloud solution, utilizing SentinelOne \acrshort{api} to fetch the data. In order that this \acrshort{api}
+% to be able to send the correct data, the necessary Agents and Ranger need to be set up properly in a client's machine. This Agent will
+% then gather the data from the client's machine and send it to the management \acrshort{db}, providing real-time monitoring. Additionally,
+% a SentinelOne account with the necessary rights to read the data with its \acrshort{api} key is also needed to be configured. Lastly, a
+% SentinelOne \acrshort{api} key that is based on a SentinelOne account needs to be set up with a proper role to read the data, and secured
+% in  the cloud where it is encrypted like Google Secret Manager or Azure Key Vault.
+
+% Based on comparison with other \acrshort{edr} platforms, it is concluded that when making a visual representation for the users, it is
+% important that the images are understandable and user-friendly to the users to create a strong message when displaying a complex data
+% or information. The visualization widget also needs to be customizable, so that the user can choose which data they want to see in the
+% dashboard. The colours of these visualization widgets do not need to be too flashy, as it can distract the user from the data itself. Instead,
+% opting for colour that is more suitable to the general theme of the app is preferable. In the front-end, the visualization is done using the
+% Flutter framework. The framework itself have several packages that can do this: \textit{fl\_chart}, \textit{syncfusion\_flutter\_charts},
+% and \textit{flutter\_echarts}. The author chose to use all the three packages as all of them have their own strengths and weaknesses, along
+% with making customization options for the user to choose which types of visualization and what data they want to see.
 
 In the back-end, several functions with different functionalities need to be created to handle the data that is fetched from different
 SentinelOne \acrshort{api} endpoints. The user's session and preference data are stored in the Firebase Firestore \acrshort{db}, and as
@@ -54,6 +77,7 @@ In the research phase of this project, the Company Supervisor mentioned that the
 from N-Central \acrshort{api} (which also one of the \acrshort{api} used for security) that sometimes can cause data discrepancy. The author
 has looked into said N-Central data and noticed some similarities with some SentinelOne data structure. The idea of this recommendation
 is to combine the data from SentinelOne and N-Central that have similar structure, to then make the data to be more accurate and reliable.
+This will serve as further development for the continuation of this project.
 
 For example, N-Central has one \acrshort{api} that can automatically check for an update of an application
 of a device, given the correct application \acrshort{id} and device \acrshort{id}. If a device has an outdated application, it can either
@@ -78,11 +102,12 @@ frequently accessed.
 The idea is to put SentinelOne data into the Redis \acrshort{db} too, with the limit of 5-10 minutes before the cache is deleted,
 and then fetch the data from the Redis \acrshort{db} instead of directly fetching it from Firestore and SentinelOne \acrshort{api}
 constantly. Implementing Redis will make querying the data faster than Firestore, providing better \acrshort{ux} for the users.
+Below is how the connection infrastructure would look if Redis is implemented:
 
 \begin{figure}[H]
-      \centering
-      \includegraphics[width=1.0\textwidth]{Figures/Redis Caching.jpg}
-      \caption{How the infrastructure would look if Redis is implemented}
+  \centering
+  \includegraphics[width=1.0\textwidth]{Figures/Redis Caching.jpg}
+  \caption{How the infrastructure would look if Redis is implemented}
 \end{figure}
 
 However, there is one potential downside that the author sees when using Redis in this project. According to these articles
@@ -91,14 +116,31 @@ changed the official licence for all future versions. This has serious consequen
 providing managed Redis. Therefore, the initial development of the Redis middleware to this project can no longer use the free version
 of Redis from a Redis provider without a direct partnership with Redis. Nonetheless, with a direct paid subscription to Redis, the
 author believes that in the long run, using Redis as a means of caching the data will be beneficial for the \acrshort{qaas} app,
-especially when the number of customers have grown and the SentinelOne data gets called more frequently.
+especially when the number of customers have grown and the SentinelOne data gets called more frequently. Figure 5.2 describes
+the Redis providers that can no longer provide Redis server to their service without direct partnership with Redis.
 
 \begin{figure}[H]
-      \centering
-      \includegraphics[width=0.9\textwidth]{Figures/Redis Providers.jpg}
-      \caption{Redis providers now cannot distribute Redis anymore without a direct partnership with Redis, therefore Redis itself controls
-            the pricing.}
+  \centering
+  \includegraphics[width=0.9\textwidth]{Figures/Redis Providers.jpg}
+  \caption{Redis providers now cannot distribute Redis any more without a direct partnership with Redis, therefore Redis itself controls
+    the pricing.}
 \end{figure}
+
+\subsection{Additional requirements gathering}
+
+Additional insights such as market requirements should be gathered to identify other desired features and functionality. This ensures the
+dashboard meets user needs and maintaining trust relationship between the clients and Q-ICT.
+
+\subsection{User pilot testing}
+
+Because the quality assurance testers of this project has been the employees within Q-ICT so far, the author recommends the company
+further conduct user testing with their actual customers, to gather feedback and identify any missing features or unknown bugs.
+A representative group of users should be selected and interviewed upon based on their user experience to refine the end-product.
+
+\subsection{Training and User Manual}
+
+While the purpose of this project is to promote user-friendliness while showing technical data, Q-ICT should consider proper user manual
+creation to briefly explain the purpose of this next version of the QaaS App, ensuring clear insights for the audience on what to expect.
 
 % \subsection{Compacting everything into one function}
 
@@ -172,6 +214,8 @@ files or processes as threats and take actions such as quarantining or mitigatin
 especially in their default configuration. This can lead to unnecessary disruptions, loss of productivity, and distrust in the security protocol. Organizations
 may need to invest some time and resources in investigating and resolving false positives alerts. The author therefore would suggest \acrshort{qict} to
 treat it very carefully and to make sure that the SentinelOne Agents are configured properly to avoid unnecessary disruptions.
+
+
 
 % \subsection{Future modelling}
 
